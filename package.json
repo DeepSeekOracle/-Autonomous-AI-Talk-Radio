@@ -1,15 +1,36 @@
 {
-  "name": "react-example",
+  "name": "ai-talk-radio-ungated",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Ungated AI talk radio studio - generate a talk-radio broadcast (script, hosts, callers, show notes, transcript) with an optional server-side Gemini path and a zero-dependency local synthesizer fallback.",
   "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Justin Helmer (Lightfather - Excavationpro - DeepSeekOracle)",
+  "homepage": "https://deepseekoracle-ai-talk-radio.static.hf.space",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepSeekOracle/-Autonomous-AI-Talk-Radio.git"
+  },
+  "keywords": [
+    "ai-talk-radio",
+    "talk-radio",
+    "gemini",
+    "text-to-speech",
+    "react",
+    "vite",
+    "lygo"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
     "start": "tsx server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "selfcheck": "tsx scripts/selfcheck.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -28,7 +49,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.28.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",

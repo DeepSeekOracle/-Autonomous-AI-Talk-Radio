@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RadioShow } from '../types';
 import { X, ExternalLink, Check, Copy, Download, BookOpen, Key, Link2 } from 'lucide-react';
+import { buildZip, episodePackFiles } from '../lib/packZip';
 
 interface ShowNotesModalProps {
   show: RadioShow;
@@ -34,6 +35,16 @@ ${show.segments.map(s => `**${s.speakerName}**: ${s.text}`).join('\n\n')}
     navigator.clipboard.writeText(md);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleDownloadPack = () => {
+    const blob = buildZip(episodePackFiles(show));
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `radio-episode-${show.episodeNumber}-pack.zip`;
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const handleDownloadJson = () => {
@@ -167,8 +178,16 @@ ${show.segments.map(s => `**${s.speakerName}**: ${s.text}`).join('\n\n')}
             </button>
 
             <button
-              onClick={handleDownloadJson}
+              onClick={handleDownloadPack}
               className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center gap-1.5 cursor-pointer transition-colors shadow-sm shadow-amber-500/20"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download Pack (.zip)</span>
+            </button>
+
+            <button
+              onClick={handleDownloadJson}
+              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 border border-slate-700 hover:text-white text-slate-300 flex items-center gap-1.5 cursor-pointer transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Export JSON</span>

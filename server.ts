@@ -10,9 +10,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: '64kb' }));
 
 const PORT = Number(process.env.PORT) || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
+
+// The model id is configuration, not a constant: if the id or the key is unavailable the studio
+// falls back to its own synthesizer, so a wrong model can never leave the station off air.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 
 // Shared server-side Gemini client
 const getAiClient = () => {
@@ -28,20 +33,27 @@ const getAiClient = () => {
   });
 };
 
-// API Status
-app.get('/api/radio/status', (req, res) => {
-  res.json({
-    status: 'online',
-    hasKey: Boolean(process.env.GEMINI_API_KEY),
-    timestamp: new Date().toISOString(),
-    channelCount: 4,
-    features: ['ai-talk-radio', 'live-transcript', 'caller-hotline', 'soundboard', 'ungated-mode']
-  });
+// API Status (also served as /api/health for deployments and uptime probes)
+const statusPayload = () => ({
+  status: 'online',
+  name: 'AI Talk Radio (Ungated)',
+  hasKey: Boolean(process.env.GEMINI_API_KEY),
+  model: GEMINI_MODEL,
+  engine: process.env.GEMINI_API_KEY ? 'gemini+local-synthesizer' : 'local-synthesizer',
+  timestamp: new Date().toISOString(),
+  channelCount: 4,
+  features: ['ai-talk-radio', 'live-transcript', 'caller-hotline', 'soundboard', 'ungated-mode']
+});
+
+app.get(['/api/health', '/api/radio/status'], (req, res) => {
+  res.json(statusPayload());
 });
 
 // Generate Show Endpoint
 app.post('/api/radio/generate-show', async (req, res) => {
-  const { topic, tone = 'unfiltered-debate', stationId = 'station-algorithmic-wire', ungated = false, host1 = 'Devon Cross', host2 = 'Dr. Maya Lin' } = req.body;
+  const { tone = 'unfiltered-debate', stationId = 'station-algorithmic-wire', ungated = false, host1 = 'Devon Cross', host2 = 'Dr. Maya Lin' } = req.body;
+  // Clamp what a public caller can push into the prompt.
+  const topic = String(req.body?.topic ?? '').slice(0, 240).trim();
 
   const ai = getAiClient();
 
@@ -70,7 +82,7 @@ Return a JSON object with:
   - topicTag: short 1-2 word segment subject`;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
+        model: GEMINI_MODEL,
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
@@ -138,7 +150,7 @@ Write 3 alternating dialogue lines where host Devon (cynic) and host Maya (optim
 Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerName, text, emotion, durationMs }.`;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
+        model: GEMINI_MODEL,
         contents: prompt,
         config: { responseMimeType: 'application/json' },
       });
@@ -312,6 +324,16 @@ function generateFallbackShow(topic: string, tone: string, stationId: string, un
   };
 }
 
+// Unknown API routes answer JSON. Without this a static/SPA host hands the client index.html with
+// HTTP 200, and the client cannot tell a failed generation from a successful one.
+app.use('/api', (req, res) => {
+  res.status(404).json({
+    success: false,
+    error: `Unknown API route: ${req.method} ${req.originalUrl}`,
+    routes: ['GET /api/health', 'GET /api/radio/status', 'POST /api/radio/generate-show', 'POST /api/radio/caller-take']
+  });
+});
+
 // Development or production static serving
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
@@ -328,8 +350,9 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[AI Talk Radio] Studio transmitter broadcasting on port ${PORT}`);
+  app.listen(PORT, HOST, () => {
+    console.log(`[AI Talk Radio] Studio transmitter broadcasting on http://${HOST}:${PORT}`);
+    console.log(`[AI Talk Radio] engine: ${process.env.GEMINI_API_KEY ? `${GEMINI_MODEL} + local synthesizer` : 'local synthesizer (no GEMINI_API_KEY)'}`);
   });
 }
 

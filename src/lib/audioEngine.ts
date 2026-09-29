@@ -277,12 +277,13 @@ class RadioAudioEngine {
 
     utterance.onend = () => {
       if (this.isPlaying && this.currentSegmentIndex === index) {
-        // Micro radio pause between speakers (180ms)
+        // Pause between speakers: enough room to hand off cleanly. 180 ms read as talking over
+        // each other, so the desk holds ~650 ms, the same beat the published sessions run at.
         setTimeout(() => {
           if (this.isPlaying) {
             this.playSegment(index + 1);
           }
-        }, 180 / this.speedMultiplier);
+        }, 650 / this.speedMultiplier);
       }
     };
 

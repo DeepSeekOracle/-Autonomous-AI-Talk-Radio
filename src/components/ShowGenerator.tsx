@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RadioStation, RadioShow } from '../types';
 import { Sparkles, Radio, Flame, Cpu, Users, Layers, Zap, CheckCircle2 } from 'lucide-react';
 import { audioEngine } from '../lib/audioEngine';
+import { synthesizeShow } from '../lib/localShow';
 
 interface ShowGeneratorProps {
   stations: RadioStation[];
@@ -21,6 +22,7 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
   const [isUngated, setIsUngated] = useState(ungatedDefault);
   const [isGenerating, setIsGenerating] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
+  const [engineNote, setEngineNote] = useState('');
 
   const trendingTopics = [
     'The Death of Frameworks: Why Prompts Are the New Syntax',
@@ -47,6 +49,18 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
       h2 = 'Devon Cross';
     }
 
+    const payload = {
+      topic: finalTopic,
+      tone: isUngated ? 'unfiltered-ungated' : tone,
+      stationId: selectedStationId,
+      ungated: isUngated,
+      host1: h1,
+      host2: h2
+    };
+
+    let produced: RadioShow | null = null;
+    let engine = 'gemini';
+
     try {
       audioEngine.playNewsChime();
       setStatusMessage('Synthesizing studio broadcast script & audio cues...');
@@ -54,29 +68,36 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
       const response = await fetch('/api/radio/generate-show', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          topic: finalTopic,
-          tone: isUngated ? 'unfiltered-ungated' : tone,
-          stationId: selectedStationId,
-          ungated: isUngated,
-          host1: h1,
-          host2: h2
-        })
+        body: JSON.stringify(payload)
       });
 
-      const data = await response.json();
-      if (data.show) {
-        setStatusMessage('Broadcast produced successfully! Patching to master feed...');
-        setTimeout(() => {
-          onShowGenerated(data.show);
-          setIsGenerating(false);
-          setStatusMessage('');
-        }, 800);
-      } else {
-        throw new Error('No show returned');
+      // A static host answers an unknown route with its index.html and HTTP 200, so a 200 alone
+      // proves nothing: the payload has to be JSON and it has to carry a show.
+      const contentType = response.headers.get('content-type') || '';
+      const data = response.ok && contentType.includes('application/json') ? await response.json() : null;
+      if (!data?.show?.segments?.length) {
+        throw new Error(`studio API unavailable (HTTP ${response.status}, ${contentType || 'no content-type'})`);
       }
-    } catch (err: any) {
-      console.warn('Error generating show, using local synthesis fallback:', err);
+
+      produced = data.show as RadioShow;
+      engine = data.source === 'gemini' ? 'gemini' : 'server synthesizer';
+    } catch (err) {
+      console.warn('[studio] server path unavailable — writing the episode in the local synthesizer:', err);
+      setStatusMessage('Transmitter offline. Writing the episode in the studio synthesizer...');
+      produced = synthesizeShow(payload);
+      engine = 'local synthesizer (offline)';
+    }
+
+    if (produced) {
+      const finished: RadioShow = produced;
+      setStatusMessage('Broadcast produced successfully! Patching to master feed...');
+      setEngineNote(`Engine: ${engine}`);
+      setTimeout(() => {
+        onShowGenerated(finished);
+        setIsGenerating(false);
+        setStatusMessage('');
+      }, 800);
+    } else {
       setIsGenerating(false);
       setStatusMessage('');
     }
@@ -98,8 +119,15 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
           </p>
         </div>
 
-        <div className="text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded">
-          <span>ON-DEMAND TRANSMITTER</span>
+        <div className="flex items-center gap-2">
+          {engineNote && (
+            <div className="text-[11px] font-mono text-slate-400 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded">
+              {engineNote}
+            </div>
+          )}
+          <div className="text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded">
+            <span>ON-DEMAND TRANSMITTER</span>
+          </div>
         </div>
       </div>
 
