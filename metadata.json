@@ -1,0 +1,6 @@
+{
+  "name": "AI Talk Radio (Ungated)",
+  "description": "24/7 autonomous AI talk radio broadcasting dynamic host debates, caller hotlines, interactive transcripts, and custom broadcast synthesis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
