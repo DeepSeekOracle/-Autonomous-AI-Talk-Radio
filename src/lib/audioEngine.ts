@@ -1,4 +1,5 @@
 import { ScriptSegment, Speaker } from '../types';
+import { pickEnglishVoice } from './voices';
 
 class RadioAudioEngine {
   private audioCtx: AudioContext | null = null;
@@ -98,30 +99,11 @@ class RadioAudioEngine {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) return;
 
-    // Pick crisp English voices
-    const englishVoices = voices.filter(v => v.lang.startsWith('en'));
-    const pool = englishVoices.length ? englishVoices : voices;
-
-    // Prefer high quality / natural voices if present
-    const maleVoice = pool.find(v => 
-      v.name.toLowerCase().includes('daniel') || 
-      v.name.toLowerCase().includes('david') || 
-      v.name.toLowerCase().includes('george') || 
-      v.name.toLowerCase().includes('guy') || 
-      v.name.toLowerCase().includes('male')
-    ) || pool[0];
-
-    const femaleVoice = pool.find(v => 
-      v.name.toLowerCase().includes('samantha') || 
-      v.name.toLowerCase().includes('victoria') || 
-      v.name.toLowerCase().includes('karen') || 
-      v.name.toLowerCase().includes('serena') || 
-      v.name.toLowerCase().includes('female')
-    ) || pool[Math.min(1, pool.length - 1)];
-
+    const maleVoice = pickEnglishVoice(voices, 'male');
+    const femaleVoice = pickEnglishVoice(voices, 'female');
     this.voiceMap = {
       male: maleVoice,
-      female: femaleVoice
+      female: femaleVoice,
     };
   }
 
@@ -288,7 +270,9 @@ class RadioAudioEngine {
       utterance.voice = matchedVoice;
     }
 
-    utterance.pitch = (speaker?.voicePitch || 1.0);
+    const neural = /natural|neural|online/i.test(matchedVoice?.name || '');
+    const rawPitch = speaker?.voicePitch || 1.0;
+    utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
     utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
 
     utterance.onend = () => {

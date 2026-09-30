@@ -13,6 +13,7 @@ import { synthesizeShow } from '../src/lib/localShow';
 import { buildZip, episodePackFiles, crc32 } from '../src/lib/packZip';
 import { mintEpisodeTitle, topicCore } from '../src/lib/mintTitles';
 import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMill';
+import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 
 const topic = 'why every agent demo dies in production';
 
@@ -52,6 +53,20 @@ assert.equal(parsed[0].band, 'world');
 assert.match(parsed[0].prompt, /RESOURCE/);
 const picked = pickTopic(LYGO_TOPICS, 'station-hn-live', new Set(), () => 0);
 assert.ok(picked.title.length > 0, 'pickTopic returns a desk');
+assert.ok(
+  scoreEnglishVoice('Microsoft Andrew Online (Natural) - English (United States)', 'en-US', 'male', false) >
+    scoreEnglishVoice('Microsoft David - English (United States)', 'en-US', 'male', true),
+  'natural Andrew beats robotic David',
+);
+const malePick = pickEnglishVoice(
+  [
+    { name: 'Microsoft David - English (United States)', lang: 'en-US', localService: true },
+    { name: 'Microsoft Zira - English (United States)', lang: 'en-US', localService: true },
+    { name: 'Microsoft Guy Online (Natural) - English (United States)', lang: 'en-US', localService: false },
+  ],
+  'male',
+);
+assert.equal(malePick?.name.includes('Guy'), true, 'default male is a natural Guy voice when present');
 assert.ok(!show.segments.some((s) => /undefined|\[object/.test(s.text)), 'no unresolved placeholders');
 
 const files = episodePackFiles(show);

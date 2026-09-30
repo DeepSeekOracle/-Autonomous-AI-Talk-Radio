@@ -7,8 +7,8 @@ export const SPEAKERS: Record<string, Speaker> = {
     role: 'host-1',
     title: 'Senior Systems Architect & Cynic',
     avatar: 'DC',
-    voicePitch: 0.9,
-    voiceRate: 1.05,
+    voicePitch: 1.0,
+    voiceRate: 1.02,
     voiceGender: 'male',
     personality: 'Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets.'
   },
@@ -29,8 +29,8 @@ export const SPEAKERS: Record<string, Speaker> = {
     role: 'host-1',
     title: 'Offensive Security Researcher',
     avatar: 'ZZ',
-    voicePitch: 0.85,
-    voiceRate: 1.1,
+    voicePitch: 0.97,
+    voiceRate: 1.04,
     voiceGender: 'male',
     personality: 'Underground cybervet, drinks Club-Mate, speaks in fast terminal metaphors, ungated enthusiast.'
   },
@@ -51,8 +51,8 @@ export const SPEAKERS: Record<string, Speaker> = {
     role: 'host-1',
     title: 'Tech Journalist & Ex-Founder',
     avatar: 'CR',
-    voicePitch: 1.0,
-    voiceRate: 1.05,
+    voicePitch: 1.02,
+    voiceRate: 1.03,
     voiceGender: 'male',
     personality: 'Fast-talking morning broadcast host, tracks GitHub trending like Wall Street stock tickers.'
   },
