@@ -33,6 +33,8 @@ build, so a rename would want to be something like `autonomous-ai-talk-radio`.
 | 9 | The pack the desk advertises did not exist here | `ShowNotesModal` offered JSON only | `src/lib/packZip.ts` (store-only ZIP, no dependency) + **Download Pack (.zip)** button; the archive was validated with Python's `zipfile.testzip()` |
 | 10 | Speakers were 180 ms apart | `audioEngine` — read as talking over each other | 650 ms, the same beat the desk sessions run at (the pacing lesson that took the desk from 205 → ~150 wpm) |
 | 11 | No way to check the offline path | — | `scripts/selfcheck.ts` → `npm run selfcheck`, exit non-zero on failure |
+| 12 | Bundling the server broke production hosting | with `dist-server/server.js`, `__dirname` pointed inside the bundle, so `NODE_ENV=production` answered **404 for `/` and every asset** while the API kept working | built assets now resolve from `process.cwd()` (`DIST_DIR`), with a startup warning when `dist/` is missing |
+| 13 | No deployment path | the app only ran through `tsx` in dev | `Dockerfile` (build client + server bundle, run `node dist-server/server.js` on `PORT=7860`), `.dockerignore`, `npm run build:server` / `start:compiled` / `verify`, and a Space README with the frontmatter and the secret that enables the Gemini path |
 
 ## Design notes
 
@@ -62,6 +64,20 @@ build, so a rename would want to be something like `autonomous-ai-talk-radio`.
 - Browsers without Web Speech (most headless setups) get the transcript and the studio visuals without
   voice.
 - Not deployed yet: the public static Space currently serves the sibling desk build.
+
+## Deployment
+
+| Surface | What runs | How |
+| --- | --- | --- |
+| Static host | the built client only; engine 3 writes episodes | `npm run build`, serve `dist/` |
+| Node host | client + API in one process | `npm run build && npm run build:server`, then `NODE_ENV=production npm run start:compiled` |
+| Container / HF Docker Space | same, on `PORT=7860` | `docker build -t ai-talk-radio . && docker run -p 7860:7860 ai-talk-radio` |
+
+`GEMINI_API_KEY` is a runtime secret (Space secret / `-e` / `.env`), never baked into the image. The
+public deployment this repo mirrors is the AI Studio build at `https://talkradio.ai.studio/`, which runs
+the same Express server with a key present (`/api/radio/status` there answers `hasKey: true`). This
+cleanup pass makes the repo self-hosting: the same behaviour with a key, and a working studio without
+one.
 
 ## Sensible next steps
 

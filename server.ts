@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI, Type } from '@google/genai';
@@ -8,6 +9,11 @@ dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Built assets are resolved from the working directory, not from this file: when the server is
+// bundled into dist-server/server.js, __dirname would point inside the bundle and the app would
+// 404 in production. Locally that is the repo root; in the container it is /app.
+const DIST_DIR = path.resolve(process.cwd(), 'dist');
 
 const app = express();
 app.use(express.json({ limit: '64kb' }));
@@ -344,9 +350,12 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    app.use(express.static(path.resolve(__dirname, 'dist')));
+    if (!existsSync(path.join(DIST_DIR, 'index.html'))) {
+      console.error(`[AI Talk Radio] no build found in ${DIST_DIR} — run \`npm run build\` first (serving the API only).`);
+    }
+    app.use(express.static(DIST_DIR));
     app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+      res.sendFile(path.join(DIST_DIR, 'index.html'));
     });
   }
 

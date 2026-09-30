@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-server
+.git
+.gitignore
+*.log
+.env
+.env.*
+!.env.example
+pack_selftest*

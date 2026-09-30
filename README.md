@@ -7,6 +7,7 @@ then voices it live through the Web Speech API and hands you the episode pack as
 No login. No daily cap. If the server path is unavailable (a static host, an exhausted Gemini quota,
 no key at all) the studio writes the episode itself and stays on air.
 
+- **Live studio (this build, static Space):** https://deepseekoracle-autonomous-ai-talk-radio.static.hf.space
 - **Live desk (sibling build, renders MP3 packs):** https://deepseekoracle-ai-talk-radio.static.hf.space
 - **Signal hub / Studio Desk section:** https://chatagent.ca/signal/#studio-desk
 - **This repository:** https://github.com/DeepSeekOracle/-Autonomous-AI-Talk-Radio
@@ -90,15 +91,24 @@ sibling desk build renders — VoiceStudio / Edge / Gemini engines, served from
 
 ## Deploying
 
-**Static host** (this is how the public deployment runs): `npm run build`, then serve `dist/`. There
-is no `/api` in that mode, so engine 3 takes over and the studio still produces episodes and packs.
+**Static host** (the app runs with no API at all): `npm run build`, then serve `dist/`. Engine 3 takes
+over, and the studio still produces episodes and packs.
 
-**Node host:** run with `NODE_ENV=production` and `dist/` present — the server serves the built app
-and the API from one process:
+**Node host:** `npm run build && npm run build:server`, then `NODE_ENV=production npm run start:compiled`.
+The bundled server serves the app and the API from one process on `PORT` (default 3000), with a SPA
+fallback for deep links and JSON 404s for unknown `/api/*` routes.
+
+**Container / Hugging Face Docker Space:**
 
 ```bash
-npm run build && NODE_ENV=production npm start
+docker build -t ai-talk-radio .
+docker run -p 7860:7860 -e GEMINI_API_KEY=... ai-talk-radio
 ```
+
+The image builds the client and the server bundle, then runs `node dist-server/server.js` with
+`NODE_ENV=production` on `PORT=7860` (the port Docker Spaces expect). `GEMINI_API_KEY` belongs in the
+Space's **secrets**, never in the image or the repo — without it the studio writes episodes with the
+local synthesizer and stays fully functional.
 
 ## Studio standards
 
