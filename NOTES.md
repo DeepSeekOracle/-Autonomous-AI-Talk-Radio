@@ -75,6 +75,13 @@ minute roundtable with its own UI without leaving the page.
 - The desk voices roundtables with the same browser speech service the studio uses, so the LYGO Radio
   dock's yield check covers both apps.
 
+Verified on the live origin, by driving it rather than looking at it: the frame mounts on approach
+(997x760), Reload remounts it, the desk paints its own composer, and a trusted click + typed topic
+started a real generation run inside the frame (process log, `EST: ~5 MINS`, voice model loading).
+That run was aborted with Reload so no stray show is left in the desk. A programmatic `click()` cannot
+prove any of this — `requestFullscreen()` and `play()` both refuse without a genuine user gesture, so
+"the button exists" is not evidence that it works.
+
 ## Design notes
 
 - **The fallback contract.** Each layer assumes the one below it will fail: Gemini → server
