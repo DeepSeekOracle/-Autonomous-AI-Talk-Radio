@@ -1,5 +1,6 @@
 import { ScriptSegment, Speaker } from '../types';
 import { pickEnglishVoice } from './voices';
+import { chunkSpeech, looksLikeInstruction, normalizeSpoken, speakable } from './speakable';
 
 class RadioAudioEngine {
   private audioCtx: AudioContext | null = null;
@@ -30,6 +31,9 @@ class RadioAudioEngine {
   private timerInterval: number | null = null;
   private segmentStartTime: number = 0;
   private accumulatedElapsedMs: number = 0;
+  private keepAliveTimer: number | null = null;
+  private speakGen = 0;
+  private lastSpokenNorm = "";
 
   constructor() {
     this.initVoices();
@@ -123,6 +127,7 @@ class RadioAudioEngine {
     this.stop();
     this.segments = segments;
     this.speakers = speakers;
+    this.lastSpokenNorm = "";
     this.currentSegmentIndex = Math.max(0, Math.min(startIndex, segments.length - 1));
     this.calculateElapsedFromSegment(this.currentSegmentIndex);
   }
@@ -138,6 +143,8 @@ class RadioAudioEngine {
 
   public pause() {
     this.isPlaying = false;
+    this.speakGen += 1;
+    this.stopKeepAlive();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -147,12 +154,15 @@ class RadioAudioEngine {
 
   public stop() {
     this.isPlaying = false;
+    this.speakGen += 1;
+    this.stopKeepAlive();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
     this.stopProgressTicker();
     this.currentSegmentIndex = 0;
     this.accumulatedElapsedMs = 0;
+    this.lastSpokenNorm = "";
     this.onPlaybackStateChange?.(false);
     this.onSegmentChange?.(0);
     this.updateProgress();
@@ -216,40 +226,74 @@ class RadioAudioEngine {
     }
   }
 
+  private finishShow() {
+    this.stopKeepAlive();
+    this.stopProgressTicker();
+    this.isPlaying = false;
+    this.speakGen += 1;
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    this.onPlaybackStateChange?.(false);
+    if (this.onShowComplete) {
+      this.onShowComplete();
+    } else {
+      this.currentSegmentIndex = 0;
+      this.accumulatedElapsedMs = 0;
+      this.onSegmentChange?.(0);
+      this.updateProgress();
+    }
+  }
+
+  private startKeepAlive() {
+    this.stopKeepAlive();
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+    this.keepAliveTimer = window.setInterval(() => {
+      if (!this.isPlaying) return;
+      try {
+        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+          window.speechSynthesis.pause();
+          window.speechSynthesis.resume();
+        }
+      } catch {
+        // Chrome can throw if the utterance already ended.
+      }
+    }, 8500);
+  }
+
+  private stopKeepAlive() {
+    if (this.keepAliveTimer !== null) {
+      clearInterval(this.keepAliveTimer);
+      this.keepAliveTimer = null;
+    }
+  }
+
   private playSegment(index: number) {
     if (index >= this.segments.length) {
-      this.stopProgressTicker();
-      this.isPlaying = false;
-      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-      this.onPlaybackStateChange?.(false);
-      if (this.onShowComplete) {
-        this.onShowComplete();
-      } else {
-        this.currentSegmentIndex = 0;
-        this.accumulatedElapsedMs = 0;
-        this.onSegmentChange?.(0);
-        this.updateProgress();
-      }
+      this.finishShow();
       return;
     }
 
     const seg = this.segments[index];
+    const spoken = speakable(seg.text);
+    const norm = normalizeSpoken(spoken);
+    if (!spoken || looksLikeInstruction(seg.text) || (norm && norm === this.lastSpokenNorm)) {
+      this.playSegment(index + 1);
+      return;
+    }
+    this.lastSpokenNorm = norm;
+
     this.currentSegmentIndex = index;
     this.onSegmentChange?.(index);
     this.segmentStartTime = Date.now();
 
-    // Check if segment has a sound effect (e.g. bleep, cough, static)
     if (seg.soundEffect === 'censor-bleep') {
       this.playCensorBleep();
     } else if (seg.soundEffect === 'cough' || seg.soundEffect === 'chuckle') {
-      // micro stinger
       this.playSubtleStatic(150);
     }
 
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-      // Fallback timer simulation if Web Speech is not available
       const duration = (seg.durationMs || 5000) / this.speedMultiplier;
       setTimeout(() => {
         if (this.isPlaying && this.currentSegmentIndex === index) {
@@ -259,45 +303,59 @@ class RadioAudioEngine {
       return;
     }
 
-    window.speechSynthesis.cancel();
-    const speaker = this.speakers[seg.speakerId];
-    const utterance = new SpeechSynthesisUtterance(seg.text);
-
-    // Set voice properties
-    const gender = speaker ? speaker.voiceGender : (index % 2 === 0 ? 'male' : 'female');
-    const matchedVoice = gender === 'female' ? this.voiceMap.female : this.voiceMap.male;
-    if (matchedVoice) {
-      utterance.voice = matchedVoice;
+    const chunks = chunkSpeech(spoken);
+    if (!chunks.length) {
+      this.playSegment(index + 1);
+      return;
     }
 
-    const neural = /natural|neural|online/i.test(matchedVoice?.name || '');
-    const rawPitch = speaker?.voicePitch || 1.0;
-    utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
-    utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
+    this.startKeepAlive();
+    this.speakChunks(chunks, index, 0);
+  }
 
-    utterance.onend = () => {
-      if (this.isPlaying && this.currentSegmentIndex === index) {
-        // Pause between speakers: enough room to hand off cleanly. 180 ms read as talking over
-        // each other, so the desk holds ~650 ms, the same beat the published sessions run at.
-        setTimeout(() => {
-          if (this.isPlaying) {
-            this.playSegment(index + 1);
-          }
-        }, 650 / this.speedMultiplier);
-      }
-    };
+  private speakChunks(chunks: string[], segIndex: number, chunkIndex: number) {
+    if (!this.isPlaying) return;
+    if (chunkIndex >= chunks.length) {
+      this.stopKeepAlive();
+      window.setTimeout(() => {
+        if (this.isPlaying) this.playSegment(segIndex + 1);
+      }, 650 / this.speedMultiplier);
+      return;
+    }
 
-    utterance.onerror = (e) => {
-      console.warn('SpeechSynthesis error:', e);
-      if (this.isPlaying && this.currentSegmentIndex === index) {
-        setTimeout(() => {
-          if (this.isPlaying) this.playSegment(index + 1);
-        }, 1000);
-      }
-    };
+    const gen = ++this.speakGen;
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
 
-    this.currentUtterance = utterance;
-    window.speechSynthesis.speak(utterance);
+    window.setTimeout(() => {
+      if (!this.isPlaying || gen !== this.speakGen) return;
+      const seg = this.segments[segIndex];
+      const speaker = this.speakers[seg?.speakerId];
+      const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+      const gender = speaker ? speaker.voiceGender : (segIndex % 2 === 0 ? 'male' : 'female');
+      const matchedVoice = gender === 'female' ? this.voiceMap.female : this.voiceMap.male;
+      if (matchedVoice) utterance.voice = matchedVoice;
+      const neural = /natural|neural|online/i.test(matchedVoice?.name || '');
+      const rawPitch = speaker?.voicePitch || 1.0;
+      utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
+      utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
+
+      utterance.onend = () => {
+        if (!this.isPlaying || gen !== this.speakGen) return;
+        this.speakChunks(chunks, segIndex, chunkIndex + 1);
+      };
+      utterance.onerror = (e) => {
+        console.warn('SpeechSynthesis error:', e);
+        if (!this.isPlaying || gen !== this.speakGen) return;
+        window.setTimeout(() => {
+          if (this.isPlaying && gen === this.speakGen) this.speakChunks(chunks, segIndex, chunkIndex + 1);
+        }, 400);
+      };
+
+      this.currentUtterance = utterance;
+      window.speechSynthesis.speak(utterance);
+    }, 90);
   }
 
   private calculateElapsedFromSegment(index: number) {

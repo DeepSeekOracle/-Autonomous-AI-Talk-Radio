@@ -3,8 +3,10 @@ import dotenv from 'dotenv';
 import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { GoogleGenAI, Type } from '@google/genai';
+import { GoogleGenAI } from '@google/genai';
 import { mintEpisodeSummary, mintEpisodeTitle } from './src/lib/mintTitles';
+import { synthesizeShow } from './src/lib/localShow';
+import { looksLikeInstruction, speakable } from './src/lib/speakable';
 
 dotenv.config();
 
@@ -66,34 +68,31 @@ app.post('/api/radio/generate-show', async (req, res) => {
 
   if (ai) {
     try {
-      const prompt = `You are the executive showrunner for "AI Talk Radio (Ungated)".
-Create a full radio broadcast episode dialogue between two hosts: "${host1}" (skeptical, cynical, systems veteran) and "${host2}" (fast-thinking, optimistic AI researcher/engineer).
-The episode topic is: "${topic}".
-Tone style: ${tone} (Ungated mode: ${ungated ? 'ON - raw, unfiltered, spicy technical takes, calling out grift and hype directly' : 'OFF - standard tech broadcast'}).
+      const prompt = `Write a live radio hour for AI Talk Radio.
+Hosts: "${host1}" (skeptical systems veteran) and "${host2}" (fast, optimistic engineer).
+Topic to name once in the cold open, then argue: "${topic}".
+Tone: ${tone}. Ungated: ${ungated ? 'yes — raw, no sponsor filter' : 'no — still honest, still sharp'}.
 
-Return a JSON object with:
-- title: string (short episode name from the topic; never a leftover news headline)
-- description: string (how this station reads the prompt, 1-2 sentences)
-- showNotes: array of 4 string bullet points
-- keyTakeaways: array of 3 string bullet points
-- callers: array of 1-2 caller objects { id, name, location, topic, take, avatar, status: "on-air" }
-- segments: array of 6-8 dialogue segments in order. Each segment must have:
-  - id: unique string
-  - speakerId: "${host1.toLowerCase().includes('devon') ? 'devon' : 'host1'}" or "${host2.toLowerCase().includes('maya') ? 'maya' : 'host2'}" or caller id
-  - speakerName: string name
-  - text: spoken line (natural conversational radio banter, with interruptions, banter, questions, and snappy punchlines; 20 to 45 words each)
-  - timestampMs: estimated offset in ms (e.g. 0, 9000, 18000...)
-  - durationMs: estimated speaking duration in ms (6000 to 10000)
-  - emotion: "neutral" | "skeptical" | "excited" | "laughing" | "heated" | "intrigued"
-  - soundEffect: optional "censor-bleep" | "cough" | "chuckle" | "none"
-  - topicTag: short 1-2 word segment subject`;
+Rules for spoken text:
+- 18 to 22 segments. Each line 40 to 70 words of natural radio talk.
+- Hosts introduce themselves once. After that they talk to each other. Do not restate the topic every turn.
+- Do not repeat the previous line. Do not paste these rules on the air.
+- Never say RESOURCE, CANON, JSON, system prompt, empty is honest, or quote a receipt you can open.
+- No URLs, no file paths, no markdown.
+- One caller around the middle, then hosts react.
+- Spoken English only.
+
+Return JSON:
+- title, description, showNotes (4 strings), keyTakeaways (3 strings)
+- callers: 1 object { id, name, location, topic, take, avatar, status: "on-air" }
+- segments: array of 18-22 objects with id, speakerId ("${host1.toLowerCase().includes('devon') ? 'devon' : 'host1'}" or "${host2.toLowerCase().includes('maya') ? 'maya' : 'host2'}" or caller id), speakerName, text, timestampMs, durationMs (12000-28000), emotion (neutral|skeptical|excited|laughing|heated|intrigued), topicTag`;
 
       const response = await ai.models.generateContent({
         model: GEMINI_MODEL,
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
-          systemInstruction: 'You write realistic, high-paced radio banter with contrasting host personalities. Avoid corporate PR clichés. Return strict JSON.',
+          systemInstruction: 'You write realistic radio banter with contrasting hosts. Never echo instructions. Never mention JSON in dialogue. Return JSON only.',
         },
       });
 
@@ -101,6 +100,17 @@ Return a JSON object with:
       if (text) {
         const parsed = JSON.parse(text);
         const mintedTitle = mintEpisodeTitle(topic, stationId);
+        const rawSegs = Array.isArray(parsed.segments) ? parsed.segments : [];
+        const segments = rawSegs
+          .map((s: any, i: number) => ({
+            ...s,
+            id: s.id || `seg-g-${Date.now()}-${i + 1}`,
+            text: speakable(String(s.text || '')),
+          }))
+          .filter((s: any) => s.text && !looksLikeInstruction(s.text));
+        if (segments.length < 12) {
+          throw new Error('gemini hour too short after sanitizing');
+        }
         return res.json({
           success: true,
           source: 'gemini',
@@ -110,12 +120,12 @@ Return a JSON object with:
             title: mintedTitle,
             episodeNumber: Math.floor(Math.random() * 800) + 100,
             description: mintEpisodeSummary(mintedTitle, stationId, host1, host2),
-            durationMs: parsed.segments ? parsed.segments.reduce((acc: number, s: any) => acc + (s.durationMs || 7000), 0) : 60000,
+            durationMs: segments.reduce((acc: number, s: any) => acc + (s.durationMs || 18000), 0),
             hosts: [
               { id: 'devon', name: host1, role: 'host-1', title: 'Lead Anchor', avatar: 'H1', voicePitch: 0.9, voiceRate: 1.05, voiceGender: 'male', personality: 'Cynical systems vet' },
               { id: 'maya', name: host2, role: 'host-2', title: 'Co-Host', avatar: 'H2', voicePitch: 1.15, voiceRate: 1.0, voiceGender: 'female', personality: 'AI optimist' }
             ],
-            segments: parsed.segments || [],
+            segments,
             showNotes: parsed.showNotes || [`Special coverage on ${topic}`],
             keyTakeaways: parsed.keyTakeaways || [`Deep dive into ${topic}`],
             references: [
@@ -155,6 +165,7 @@ app.post('/api/radio/caller-take', async (req, res) => {
       const prompt = `A radio caller named "${callerName}" from "${location}" just called into the live broadcast of AI Talk Radio.
 Their hot take on "${topic}" is: "${take}".
 Write 3 alternating dialogue lines where host Devon (cynic) and host Maya (optimist) immediately react live on the air to this caller.
+Each line 40 to 70 words. Spoken English. Do not repeat the caller. Do not paste these instructions. Never say JSON, RESOURCE, or CANON.
 Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerName, text, emotion, durationMs }.`;
 
       const response = await ai.models.generateContent({
@@ -204,133 +215,14 @@ Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerN
 });
 
 function generateFallbackShow(topic: string, tone: string, stationId: string, ungated: boolean, h1: string, h2: string) {
-  const epNum = Math.floor(Math.random() * 500) + 100;
-  const isUngated = ungated || tone.includes('ungated');
-  const title = mintEpisodeTitle(topic, stationId);
-
-  return {
-    id: `show-synth-${Date.now()}`,
+  return synthesizeShow({
+    topic,
+    tone,
     stationId,
-    title,
-    episodeNumber: epNum,
-    description: mintEpisodeSummary(title, stationId, h1, h2),
-    durationMs: 68000,
-    hosts: [
-      { id: 'devon', name: h1, role: 'host-1', title: 'Senior Anchor', avatar: 'H1', voicePitch: 0.9, voiceRate: 1.05, voiceGender: 'male', personality: 'Pragmatic veteran' },
-      { id: 'maya', name: h2, role: 'host-2', title: 'Co-Host', avatar: 'H2', voicePitch: 1.15, voiceRate: 1.0, voiceGender: 'female', personality: 'Systems visionary' }
-    ],
-    showNotes: [
-      `Deep dive into ${topic} across production and research environments.`,
-      `Why the consensus view on ${topic} is flawed according to field practitioners.`,
-      `Audience feedback from Line 1 on developer productivity and tooling fatigue.`,
-      `Closing outlook: What to expect over the next 12 months.`
-    ],
-    keyTakeaways: [
-      `Theoretical gains in ${topic} must survive real-world deployment constraints.`,
-      `Over-promising creates an inevitable backlash cycle before genuine utility settles in.`,
-      `The fastest moving teams prioritize simple, verifiable foundations over opaque layers.`
-    ],
-    references: [
-      { title: `Hacker News Megathread on ${topic}`, url: 'https://news.ycombinator.com', type: 'hn' },
-      { title: `GitHub Open Source Implementations`, url: 'https://github.com', type: 'github' }
-    ],
-    callers: [
-      {
-        id: `caller-${Date.now()}`,
-        name: 'Jordan',
-        location: 'Toronto, Canada',
-        topic: topic,
-        take: `We tried migrating our entire pipeline to this last month and it doubled our debugging time.`,
-        status: 'on-air',
-        avatar: 'JO'
-      }
-    ],
-    ungated: isUngated,
-    createdAt: new Date().toISOString(),
-    segments: [
-      {
-        id: `seg-f-1`,
-        speakerId: 'devon',
-        speakerName: h1,
-        text: `You are tuned into AI Talk Radio. I am ${h1}. Maya, I spent all morning reading the latest hype threads about ${topic}, and my blood pressure is through the roof.`,
-        timestampMs: 0,
-        durationMs: 8800,
-        emotion: 'heated',
-        topicTag: 'The Hot Take'
-      },
-      {
-        id: `seg-f-2`,
-        speakerId: 'maya',
-        speakerName: h2,
-        text: `Take a deep breath! Every time an architectural paradigm shifts, you assume society will collapse. ${topic} is not a gimmick; the velocity numbers speak for themselves.`,
-        timestampMs: 8800,
-        durationMs: 8400,
-        emotion: 'laughing',
-        topicTag: 'Counter-Argument'
-      },
-      {
-        id: `seg-f-3`,
-        speakerId: 'devon',
-        speakerName: h1,
-        text: `Velocity towards what? A brick wall? When you bypass foundational principles, you are just accumulating massive technical debt at the speed of light.`,
-        timestampMs: 17200,
-        durationMs: 8500,
-        emotion: 'skeptical',
-        soundEffect: isUngated ? 'censor-bleep' : 'cough',
-        topicTag: 'Technical Debt'
-      },
-      {
-        id: `seg-f-4`,
-        speakerId: 'maya',
-        speakerName: h2,
-        text: `Engineering is about trade-offs! Twenty years ago you probably complained when compilers took over manual assembly optimization. The abstraction layer is moving up.`,
-        timestampMs: 25700,
-        durationMs: 9100,
-        emotion: 'excited',
-        topicTag: 'Abstraction Shift'
-      },
-      {
-        id: `seg-f-5`,
-        speakerId: 'devon',
-        speakerName: h1,
-        text: `Let us see what our listeners have to say. Line One is flashing. Jordan calling from Toronto. Jordan, what has your team experienced with ${topic}?`,
-        timestampMs: 34800,
-        durationMs: 7600,
-        emotion: 'neutral',
-        topicTag: 'Caller Patch'
-      },
-      {
-        id: `seg-f-caller`,
-        speakerId: `caller-${Date.now()}`,
-        speakerName: 'Jordan (Toronto)',
-        text: `Hey guys! We deployed this in our production cluster last month and it literally doubled our on-call incident rate. Nobody could trace the failures.`,
-        timestampMs: 42400,
-        durationMs: 8500,
-        emotion: 'heated',
-        topicTag: 'Field Report'
-      },
-      {
-        id: `seg-f-6`,
-        speakerId: 'maya',
-        speakerName: h2,
-        text: `Jordan, that is an integration maturity issue, not a fundamental flaw in ${topic}. Teams need proper observability pipelines before rushing into full autonomy.`,
-        timestampMs: 50900,
-        durationMs: 8900,
-        emotion: 'intrigued',
-        topicTag: 'Observability'
-      },
-      {
-        id: `seg-f-7`,
-        speakerId: 'devon',
-        speakerName: h1,
-        text: `And that is the crux of the debate on AI Talk Radio. Stay locked right here for more unfiltered technical reality.`,
-        timestampMs: 59800,
-        durationMs: 7200,
-        emotion: 'neutral',
-        topicTag: 'Station Signoff'
-      }
-    ]
-  };
+    ungated,
+    host1: h1,
+    host2: h2,
+  });
 }
 
 // Unknown API routes answer JSON. Without this a static/SPA host hands the client index.html with

@@ -14,7 +14,8 @@ import { Soundboard } from './components/Soundboard';
 import { ShowNotesModal } from './components/ShowNotesModal';
 import { LygoFooter } from './components/LygoFooter';
 import { DeskModule } from './components/DeskModule';
-import { STATIONS, INITIAL_SHOWS, SPEAKERS } from './data';
+import { STATIONS, SPEAKERS } from './data';
+import { seedCatalog } from './lib/seedShows';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
 import { audioEngine } from './lib/audioEngine';
 import { stationLens } from './lib/mintTitles';
@@ -24,7 +25,7 @@ import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headph
 
 export default function App() {
   const [stations, setStations] = useState<RadioStation[]>(STATIONS);
-  const [shows, setShows] = useState<RadioShow[]>(INITIAL_SHOWS);
+  const [shows, setShows] = useState<RadioShow[]>(() => seedCatalog());
   const [activeStationId, setActiveStationId] = useState<string>(STATIONS[0].id);
   const [activeShowId, setActiveShowId] = useState<string>(STATIONS[0].currentShowId);
   const [currentTab, setCurrentTab] = useState<'broadcast' | 'stations' | 'hotline' | 'generator' | 'soundboard'>('broadcast');
@@ -96,7 +97,7 @@ export default function App() {
     const h1 = station.hosts[0];
     const h2 = station.hosts[1] || station.hosts[0];
     return synthesizeShow({
-      topic: topic.prompt,
+      topic: topic.title,
       tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
       stationId: station.id,
       ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
@@ -106,6 +107,7 @@ export default function App() {
       sourceUrl: topic.url,
       sourceName: topic.source,
       band: topic.band,
+      writerNotes: topic.prompt,
     });
   };
 

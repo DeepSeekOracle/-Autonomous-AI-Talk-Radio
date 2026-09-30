@@ -14,6 +14,8 @@ import { buildZip, episodePackFiles, crc32 } from '../src/lib/packZip';
 import { mintEpisodeTitle, topicCore } from '../src/lib/mintTitles';
 import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMill';
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
+import { chunkSpeech, speakable } from '../src/lib/speakable';
+import { seedCatalog } from '../src/lib/seedShows';
 
 const topic = 'why every agent demo dies in production';
 
@@ -26,7 +28,7 @@ const show = synthesizeShow({
   host2: 'Dr. Maya Lin',
 });
 
-assert.equal(show.segments.length, 8, 'a synthesized show is eight segments');
+assert.ok(show.segments.length >= 16 && show.segments.length <= 28, 'a synthesized hour is a full desk, not eight lines');
 assert.equal(show.hosts.length, 2, 'two hosts');
 assert.equal(show.callers.length, 1, 'one caller patched into the broadcast');
 assert.ok(show.showNotes.length >= 4, 'show notes are written');
@@ -34,7 +36,22 @@ assert.ok(show.keyTakeaways.length >= 3, 'takeaways are written');
 assert.ok(show.segments.every((s) => s.text.trim().length > 0), 'no empty dialogue lines');
 assert.ok(show.segments.every((s) => s.durationMs > 0 && s.timestampMs >= 0), 'every line is timed');
 assert.ok(show.segments[0].text.includes(topic), 'the topic reaches the cold open');
-assert.ok(show.durationMs > 60000, 'a full episode runs over a minute');
+assert.ok(show.durationMs > 7 * 60 * 1000, 'a full episode runs over seven minutes');
+assert.ok(
+  !show.segments.some((s) => /RESOURCE|CANON|Empty is honest|executive showrunner|https?:\/\//.test(s.text)),
+  'protocol notes and URLs stay off the air',
+);
+assert.ok(!show.segments.some((s) => /Δ9Φ963/.test(s.text)), 'the mark is spoken in English');
+assert.match(speakable('See https://chatagent.ca/signal Δ9Φ963 RESOURCE CANON'), /LYGO mark/);
+assert.ok(
+  chunkSpeech('One two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twentyone twentytwo twentythree.', 22).every(
+    (c) => c.split(/\s+/).length <= 22,
+  ),
+  'speech chunks stay under the Chrome cutoff',
+);
+const catalog = seedCatalog();
+assert.equal(catalog.length, 4, 'four station slates');
+assert.ok(catalog.every((s) => s.durationMs > 7 * 60 * 1000), 'catalog hours are full length');
 assert.ok(!/Firestorm Over|Great Software Rewrite|Spec Prompters/i.test(show.title), 'no leftover demo headline');
 assert.ok(show.title.length <= 64, 'episode title stays on a radio slate');
 assert.ok(!show.title.includes(topic), 'title is minted from the topic, not the whole prompt');
