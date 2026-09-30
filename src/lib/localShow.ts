@@ -9,6 +9,7 @@
  */
 import { RadioShow, ScriptSegment, Caller } from '../types';
 import { SPEAKERS } from '../data';
+import { mintEpisodeSummary, mintEpisodeTitle } from './mintTitles';
 
 export interface SynthesizeOptions {
   topic: string;
@@ -87,12 +88,14 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
     return segment;
   });
 
+  const title = mintEpisodeTitle(topic, opts.stationId);
+
   return {
     id: `show-local-${Date.now()}`,
     stationId: opts.stationId,
-    title: `${ungated ? '[UNGATED] ' : ''}The Firestorm Over ${topic}`,
+    title,
     episodeNumber: Math.floor(Math.random() * 800) + 100,
-    description: `${h1} and ${h2} take ${topic} apart on air: what shipped, what broke, and what the keynote left out.`,
+    description: mintEpisodeSummary(title, opts.stationId, h1, h2),
     durationMs: segments.reduce((acc, s) => acc + s.durationMs, 0),
     hosts: [
       { id: id1, name: h1, role: 'host-1', title: 'Lead Anchor', avatar: 'H1', voicePitch: 0.9, voiceRate: 1.0, voiceGender: 'male', personality: 'Cynical systems vet' },

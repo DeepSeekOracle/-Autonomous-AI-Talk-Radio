@@ -11,6 +11,7 @@
 import assert from 'node:assert/strict';
 import { synthesizeShow } from '../src/lib/localShow';
 import { buildZip, episodePackFiles, crc32 } from '../src/lib/packZip';
+import { mintEpisodeTitle, topicCore } from '../src/lib/mintTitles';
 
 const topic = 'why every agent demo dies in production';
 
@@ -32,6 +33,14 @@ assert.ok(show.segments.every((s) => s.text.trim().length > 0), 'no empty dialog
 assert.ok(show.segments.every((s) => s.durationMs > 0 && s.timestampMs >= 0), 'every line is timed');
 assert.ok(show.segments[0].text.includes(topic), 'the topic reaches the cold open');
 assert.ok(show.durationMs > 60000, 'a full episode runs over a minute');
+assert.ok(!/Firestorm Over|Great Software Rewrite|Spec Prompters/i.test(show.title), 'no leftover demo headline');
+assert.ok(show.title.length <= 64, 'episode title stays on a radio slate');
+assert.ok(!show.title.includes(topic), 'title is minted from the topic, not the whole prompt');
+assert.equal(
+  topicCore('The Great Software Rewrite: Are Devs Just Spec Prompters Now?'),
+  'Great Software Rewrite Devs Spec Prompters',
+);
+assert.ok(mintEpisodeTitle(topic, 'station-algorithmic-wire', () => 0).startsWith('Wire Desk:'), 'Algorithmic Wire titles use the station lens');
 assert.ok(!show.segments.some((s) => /undefined|\[object/.test(s.text)), 'no unresolved placeholders');
 
 const files = episodePackFiles(show);

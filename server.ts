@@ -4,6 +4,7 @@ import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI, Type } from '@google/genai';
+import { mintEpisodeSummary, mintEpisodeTitle } from './src/lib/mintTitles';
 
 dotenv.config();
 
@@ -71,8 +72,8 @@ The episode topic is: "${topic}".
 Tone style: ${tone} (Ungated mode: ${ungated ? 'ON - raw, unfiltered, spicy technical takes, calling out grift and hype directly' : 'OFF - standard tech broadcast'}).
 
 Return a JSON object with:
-- title: string (catchy radio show headline)
-- description: string (punchy 1-2 sentence teaser)
+- title: string (short episode name from the topic; never a leftover news headline)
+- description: string (how this station reads the prompt, 1-2 sentences)
 - showNotes: array of 4 string bullet points
 - keyTakeaways: array of 3 string bullet points
 - callers: array of 1-2 caller objects { id, name, location, topic, take, avatar, status: "on-air" }
@@ -99,15 +100,16 @@ Return a JSON object with:
       const text = response.text;
       if (text) {
         const parsed = JSON.parse(text);
+        const mintedTitle = mintEpisodeTitle(topic, stationId);
         return res.json({
           success: true,
           source: 'gemini',
           show: {
             id: `show-${Date.now()}`,
             stationId,
-            title: parsed.title || `Live Debate: ${topic}`,
+            title: mintedTitle,
             episodeNumber: Math.floor(Math.random() * 800) + 100,
-            description: parsed.description || `Special broadcast examining ${topic}.`,
+            description: mintEpisodeSummary(mintedTitle, stationId, host1, host2),
             durationMs: parsed.segments ? parsed.segments.reduce((acc: number, s: any) => acc + (s.durationMs || 7000), 0) : 60000,
             hosts: [
               { id: 'devon', name: host1, role: 'host-1', title: 'Lead Anchor', avatar: 'H1', voicePitch: 0.9, voiceRate: 1.05, voiceGender: 'male', personality: 'Cynical systems vet' },
@@ -204,13 +206,14 @@ Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerN
 function generateFallbackShow(topic: string, tone: string, stationId: string, ungated: boolean, h1: string, h2: string) {
   const epNum = Math.floor(Math.random() * 500) + 100;
   const isUngated = ungated || tone.includes('ungated');
+  const title = mintEpisodeTitle(topic, stationId);
 
   return {
     id: `show-synth-${Date.now()}`,
     stationId,
-    title: `${isUngated ? '[UNGATED] ' : ''}The Firestorm Over ${topic}`,
+    title,
     episodeNumber: epNum,
-    description: `${h1} and ${h2} dissect ${topic} in a heated debate over benchmarks, engineering realism, and the economics of modern tech.`,
+    description: mintEpisodeSummary(title, stationId, h1, h2),
     durationMs: 68000,
     hosts: [
       { id: 'devon', name: h1, role: 'host-1', title: 'Senior Anchor', avatar: 'H1', voicePitch: 0.9, voiceRate: 1.05, voiceGender: 'male', personality: 'Pragmatic veteran' },

@@ -75,7 +75,7 @@ export const STATIONS: RadioStation[] = [
     name: 'The Algorithmic Wire',
     frequency: '98.4 FM',
     genre: 'AI, Architecture & Dev Debate',
-    tagline: 'High-bandwidth banter from the machine room floor.',
+    tagline: 'Reads a prompt as architecture versus production fire.',
     hosts: [SPEAKERS.devon, SPEAKERS.maya],
     currentShowId: 'show-software-rewrite',
     accentColor: '#f59e0b', // amber-500
@@ -86,7 +86,7 @@ export const STATIONS: RadioStation[] = [
     name: 'Kernel Panic Radio',
     frequency: '104.2 FM',
     genre: 'Ungated Late-Night & Deep Hacking',
-    tagline: 'Unfiltered, raw, no corporate PR, zero FCC oversight.',
+    tagline: 'Reads a prompt ungated: late desk, no sponsor filter.',
     hosts: [SPEAKERS.zack, SPEAKERS.aris],
     currentShowId: 'show-ungated-systems',
     accentColor: '#ef4444', // red-500
@@ -97,7 +97,7 @@ export const STATIONS: RadioStation[] = [
     name: 'Hacker News Live',
     frequency: '88.9 FM',
     genre: 'Trending Repos & Front Page Firestorms',
-    tagline: 'Show HN teardowns, flame wars, and startup postmortems.',
+    tagline: 'Reads a prompt as a front-page teardown.',
     hosts: [SPEAKERS.casey, SPEAKERS.devon],
     currentShowId: 'show-hn-breakdown',
     accentColor: '#3b82f6', // blue-500
@@ -108,7 +108,7 @@ export const STATIONS: RadioStation[] = [
     name: 'Silicon Valley Confidential',
     frequency: '93.5 FM',
     genre: 'Venture Capital, GPUs & Compute Warfare',
-    tagline: 'Where gigawatts meet term sheets.',
+    tagline: 'Reads a prompt as capital, silicon, and who pays.',
     hosts: [SPEAKERS.victoria, SPEAKERS.devon],
     currentShowId: 'show-compute-wars',
     accentColor: '#10b981', // emerald-500
@@ -120,9 +120,9 @@ export const INITIAL_SHOWS: RadioShow[] = [
   {
     id: 'show-software-rewrite',
     stationId: 'station-algorithmic-wire',
-    title: 'The Great Software Rewrite: Are Devs Just Spec Prompters Now?',
+    title: 'The Algorithmic Wire — On Air',
     episodeNumber: 142,
-    description: 'Devon and Maya battle over whether human programmers are entering the "prompting-only" era or if production outages are about to skyrocket.',
+    description: 'This station reads a prompt as architecture versus production fire. Devon and Maya run the live autonomous desk until the clock is honest.',
     durationMs: 78000,
     hosts: [SPEAKERS.devon, SPEAKERS.maya],
     ungated: false,
@@ -262,9 +262,9 @@ export const INITIAL_SHOWS: RadioShow[] = [
   {
     id: 'show-ungated-systems',
     stationId: 'station-kernel-panic',
-    title: 'Ungated & Unfiltered: The Silicon Valley Grift, Memory Safety Wars & Local Silicon',
+    title: 'Kernel Panic Radio — On Air',
     episodeNumber: 89,
-    description: 'ZeroDay Zack and Dr. Aris Thorne go completely off the rails discussing unreleased model weights, synthetic benchmarks, and why big cloud providers are terrified of local NPUs.',
+    description: 'This station reads a prompt ungated: late desk, no sponsor filter. Zack and Aris keep the transmitter raw until the clock is honest.',
     durationMs: 72000,
     hosts: [SPEAKERS.zack, SPEAKERS.aris],
     ungated: true,
@@ -385,9 +385,9 @@ export const INITIAL_SHOWS: RadioShow[] = [
   {
     id: 'show-hn-breakdown',
     stationId: 'station-hn-live',
-    title: 'Show HN Breakdown: Rewriting Linux in Zig & The 100k Token Context Trap',
+    title: 'Hacker News Live — On Air',
     episodeNumber: 64,
-    description: 'Casey and Devon tear into the top 5 trending posts on Hacker News, analyzing technical feasibility versus pure developer vanity projects.',
+    description: 'This station reads a prompt as a front-page teardown. Casey and Devon take the board live until the clock is honest.',
     durationMs: 65000,
     hosts: [SPEAKERS.casey, SPEAKERS.devon],
     ungated: false,
@@ -483,9 +483,9 @@ export const INITIAL_SHOWS: RadioShow[] = [
   {
     id: 'show-compute-wars',
     stationId: 'station-sv-confidential',
-    title: 'The $500 Billion Compute Cluster & The Geopolitics of Silicon',
+    title: 'Silicon Valley Confidential — On Air',
     episodeNumber: 31,
-    description: 'Victoria Sterling breaks down sovereign AI funds, nuclear power agreements for data centers, and why GPU depreciation schedules are terrifying CFOs.',
+    description: 'This station reads a prompt as capital, silicon, and who pays. Victoria and Devon run the money desk until the clock is honest.',
     durationMs: 64000,
     hosts: [SPEAKERS.victoria, SPEAKERS.devon],
     ungated: false,
