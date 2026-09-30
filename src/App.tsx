@@ -410,14 +410,6 @@ export default function App() {
 
               {/* Station Tuner & Quick Actions takes 5 cols */}
               <div className="lg:col-span-5 space-y-5">
-                <StationTuner
-                  stations={stations}
-                  activeStationId={activeStationId}
-                  onSelectStation={handleSelectStation}
-                  frequency={frequency}
-                  onFrequencyChange={setFrequency}
-                />
-
                 {/* Quick hotline teaser widget */}
                 <div className="bg-[#111726] border border-slate-800 rounded-xl p-4 flex items-center justify-between shadow-lg">
                   <div>
@@ -439,6 +431,14 @@ export default function App() {
                     Dial In Line 1
                   </button>
                 </div>
+
+                <StationTuner
+                  stations={stations}
+                  activeStationId={activeStationId}
+                  onSelectStation={handleSelectStation}
+                  frequency={frequency}
+                  onFrequencyChange={setFrequency}
+                />
               </div>
             </div>
           </div>
