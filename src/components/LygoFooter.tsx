@@ -19,7 +19,7 @@ export const LygoFooter: React.FC = () => (
       {/* brand row */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <img src="/brand/lygo-signal-logo.svg" alt="LYGO Signal" width={208} height={58} className="h-11 w-auto" />
+          <img src="/brand/lygo-signal-logo.svg" alt="LYGO Signal" width={240} height={67} className="h-[67px] w-auto" />
           <div className="text-xs text-slate-400">
             <div className="font-semibold text-slate-200">{LYGO.show}</div>
             <div className="font-mono uppercase tracking-[0.16em] text-[10px] text-amber-400/90">a {LYGO.network} station · {LYGO.descriptor}</div>

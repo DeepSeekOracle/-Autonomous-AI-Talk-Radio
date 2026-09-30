@@ -37,6 +37,26 @@ build, so a rename would want to be something like `autonomous-ai-talk-radio`.
 | 13 | No deployment path | the app only ran through `tsx` in dev | `Dockerfile` (build client + server bundle, run `node dist-server/server.js` on `PORT=7860`), `.dockerignore`, `npm run build:server` / `start:compiled` / `verify`, and a Space README with the frontmatter and the secret that enables the Gemini path |
 | 14 | A missing asset answered with the SPA shell | in the container, `GET /assets/<absent>.js` returned `index.html` at HTTP 200, so a browser reports a MIME type error instead of a clean miss | the shell fallback now skips `/assets/*` and any path with a file extension — those 404 as `text/plain` |
 
+## Branding (LYGO layer)
+
+The studio is a **LYGO Signal** station, published alongside the network's other surfaces. Naming is
+applied as the network defines it — the network is **LYGO Signal**, its descriptor is **AI Radio ·
+Always On**, the music stream and its player are **LYGO RADIO**, and **LYGO TV** is the live-channel
+room (`chatagent.ca/sources/`). "AI Talk Radio (Ungated)" is the station's own name, not the network's.
+
+- `src/lib/lygoBrand.ts` holds every link, so the house/DSP/support list changes in one place.
+- `src/components/LygoFooter.tsx` renders the brand row, the link columns and the support block.
+- `src/components/LygoRadioDock.tsx` is the listen portal's own mini player (`signal/radio-mini.js`),
+  ported rather than reinvented: shuffle-bag Next, mute as volume (never pause), level kept in
+  `localStorage.lygo_signal_radio`, catalogue fetched live from the Signal pages (80 tracks from
+  `chatagent.ca/witness/radio.json`, then the two streaming mirrors), and `ended`/`error` advance the
+  bag. Two changes for this host: it yields the speakers while the studio's own voice is on air, and a
+  refused `play()` (`NotAllowedError`) keeps the queued track instead of burning through the bag.
+- The brand marks are **self-hosted** in `public/brand/` — the studio keeps its marks if chatagent.ca is
+  slow, and the live origin serves them from its own build.
+- Mark sizing is a real defect class: a square lockup carrying the wordmark is illegible at 36 px, so
+  the navbar uses the mark alone, and the footer lockup is rendered at its 240x67 design size.
+
 ## Design notes
 
 - **The fallback contract.** Each layer assumes the one below it will fail: Gemini → server
