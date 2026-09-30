@@ -8,6 +8,9 @@ import React from 'react';
 import { Radio } from 'lucide-react';
 import { LYGO } from '../lib/lygoBrand';
 import { LygoRadioDock } from './LygoRadioDock';
+import { ShareRow } from './ShareRow';
+
+const BASE = import.meta.env.BASE_URL;
 
 const linkCls = 'text-slate-400 hover:text-teal-300 transition-colors';
 const fundCls = 'text-amber-300 hover:text-amber-200 transition-colors font-medium';
@@ -19,7 +22,7 @@ export const LygoFooter: React.FC = () => (
       {/* brand row */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <img src="/brand/lygo-signal-logo.svg" alt="LYGO Signal" width={240} height={67} className="h-[67px] w-auto" />
+          <img src={`${BASE}brand/lygo-signal-logo.svg`} alt="LYGO Signal" width={240} height={67} className="h-[67px] w-auto" />
           <div className="text-xs text-slate-400">
             <div className="font-semibold text-slate-200">{LYGO.show}</div>
             <div className="font-mono uppercase tracking-[0.16em] text-[10px] text-amber-400/90">a {LYGO.network} station · {LYGO.descriptor}</div>
@@ -31,7 +34,7 @@ export const LygoFooter: React.FC = () => (
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-md border border-slate-700 px-3 py-1.5 text-xs text-slate-300 hover:border-teal-400/60 hover:text-teal-200 transition-colors"
         >
-          <img src="/brand/lygo-tv-emblem.svg" alt="" width={18} height={18} className="h-4 w-4" />
+          <img src={`${BASE}brand/lygo-tv-emblem.svg`} alt="" width={18} height={18} className="h-4 w-4" />
           LYGO TV — live channels
         </a>
       </div>
@@ -67,6 +70,8 @@ export const LygoFooter: React.FC = () => (
           </ul>
         </div>
       </div>
+
+      <ShareRow />
 
       {/* quiet info line */}
       <div className="border-t border-slate-800/70 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] text-slate-500">

@@ -11,6 +11,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Maximize2, RotateCw } from 'lucide-react';
 
+const BASE = import.meta.env.BASE_URL;
+
 export const DESK_URL = 'https://deepseekoracle-ai-talk-radio.static.hf.space/';
 
 export const DeskModule: React.FC = () => {
@@ -38,7 +40,7 @@ export const DeskModule: React.FC = () => {
       <div className="rounded-xl border border-slate-800/80 bg-[#0d1119] overflow-hidden">
         <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-b border-slate-800/80">
           <div className="flex items-center gap-3">
-            <img src="/brand/lygo-signal-mark.svg" alt="" width={34} height={34} className="w-8 h-8" />
+            <img src={`${BASE}brand/lygo-signal-mark.svg`} alt="" width={34} height={34} className="w-8 h-8" />
             <div>
               <div className="text-sm font-semibold text-slate-100">Studio Desk — the show builder</div>
               <div className="text-[11px] text-slate-500 font-mono uppercase tracking-[0.16em]">

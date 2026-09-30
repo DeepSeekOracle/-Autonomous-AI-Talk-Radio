@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL;
+
 import React from 'react';
 import { Radio, Flame, Sparkles } from 'lucide-react';
 
@@ -26,7 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         
         {/* Zone 1: Single text element wordmark with radio frequency mark */}
         <div className="flex items-center gap-3">
-          <img src="/brand/lygo-signal-mark.svg" alt="LYGO Signal" width={38} height={38} className="w-9 h-9 drop-shadow-[0_0_10px_rgba(245,158,11,0.25)]" />
+          <img src={`${BASE}brand/lygo-signal-mark.svg`} alt="LYGO Signal" width={38} height={38} className="w-9 h-9 drop-shadow-[0_0_10px_rgba(245,158,11,0.25)]" />
           <button 
             onClick={() => setCurrentTab('broadcast')}
             className="text-left group cursor-pointer"

@@ -14,6 +14,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { LYGO, studioVoiceOnAir } from '../lib/lygoBrand';
 
+const BASE = import.meta.env.BASE_URL;
+
 interface Track {
   title: string;
   url: string;
@@ -174,7 +176,7 @@ export const LygoRadioDock: React.FC<{ className?: string }> = ({ className = ''
     <div className={`rounded-lg border border-slate-800/80 bg-[#0d1119] px-4 py-3 ${className}`}>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
         <div className="flex items-center gap-3">
-          <img src="/brand/lygo-radio-logo.svg" alt="LYGO Radio" width={128} height={36} className="h-9 w-auto opacity-95" />
+          <img src={`${BASE}brand/lygo-radio-logo.svg`} alt="LYGO Radio" width={128} height={36} className="h-9 w-auto opacity-95" />
           <span className="hidden sm:inline text-[10px] font-mono uppercase tracking-[0.18em] text-slate-500">Music stream</span>
         </div>
 

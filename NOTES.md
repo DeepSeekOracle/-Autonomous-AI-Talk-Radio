@@ -37,6 +37,34 @@ build, so a rename would want to be something like `autonomous-ai-talk-radio`.
 | 13 | No deployment path | the app only ran through `tsx` in dev | `Dockerfile` (build client + server bundle, run `node dist-server/server.js` on `PORT=7860`), `.dockerignore`, `npm run build:server` / `start:compiled` / `verify`, and a Space README with the frontmatter and the secret that enables the Gemini path |
 | 14 | A missing asset answered with the SPA shell | in the container, `GET /assets/<absent>.js` returned `index.html` at HTTP 200, so a browser reports a MIME type error instead of a clean miss | the shell fallback now skips `/assets/*` and any path with a file extension — those 404 as `text/plain` |
 
+## Where the studio lives (two targets, one source)
+
+The canonical home is **https://chatagent.ca/talk-radio/** — served by GitHub Pages from the
+`DeepSeekOracle/chatagent` repo, where the build is committed under `talk-radio/`. The Hugging Face Space
+(`DeepSeekOracle/autonomous-ai-talk-radio`) is the **backup mirror**: same bytes, root base.
+
+Because the app owns absolute asset paths, each target needs its own build, and both carry the same head
+(canonical + og:url always point at chatagent.ca, even from the mirror):
+
+```
+python scripts/make_card.py                                   # -> public/card-1200x630.jpg
+python scripts/stamp_head.py --canonical https://chatagent.ca/talk-radio/
+npm run build -- --base=/talk-radio/                          # -> dist, for the site
+cp -r dist/* ../chatagent/talk-radio/                         #    (then commit the site repo)
+npm run build                                                 # -> dist, for the mirror
+hf upload DeepSeekOracle/autonomous-ai-talk-radio dist . --type space
+```
+
+- Component asset paths go through `import.meta.env.BASE_URL` (`${BASE}brand/...`), never a bare
+  `/brand/...`, or the same source serves a broken page under a subpath.
+- `scripts/stamp_head.py` writes the head between `<!-- seo:start -->` / `<!-- seo:end -->`, serialising
+  the JSON-LD graph with `json.dumps` rather than hand-typed JSON, then re-reads the file and asserts one
+  title, one graph, no unfilled slot and the required card tags. Re-run it after any copy change.
+- The share row's intents are built from the canonical URL, so a share from the mirror still promotes
+  chatagent.ca.
+- `make_card.py` self-checks that no ink touches the right 20px of the frame: the first headline size
+  looked fine in the layout maths and was clipped in pixels.
+
 ## Branding (LYGO layer)
 
 The studio is a **LYGO Signal** station, published alongside the network's other surfaces. Naming is
