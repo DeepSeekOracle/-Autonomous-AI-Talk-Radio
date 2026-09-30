@@ -18,7 +18,9 @@ import { STATIONS, INITIAL_SHOWS, SPEAKERS } from './data';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
 import { audioEngine } from './lib/audioEngine';
 import { stationLens } from './lib/mintTitles';
-import { Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
+import { synthesizeShow } from './lib/localShow';
+import { gatherTopicDeck, pickTopic, researchFacts, WITNESS_HOME } from './lib/topicMill';
+import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 export default function App() {
   const [stations, setStations] = useState<RadioStation[]>(STATIONS);
@@ -35,6 +37,12 @@ export default function App() {
   const [showNotesOpen, setShowNotesOpen] = useState<boolean>(false);
   const [frequency, setFrequency] = useState<string>(STATIONS[0].frequency);
   const onAirRef = useRef(false);
+  const eternityRef = useRef(false);
+  const mintingRef = useRef(false);
+  const queueRef = useRef<RadioShow | null>(null);
+  const usedTopicsRef = useRef<Set<string>>(new Set());
+  const [eternity, setEternity] = useState(false);
+  const [eternityLabel, setEternityLabel] = useState('next hour writes itself');
   const wheelRef = useRef({
     stations,
     shows,
@@ -42,6 +50,7 @@ export default function App() {
     activeShowId,
   });
   wheelRef.current = { stations, shows, activeStationId, activeShowId };
+  const playQueuedOrMintRef = useRef<() => Promise<void>>(async () => {});
 
   // Audio settings
   const [settings, setSettings] = useState<AudioSettings>({
@@ -56,10 +65,82 @@ export default function App() {
   const activeShow = shows.find(s => s.id === activeShowId) || shows[0];
   const lens = stationLens(activeStation.id);
 
+  const nextStation = (fromId: string) => {
+    const list = wheelRef.current.stations;
+    const i = list.findIndex((s) => s.id === fromId);
+    return list[(i + 1) % list.length] || list[0];
+  };
+
+  const applyHour = (show: RadioShow) => {
+    setShows((prev) => [show, ...prev.filter((s) => s.id !== show.id)].slice(0, 48));
+    setStations((prev) =>
+      prev.map((s) => (s.id === show.stationId ? { ...s, currentShowId: show.id } : s)),
+    );
+    setActiveStationId(show.stationId);
+    const st = wheelRef.current.stations.find((s) => s.id === show.stationId);
+    if (st) setFrequency(st.frequency);
+    setActiveShowId(show.id);
+    setCurrentTab('broadcast');
+  };
+
+  const mintEternityHour = async (stationId: string): Promise<RadioShow | null> => {
+    const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
+    const deck = await gatherTopicDeck();
+    const topic = pickTopic(deck, station.id, usedTopicsRef.current);
+    usedTopicsRef.current.add(topic.title);
+    if (usedTopicsRef.current.size > 80) {
+      usedTopicsRef.current = new Set([...usedTopicsRef.current].slice(-40));
+    }
+    setEternityLabel(`${topic.band} · ${topic.title}`.slice(0, 72));
+    const facts = await researchFacts(topic.title);
+    const h1 = station.hosts[0];
+    const h2 = station.hosts[1] || station.hosts[0];
+    return synthesizeShow({
+      topic: topic.prompt,
+      tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
+      stationId: station.id,
+      ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
+      host1: h1.name,
+      host2: h2.name,
+      facts,
+      sourceUrl: topic.url,
+      sourceName: topic.source,
+      band: topic.band,
+    });
+  };
+
+  const prefetchEternity = async () => {
+    if (!eternityRef.current || mintingRef.current || queueRef.current) return;
+    mintingRef.current = true;
+    try {
+      const nxt = nextStation(wheelRef.current.activeStationId);
+      queueRef.current = await mintEternityHour(nxt.id);
+    } finally {
+      mintingRef.current = false;
+    }
+  };
+
+  const playQueuedOrMint = async () => {
+    if (!eternityRef.current) {
+      if (onAirRef.current) advanceHour();
+      return;
+    }
+    let show = queueRef.current;
+    queueRef.current = null;
+    if (!show) {
+      const nxt = nextStation(wheelRef.current.activeStationId);
+      show = await mintEternityHour(nxt.id);
+    }
+    if (show && eternityRef.current) {
+      applyHour(show);
+      void prefetchEternity();
+    }
+  };
+  playQueuedOrMintRef.current = playQueuedOrMint;
+
   const advanceHour = () => {
     const snap = wheelRef.current;
-    const i = snap.stations.findIndex((s) => s.id === snap.activeStationId);
-    const next = snap.stations[(i + 1) % snap.stations.length] || snap.stations[0];
+    const next = nextStation(snap.activeStationId);
     const nextShow =
       snap.shows.find((s) => s.id === next.currentShowId) ||
       snap.shows.find((s) => s.stationId === next.id) ||
@@ -82,7 +163,7 @@ export default function App() {
         setTotalMs(total);
       },
       onShowComplete: () => {
-        if (onAirRef.current) advanceHour();
+        void playQueuedOrMintRef.current();
       },
     });
     return () => {
@@ -99,6 +180,7 @@ export default function App() {
     setTotalMs(activeShow.segments.reduce((acc, s) => acc + (s.durationMs || 7000), 0));
     if (onAirRef.current) {
       const t = window.setTimeout(() => audioEngine.play(), 280);
+      if (eternityRef.current) void prefetchEternity();
       return () => window.clearTimeout(t);
     }
   }, [activeShowId]);
@@ -126,9 +208,25 @@ export default function App() {
 
   const handleStopBroadcast = () => {
     onAirRef.current = false;
+    eternityRef.current = false;
+    queueRef.current = null;
+    setEternity(false);
     audioEngine.stop();
     setActiveSegmentIndex(0);
     setElapsedMs(0);
+  };
+
+  const handlePlayForever = async () => {
+    eternityRef.current = true;
+    onAirRef.current = true;
+    setEternity(true);
+    setEternityLabel('writing the next hour…');
+    if (isPlaying) {
+      void prefetchEternity();
+      return;
+    }
+    const show = await mintEternityHour(wheelRef.current.activeStationId);
+    if (show && eternityRef.current) applyHour(show);
   };
 
   // Seek to specific segment
@@ -239,17 +337,39 @@ export default function App() {
             <span className={`w-2 h-2 rounded-full shrink-0 ${isPlaying ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500'}`} />
             <span className="font-semibold text-slate-200">Continuous 24/7 Studio Stream</span>
             <span className="text-slate-600 hidden sm:inline">·</span>
-            <span className={`hidden sm:inline font-mono ${isPlaying ? 'text-emerald-400' : 'text-amber-400/90'}`}>
-              {isPlaying ? 'ON AIR' : 'STANDBY · press play to lock the transmitter'}
+            <span className={`hidden sm:inline font-mono ${eternity ? 'text-teal-300' : isPlaying ? 'text-emerald-400' : 'text-amber-400/90'}`}>
+              {eternity
+                ? 'ETERNITY'
+                : isPlaying
+                  ? 'ON AIR'
+                  : 'STANDBY · press play, or lock Eternity'}
             </span>
             <span className="text-slate-600 hidden lg:inline">·</span>
-            <span className="hidden lg:inline truncate">{lens.lens}</span>
+            <span className="hidden lg:inline truncate">{eternity ? eternityLabel : lens.lens}</span>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-400 font-mono shrink-0">
+          <div className="flex items-center gap-3 text-slate-400 font-mono shrink-0">
             <span className="hidden md:inline">FREQ: {activeStation.frequency}</span>
-            <span className="hidden md:inline">LIVE DESK</span>
-            <span className="text-amber-400 font-medium">LINE 1: HOT</span>
+            <a
+              href={WITNESS_HOME}
+              className="hidden md:inline text-teal-300/90 hover:text-teal-200 underline underline-offset-4"
+              rel="noopener"
+            >
+              Witness
+            </a>
+            <button
+              type="button"
+              onClick={() => void handlePlayForever()}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider cursor-pointer transition-colors ${
+                eternity
+                  ? 'bg-teal-400 text-slate-950'
+                  : 'bg-slate-800 border border-teal-500/40 text-teal-300 hover:bg-teal-400 hover:text-slate-950'
+              }`}
+              title="Keep writing new hours from LYGO desks and Public Witness world feeds"
+            >
+              <InfinityIcon className="w-3.5 h-3.5" />
+              Play Forever
+            </button>
           </div>
         </div>
 
@@ -265,7 +385,7 @@ export default function App() {
               onPlayToggle={handlePlayToggle}
               onSeekSegment={handleSeekSegment}
               onStopBroadcast={handleStopBroadcast}
-              onNextHour={advanceHour}
+              onNextHour={() => { void playQueuedOrMintRef.current(); }}
               onOpenNotes={() => setShowNotesOpen(true)}
               settings={settings}
               onUpdateSettings={updateSettings}

@@ -12,6 +12,7 @@ import assert from 'node:assert/strict';
 import { synthesizeShow } from '../src/lib/localShow';
 import { buildZip, episodePackFiles, crc32 } from '../src/lib/packZip';
 import { mintEpisodeTitle, topicCore } from '../src/lib/mintTitles';
+import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMill';
 
 const topic = 'why every agent demo dies in production';
 
@@ -41,6 +42,16 @@ assert.equal(
   'Great Software Rewrite Devs Spec Prompters',
 );
 assert.ok(mintEpisodeTitle(topic, 'station-algorithmic-wire', () => 0).startsWith('Wire Desk:'), 'Algorithmic Wire titles use the station lens');
+assert.ok(LYGO_TOPICS.length >= 8, 'eternity has a LYGO desk pool');
+const parsed = parseWitnessMonitor({
+  world: [{ title: 'UN chief calls for rules on lethal autonomous weapons', url: 'https://news.un.org/x', source: 'un_news' }],
+  severe: [{ title: 'M 6.2 - Kermadec Islands, New Zealand', url: 'https://earthquake.usgs.gov/x', source: 'usgs' }],
+});
+assert.equal(parsed.length, 2, 'witness monitor parses world and earth lanes');
+assert.equal(parsed[0].band, 'world');
+assert.match(parsed[0].prompt, /RESOURCE/);
+const picked = pickTopic(LYGO_TOPICS, 'station-hn-live', new Set(), () => 0);
+assert.ok(picked.title.length > 0, 'pickTopic returns a desk');
 assert.ok(!show.segments.some((s) => /undefined|\[object/.test(s.text)), 'no unresolved placeholders');
 
 const files = episodePackFiles(show);

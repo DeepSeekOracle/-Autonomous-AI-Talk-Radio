@@ -18,6 +18,10 @@ export interface SynthesizeOptions {
   ungated: boolean;
   host1: string;
   host2: string;
+  facts?: string[];
+  sourceUrl?: string;
+  sourceName?: string;
+  band?: string;
 }
 
 /** Spoken pace the studio writes for — the same ~150 wpm the published desk sessions run at. */
@@ -42,23 +46,35 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   const id2 = voiceIdFor(h2, 'maya');
   const ungated = opts.ungated || opts.tone.includes('ungated');
 
+  const fact1 = (opts.facts && opts.facts[0]) || "";
+  const fact2 = (opts.facts && opts.facts[1]) || "";
+  const source = opts.sourceName || "the public page";
+  const resource =
+    opts.band === "world" || opts.band === "earth"
+      ? "This is Public Witness RESOURCE, not Star Chart CANON. Empty is honest."
+      : "Quote a receipt you can open. Atmosphere is not proof.";
+
   const script: Array<{ by: 1 | 2 | 'caller'; text: string; tag: string; emotion: ScriptSegment['emotion'] }> = [
     { by: 1, tag: 'The Cold Open', emotion: 'heated',
-      text: `You are tuned to AI Talk Radio. I am ${h1}. I spent the morning reading every claim about ${topic}, and I want to know which of them survive contact with a production cluster.` },
+      text: `You are tuned to AI Talk Radio. I am ${h1}. Tonight's hour is ${topic}. ${resource}` },
     { by: 2, tag: 'Counter-Argument', emotion: 'intrigued',
-      text: `And I want to know which of them we kill too fast. Every time the ground moves, we bury the useful part with the hype. ${topic} is not one idea. It is four, and only one of them is real yet.` },
-    { by: 1, tag: 'Technical Debt', emotion: 'skeptical',
-      text: `Then name it. Which one is real, and what does it cost to run it on a Tuesday at three in the morning when the pager goes off?` },
-    { by: 2, tag: 'Abstraction Shift', emotion: 'excited',
-      text: `The part that holds is boring on purpose: the interface. Teams that pinned the boundary, and kept the messy middle swappable, shipped. Teams that rewrote everything at once are still in a branch.` },
+      text: fact1
+        ? `${h2} here. The public page actually says this: ${fact1} That is the floor. Everything else is atmosphere.`
+        : `And I want to know which part of ${topic} we kill too fast. Every time the ground moves, we bury the useful part with the hype.` },
+    { by: 1, tag: 'The Cost', emotion: 'skeptical',
+      text: `Then name what still has to be true on a machine you own. If ${source} cannot be opened on Tuesday, it is a rumor wearing a timestamp.` },
+    { by: 2, tag: 'The Hold', emotion: 'excited',
+      text: fact2
+        ? `Second receipt: ${fact2} Hold that against the demo. If they disagree, the demo loses.`
+        : `The part that holds is boring on purpose: the interface. Pin the boundary. Keep the messy middle swappable.` },
     { by: 1, tag: 'Caller Patch', emotion: 'neutral',
-      text: `Line One is lit. ${topic} has somebody on the other end who has actually deployed it. Go ahead, you are on the air.` },
+      text: `Line One is lit. Someone who had to live with ${topic} is on the other end. Go ahead, you are on the air.` },
     { by: 'caller', tag: 'Field Report', emotion: 'heated',
-      text: `We ran this for six weeks in production. The wins were real and so was the on-call load, because nobody could explain a failure once the layer was doing the thinking.` },
+      text: `We treated the headline as weather, not gospel. The wins were real only where we could still explain a failure. Once the layer was doing the thinking, on-call went blind.` },
     { by: 2, tag: 'Observability', emotion: 'intrigued',
-      text: `That is the honest version of the story, and it is the one that never makes the keynote. If you cannot explain the failure, you have not adopted the tool. You have rented it.` },
+      text: `That is the honest version, and it never makes the keynote. If you cannot explain the failure, you have not adopted the tool. You have rented it.` },
     { by: 1, tag: 'Station Signoff', emotion: 'neutral',
-      text: `So the ruling stands: adopt the interface, keep the receipts, and never let a layer you cannot read make a decision you cannot reverse. ${ungated ? 'Ungated, and unsponsored.' : 'That is the broadcast.'} Stay with us.` },
+      text: `Ruling: quote the feed, keep the receipts, never let a layer you cannot read reverse a decision you cannot undo. ${ungated ? 'Ungated, and unsponsored.' : 'That is the broadcast.'} Stay with us.` },
   ];
 
   const caller: Caller = {
@@ -103,19 +119,23 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
     ],
     segments,
     showNotes: [
-      `What ${topic} actually changes on a production floor, and what it only changes in a slide deck.`,
-      `The one part of the argument that held up across six weeks of real traffic.`,
-      `A caller report from Line One on on-call load and the failures nobody could explain.`,
-      `The working rule we close on: adopt the interface, keep the receipts.`,
+      opts.sourceUrl
+        ? `Source (${opts.sourceName || "public"}): ${opts.sourceUrl}`
+        : `Desk topic with no extra URL — LYGO Signal hour.`,
+      `Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.`,
+      fact1 ? `Receipt 1: ${fact1.slice(0, 220)}` : `No Wikipedia extract landed. Empty is honest.`,
+      `Working rule: adopt the interface, keep the receipts, explain every failure.`,
     ],
     keyTakeaways: [
-      `Claims about ${topic} that cannot survive a pager at 3 a.m. are marketing, not architecture.`,
-      `Pin the boundary, keep the middle swappable, and never rewrite the whole stack in one branch.`,
+      `A headline is weather. A hash you can open is a receipt.`,
       `If a team cannot explain a failure, they have rented the tool instead of adopting it.`,
+      `Pin the boundary. Keep the messy middle swappable. Never rewrite the whole stack in one branch.`,
     ],
     references: [
-      { title: `Hacker News discussion on ${topic}`, url: 'https://news.ycombinator.com', type: 'hn' },
-      { title: 'Open source implementations on GitHub', url: 'https://github.com', type: 'github' },
+      opts.sourceUrl
+        ? { title: opts.sourceName || "Source", url: opts.sourceUrl, type: opts.band === "hn" ? "hn" : "news" }
+        : { title: "LYGO Signal", url: "https://chatagent.ca/signal/", type: "news" },
+      { title: "Public Witness", url: "https://chatagent.ca/witness/", type: "news" },
     ],
     callers: [caller],
     ungated,
