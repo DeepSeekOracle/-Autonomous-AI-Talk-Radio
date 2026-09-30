@@ -35,6 +35,7 @@ build, so a rename would want to be something like `autonomous-ai-talk-radio`.
 | 11 | No way to check the offline path | — | `scripts/selfcheck.ts` → `npm run selfcheck`, exit non-zero on failure |
 | 12 | Bundling the server broke production hosting | with `dist-server/server.js`, `__dirname` pointed inside the bundle, so `NODE_ENV=production` answered **404 for `/` and every asset** while the API kept working | built assets now resolve from `process.cwd()` (`DIST_DIR`), with a startup warning when `dist/` is missing |
 | 13 | No deployment path | the app only ran through `tsx` in dev | `Dockerfile` (build client + server bundle, run `node dist-server/server.js` on `PORT=7860`), `.dockerignore`, `npm run build:server` / `start:compiled` / `verify`, and a Space README with the frontmatter and the secret that enables the Gemini path |
+| 14 | A missing asset answered with the SPA shell | in the container, `GET /assets/<absent>.js` returned `index.html` at HTTP 200, so a browser reports a MIME type error instead of a clean miss | the shell fallback now skips `/assets/*` and any path with a file extension — those 404 as `text/plain` |
 
 ## Design notes
 

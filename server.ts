@@ -355,6 +355,12 @@ async function startServer() {
     }
     app.use(express.static(DIST_DIR));
     app.get('*', (req, res) => {
+      // Deep links get the shell. A missing asset must 404 instead: answering a .js request with
+      // index.html makes the browser report a MIME type error rather than a clean miss.
+      if (req.path.startsWith('/assets/') || path.extname(req.path)) {
+        res.status(404).type('text/plain').send('Not found');
+        return;
+      }
       res.sendFile(path.join(DIST_DIR, 'index.html'));
     });
   }
