@@ -23,6 +23,8 @@ interface LivePlayerProps {
   isPlaying: boolean;
   onPlayToggle: () => void;
   onSeekSegment: (index: number) => void;
+  onStopBroadcast: () => void;
+  onNextHour: () => void;
   onOpenNotes: () => void;
   settings: AudioSettings;
   onUpdateSettings: (newSettings: Partial<AudioSettings>) => void;
@@ -37,6 +39,8 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
   isPlaying,
   onPlayToggle,
   onSeekSegment,
+  onStopBroadcast,
+  onNextHour,
   onOpenNotes,
   settings,
   onUpdateSettings,
@@ -334,10 +338,7 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
           </button>
 
           <button
-            onClick={() => {
-              audioEngine.stop();
-              onSeekSegment(0);
-            }}
+            onClick={onStopBroadcast}
             className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             title="Stop Broadcast"
           >
@@ -345,7 +346,13 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
           </button>
 
           <button
-            onClick={() => onSeekSegment(Math.min(show.segments.length - 1, activeSegmentIndex + 1))}
+            onClick={() => {
+              if (activeSegmentIndex >= show.segments.length - 1) {
+                onNextHour();
+              } else {
+                onSeekSegment(activeSegmentIndex + 1);
+              }
+            }}
             className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             title="Next Segment"
           >

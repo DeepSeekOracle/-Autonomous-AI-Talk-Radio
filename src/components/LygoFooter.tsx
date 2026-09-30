@@ -85,6 +85,12 @@ export const LygoFooter: React.FC = () => (
           <span>Full-Duplex Hotline</span><span>·</span>
           <span>Zero Sponsor Restrictions</span><span>·</span>
           <span>Apache-2.0</span>
+          <span>·</span>
+          <a className={linkCls} href={LYGO.privacy} rel="noopener">Privacy</a>
+          <span>·</span>
+          <a className={linkCls} href={LYGO.terms} rel="noopener">Legal</a>
+          <span>·</span>
+          <a className={linkCls} href={LYGO.disclaimer} rel="noopener">Disclaimer</a>
         </div>
       </div>
     </div>

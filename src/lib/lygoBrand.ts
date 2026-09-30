@@ -17,6 +17,9 @@ export const LYGO = {
   tv: 'https://chatagent.ca/sources/',
   games: 'https://chatagent.ca/games/',
   skillHub: 'https://chatagent.ca/lygoskillhub.html',
+  privacy: 'https://chatagent.ca/privacy.html',
+  terms: 'https://chatagent.ca/terms.html',
+  disclaimer: 'https://chatagent.ca/talk-radio/disclaimer.html',
   support: {
     paypal: 'https://www.paypal.com/paypalme/ExcavationPro',
     patreon: 'https://www.patreon.com/Excavationpro',

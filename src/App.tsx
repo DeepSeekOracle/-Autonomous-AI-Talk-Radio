@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Navbar } from './components/Navbar';
 import { StationTuner } from './components/StationTuner';
 import { LivePlayer } from './components/LivePlayer';
@@ -17,6 +17,7 @@ import { DeskModule } from './components/DeskModule';
 import { STATIONS, INITIAL_SHOWS, SPEAKERS } from './data';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
 import { audioEngine } from './lib/audioEngine';
+import { stationLens } from './lib/mintTitles';
 import { Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 export default function App() {
@@ -33,6 +34,14 @@ export default function App() {
   const [totalMs, setTotalMs] = useState<number>(0);
   const [showNotesOpen, setShowNotesOpen] = useState<boolean>(false);
   const [frequency, setFrequency] = useState<string>(STATIONS[0].frequency);
+  const onAirRef = useRef(false);
+  const wheelRef = useRef({
+    stations,
+    shows,
+    activeStationId,
+    activeShowId,
+  });
+  wheelRef.current = { stations, shows, activeStationId, activeShowId };
 
   // Audio settings
   const [settings, setSettings] = useState<AudioSettings>({
@@ -45,8 +54,21 @@ export default function App() {
 
   const activeStation = stations.find(s => s.id === activeStationId) || stations[0];
   const activeShow = shows.find(s => s.id === activeShowId) || shows[0];
+  const lens = stationLens(activeStation.id);
 
-  // Initialize audio engine callbacks and load active show
+  const advanceHour = () => {
+    const snap = wheelRef.current;
+    const i = snap.stations.findIndex((s) => s.id === snap.activeStationId);
+    const next = snap.stations[(i + 1) % snap.stations.length] || snap.stations[0];
+    const nextShow =
+      snap.shows.find((s) => s.id === next.currentShowId) ||
+      snap.shows.find((s) => s.stationId === next.id) ||
+      snap.shows[0];
+    setActiveStationId(next.id);
+    setFrequency(next.frequency);
+    if (nextShow) setActiveShowId(nextShow.id);
+  };
+
   useEffect(() => {
     audioEngine.setCallbacks({
       onSegmentChange: (index) => {
@@ -58,43 +80,55 @@ export default function App() {
       onProgressUpdate: (current, total) => {
         setElapsedMs(current);
         setTotalMs(total);
-      }
+      },
+      onShowComplete: () => {
+        if (onAirRef.current) advanceHour();
+      },
     });
-
-    // Load active show into engine
-    if (activeShow) {
-      audioEngine.loadShow(activeShow.segments, SPEAKERS, 0);
-      setActiveSegmentIndex(0);
-      setElapsedMs(0);
-      setTotalMs(activeShow.segments.reduce((acc, s) => acc + (s.durationMs || 7000), 0));
-    }
-
     return () => {
+      onAirRef.current = false;
       audioEngine.stop();
     };
+  }, []);
+
+  useEffect(() => {
+    if (!activeShow) return;
+    audioEngine.loadShow(activeShow.segments, SPEAKERS, 0);
+    setActiveSegmentIndex(0);
+    setElapsedMs(0);
+    setTotalMs(activeShow.segments.reduce((acc, s) => acc + (s.durationMs || 7000), 0));
+    if (onAirRef.current) {
+      const t = window.setTimeout(() => audioEngine.play(), 280);
+      return () => window.clearTimeout(t);
+    }
   }, [activeShowId]);
 
-  // Handle station change
   const handleSelectStation = (stationId: string) => {
     const station = stations.find(s => s.id === stationId);
     if (!station) return;
     setActiveStationId(stationId);
     setFrequency(station.frequency);
-
-    // Switch to station's show if available
-    const stationShow = shows.find(s => s.stationId === stationId) || shows[0];
-    if (stationShow) {
-      setActiveShowId(stationShow.id);
-    }
+    const stationShow =
+      shows.find((s) => s.id === station.currentShowId) ||
+      shows.find((s) => s.stationId === stationId) ||
+      shows[0];
+    if (stationShow) setActiveShowId(stationShow.id);
   };
 
-  // Toggle playback
   const handlePlayToggle = () => {
     if (isPlaying) {
       audioEngine.pause();
     } else {
+      onAirRef.current = true;
       audioEngine.play();
     }
+  };
+
+  const handleStopBroadcast = () => {
+    onAirRef.current = false;
+    audioEngine.stop();
+    setActiveSegmentIndex(0);
+    setElapsedMs(0);
   };
 
   // Seek to specific segment
@@ -166,15 +200,16 @@ export default function App() {
 
   // Add new generated show
   const handleShowGenerated = (newShow: RadioShow) => {
+    onAirRef.current = true;
     setShows(prev => [newShow, ...prev]);
+    setStations((prev) =>
+      prev.map((s) => (s.id === newShow.stationId ? { ...s, currentShowId: newShow.id } : s)),
+    );
     setActiveShowId(newShow.id);
     setActiveStationId(newShow.stationId);
     const targetStation = stations.find(s => s.id === newShow.stationId);
     if (targetStation) setFrequency(targetStation.frequency);
     setCurrentTab('broadcast');
-    setTimeout(() => {
-      audioEngine.play();
-    }, 400);
   };
 
   const updateSettings = (newSettings: Partial<AudioSettings>) => {
@@ -200,16 +235,20 @@ export default function App() {
         
         {/* Quick Studio Status Banner */}
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs bg-slate-900/60 border border-slate-800/80 px-4 py-2.5 rounded-lg text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex items-center gap-2 min-w-0">
+            <span className={`w-2 h-2 rounded-full shrink-0 ${isPlaying ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500'}`} />
             <span className="font-semibold text-slate-200">Continuous 24/7 Studio Stream</span>
             <span className="text-slate-600 hidden sm:inline">·</span>
-            <span className="hidden sm:inline">Web Audio DSP Broadcast Processing Active</span>
+            <span className={`hidden sm:inline font-mono ${isPlaying ? 'text-emerald-400' : 'text-amber-400/90'}`}>
+              {isPlaying ? 'ON AIR' : 'STANDBY · press play to lock the transmitter'}
+            </span>
+            <span className="text-slate-600 hidden lg:inline">·</span>
+            <span className="hidden lg:inline truncate">{lens.lens}</span>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-400 font-mono">
+          <div className="flex items-center gap-4 text-slate-400 font-mono shrink-0">
             <span className="hidden md:inline">FREQ: {activeStation.frequency}</span>
-            <span className="hidden md:inline">CODEC: 24kHz / 320kbps</span>
+            <span className="hidden md:inline">LIVE DESK</span>
             <span className="text-amber-400 font-medium">LINE 1: HOT</span>
           </div>
         </div>
@@ -225,6 +264,8 @@ export default function App() {
               isPlaying={isPlaying}
               onPlayToggle={handlePlayToggle}
               onSeekSegment={handleSeekSegment}
+              onStopBroadcast={handleStopBroadcast}
+              onNextHour={advanceHour}
               onOpenNotes={() => setShowNotesOpen(true)}
               settings={settings}
               onUpdateSettings={updateSettings}
@@ -267,7 +308,7 @@ export default function App() {
                       </h4>
                     </div>
                     <p className="text-xs text-slate-400 mt-1">
-                      Have a counterpoint for Devon and Maya?
+                      Patch a take into this hour. The desk stays on air.
                     </p>
                   </div>
 

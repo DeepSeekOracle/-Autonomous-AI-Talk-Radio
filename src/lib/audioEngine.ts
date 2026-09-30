@@ -25,6 +25,7 @@ class RadioAudioEngine {
   private onSegmentChange?: (index: number) => void;
   private onPlaybackStateChange?: (isPlaying: boolean) => void;
   private onProgressUpdate?: (currentMs: number, totalMs: number) => void;
+  private onShowComplete?: () => void;
   private timerInterval: number | null = null;
   private segmentStartTime: number = 0;
   private accumulatedElapsedMs: number = 0;
@@ -128,10 +129,12 @@ class RadioAudioEngine {
     onSegmentChange?: (index: number) => void;
     onPlaybackStateChange?: (isPlaying: boolean) => void;
     onProgressUpdate?: (currentMs: number, totalMs: number) => void;
+    onShowComplete?: () => void;
   }) {
     this.onSegmentChange = options.onSegmentChange;
     this.onPlaybackStateChange = options.onPlaybackStateChange;
     this.onProgressUpdate = options.onProgressUpdate;
+    this.onShowComplete = options.onShowComplete;
   }
 
   public loadShow(segments: ScriptSegment[], speakers: Record<string, Speaker>, startIndex = 0) {
@@ -233,7 +236,20 @@ class RadioAudioEngine {
 
   private playSegment(index: number) {
     if (index >= this.segments.length) {
-      this.stop();
+      this.stopProgressTicker();
+      this.isPlaying = false;
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      this.onPlaybackStateChange?.(false);
+      if (this.onShowComplete) {
+        this.onShowComplete();
+      } else {
+        this.currentSegmentIndex = 0;
+        this.accumulatedElapsedMs = 0;
+        this.onSegmentChange?.(0);
+        this.updateProgress();
+      }
       return;
     }
 
