@@ -13,6 +13,7 @@ import { ShowGenerator } from './components/ShowGenerator';
 import { Soundboard } from './components/Soundboard';
 import { ShowNotesModal } from './components/ShowNotesModal';
 import { LygoFooter } from './components/LygoFooter';
+import { DeskModule } from './components/DeskModule';
 import { STATIONS, INITIAL_SHOWS, SPEAKERS } from './data';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
 import { audioEngine } from './lib/audioEngine';
@@ -382,6 +383,9 @@ export default function App() {
           onClose={() => setShowNotesOpen(false)}
         />
       )}
+
+      {/* Studio Desk module — the LYGO Signal show builder, embedded */}
+      <DeskModule />
 
       {/* LYGO footer: house links, LYGO TV, the LYGO RADIO dock, support */}
       <LygoFooter />

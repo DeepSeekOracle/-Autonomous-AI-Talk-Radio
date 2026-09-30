@@ -57,6 +57,24 @@ room (`chatagent.ca/sources/`). "AI Talk Radio (Ungated)" is the station's own n
 - Mark sizing is a real defect class: a square lockup carrying the wordmark is illegible at 36 px, so
   the navbar uses the mark alone, and the footer lockup is rendered at its 240x67 design size.
 
+## Studio Desk module
+
+The desk build (`DeepSeekOracle/ai-talk-radio`, "LYGO Signal — Radio Show Generator") is embedded at
+the bottom of the studio as a working module rather than linked away from: visitors write a 5/10/15
+minute roundtable with its own UI without leaving the page.
+
+- It is its own static Space, so the module is framed, not reimplemented — one source of truth for the
+  desk. Both Spaces serve no `X-Frame-Options` and no `frame-ancestors`, which is what makes the embed
+  legitimate; **re-check the framing headers before copying this pattern to a host that sets them**, or
+  the module renders an error page that only a screenshot will catch.
+- `IntersectionObserver` with a 600px margin mounts the frame only when a reader is near it, so the
+  studio page still opens light for people who never scroll that far.
+- Reload (remounts the frame), Full screen, and a plain "Open the desk" link cover what a frame cannot
+  do by itself; a "not loading?" line sits under the frame because a blocked frame cannot be detected
+  from the parent's script.
+- The desk voices roundtables with the same browser speech service the studio uses, so the LYGO Radio
+  dock's yield check covers both apps.
+
 ## Design notes
 
 - **The fallback contract.** Each layer assumes the one below it will fail: Gemini → server
