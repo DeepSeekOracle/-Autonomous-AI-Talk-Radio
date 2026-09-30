@@ -19,7 +19,7 @@ export const DESK_SPACE = 'https://huggingface.co/spaces/DeepSeekOracle/ai-talk-
 export const DESK_EMBED = 'https://huggingface.co/spaces/DeepSeekOracle/ai-talk-radio/embed';
 export const DESK_URL = DESK_SPACE;
 
-export const DeskModule: React.FC = () => {
+export const DeskModule: React.FC<{ flush?: boolean }> = ({ flush = false }) => {
   const holder = useRef<HTMLDivElement | null>(null);
   const [mounted, setMounted] = useState(false);
   const [nonce, setNonce] = useState(0);
@@ -40,7 +40,7 @@ export const DeskModule: React.FC = () => {
   const fullscreen = () => holder.current?.requestFullscreen?.().catch(() => {});
 
   return (
-    <section id="studio-desk" className="max-w-7xl mx-auto px-4 sm:px-6 mt-12">
+    <section id="studio-desk" className={flush ? '' : 'max-w-7xl mx-auto px-4 sm:px-6 mt-12'}>
       <div className="rounded-xl border border-slate-800/80 bg-[#0d1119] overflow-hidden">
         <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-b border-slate-800/80">
           <div className="flex items-center gap-3">

@@ -441,6 +441,14 @@ export default function App() {
                 />
               </div>
             </div>
+
+            <section id="studio-producer" className="scroll-mt-20">
+              <ShowGenerator
+                stations={stations}
+                onShowGenerated={handleShowGenerated}
+                ungatedDefault={settings.ungatedMode}
+              />
+            </section>
           </div>
         )}
 
@@ -521,13 +529,9 @@ export default function App() {
           />
         )}
 
-        {/* Show Generator Tab View */}
+        {/* Studio Desk tab — live Hugging Face Space DeepSeekOracle/ai-talk-radio */}
         {currentTab === 'generator' && (
-          <ShowGenerator
-            stations={stations}
-            onShowGenerated={handleShowGenerated}
-            ungatedDefault={settings.ungatedMode}
-          />
+          <DeskModule flush />
         )}
 
         {/* Soundboard Tab View */}
@@ -544,9 +548,6 @@ export default function App() {
           onClose={() => setShowNotesOpen(false)}
         />
       )}
-
-      {/* Studio Desk module — the LYGO Signal show builder, embedded */}
-      <DeskModule />
 
       {/* LYGO footer: house links, LYGO TV, the LYGO RADIO dock, support */}
       <LygoFooter />

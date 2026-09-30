@@ -86,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 : 'text-slate-400 border-transparent hover:text-slate-200'
             }`}
           >
-            Show Producer
+            Studio Desk
           </button>
           <button
             onClick={() => setCurrentTab('soundboard')}
@@ -132,8 +132,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-950 bg-amber-500 hover:bg-amber-400 active:scale-95 transition-all shadow-sm shadow-amber-500/20 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Generate Broadcast</span>
-            <span className="sm:hidden">New Show</span>
+            <span className="hidden sm:inline">Studio Desk</span>
+            <span className="sm:hidden">Desk</span>
           </button>
         </div>
 
