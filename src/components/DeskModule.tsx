@@ -13,7 +13,11 @@ import { ExternalLink, Maximize2, RotateCw } from 'lucide-react';
 
 const BASE = import.meta.env.BASE_URL;
 
-export const DESK_URL = 'https://deepseekoracle-ai-talk-radio.static.hf.space/';
+/** Canonical Space the module must reflect. */
+export const DESK_SPACE = 'https://huggingface.co/spaces/DeepSeekOracle/ai-talk-radio';
+/** Iframe host — /embed follows the live Space app (static.hf.space). The Space chrome page is X-Frame-Options: DENY. */
+export const DESK_EMBED = 'https://huggingface.co/spaces/DeepSeekOracle/ai-talk-radio/embed';
+export const DESK_URL = DESK_SPACE;
 
 export const DeskModule: React.FC = () => {
   const holder = useRef<HTMLDivElement | null>(null);
@@ -44,7 +48,7 @@ export const DeskModule: React.FC = () => {
             <div>
               <div className="text-sm font-semibold text-slate-100">Studio Desk — the show builder</div>
               <div className="text-[11px] text-slate-500 font-mono uppercase tracking-[0.16em]">
-                LYGO Signal desk · write a 5, 10 or 15 minute roundtable, then take the pack
+                Live Space · DeepSeekOracle/ai-talk-radio
               </div>
             </div>
           </div>
@@ -65,7 +69,7 @@ export const DeskModule: React.FC = () => {
               <Maximize2 className="w-3.5 h-3.5" /> Full screen
             </button>
             <a
-              href={DESK_URL}
+              href={DESK_SPACE}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-md bg-amber-500 px-3 py-1.5 text-xs font-semibold text-[#1a1408] hover:bg-amber-400 transition-colors"
@@ -79,11 +83,12 @@ export const DeskModule: React.FC = () => {
           {mounted ? (
             <iframe
               key={nonce}
-              src={DESK_URL}
-              title="LYGO Signal Studio Desk — radio show generator"
+              src={DESK_EMBED}
+              title="LYGO Signal Studio Desk — DeepSeekOracle/ai-talk-radio"
               loading="lazy"
-              allow="autoplay; fullscreen; clipboard-write"
-              onLoad={() => setFrameHeight(Math.max(760, Math.min(1000, window.innerHeight - 120)))}
+              referrerPolicy="no-referrer-when-downgrade"
+              allow="accelerometer; autoplay; camera; clipboard-write; encrypted-media; fullscreen; microphone; display-capture"
+              onLoad={() => setFrameHeight(Math.max(900, Math.min(1400, window.innerHeight - 80)))}
               className="w-full block"
               style={{ height: frameHeight, border: 0 }}
             />
@@ -96,11 +101,14 @@ export const DeskModule: React.FC = () => {
 
         <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-t border-slate-800/80 text-[11px] text-slate-500">
           <span>
-            The desk voices its own roundtables in this browser; the LYGO Radio dock at the bottom of this page
-            yields the speakers whenever a show is on air.
+            Same live app as{' '}
+            <a className="text-teal-300 hover:text-teal-200" href={DESK_SPACE} target="_blank" rel="noopener noreferrer">
+              huggingface.co/spaces/DeepSeekOracle/ai-talk-radio
+            </a>
+            . The dock below yields the speakers when this studio is on air.
           </span>
-          <a className="text-teal-300 hover:text-teal-200" href={DESK_URL} target="_blank" rel="noopener noreferrer">
-            Not loading? Open the desk in a new tab →
+          <a className="text-teal-300 hover:text-teal-200" href={DESK_SPACE} target="_blank" rel="noopener noreferrer">
+            Not loading? Open the Space →
           </a>
         </div>
       </div>
