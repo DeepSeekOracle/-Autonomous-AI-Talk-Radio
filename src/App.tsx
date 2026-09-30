@@ -12,6 +12,7 @@ import { CallerHotline } from './components/CallerHotline';
 import { ShowGenerator } from './components/ShowGenerator';
 import { Soundboard } from './components/Soundboard';
 import { ShowNotesModal } from './components/ShowNotesModal';
+import { LygoFooter } from './components/LygoFooter';
 import { STATIONS, INITIAL_SHOWS, SPEAKERS } from './data';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
 import { audioEngine } from './lib/audioEngine';
@@ -382,24 +383,8 @@ export default function App() {
         />
       )}
 
-      {/* Quiet Footer adhering strictly to anti-slop rules (no ornamental engines, clean info) */}
-      <footer className="border-t border-slate-800/80 bg-[#0a0d14] py-6 text-xs text-slate-500 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <Radio className="w-4 h-4 text-amber-500" />
-            <span className="font-semibold text-slate-300">AI Talk Radio (Ungated)</span>
-            <span>· Autonomous Digital Radio Station</span>
-          </div>
-
-          <div className="flex items-center gap-4 text-slate-400 font-mono">
-            <span>Stereo AGC 24kHz</span>
-            <span>·</span>
-            <span>Full-Duplex Hotline</span>
-            <span>·</span>
-            <span>Zero Sponsor Restrictions</span>
-          </div>
-        </div>
-      </footer>
+      {/* LYGO footer: house links, LYGO TV, the LYGO RADIO dock, support */}
+      <LygoFooter />
 
     </div>
   );

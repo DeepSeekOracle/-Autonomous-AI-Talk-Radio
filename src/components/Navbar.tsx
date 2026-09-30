@@ -26,9 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         
         {/* Zone 1: Single text element wordmark with radio frequency mark */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-red-600 flex items-center justify-center text-slate-950 font-bold shadow-sm shadow-amber-500/20">
-            <Radio className="w-4 h-4 text-slate-950" />
-          </div>
+          <img src="/brand/lygo-signal-square.svg" alt="LYGO Signal" width={36} height={36} className="w-9 h-9 rounded-xl shadow-sm shadow-amber-500/20" />
           <button 
             onClick={() => setCurrentTab('broadcast')}
             className="text-left group cursor-pointer"
@@ -38,6 +36,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
             <span className="text-xs text-amber-500 font-mono ml-2 font-medium tracking-wider">
               {ungatedMode ? 'UNGATED' : 'LIVE'}
+            </span>
+            <span className="block text-[10px] font-mono uppercase tracking-[0.18em] text-slate-500 mt-0.5">
+              LYGO Signal · AI Radio · Always On
             </span>
           </button>
         </div>

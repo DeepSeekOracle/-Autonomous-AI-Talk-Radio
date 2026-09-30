@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LYGO Signal mark">
+  <title>LYGO Signal mark</title>
+  <rect width="240" height="240" rx="52" fill="#0b121c"/>
+  <rect x="4" y="4" width="232" height="232" rx="49" fill="none" stroke="#1e3a4a" stroke-width="2"/>
+  <circle cx="120.0" cy="120.0" r="11.5" fill="#fbbf24"/>
+    <path d="M 137.3 97.8 A 28.16 28.16 0 0 1 137.3 142.2" fill="none" stroke="#5eead4" stroke-width="5.4" stroke-linecap="round"/>
+    <path d="M 102.7 97.8 A 28.16 28.16 0 0 0 102.7 142.2" fill="none" stroke="#5eead4" stroke-width="5.4" stroke-linecap="round"/>
+    <path d="M 149.9 81.7 A 48.64 48.64 0 0 1 149.9 158.3" fill="none" stroke="#14b8a6" stroke-width="9.2" stroke-linecap="round"/>
+    <path d="M 90.1 81.7 A 48.64 48.64 0 0 0 90.1 158.3" fill="none" stroke="#14b8a6" stroke-width="9.2" stroke-linecap="round"/>
+    <path d="M 162.6 65.5 A 69.12 69.12 0 0 1 162.6 174.5" fill="none" stroke="#0f766e" stroke-width="13.1" stroke-linecap="round"/>
+    <path d="M 77.4 65.5 A 69.12 69.12 0 0 0 77.4 174.5" fill="none" stroke="#0f766e" stroke-width="13.1" stroke-linecap="round"/>
+</svg>
