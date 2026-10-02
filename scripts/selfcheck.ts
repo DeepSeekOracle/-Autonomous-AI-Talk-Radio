@@ -16,6 +16,7 @@ import { LYGO_TOPICS, nextLiveStory, parseWitnessMonitor, pickTopic, type DeskTo
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 import { chunkSpeech, speakable } from '../src/lib/speakable';
 import { seedCatalog } from '../src/lib/seedShows';
+import { pickQueuedShow } from '../src/lib/liveQueue';
 import { adoptDiscoveredTopic, assembleResearch, rankTopicCandidates } from '../src/lib/agentEngine';
 
 const topic = 'why every agent demo dies in production';
@@ -152,6 +153,11 @@ assert.ok(liveA.durationMs > 7 * 60 * 1000 && liveB.durationMs > 7 * 60 * 1000, 
 assert.ok(
   ![...liveA.segments, ...liveB.segments].some((s) => /RESOURCE|CANON|https?:\/\/|operator notes|return json/i.test(s.text)),
   'a live hour keeps the feed notes off the air',
+);
+assert.equal(
+  pickQueuedShow([liveA, liveB], new Set([liveA.topic || '']), 'station-algorithmic-wire')?.topic,
+  liveB.topic,
+  'a prepared hour is skipped after it has been heard',
 );
 assert.ok(
   scoreEnglishVoice('Microsoft Andrew Online (Natural) - English (United States)', 'en-US', 'male', false) >

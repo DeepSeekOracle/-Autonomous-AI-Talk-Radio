@@ -42,6 +42,8 @@ export interface ShowReference {
 export interface RadioShow {
   id: string;
   stationId: string;
+  /** Public headline this hour was written from, when it came off a live feed. */
+  topic?: string;
   title: string;
   episodeNumber: number;
   description: string;

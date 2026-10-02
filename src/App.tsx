@@ -23,6 +23,7 @@ import { synthesizeShow } from './lib/localShow';
 import { speakable } from './lib/speakable';
 import { gatherTopicDeck, nextLiveStory, WITNESS_HOME } from './lib/topicMill';
 import { research_topic } from './lib/agentEngine';
+import { loadLiveQueue, pickQueuedShow } from './lib/liveQueue';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 const HEARD_KEY = 'talk-radio-heard';
@@ -105,6 +106,15 @@ export default function App() {
 
   const mintEternityHour = async (stationId: string): Promise<RadioShow | null> => {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
+    const queuedDoc = await loadLiveQueue().catch(() => null);
+    const queued = pickQueuedShow(queuedDoc?.shows || [], usedTopicsRef.current, station.id);
+    if (queued) {
+      const key = queued.topic || queued.title;
+      usedTopicsRef.current.add(key);
+      writeHeard(usedTopicsRef.current);
+      setEternityLabel(`${queued.stationId.replace('station-', '')} · ${key}`.slice(0, 72));
+      return queued;
+    }
     const deck = await gatherTopicDeck();
     let story = nextLiveStory(deck, station.id, usedTopicsRef.current);
     if (!story && usedTopicsRef.current.size) {

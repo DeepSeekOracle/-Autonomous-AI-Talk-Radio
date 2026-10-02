@@ -144,6 +144,7 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   return {
     id: `show-local-${Date.now()}`,
     stationId: opts.stationId,
+    topic,
     title,
     episodeNumber: Math.floor(Math.random() * 800) + 100,
     description: mintEpisodeSummary(title, opts.stationId, h1, h2),

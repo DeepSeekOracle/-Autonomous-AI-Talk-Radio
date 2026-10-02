@@ -1,0 +1,1049 @@
+{
+  "mintedAt": "2026-10-02T22:15:39.319Z",
+  "shows": [
+    {
+      "id": "show-live-world-1",
+      "stationId": "station-algorithmic-wire",
+      "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
+      "title": "On the Wire: Lake Our Life Protecting Shared Lifeline",
+      "episodeNumber": 384,
+      "description": "The Algorithmic Wire is on air. Reads a prompt as architecture versus production fire. Devon Cross and Dr. Maya Lin take On the Wire: Lake Our Life Protecting Shared Lifeline as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 555500,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Passionate about foundation models, quick-witted, calls out Devon on his nostalgia bias."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1790979337783-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "You are tuned to The Algorithmic Wire. I am Devon Cross. Maya is across the desk. Tonight we are on ‘The lake is our life’: Protecting a shared lifeline in Uganda. The question on this desk is what this fresh public line does to a service people are already using. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1790979337783-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Maya here. I am reading the claim as it arrived, not as I wish it had arrived. ‘The lake is our life’: Protecting a shared lifeline in Uganda. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong.",
+          "timestampMs": 30750,
+          "durationMs": 25700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1790979337783-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A headline is not a casualty report, Maya. ‘The lake is our life’: Protecting a shared lifeline in Uganda is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 57100,
+          "durationMs": 32500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1790979337783-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture the night desk with this exact line in front of it: ‘The lake is our life’: Protecting a shared lifeline in Uganda. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 90250,
+          "durationMs": 33300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1790979337783-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon, I am going to read the page once. ‘The lake is our life’: Protecting a shared lifeline in Uganda On the shores of Nkondo, in Uganda’s Kikuube district, the day begins before sunrise. That is the sentence in front of me about Lake Our Life Protecting Shared Lifeline. It answers one question. It does not become a log because I found it exciting.",
+          "timestampMs": 124200,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1790979337783-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If I take ‘The lake is our life’: Protecting a shared lifeline in Uganda seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. Lake Our Life Protecting Shared Lifeline is now a public line. Public lines travel faster than corrections. The correction has to be just as plain.",
+          "timestampMs": 151350,
+          "durationMs": 27300,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1790979337783-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "And it does not prove the flattering version of ‘The lake is our life’: Protecting a shared lifeline in Uganda. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever public witness · un news did not put on the page. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 179300,
+          "durationMs": 32100,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1790979337783-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Second pass, and it does not exist to decorate the first. There is no second site on ‘The lake is our life’: Protecting a shared lifeline in Uganda. I will not invent the opposing citation. If that fights the first story about Lake Our Life Protecting Shared Lifeline, I stay with the page I can still find. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 212050,
+          "durationMs": 32100,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1790979337783-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Who stays is the person who has to keep a service up while ‘The lake is our life’: Protecting a shared lifeline in Uganda is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 244800,
+          "durationMs": 29300,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1790979337783-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "What I would ship tonight is a narrower note than the headline. Lake Our Life Protecting Shared Lifeline gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 274750,
+          "durationMs": 28900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1790979337783-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The hole, Maya, is treating ‘The lake is our life’: Protecting a shared lifeline in Uganda as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 304300,
+          "durationMs": 30100,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1790979337783-12",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Line One is lit. Jordan is calling from Toronto, Canada about this exact item, ‘The lake is our life’: Protecting a shared lifeline in Uganda. Go ahead, you are on The Algorithmic Wire. Tell us what you can check. Leave the slogan in the hallway. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 335050,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1790979337783-13",
+          "speakerId": "caller-local-1790979337782",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am Jordan, in Toronto, Canada. We saw ‘The lake is our life’: Protecting a shared lifeline in Uganda before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 363000,
+          "durationMs": 32900,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1790979337783-14",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Jordan separated the feed from the work, and that is the adult version of Lake Our Life Protecting Shared Lifeline. Thank you. This desk will not round that back into a vibe. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 396550,
+          "durationMs": 22100,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1790979337783-15",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Unasked, and necessary. When ‘The lake is our life’: Protecting a shared lifeline in Uganda is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 419300,
+          "durationMs": 27700,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1790979337783-16",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The test is small and it fits this item. Can a person who missed the first post explain Lake Our Life Protecting Shared Lifeline from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 447650,
+          "durationMs": 29700,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1790979337783-17",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Ruling on ‘The lake is our life’: Protecting a shared lifeline in Uganda. We keep the sentence the page gave us, and we do not promote the sentence it did not. Lake Our Life Protecting Shared Lifeline can be urgent and still be narrow. Narrow is what the listener can reuse without us in the room. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 478000,
+          "durationMs": 31700,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1790979337783-18",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If you are still here, write the failure sentence for Lake Our Life Protecting Shared Lifeline before you forward ‘The lake is our life’: Protecting a shared lifeline in Uganda. Devon and I will still disagree on the pace. We do not disagree on that order. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 510350,
+          "durationMs": 27700,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1790979337783-19",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour. I am Devon. Maya was across the desk. You were listening to The Algorithmic Wire. Tonight we took apart ‘The lake is our life’: Protecting a shared lifeline in Uganda. The next show starts when the clock turns. Thanks for staying to the end. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "timestampMs": 538700,
+          "durationMs": 28500,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168228",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: ‘The lake is our life’: Protecting a shared lifeline in Uganda On the shores of Nkondo, in Uganda’s Kikuube district, the day begins before sunrise.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Lake Our Life Protecting Shared Lifeline: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168228",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1790979337782",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
+          "take": "I am Jordan, in Toronto, Canada. We saw ‘The lake is our life’: Protecting a shared lifeline in Uganda before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on Lake Our Life Protecting Shared Lifeline, taken from the feed, not from a saved essay.",
+          "status": "on-air",
+          "avatar": "JO"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-02T22:15:37.783Z"
+    },
+    {
+      "id": "show-live-world-3",
+      "stationId": "station-kernel-panic",
+      "topic": "Rising seas, rising stakes: What increasing sea-levels mean to humanity",
+      "title": "Panic Desk: Rising Seas Rising Stakes Increasing Sea",
+      "episodeNumber": 151,
+      "description": "Kernel Panic Radio is on air. Reads a prompt ungated: late desk, no sponsor filter. ZeroDay Zack and Dr. Aris Thorne take Panic Desk: Rising Seas Rising Stakes Increasing Sea as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 517500,
+      "hosts": [
+        {
+          "id": "zack",
+          "name": "ZeroDay Zack",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 0.97,
+          "voiceRate": 1.04,
+          "voiceGender": "male",
+          "personality": "Underground cybervet, drinks Club-Mate, speaks in fast terminal metaphors, ungated enthusiast."
+        },
+        {
+          "id": "aris",
+          "name": "Dr. Aris Thorne",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.05,
+          "voiceRate": 0.95,
+          "voiceGender": "female",
+          "personality": "Methodical, mathematically rigorous, questions every benchmark, allergic to benchmark gaming."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1790979338246-1",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "You are tuned to Kernel Panic Radio. I am ZeroDay Zack. Aris is across the desk. Tonight we are on Rising seas, rising stakes: What increasing sea-levels mean to humanity. The question on this desk is what still works when this public line is the thing stressing the network. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 29700,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1790979338246-2",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Aris here. Rising seas, rising stakes: What increasing sea-levels mean to humanity is on the desk because it is live, not because it flatters us. I want the piece a person can still run if the account that posted it goes quiet. If that piece is missing, the item is a rental with a headline. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 30350,
+          "durationMs": 31300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1790979338246-3",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Pull the cord and say what remains of Rising seas, rising stakes: What increasing sea-levels mean to humanity. If the answer is a login page, you were renting the claim. I will not invent a backup you do not have. Rising Seas Rising Stakes Increasing Sea is either operable from here or it is theater. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 62300,
+          "durationMs": 31300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1790979338246-4",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The failure is the network, and the line on the radio is Rising seas, rising stakes: What increasing sea-levels mean to humanity. A local note still has to outlast the refresh. The plan is the sentence you can read with the cable on the floor, and that sentence gets one reading, not a remix. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 94250,
+          "durationMs": 30900,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1790979338246-5",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Once, and then I stop. Rising seas, rising stakes: What increasing sea levels mean to humanity The ocean is rising faster now than at any point in recorded history. That is the page on Rising Seas Rising Stakes Increasing Sea. It is not a permission slip to add a second outage I did not see. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 125800,
+          "durationMs": 31300,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1790979338246-6",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The meaning of Rising seas, rising stakes: What increasing sea-levels mean to humanity on this station is ownership. Who can switch it off. Who can explain it to a second person without opening a dashboard they do not control. If both answers are a stranger, the item does not belong to the building. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 157750,
+          "durationMs": 30500,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1790979338246-7",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Rising seas, rising stakes: What increasing sea-levels mean to humanity does not prove you are sovereign because you liked the post. A demo that phones home is still a demo. We say the limit in the same breath as the praise. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 188900,
+          "durationMs": 25700,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1790979338246-8",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The other page, if it exists, gets the same cold reading. There is no second site on Rising seas, rising stakes: What increasing sea-levels mean to humanity. I will not invent the opposing citation. Where it does not match Rising Seas Rising Stakes Increasing Sea, we leave the hole visible. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 215250,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1790979338246-9",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Who stays is the named person who can still run Rising Seas Rising Stakes Increasing Sea after public witness · un news goes quiet. If the answer is nobody, the headline was a shrine. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 245200,
+          "durationMs": 22900,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1790979338246-10",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "I would ship the rude version. One offline step for Rising seas, rising stakes: What increasing sea-levels mean to humanity, explained out loud, timed, and ugly. If it only works while the sponsor is watching, it does not ship from this desk. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 268750,
+          "durationMs": 26100,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1790979338246-11",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "The hole is applause. Rising seas, rising stakes: What increasing sea-levels mean to humanity can be clever and still collapse when the cord moves. Clever is not a power source. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 295500,
+          "durationMs": 21300,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1790979338246-12",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Jordan from Toronto, Canada has had to live with Rising seas, rising stakes: What increasing sea-levels mean to humanity, not just repost it. You are on Kernel Panic Radio. What still ran when the easy path stopped. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 317450,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1790979338246-13",
+          "speakerId": "caller-local-1790979338246",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am Jordan, in Toronto, Canada. We tried to keep Rising Seas Rising Stakes Increasing Sea after the comfortable path blinked. The part we could explain kept going. The part that only existed inside someone else's login stopped. We did not need a braver slogan. We needed a switch we could reach. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 342200,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1790979338246-14",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Jordan just priced the cord. That is the ungated version of Rising seas, rising stakes: What increasing sea-levels mean to humanity. Thank you. We will not sand it back down. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 372950,
+          "durationMs": 21300,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1790979338246-15",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Unasked: what is the stop for Rising seas, rising stakes: What increasing sea-levels mean to humanity. The hour, the bill, or the outage where you pull it yourself. If that line does not exist, the project is a hope with a socket. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 394900,
+          "durationMs": 26100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1790979338246-16",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The test is one rude run. Take Rising Seas Rising Stakes Increasing Sea off the vendor path and explain it to a second person before the next headline. If you cannot, it goes back to the bench. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 421650,
+          "durationMs": 24100,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1790979338246-17",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Ruling on Rising seas, rising stakes: What increasing sea-levels mean to humanity. If it dies when the cord is pulled, say you are renting it. The page we read does not get to overrule that test. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 446400,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1790979338246-18",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Before you sleep, name the piece of Rising Seas Rising Stakes Increasing Sea that survives the plug, and the piece that dies with Rising seas, rising stakes: What increasing sea-levels mean to humanity. Zack will pull the cord earlier than I will. The list is the show. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 470750,
+          "durationMs": 28100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1790979338246-19",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "No sponsor gets a veto on this desk. I am Zack. Aris was across the desk. You were listening to Kernel Panic Radio. Tonight we took apart Rising seas, rising stakes: What increasing sea-levels mean to humanity. The next show starts when the clock turns. Thanks for staying to the end. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "timestampMs": 499500,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168206",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: Rising seas, rising stakes: What increasing sea levels mean to humanity The ocean is rising faster now than at any point in recorded history.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Rising Seas Rising Stakes Increasing Sea: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168206",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1790979338246",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Rising seas, rising stakes: What increasing sea-levels mean to humanity",
+          "take": "I am Jordan, in Toronto, Canada. We tried to keep Rising Seas Rising Stakes Increasing Sea after the comfortable path blinked. The part we could explain kept going. The part that only existed inside someone else's login stopped. We did not need a braver slogan. We needed a switch we could reach. Say it in the ungated voice: Rising Seas Rising Stakes Increasing Sea still has to survive after the feed moves on.",
+          "status": "on-air",
+          "avatar": "JO"
+        }
+      ],
+      "ungated": true,
+      "createdAt": "2026-10-02T22:15:38.246Z"
+    },
+    {
+      "id": "show-live-hn-5",
+      "stationId": "station-hn-live",
+      "topic": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+      "title": "Hacker News Live — Court Agrees EFF Utahs VPN Law",
+      "episodeNumber": 703,
+      "description": "Hacker News Live is on air. Reads a prompt as a front-page teardown. Casey Rivera and Devon Cross take Hacker News Live — Court Agrees EFF Utahs VPN Law as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 471500,
+      "hosts": [
+        {
+          "id": "casey",
+          "name": "Casey Rivera",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.02,
+          "voiceRate": 1.03,
+          "voiceGender": "male",
+          "personality": "Fast-talking morning broadcast host, tracks GitHub trending like Wall Street stock tickers."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1790979338731-1",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "You are tuned to Hacker News Live. I am Casey Rivera. Devon is across the desk. Tonight we are on Court agrees with EFF: Utah's VPN law demands a technical impossibility. The question on this desk is what in this public claim a stranger can retrace without joining the thread. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1790979338731-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. The board moved, and the item is Court agrees with EFF: Utah's VPN law demands a technical impossibility. I am not grading the comments. I am asking which sentence a person who missed the thread can still check. If the answer is none, it was a mood. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 30750,
+          "durationMs": 27700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1790979338731-3",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "A confident title is not a source, Devon. Court agrees with EFF: Utah's VPN law demands a technical impossibility can be sharp and still be a claim. Show me the step. If the step is behind a login, the public part of this hour is over, and we should say that out loud. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 59100,
+          "durationMs": 29300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1790979338731-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A stranger opens the item called Court agrees with EFF: Utah's VPN law demands a technical impossibility with no context and no friends in the thread. The only fair reading is the page, not the pile-on. If they cannot repeat the page and then stop, the post was atmosphere. Atmosphere is not a step. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 89050,
+          "durationMs": 29700,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1790979338731-5",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Receipt, once. In his ruling, Judge Barlow noted that the statute requires a technical impossibility on pain of legal liability. I am not going to add a benchmark the item did not bring. Court Agrees EFF Utahs VPN Law gets the words that are actually there. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 119400,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1790979338731-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning on this station is retraceability. Court agrees with EFF: Utah's VPN law demands a technical impossibility is large if a second person can follow it, and small if they have to trust the author. Small is allowed. Calling it large is the failure. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 146550,
+          "durationMs": 26100,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1790979338731-7",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "It does not prove the replies. Replies are weather. Court agrees with EFF: Utah's VPN law demands a technical impossibility is the claim. We do not let the weather write the ruling. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 173300,
+          "durationMs": 20900,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1790979338731-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If another page showed up, here it is, unimproved. There is no second site on Court agrees with EFF: Utah's VPN law demands a technical impossibility. I will not invent the opposing citation. A fight between pages is useful. A fight between moods is a different program. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 194850,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1790979338731-9",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Who stays is the reader who can still find Court Agrees EFF Utahs VPN Law tomorrow, not the account that posted Court agrees with EFF: Utah's VPN law demands a technical impossibility first. First is a clock. The page is the work. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 222400,
+          "durationMs": 24900,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1790979338731-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the failure note. What Court agrees with EFF: Utah's VPN law demands a technical impossibility tried, what a stranger can rerun, and what broke. That note saves the next reader an afternoon. A victory lap does not. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 247950,
+          "durationMs": 24100,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1790979338731-11",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "The hole is a demo that only runs on the author's machine while the title says Court agrees with EFF: Utah's VPN law demands a technical impossibility as if it were general. General is a word you earn with a second machine. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 272700,
+          "durationMs": 24900,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1790979338731-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Priya, Bangalore, India, you are on Hacker News Live. You saw Court agrees with EFF: Utah's VPN law demands a technical impossibility the way a stranger sees it. What could you actually retrace. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 298250,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1790979338731-13",
+          "speakerId": "caller-local-1790979338731",
+          "speakerName": "Priya (Bangalore, India)",
+          "text": "I am Priya, in Bangalore, India. I opened Court Agrees EFF Utahs VPN Law the way anyone could. The part with a step, I could follow. The part that was only confidence, I could not. I do not need the thread to clap. I need the step to exist tomorrow. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 320200,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1790979338731-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Priya did the stranger's job on Court agrees with EFF: Utah's VPN law demands a technical impossibility. That is the whole craft of this station. Thank you. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 348950,
+          "durationMs": 18900,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1790979338731-15",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Unasked: what would falsify Court agrees with EFF: Utah's VPN law demands a technical impossibility by tomorrow morning. If nothing could, it was not a claim. It was a jersey. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 368500,
+          "durationMs": 20100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1790979338731-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is one clean rerun, by someone who did not write Court Agrees EFF Utahs VPN Law, reported without adjectives. Pass, fail, or not public. Those are the only scores this desk prints. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 389250,
+          "durationMs": 21700,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1790979338731-17",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Ruling on Court agrees with EFF: Utah's VPN law demands a technical impossibility. It is only as large as the step we could read. The rest stays a title until a stranger can retrace it. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 411600,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1790979338731-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If you post about Court Agrees EFF Utahs VPN Law, post the step that failed too. Casey will ask for it. The listener who includes it will save a stranger an afternoon. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 434350,
+          "durationMs": 20900,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1790979338731-19",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "That is the hour. I am Casey. Devon was across the desk. You were listening to Hacker News Live. Tonight we took apart Court agrees with EFF: Utah's VPN law demands a technical impossibility. The next show starts when the clock turns. Thanks for staying to the end. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "timestampMs": 455900,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Hacker News): https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: In his ruling, Judge Barlow noted that the statute requires a technical impossibility on pain of legal liability.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Court Agrees EFF Utahs VPN Law: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Hacker News",
+          "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+          "type": "hn"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1790979338731",
+          "name": "Priya",
+          "location": "Bangalore, India",
+          "topic": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+          "take": "I am Priya, in Bangalore, India. I opened Court Agrees EFF Utahs VPN Law the way anyone could. The part with a step, I could follow. The part that was only confidence, I could not. I do not need the thread to clap. I need the step to exist tomorrow. Front page only: Court Agrees EFF Utahs VPN Law is exactly as large as a stranger can retrace.",
+          "status": "on-air",
+          "avatar": "PR"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-02T22:15:38.732Z"
+    },
+    {
+      "id": "show-live-world-7",
+      "stationId": "station-sv-confidential",
+      "topic": "WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion",
+      "title": "Confidential: Reports More Than 200 Attacks Ukraines",
+      "episodeNumber": 839,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Confidential: Reports More Than 200 Attacks Ukraines as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 600700,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1790979339318-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 31700,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1790979339318-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 32350,
+          "durationMs": 35700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1790979339318-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion can be important and still have no buyer. Attention is not solvency. If Reports More Than 200 Attacks Ukraines has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 68700,
+          "durationMs": 35300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1790979339318-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 104650,
+          "durationMs": 35300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1790979339318-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion Since the beginning of Russia’s full-scale invasion of Ukraine, 3,205 attacks on healthcare facilities have been carried out, World Health Organization Representative for Ukr I will not turn Reports More Than 200 Attacks Ukraines into a market it did not claim.",
+          "timestampMs": 140600,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1790979339318-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 167750,
+          "durationMs": 32500,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1790979339318-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 200900,
+          "durationMs": 28100,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1790979339318-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. I will not invent the opposing citation. If neither page names a payer, then Reports More Than 200 Attacks Ukraines does not have one yet. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 229650,
+          "durationMs": 36500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1790979339318-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 266800,
+          "durationMs": 27300,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1790979339318-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Reports More Than 200 Attacks Ukraines gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 294750,
+          "durationMs": 29700,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1790979339318-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 325100,
+          "durationMs": 30900,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1790979339318-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Hiro in Tokyo, Japan, you are on Silicon Valley Confidential. You had to pay for something like WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 356650,
+          "durationMs": 30500,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1790979339319-13",
+          "speakerId": "caller-local-1790979339318",
+          "speakerName": "Hiro (Tokyo, Japan)",
+          "text": "I am Hiro, in Tokyo, Japan. Reports More Than 200 Attacks Ukraines looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 387800,
+          "durationMs": 34900,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1790979339319-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Hiro priced the part WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 423350,
+          "durationMs": 28900,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1790979339319-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 452900,
+          "durationMs": 30500,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1790979339319-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Reports More Than 200 Attacks Ukraines. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 484050,
+          "durationMs": 31700,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1790979339319-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 516400,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1790979339319-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Reports More Than 200 Attacks Ukraines, write the stop under WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 546350,
+          "durationMs": 30900,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1790979339319-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "timestampMs": 577900,
+          "durationMs": 34500,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168226",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion Since the beginning of Russia’s full-scale invasion of Ukraine, 3,205 attacks on healthcare facilities have been carried out, W",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Reports More Than 200 Attacks Ukraines: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168226",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1790979339318",
+          "name": "Hiro",
+          "location": "Tokyo, Japan",
+          "topic": "WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion",
+          "take": "I am Hiro, in Tokyo, Japan. Reports More Than 200 Attacks Ukraines looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: Reports More Than 200 Attacks Ukraines is whoever pays when WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion is no longer a headline.",
+          "status": "on-air",
+          "avatar": "HI"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-02T22:15:39.319Z"
+    }
+  ]
+}
