@@ -322,30 +322,37 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
         {/* Play, Pause, Skip segment buttons */}
         <div className="flex items-center gap-2 sm:gap-3">
           <button
+            type="button"
             onClick={() => onSeekSegment(Math.max(0, activeSegmentIndex - 1))}
             className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             title="Previous Segment"
+            aria-label="Previous segment"
           >
             <SkipBack className="w-4 h-4" />
           </button>
 
           <button
+            type="button"
             onClick={onPlayToggle}
             className="w-12 h-12 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-bold flex items-center justify-center transition-all shadow-md shadow-amber-500/20 cursor-pointer"
             title={isPlaying ? 'Pause Broadcast' : 'Play Broadcast'}
+            aria-label={isPlaying ? 'Pause broadcast' : 'Play broadcast'}
           >
             {isPlaying ? <Pause className="w-5 h-5 fill-slate-950" /> : <Play className="w-5 h-5 fill-slate-950 ml-0.5" />}
           </button>
 
           <button
+            type="button"
             onClick={onStopBroadcast}
             className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             title="Stop Broadcast"
+            aria-label="Stop broadcast"
           >
             <Square className="w-4 h-4" />
           </button>
 
           <button
+            type="button"
             onClick={() => {
               if (activeSegmentIndex >= show.segments.length - 1) {
                 onNextHour();
@@ -355,6 +362,7 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
             }}
             className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             title="Next Segment"
+            aria-label="Next segment"
           >
             <SkipForward className="w-4 h-4" />
           </button>
@@ -365,7 +373,9 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
           {(['broadcast-warmth', 'fm-clarity', 'vintage-transistor', 'bypass'] as const).map((eq) => (
             <button
               key={eq}
+              type="button"
               onClick={() => handleEqualizerChange(eq)}
+              aria-pressed={settings.equalizerPreset === eq}
               className={`px-2.5 py-1 rounded cursor-pointer transition-colors whitespace-nowrap ${
                 settings.equalizerPreset === eq
                   ? 'bg-amber-500 text-slate-950 font-bold'
@@ -385,7 +395,10 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
             {[0.75, 1.0, 1.25, 1.5].map((speed) => (
               <button
                 key={speed}
+                type="button"
                 onClick={() => handleSpeedChange(speed)}
+                aria-pressed={settings.playbackRate === speed}
+                aria-label={`${speed} times speed`}
                 className={`px-2 py-1 rounded cursor-pointer transition-colors ${
                   settings.playbackRate === speed
                     ? 'bg-slate-800 text-amber-400 font-bold'
@@ -400,9 +413,11 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
           {/* Volume Control */}
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={toggleMute}
               className="text-slate-400 hover:text-white cursor-pointer"
               title={isMuted ? 'Unmute' : 'Mute'}
+              aria-label={isMuted ? 'Unmute' : 'Mute'}
             >
               {isMuted || settings.volume === 0 ? (
                 <VolumeX className="w-4 h-4 text-red-400" />
@@ -417,6 +432,7 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
               step="0.05"
               value={isMuted ? 0 : settings.volume}
               onChange={handleVolumeChange}
+              aria-label="Studio volume"
               className="w-16 sm:w-20 accent-amber-500 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
             />
           </div>

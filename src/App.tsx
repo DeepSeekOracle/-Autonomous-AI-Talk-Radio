@@ -427,6 +427,7 @@ export default function App() {
                   </div>
 
                   <button
+                    type="button"
                     onClick={() => setCurrentTab('hotline')}
                     className="px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-500 text-slate-950 font-bold text-xs transition-colors cursor-pointer shadow-sm shadow-red-600/20 whitespace-nowrap"
                   >
@@ -476,13 +477,14 @@ export default function App() {
 
               <div className="space-y-3">
                 {shows.filter(s => s.stationId === activeStationId).map(showItem => (
-                  <div
+                  <button
+                    type="button"
                     key={showItem.id}
                     onClick={() => {
                       setActiveShowId(showItem.id);
                       setCurrentTab('broadcast');
                     }}
-                    className={`p-4 rounded-lg border text-left transition-all cursor-pointer flex items-center justify-between ${
+                    className={`w-full p-4 rounded-lg border text-left transition-all cursor-pointer flex items-center justify-between ${
                       showItem.id === activeShowId
                         ? 'bg-amber-500/10 border-amber-500/60 shadow-sm'
                         : 'bg-slate-900/60 border-slate-800 hover:bg-slate-800/60'
@@ -510,12 +512,12 @@ export default function App() {
                       </p>
                     </div>
 
-                    <button
-                      className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-300 text-xs font-medium transition-colors shrink-0 ml-4"
+                    <span
+                      className="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-xs font-medium shrink-0 ml-4"
                     >
                       {showItem.id === activeShowId && isPlaying ? 'On Air' : 'Tune In'}
-                    </button>
-                  </div>
+                    </span>
+                  </button>
                 ))}
               </div>
             </div>

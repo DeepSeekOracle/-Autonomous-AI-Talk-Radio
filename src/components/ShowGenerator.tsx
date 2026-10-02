@@ -134,11 +134,12 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
       <form onSubmit={handleGenerate} className="space-y-5">
         {/* Topic Input with Fast Suggestions */}
         <div>
-          <label className="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
+          <label htmlFor="broadcast-topic" className="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
             <span>Broadcast Topic or Technical Controversy</span>
             <span className="text-[10px] text-slate-500 font-mono">CUSTOM OR CLICK PRESET</span>
           </label>
           <input
+            id="broadcast-topic"
             type="text"
             placeholder="e.g. Memory safety benchmarks in distributed databases..."
             value={topic}
@@ -226,11 +227,12 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
           {/* Station Channel & Ungated Filter */}
           <div className="space-y-4">
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1.5 flex items-center gap-1">
+              <label htmlFor="station-destination" className="block text-xs font-medium text-slate-400 mb-1.5 flex items-center gap-1">
                 <Radio className="w-3.5 h-3.5 text-amber-400" />
                 <span>Station Destination</span>
               </label>
               <select
+                id="station-destination"
                 value={selectedStationId}
                 onChange={(e) => setSelectedStationId(e.target.value)}
                 className="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-xs text-white focus:outline-none focus:border-amber-500/80 cursor-pointer"
@@ -254,6 +256,7 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
                   type="checkbox"
                   checked={isUngated}
                   onChange={(e) => setIsUngated(e.target.checked)}
+                  aria-label="Ungated mode"
                   className="w-4 h-4 accent-red-500 cursor-pointer"
                 />
               </div>

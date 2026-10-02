@@ -22,8 +22,8 @@ export const LYGO = {
   disclaimer: 'https://chatagent.ca/talk-radio/disclaimer.html',
   support: {
     paypal: 'https://www.paypal.com/paypalme/ExcavationPro',
-    patreon: 'https://www.patreon.com/Excavationpro',
-    patreonPost: 'https://www.patreon.com/Excavationpro/posts/lygo-supporter-170485961',
+    patreon: 'https://www.patreon.com/Excavationpro/posts/chatagent-ca-api-170485961',
+    patreonPost: 'https://www.patreon.com/Excavationpro/posts/chatagent-ca-api-170485961',
   },
   music: {
     hub: 'https://asiancoastline.com/listen.html',
