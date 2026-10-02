@@ -26,6 +26,7 @@ export interface SynthesizeOptions {
   band?: string;
   writerNotes?: string;
   packet?: ResearchPacket;
+  live?: boolean;
 }
 
 const WPM = 150;
@@ -91,6 +92,7 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
     stationId: opts.stationId,
     stationName,
     packet: opts.packet,
+    live: opts.live,
   };
   const script = writeDeskScript(brief);
 

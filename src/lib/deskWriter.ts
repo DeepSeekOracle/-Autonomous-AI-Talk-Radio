@@ -27,6 +27,8 @@ export type DeskBrief = {
   stationId: string;
   stationName: string;
   packet?: ResearchPacket;
+  /** Play Forever: this hour is one public item, not the saved desk essay. */
+  live?: boolean;
 };
 
 export type DeskLine = {
@@ -294,7 +296,7 @@ export function writeDeskScript(brief: DeskBrief): DeskLine[] {
     spare: "",
   };
   const write = SCRIPTS[brief.stationId] || wire;
-  const lines = voicePacket(write(cast), cast);
+  const lines = brief.live ? writeLiveHour(cast) : voicePacket(write(cast), cast);
   const seen = new Set<string>();
   return lines.filter((row) => {
     const key = row.text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 80);
@@ -341,7 +343,161 @@ function voicePacket(lines: DeskLine[], c: Cast): DeskLine[] {
   });
 }
 
+function pageLine(c: Cast): string {
+  if (c.b.fact1) return c.b.fact1;
+  return `I do not have a page I would quote under ${c.b.topic}. The public line is the headline, and I will not decorate it.`;
+}
+
+function otherLine(c: Cast): string {
+  if (c.b.fact2) return c.b.fact2;
+  return `There is no second site on ${c.b.topic}. I will not invent the opposing citation.`;
+}
+
+function writeLiveHour(c: Cast): DeskLine[] {
+  const id = c.b.stationId;
+  if (id === "station-kernel-panic") return livePanic(c);
+  if (id === "station-hn-live") return liveBoard(c);
+  if (id === "station-sv-confidential") return liveMoney(c);
+  return liveWire(c);
+}
+
+function liveWire(c: Cast): DeskLine[] {
+  const story = c.b.topic;
+  const spare = `That is the live line on ${c.b.core}, taken from the feed, not from a saved essay.`;
+  const page = pageLine(c);
+  const other = otherLine(c);
+  const scene = c.world
+    ? `Picture the night desk with this exact line in front of it: ${story}. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not.`
+    : `This just landed where a person on duty can see it: ${story}. The sentence they can stand on is the one the page gave them, and it gets read once. Everything past that sentence is a guess, and a guess does not get a microphone on this desk.`;
+  return [
+    line(1, "Cold Open", "heated", open(c, c.world ? "what this fresh public line does to a service people are already using" : "what is still true in this fresh public line when someone has to operate it"), spare),
+    line(2, "First Take", "intrigued", `${c.second} here. I am reading the claim as it arrived, not as I wish it had arrived. ${story}. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong.`, spare),
+    line(1, "The Push", "skeptical", c.world
+      ? `A headline is not a casualty report, ${c.second}. ${story} is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all.`
+      : `The arrival of ${story} is not the same thing as a system that survived it. I have watched a true headline sit on top of a team that could not point to the failing part. If the people on duty cannot say what changed, they have a rumor with good timing.`, spare),
+    line(2, "Scene", "excited", scene, spare),
+    line(1, "Page One", "neutral", `${c.first}, I am going to read the page once. ${page} That is the sentence in front of me about ${c.b.core}. It answers one question. It does not become a log because I found it exciting.`, spare),
+    line(2, "What It Means", "intrigued", `If I take ${story} seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. ${c.b.core} is now a public line. Public lines travel faster than corrections. The correction has to be just as plain.`, spare),
+    line(1, "What It Does Not Prove", "skeptical", `And it does not prove the flattering version of ${story}. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever ${c.b.source} did not put on the page.`, spare),
+    line(2, "Second Pass", "neutral", `Second pass, and it does not exist to decorate the first. ${other} If that fights the first story about ${c.b.core}, I stay with the page I can still find.`, spare),
+    line(1, "Who Stays", "heated", `Who stays is the person who has to keep a service up while ${story} is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work.`, spare),
+    line(2, "What I Would Ship", "excited", `What I would ship tonight is a narrower note than the headline. ${c.b.core} gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page.`, spare),
+    line(1, "The Hole", "skeptical", `The hole, ${c.second}, is treating ${story} as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed.`, spare),
+    line(2, "Caller Intro", "neutral", `Line One is lit. ${c.caller.name} is calling from ${c.caller.location} about this exact item, ${story}. Go ahead, you are on ${c.b.stationName}. Tell us what you can check. Leave the slogan in the hallway.`, spare),
+    line("caller", "Field Report", "heated", `I am ${c.caller.name}, in ${c.caller.location}. We saw ${story} before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used.`, spare),
+    line(2, "Caller Hold", "intrigued", `${c.caller.name} separated the feed from the work, and that is the adult version of ${c.b.core}. Thank you. This desk will not round that back into a vibe.`, spare),
+    line(1, "The Unasked", "skeptical", `Unasked, and necessary. When ${story} is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item.`, spare),
+    line(2, "The Test", "excited", `The test is small and it fits this item. Can a person who missed the first post explain ${c.b.core} from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline.`, spare),
+    line(1, "Ruling", "neutral", c.b.fact1
+      ? `Ruling on ${story}. We keep the sentence the page gave us, and we do not promote the sentence it did not. ${c.b.core} can be urgent and still be narrow. Narrow is what the listener can reuse without us in the room.`
+      : `We are not ready to rule on ${story}. The honest close is a question, because a matching page did not land. What would a second, independent page have to say before this headline is a thesis?`, spare),
+    line(2, "Handoff", "laughing", `If you are still here, write the failure sentence for ${c.b.core} before you forward ${story}. ${c.first} and I will still disagree on the pace. We do not disagree on that order.`, spare),
+    line(1, "Signoff", "neutral", signoff(c), spare),
+  ];
+}
+
+function livePanic(c: Cast): DeskLine[] {
+  const story = c.b.topic;
+  const spare = `Say it in the ungated voice: ${c.b.core} still has to survive after the feed moves on.`;
+  const page = pageLine(c);
+  const other = otherLine(c);
+  return [
+    line(1, "Cold Open", "heated", open(c, c.world ? "what still works when this public line is the thing stressing the network" : "what is left of this public line when the vendor cord is pulled"), spare),
+    line(2, "First Take", "intrigued", `${c.second} here. ${story} is on the desk because it is live, not because it flatters us. I want the piece a person can still run if the account that posted it goes quiet. If that piece is missing, the item is a rental with a headline.`, spare),
+    line(1, "The Push", "skeptical", `Pull the cord and say what remains of ${story}. If the answer is a login page, you were renting the claim. I will not invent a backup you do not have. ${c.b.core} is either operable from here or it is theater.`, spare),
+    line(2, "Scene", "excited", c.world
+      ? `The failure is the network, and the line on the radio is ${story}. A local note still has to outlast the refresh. The plan is the sentence you can read with the cable on the floor, and that sentence gets one reading, not a remix.`
+      : `Unplug the flattering half of ${story} and see what is still in the room. If the claim dies without the vendor, the hour's job is to say you are renting it. Renting can be honest. Pretending it is yours cannot.`, spare),
+    line(1, "Page One", "neutral", `Once, and then I stop. ${page} That is the page on ${c.b.core}. It is not a permission slip to add a second outage I did not see.`, spare),
+    line(2, "What It Means", "intrigued", `The meaning of ${story} on this station is ownership. Who can switch it off. Who can explain it to a second person without opening a dashboard they do not control. If both answers are a stranger, the item does not belong to the building.`, spare),
+    line(1, "What It Does Not Prove", "skeptical", `${story} does not prove you are sovereign because you liked the post. A demo that phones home is still a demo. We say the limit in the same breath as the praise.`, spare),
+    line(2, "Second Pass", "neutral", `The other page, if it exists, gets the same cold reading. ${other} Where it does not match ${c.b.core}, we leave the hole visible.`, spare),
+    line(1, "Who Stays", "heated", `Who stays is the named person who can still run ${c.b.core} after ${c.b.source} goes quiet. If the answer is nobody, the headline was a shrine.`, spare),
+    line(2, "What I Would Ship", "excited", `I would ship the rude version. One offline step for ${story}, explained out loud, timed, and ugly. If it only works while the sponsor is watching, it does not ship from this desk.`, spare),
+    line(1, "The Hole", "skeptical", `The hole is applause. ${story} can be clever and still collapse when the cord moves. Clever is not a power source.`, spare),
+    line(2, "Caller Intro", "neutral", `${c.caller.name} from ${c.caller.location} has had to live with ${story}, not just repost it. You are on ${c.b.stationName}. What still ran when the easy path stopped.`, spare),
+    line("caller", "Field Report", "heated", `I am ${c.caller.name}, in ${c.caller.location}. We tried to keep ${c.b.core} after the comfortable path blinked. The part we could explain kept going. The part that only existed inside someone else's login stopped. We did not need a braver slogan. We needed a switch we could reach.`, spare),
+    line(2, "Caller Hold", "intrigued", `${c.caller.name} just priced the cord. That is the ungated version of ${story}. Thank you. We will not sand it back down.`, spare),
+    line(1, "The Unasked", "skeptical", `Unasked: what is the stop for ${story}. The hour, the bill, or the outage where you pull it yourself. If that line does not exist, the project is a hope with a socket.`, spare),
+    line(2, "The Test", "excited", `The test is one rude run. Take ${c.b.core} off the vendor path and explain it to a second person before the next headline. If you cannot, it goes back to the bench.`, spare),
+    line(1, "Ruling", "neutral", c.b.fact1
+      ? `Ruling on ${story}. If it dies when the cord is pulled, say you are renting it. The page we read does not get to overrule that test.`
+      : `No ruling on ${story}. A page that mentions it did not land, and this desk will not invent one. The question stays open until a person can run the claim without the feed.`, spare),
+    line(2, "Handoff", "laughing", `Before you sleep, name the piece of ${c.b.core} that survives the plug, and the piece that dies with ${story}. ${c.first} will pull the cord earlier than I will. The list is the show.`, spare),
+    line(1, "Signoff", "neutral", signoff(c), spare),
+  ];
+}
+
+function liveBoard(c: Cast): DeskLine[] {
+  const story = c.b.topic;
+  const spare = `Front page only: ${c.b.core} is exactly as large as a stranger can retrace.`;
+  const page = pageLine(c);
+  const other = otherLine(c);
+  return [
+    line(1, "Cold Open", "heated", open(c, "what in this public claim a stranger can retrace without joining the thread"), spare),
+    line(2, "First Take", "intrigued", `${c.second} here. The board moved, and the item is ${story}. I am not grading the comments. I am asking which sentence a person who missed the thread can still check. If the answer is none, it was a mood.`, spare),
+    line(1, "The Push", "skeptical", `A confident title is not a source, ${c.second}. ${story} can be sharp and still be a claim. Show me the step. If the step is behind a login, the public part of this hour is over, and we should say that out loud.`, spare),
+    line(2, "Scene", "excited", `A stranger opens the item called ${story} with no context and no friends in the thread. The only fair reading is the page, not the pile-on. If they cannot repeat the page and then stop, the post was atmosphere. Atmosphere is not a step.`, spare),
+    line(1, "Page One", "neutral", `Receipt, once. ${page} I am not going to add a benchmark the item did not bring. ${c.b.core} gets the words that are actually there.`, spare),
+    line(2, "What It Means", "intrigued", `The meaning on this station is retraceability. ${story} is large if a second person can follow it, and small if they have to trust the author. Small is allowed. Calling it large is the failure.`, spare),
+    line(1, "What It Does Not Prove", "skeptical", `It does not prove the replies. Replies are weather. ${story} is the claim. We do not let the weather write the ruling.`, spare),
+    line(2, "Second Pass", "neutral", `If another page showed up, here it is, unimproved. ${other} A fight between pages is useful. A fight between moods is a different program.`, spare),
+    line(1, "Who Stays", "heated", `Who stays is the reader who can still find ${c.b.core} tomorrow, not the account that posted ${story} first. First is a clock. The page is the work.`, spare),
+    line(2, "What I Would Ship", "excited", `I would ship the failure note. What ${story} tried, what a stranger can rerun, and what broke. That note saves the next reader an afternoon. A victory lap does not.`, spare),
+    line(1, "The Hole", "skeptical", `The hole is a demo that only runs on the author's machine while the title says ${story} as if it were general. General is a word you earn with a second machine.`, spare),
+    line(2, "Caller Intro", "neutral", `${c.caller.name}, ${c.caller.location}, you are on ${c.b.stationName}. You saw ${story} the way a stranger sees it. What could you actually retrace.`, spare),
+    line("caller", "Field Report", "heated", `I am ${c.caller.name}, in ${c.caller.location}. I opened ${c.b.core} the way anyone could. The part with a step, I could follow. The part that was only confidence, I could not. I do not need the thread to clap. I need the step to exist tomorrow.`, spare),
+    line(2, "Caller Hold", "intrigued", `${c.caller.name} did the stranger's job on ${story}. That is the whole craft of this station. Thank you.`, spare),
+    line(1, "The Unasked", "skeptical", `Unasked: what would falsify ${story} by tomorrow morning. If nothing could, it was not a claim. It was a jersey.`, spare),
+    line(2, "The Test", "excited", `The test is one clean rerun, by someone who did not write ${c.b.core}, reported without adjectives. Pass, fail, or not public. Those are the only scores this desk prints.`, spare),
+    line(1, "Ruling", "neutral", c.b.fact1
+      ? `Ruling on ${story}. It is only as large as the step we could read. The rest stays a title until a stranger can retrace it.`
+      : `No ruling on ${story}. The title is public and the page is not, and this board will not pretend those are the same thing.`, spare),
+    line(2, "Handoff", "laughing", `If you post about ${c.b.core}, post the step that failed too. ${c.first} will ask for it. The listener who includes it will save a stranger an afternoon.`, spare),
+    line(1, "Signoff", "neutral", signoff(c), spare),
+  ];
+}
+
+function liveMoney(c: Cast): DeskLine[] {
+  const story = c.b.topic;
+  const spare = `Bring it back to the bill: ${c.b.core} is whoever pays when ${story} is no longer a headline.`;
+  const page = pageLine(c);
+  const other = otherLine(c);
+  return [
+    line(1, "Cold Open", "heated", open(c, c.world ? "who is already paying, in time or money, while this public line is still unfinished" : "who writes the check when this public line becomes an invoice"), spare),
+    line(2, "First Take", "intrigued", `${c.second} here. ${story} arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage.`, spare),
+    line(1, "The Push", "skeptical", `Show me the check, not the destiny. ${story} can be important and still have no buyer. Attention is not solvency. If ${c.b.core} has a cost, the cost gets said on this desk before the applause.`, spare),
+    line(2, "Scene", "excited", c.world
+      ? `Someone is already on a clock because of ${story}. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there.`
+      : `Put ${story} on a one-page bill. Buyer, user, failure person, monthly cost, and the condition that ends the spend. The outside page gets read once into that bill, and it does not get to invent a second price.`, spare),
+    line(1, "Page One", "neutral", `The page, once, with the price still in the room. ${page} I will not turn ${c.b.core} into a market it did not claim.`, spare),
+    line(2, "What It Means", "intrigued", `The meaning of ${story} here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt.`, spare),
+    line(1, "What It Does Not Prove", "skeptical", `${story} does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart.`, spare),
+    line(2, "Second Pass", "neutral", `The second page does not get to invent a price either. ${other} If neither page names a payer, then ${c.b.core} does not have one yet.`, spare),
+    line(1, "Who Stays", "heated", `Who stays is the person who pays after ${story} leaves the front page. The poster can go. The invoice cannot.`, spare),
+    line(2, "What I Would Ship", "excited", `I would ship the stop-loss in the same note as the headline. ${c.b.core} gets a number, a date, and a name. No number, no destiny. That is the whole product from this station.`, spare),
+    line(1, "The Hole", "skeptical", `The hole is a crowded hour of adjectives around ${story}. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset.`, spare),
+    line(2, "Caller Intro", "neutral", `${c.caller.name} in ${c.caller.location}, you are on ${c.b.stationName}. You had to pay for something like ${story}, in money or in a ruined afternoon. Tell us which.`, spare),
+    line("caller", "Field Report", "heated", `I am ${c.caller.name}, in ${c.caller.location}. ${c.b.core} looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one.`, spare),
+    line(2, "Caller Hold", "intrigued", `${c.caller.name} priced the part ${story} treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision.`, spare),
+    line(1, "The Unasked", "skeptical", `Unasked: the stop-loss for ${story}. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card.`, spare),
+    line(2, "The Test", "excited", `The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of ${c.b.core}. If the page is still only adjectives, we entertained them, and that is a different station.`, spare),
+    line(1, "Ruling", "neutral", c.b.fact1
+      ? `Ruling on ${story}. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further.`
+      : `No ruling on ${story}. We have the headline and we do not have a page that mentions it. A check cannot be written from a headline alone.`, spare),
+    line(2, "Handoff", "laughing", `Before the next meeting about ${c.b.core}, write the stop under ${story} where everyone can see it. ${c.first} will ask. Better it comes from you.`, spare),
+    line(1, "Signoff", "neutral", signoff(c), spare),
+  ];
+}
+
 export function deskTakeaways(brief: DeskBrief): [string, string, string] {
+  if (brief.live) {
+    return [
+      `${brief.core}: this hour follows the public line.`,
+      brief.fact1 ? `A page that mentions it was read once.` : `No matching page landed, so the headline stays a question.`,
+      `The next hour takes the next unused public item.`,
+    ];
+  }
   if (brief.packet?.soften) {
     return [
       brief.packet.open_question,

@@ -12,7 +12,7 @@ import assert from 'node:assert/strict';
 import { synthesizeShow } from '../src/lib/localShow';
 import { buildZip, episodePackFiles, crc32 } from '../src/lib/packZip';
 import { mintEpisodeTitle, topicCore } from '../src/lib/mintTitles';
-import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMill';
+import { LYGO_TOPICS, nextLiveStory, parseWitnessMonitor, pickTopic, type DeskTopic } from '../src/lib/topicMill';
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 import { chunkSpeech, speakable } from '../src/lib/speakable';
 import { seedCatalog } from '../src/lib/seedShows';
@@ -107,6 +107,52 @@ assert.equal(parsed[0].band, 'world');
 assert.match(parsed[0].prompt, /RESOURCE/);
 const picked = pickTopic(LYGO_TOPICS, 'station-hn-live', new Set(), () => 0);
 assert.ok(picked.title.length > 0, 'pickTopic returns a desk');
+const liveDeck: DeskTopic[] = [
+  { title: 'Lattice roundtable', prompt: 'saved', source: 'LYGO Signal', band: 'lygo', url: 'https://chatagent.ca/signal/' },
+  { title: 'Show HN: the desk clock that pages the night shift', prompt: 'board', source: 'Hacker News', band: 'hn', url: 'https://news.ycombinator.com/item?id=1' },
+  { title: 'M 6.1 south of the Kermadec Islands', prompt: 'quake', source: 'USGS', band: 'earth', url: 'https://earthquake.usgs.gov/x' },
+];
+assert.equal(nextLiveStory(liveDeck, 'station-algorithmic-wire', new Set())?.title, liveDeck[1].title, 'forever skips the canned desk and takes a public item');
+assert.equal(
+  nextLiveStory(liveDeck, 'station-hn-live', new Set([liveDeck[1].title]))?.title,
+  liveDeck[2].title,
+  'the next hour is the next unused public item',
+);
+const liveQuote = 'The night shift clock pages one person, and that person can switch it off.';
+const liveA = synthesizeShow({
+  topic: liveDeck[1].title,
+  tone: 'unfiltered',
+  stationId: 'station-hn-live',
+  ungated: false,
+  host1: 'Casey Rivera',
+  host2: 'Devon Cross',
+  band: 'hn',
+  sourceName: 'Hacker News',
+  facts: [liveQuote],
+  live: true,
+});
+const liveB = synthesizeShow({
+  topic: liveDeck[2].title,
+  tone: 'late-night',
+  stationId: 'station-algorithmic-wire',
+  ungated: false,
+  host1: 'Devon Cross',
+  host2: 'Dr. Maya Lin',
+  band: 'earth',
+  sourceName: 'USGS',
+  live: true,
+});
+assert.ok(liveA.segments[0].text.includes(liveDeck[1].title), 'a live cold open names the public item');
+assert.ok(liveB.segments[0].text.includes(liveDeck[2].title), 'the next live hour names its own item');
+assert.notEqual(liveA.segments[3].text.slice(0, 80), liveB.segments[3].text.slice(0, 80), 'two live hours do not share a scene');
+assert.ok(liveA.segments.some((s) => s.text.includes('switch it off')), 'a live hour reads the page it was given');
+assert.ok(liveA.segments.filter((s) => s.text.includes('switch it off')).length === 1, 'the page is read once');
+assert.ok(!/pull request/i.test(liveB.segments.map((s) => s.text).join(' ')), 'a live quake hour does not borrow a software scene');
+assert.ok(liveA.durationMs > 7 * 60 * 1000 && liveB.durationMs > 7 * 60 * 1000, 'a live hour still clears seven minutes');
+assert.ok(
+  ![...liveA.segments, ...liveB.segments].some((s) => /RESOURCE|CANON|https?:\/\/|operator notes|return json/i.test(s.text)),
+  'a live hour keeps the feed notes off the air',
+);
 assert.ok(
   scoreEnglishVoice('Microsoft Andrew Online (Natural) - English (United States)', 'en-US', 'male', false) >
     scoreEnglishVoice('Microsoft David - English (United States)', 'en-US', 'male', true),

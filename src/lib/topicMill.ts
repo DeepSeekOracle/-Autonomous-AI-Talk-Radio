@@ -228,6 +228,22 @@ export const STATION_BAND: Record<string, TopicBand> = {
   "station-sv-confidential": "world",
 };
 
+/** Next unused public item. The canned LYGO prompts are not a live hour. */
+export function nextLiveStory(
+  deck: DeskTopic[],
+  stationId: string,
+  used: Set<string>,
+): DeskTopic | null {
+  const prefer = STATION_BAND[stationId] || "hn";
+  const real = deck.filter((t) => t.band !== "lygo" && t.title.trim().length > 8 && !used.has(t.title));
+  if (!real.length) return null;
+  const preferred = real.filter((t) => {
+    if (prefer === "lygo") return t.band === "hn" || t.band === "world";
+    return t.band === prefer;
+  });
+  return (preferred.length ? preferred : real)[0];
+}
+
 export function pickTopic(
   deck: DeskTopic[],
   stationId: string,

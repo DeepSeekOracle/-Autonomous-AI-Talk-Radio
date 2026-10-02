@@ -21,27 +21,25 @@ import { audioEngine } from './lib/audioEngine';
 import { stationLens } from './lib/mintTitles';
 import { synthesizeShow } from './lib/localShow';
 import { speakable } from './lib/speakable';
-import { gatherTopicDeck, pickTopic, researchFacts, STATION_BAND, WITNESS_HOME } from './lib/topicMill';
-import { adoptDiscoveredTopic, discover_topics, research_topic } from './lib/agentEngine';
+import { gatherTopicDeck, nextLiveStory, WITNESS_HOME } from './lib/topicMill';
+import { research_topic } from './lib/agentEngine';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
-function bandFromFeed(url: string, title: string): string {
-  const u = url.toLowerCase();
-  const t = title.toLowerCase();
-  if (/usgs|earthquake|eonet|nasa|gdacs/.test(u) || /\bm\s*\d/.test(t)) return 'earth';
-  if (/ycombinator|algolia/.test(u)) return 'hn';
-  if (/news\.un\.org|witness/.test(u)) return 'world';
-  return 'lygo';
+const HEARD_KEY = 'talk-radio-heard';
+
+function readHeard(): Set<string> {
+  if (typeof sessionStorage === 'undefined') return new Set();
+  try {
+    const raw = JSON.parse(sessionStorage.getItem(HEARD_KEY) || '[]');
+    return new Set(Array.isArray(raw) ? raw.filter((item) => typeof item === 'string') : []);
+  } catch {
+    return new Set();
+  }
 }
 
-function sourceNameFromFeed(url: string): string {
-  const u = url.toLowerCase();
-  if (/usgs|earthquake/.test(u)) return 'USGS';
-  if (/eonet|nasa/.test(u)) return 'NASA EONET';
-  if (/ycombinator|algolia/.test(u)) return 'Hacker News';
-  if (/news\.un\.org|witness/.test(u)) return 'Public Witness';
-  if (/news\.google/.test(u)) return 'Google News';
-  return 'public feed';
+function writeHeard(used: Set<string>) {
+  if (typeof sessionStorage === 'undefined') return;
+  sessionStorage.setItem(HEARD_KEY, JSON.stringify([...used].slice(-80)));
 }
 
 export default function App() {
@@ -62,7 +60,7 @@ export default function App() {
   const eternityRef = useRef(false);
   const mintingRef = useRef(false);
   const queueRef = useRef<RadioShow | null>(null);
-  const usedTopicsRef = useRef<Set<string>>(new Set());
+  const usedTopicsRef = useRef<Set<string>>(readHeard());
   const [eternity, setEternity] = useState(false);
   const [eternityLabel, setEternityLabel] = useState('next hour writes itself');
   const wheelRef = useRef({
@@ -108,43 +106,34 @@ export default function App() {
   const mintEternityHour = async (stationId: string): Promise<RadioShow | null> => {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
     const deck = await gatherTopicDeck();
-    const found = await discover_topics({
-      network_theme: stationLens(station.id).lens,
-      lookback_minutes: 180,
-      sources: ['rss_feeds', 'google_news'],
-      max_candidates: 5,
-    }).catch(() => []);
-    const prefer = STATION_BAND[station.id] || 'lygo';
-    const fresh = found.find((row) => row.topic && !usedTopicsRef.current.has(row.topic) && adoptDiscoveredTopic(row, prefer));
-    const fallback = pickTopic(deck, station.id, usedTopicsRef.current);
-    const matched = fresh
-      ? deck.find((row) => row.title === fresh.topic || (fresh.source_urls[0] && row.url === fresh.source_urls[0]))
-      : undefined;
-    const title = fresh?.topic || fallback.title;
-    const sourceUrl = fresh?.source_urls[0] || fallback.url || '';
-    const band = matched?.band || (fresh ? bandFromFeed(sourceUrl, title) : fallback.band);
-    usedTopicsRef.current.add(title);
-    if (usedTopicsRef.current.size > 80) {
-      usedTopicsRef.current = new Set([...usedTopicsRef.current].slice(-40));
+    let story = nextLiveStory(deck, station.id, usedTopicsRef.current);
+    if (!story && usedTopicsRef.current.size) {
+      usedTopicsRef.current = new Set([...usedTopicsRef.current].slice(-8));
+      story = nextLiveStory(deck, station.id, usedTopicsRef.current);
     }
-    const packet = await research_topic(title, 'standard').catch(() => undefined);
-    const facts = packet?.sources.length ? packet.sources.map((src) => src.key_quote) : await researchFacts(title);
-    setEternityLabel(`${band} · ${title}`.slice(0, 72));
+    if (!story) {
+      setEternityLabel('public feeds are quiet');
+      return null;
+    }
+    usedTopicsRef.current.add(story.title);
+    writeHeard(usedTopicsRef.current);
+    const packet = await research_topic(story.title, 'standard').catch(() => undefined);
+    setEternityLabel(`${story.band} · ${story.title}`.slice(0, 72));
     const h1 = station.hosts[0];
     const h2 = station.hosts[1] || station.hosts[0];
     return synthesizeShow({
-      topic: title,
+      topic: story.title,
       tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
       stationId: station.id,
       ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
       host1: h1.name,
       host2: h2.name,
-      facts,
+      facts: packet?.sources.map((src) => src.key_quote) || [],
       packet,
-      sourceUrl,
-      sourceName: matched?.source || (fresh ? sourceNameFromFeed(sourceUrl) : fallback.source),
-      band,
-      writerNotes: matched?.prompt || (fresh ? '' : fallback.prompt),
+      sourceUrl: story.url || '',
+      sourceName: story.source,
+      band: story.band,
+      live: true,
     });
   };
 
@@ -266,6 +255,7 @@ export default function App() {
     }
     const show = await mintEternityHour(wheelRef.current.activeStationId);
     if (show && eternityRef.current) applyHour(show);
+    else if (eternityRef.current) setEternityLabel('public feeds are quiet');
   };
 
   // Seek to specific segment
@@ -404,7 +394,7 @@ export default function App() {
                   ? 'bg-teal-400 text-slate-950'
                   : 'bg-slate-800 border border-teal-500/40 text-teal-300 hover:bg-teal-400 hover:text-slate-950'
               }`}
-              title="Keep writing new hours from LYGO desks and Public Witness world feeds"
+              title="While this tab is open, each hour takes the next unused public story and writes from that story"
             >
               <InfinityIcon className="w-3.5 h-3.5" />
               Play Forever
