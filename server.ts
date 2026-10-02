@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { mintEpisodeSummary, mintEpisodeTitle, stationLens } from './src/lib/mintTitles';
 import { synthesizeShow } from './src/lib/localShow';
+import { research_topic } from './src/lib/agentEngine';
 import { looksLikeInstruction, speakable } from './src/lib/speakable';
 
 dotenv.config();
@@ -149,7 +150,7 @@ Return JSON:
 
   // Resilient High-Octane Show Generator (Guarantees zero-failure operation even with quota exhaustion)
   const cleanTopic = topic || 'The Future of Autonomous Engineering Systems';
-  const fallbackShow = generateFallbackShow(cleanTopic, tone, stationId, ungated, host1, host2);
+  const fallbackShow = await generateFallbackShow(cleanTopic, tone, stationId, ungated, host1, host2);
   return res.json({
     success: true,
     source: 'synthesizer-engine',
@@ -220,7 +221,9 @@ Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerN
   return res.json({ success: true, segments: fallbackSegments });
 });
 
-function generateFallbackShow(topic: string, tone: string, stationId: string, ungated: boolean, h1: string, h2: string) {
+async function generateFallbackShow(topic: string, tone: string, stationId: string, ungated: boolean, h1: string, h2: string) {
+  const depth = String(tone || '').includes('deep') ? 'deep' : String(tone || '').includes('morning') ? 'quick' : 'standard';
+  const packet = await research_topic(topic, depth).catch(() => undefined);
   return synthesizeShow({
     topic,
     tone,
@@ -228,6 +231,7 @@ function generateFallbackShow(topic: string, tone: string, stationId: string, un
     ungated,
     host1: h1,
     host2: h2,
+    packet,
   });
 }
 

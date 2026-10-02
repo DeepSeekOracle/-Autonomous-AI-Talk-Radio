@@ -10,7 +10,8 @@ import { RadioShow, ScriptSegment, Caller } from '../types';
 import { SPEAKERS } from '../data';
 import { mintEpisodeSummary, mintEpisodeTitle, topicCore } from './mintTitles';
 import { looksLikeInstruction, speakable } from './speakable';
-import { callerFor, deskTakeaways, writeDeskScript } from './deskWriter';
+import { callerFor, deskTakeaways, writeDeskScript, type DeskBrief } from './deskWriter';
+import type { ResearchPacket } from './agentEngine';
 
 export interface SynthesizeOptions {
   topic: string;
@@ -24,6 +25,7 @@ export interface SynthesizeOptions {
   sourceName?: string;
   band?: string;
   writerNotes?: string;
+  packet?: ResearchPacket;
 }
 
 const WPM = 150;
@@ -67,13 +69,14 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   const id1 = voiceIdFor(opts.host1 || h1, "devon");
   const id2 = voiceIdFor(opts.host2 || h2, "maya");
   const ungated = opts.ungated || opts.tone.includes("ungated");
-  const fact1 = opts.facts?.[0] ? airFact(opts.facts[0]) : "";
-  const fact2 = opts.facts?.[1] ? airFact(opts.facts[1]) : "";
+  const quoted = (opts.packet?.sources || []).map((src) => src.key_quote);
+  const fact1 = airFact(quoted[0] || opts.facts?.[0] || "");
+  const fact2 = airFact(quoted[1] || opts.facts?.[1] || "");
   const source = speakable(opts.sourceName || "the public page") || "the public page";
   const seed = hash(`${opts.stationId}|${topic}|${h1}`);
 
   const stationName = STATION_NAME[opts.stationId] || "AI Talk Radio";
-  const script = writeDeskScript({
+  const brief: DeskBrief = {
     topic,
     core,
     h1,
@@ -87,7 +90,9 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
     seed,
     stationId: opts.stationId,
     stationName,
-  });
+    packet: opts.packet,
+  };
+  const script = writeDeskScript(brief);
 
   const seen = new Set<string>();
   const unique = script.filter((line) => {
@@ -129,9 +134,10 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
 
   const title = mintEpisodeTitle(topic, opts.stationId);
   const notesPrompt = opts.writerNotes ? speakable(opts.writerNotes).slice(0, 220) : "";
-  const takeaways = deskTakeaways({
-    topic, core, h1, h2, fact1, fact2, source, ungated, band: opts.band, tone: opts.tone, seed, stationId: opts.stationId, stationName,
-  });
+  const takeaways = deskTakeaways(brief);
+  const packetNote = opts.packet
+    ? `Research packet: ${opts.packet.sources.length} page(s), confidence ${opts.packet.confidence.toFixed(2)}${opts.packet.soften ? ", held as a question" : ""}.`
+    : "";
 
   return {
     id: `show-local-${Date.now()}`,
@@ -151,14 +157,20 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
         : `Desk topic with no extra URL — LYGO Signal hour.`,
       `Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.`,
       fact1 ? `Receipt 1: ${fact1.slice(0, 220)}` : `No Wikipedia extract landed. Empty is honest.`,
-      notesPrompt ? `Writer notes (not spoken): ${notesPrompt}` : `Desk ruling (not spoken): ${takeaways[0]}`,
-    ],
+      packetNote || (notesPrompt ? `Writer notes (not spoken): ${notesPrompt}` : `Desk ruling (not spoken): ${takeaways[0]}`),
+      notesPrompt && packetNote ? `Writer notes (not spoken): ${notesPrompt}` : "",
+    ].filter(Boolean),
     keyTakeaways: takeaways,
     references: [
       opts.sourceUrl
         ? { title: opts.sourceName || "Source", url: opts.sourceUrl, type: opts.band === "hn" ? "hn" : "news" }
         : { title: "LYGO Signal", url: "https://chatagent.ca/signal/", type: "news" },
       { title: "Public Witness", url: "https://chatagent.ca/witness/", type: "news" },
+      ...(opts.packet?.sources || []).filter((src) => src.url).map((src) => ({
+        title: src.title.slice(0, 80),
+        url: src.url,
+        type: /ycombinator/i.test(src.url) ? "hn" as const : "news" as const,
+      })),
     ],
     callers: [caller],
     ungated,

@@ -3,6 +3,7 @@ import { RadioStation, RadioShow } from '../types';
 import { Sparkles, Radio, Flame, Cpu, Users, Layers, Zap, CheckCircle2 } from 'lucide-react';
 import { audioEngine } from '../lib/audioEngine';
 import { synthesizeShow } from '../lib/localShow';
+import { research_topic } from '../lib/agentEngine';
 
 interface ShowGeneratorProps {
   stations: RadioStation[];
@@ -83,8 +84,10 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
       engine = data.source === 'gemini' ? 'gemini' : 'server synthesizer';
     } catch (err) {
       console.warn('[studio] server path unavailable — writing the episode in the local synthesizer:', err);
-      setStatusMessage('Transmitter offline. Writing the episode in the studio synthesizer...');
-      produced = synthesizeShow(payload);
+      setStatusMessage('Opening pages before the hosts speak...');
+      const depth = tone === 'deep-dive' ? 'deep' : tone === 'morning-rush' ? 'quick' : 'standard';
+      const packet = await research_topic(finalTopic, depth).catch(() => undefined);
+      produced = synthesizeShow({ ...payload, packet });
       engine = 'local synthesizer (offline)';
     }
 

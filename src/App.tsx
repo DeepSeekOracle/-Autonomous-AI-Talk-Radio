@@ -22,7 +22,27 @@ import { stationLens } from './lib/mintTitles';
 import { synthesizeShow } from './lib/localShow';
 import { speakable } from './lib/speakable';
 import { gatherTopicDeck, pickTopic, researchFacts, WITNESS_HOME } from './lib/topicMill';
+import { discover_topics, research_topic } from './lib/agentEngine';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
+
+function bandFromFeed(url: string, title: string): string {
+  const u = url.toLowerCase();
+  const t = title.toLowerCase();
+  if (/usgs|earthquake|eonet|nasa/.test(u) || /\bm\s*\d/.test(t)) return 'earth';
+  if (/ycombinator|algolia/.test(u)) return 'hn';
+  if (/news\.un\.org|witness/.test(u)) return 'world';
+  return 'lygo';
+}
+
+function sourceNameFromFeed(url: string): string {
+  const u = url.toLowerCase();
+  if (/usgs|earthquake/.test(u)) return 'USGS';
+  if (/eonet|nasa/.test(u)) return 'NASA EONET';
+  if (/ycombinator|algolia/.test(u)) return 'Hacker News';
+  if (/news\.un\.org|witness/.test(u)) return 'Public Witness';
+  if (/news\.google/.test(u)) return 'Google News';
+  return 'public feed';
+}
 
 export default function App() {
   const [stations, setStations] = useState<RadioStation[]>(STATIONS);
@@ -88,27 +108,42 @@ export default function App() {
   const mintEternityHour = async (stationId: string): Promise<RadioShow | null> => {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
     const deck = await gatherTopicDeck();
-    const topic = pickTopic(deck, station.id, usedTopicsRef.current);
-    usedTopicsRef.current.add(topic.title);
+    const found = await discover_topics({
+      network_theme: stationLens(station.id).lens,
+      lookback_minutes: 180,
+      sources: ['rss_feeds', 'google_news'],
+      max_candidates: 5,
+    }).catch(() => []);
+    const fresh = found.find((row) => row.topic && !usedTopicsRef.current.has(row.topic));
+    const fallback = pickTopic(deck, station.id, usedTopicsRef.current);
+    const matched = fresh
+      ? deck.find((row) => row.title === fresh.topic || (fresh.source_urls[0] && row.url === fresh.source_urls[0]))
+      : undefined;
+    const title = fresh?.topic || fallback.title;
+    const sourceUrl = fresh?.source_urls[0] || fallback.url || '';
+    const band = matched?.band || (fresh ? bandFromFeed(sourceUrl, title) : fallback.band);
+    usedTopicsRef.current.add(title);
     if (usedTopicsRef.current.size > 80) {
       usedTopicsRef.current = new Set([...usedTopicsRef.current].slice(-40));
     }
-    setEternityLabel(`${topic.band} · ${topic.title}`.slice(0, 72));
-    const facts = await researchFacts(topic.title);
+    const packet = await research_topic(title, 'standard').catch(() => undefined);
+    const facts = packet?.sources.length ? packet.sources.map((src) => src.key_quote) : await researchFacts(title);
+    setEternityLabel(`${band} · ${title}`.slice(0, 72));
     const h1 = station.hosts[0];
     const h2 = station.hosts[1] || station.hosts[0];
     return synthesizeShow({
-      topic: topic.title,
+      topic: title,
       tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
       stationId: station.id,
       ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
       host1: h1.name,
       host2: h2.name,
       facts,
-      sourceUrl: topic.url,
-      sourceName: topic.source,
-      band: topic.band,
-      writerNotes: topic.prompt,
+      packet,
+      sourceUrl,
+      sourceName: matched?.source || (fresh ? sourceNameFromFeed(sourceUrl) : fallback.source),
+      band,
+      writerNotes: matched?.prompt || (fresh ? '' : fallback.prompt),
     });
   };
 

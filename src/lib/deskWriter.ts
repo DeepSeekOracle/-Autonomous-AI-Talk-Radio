@@ -8,6 +8,7 @@
  * @license SPDX-License-Identifier: Apache-2.0
  */
 import type { ScriptSegment } from '../types';
+import type { ResearchPacket } from './agentEngine';
 
 export type AirCaller = { name: string; location: string; avatar: string };
 
@@ -25,6 +26,7 @@ export type DeskBrief = {
   seed: number;
   stationId: string;
   stationName: string;
+  packet?: ResearchPacket;
 };
 
 export type DeskLine = {
@@ -292,7 +294,7 @@ export function writeDeskScript(brief: DeskBrief): DeskLine[] {
     spare: "",
   };
   const write = SCRIPTS[brief.stationId] || wire;
-  const lines = write(cast);
+  const lines = voicePacket(write(cast), cast);
   const seen = new Set<string>();
   return lines.filter((row) => {
     const key = row.text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 80);
@@ -302,7 +304,50 @@ export function writeDeskScript(brief: DeskBrief): DeskLine[] {
   });
 }
 
+function voicePacket(lines: DeskLine[], c: Cast): DeskLine[] {
+  const packet = c.b.packet;
+  if (!packet) return lines;
+  const spare = `We will not add a fact about ${c.b.core} that those pages did not give us.`;
+  return lines.map((row) => {
+    if (row.tag === "Cold Open" && packet.soften) {
+      return line(
+        row.by,
+        row.tag,
+        row.emotion,
+        row.text.replace(
+          "We will argue that all the way through, including the part that does not flatter the idea.",
+          "We are holding this as a question, because the pages are not strong enough for a thesis.",
+        ),
+        spare,
+      );
+    }
+    if (row.tag === "First Take") {
+      return line(2, row.tag, "intrigued", `${c.second} here. I am taking the favorable reading from a page, not from a hunch. ${packet.framings.pro}`, spare);
+    }
+    if (row.tag === "The Push") {
+      return line(1, row.tag, "skeptical", `That reading does not get the hour to itself. ${packet.framings.con}`, spare);
+    }
+    if (row.tag === "Scene") {
+      return line(2, row.tag, row.emotion, `Here is the concrete piece, and it is only as solid as the page it came from. ${packet.concrete_example}`, spare);
+    }
+    if (row.tag === "Ruling") {
+      const lead = packet.soften
+        ? `We are not ready to rule on ${c.b.topic}. The honest close is a question.`
+        : `The pages are strong enough for a narrow ruling on ${c.b.topic}.`;
+      return line(1, row.tag, "neutral", `${lead} ${packet.open_question}`, spare);
+    }
+    return row;
+  });
+}
+
 export function deskTakeaways(brief: DeskBrief): [string, string, string] {
+  if (brief.packet?.soften) {
+    return [
+      brief.packet.open_question,
+      `Confidence ${brief.packet.confidence.toFixed(2)}. One domain, or none, is not a thesis.`,
+      `Say what the page said. Do not decorate ${brief.core}.`,
+    ];
+  }
   const world = worldBand(brief.band);
   const core = brief.core;
   if (brief.stationId === "station-kernel-panic") {

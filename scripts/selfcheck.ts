@@ -16,6 +16,7 @@ import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMil
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 import { chunkSpeech, speakable } from '../src/lib/speakable';
 import { seedCatalog } from '../src/lib/seedShows';
+import { assembleResearch, rankTopicCandidates } from '../src/lib/agentEngine';
 
 const topic = 'why every agent demo dies in production';
 
@@ -135,6 +136,86 @@ const bytes = new Uint8Array(await zip.arrayBuffer());
 const signature = String.fromCharCode(...bytes.slice(0, 4));
 assert.equal(signature, 'PK\u0003\u0004', 'the archive starts with a local file header');
 assert.ok(bytes.length > 4000, 'the archive carries the whole episode');
+
+const ranked = rankTopicCandidates(
+  [
+    {
+      topic: 'Old picnic weather in the park',
+      url: 'https://example.com/picnic',
+      source: 'archive',
+      published_at: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
+    },
+    {
+      topic: 'Local model crash versus cloud outage leak',
+      url: 'https://news.ycombinator.com/item?id=1',
+      source: 'hn',
+      published_at: new Date().toISOString(),
+    },
+  ],
+  { network_theme: 'local models and outages', lookback_minutes: 180, max_candidates: 5, now: Date.now() },
+);
+assert.equal(ranked.length, 1, 'stale topics fall outside the lookback');
+assert.match(ranked[0].topic, /crash/);
+assert.ok(ranked[0].controversy_score > 0, 'a crash and a leak score as contested');
+
+const packet = assembleResearch('local models', 'standard', [
+  {
+    title: 'Operator hardware',
+    url: 'https://en.wikipedia.org/wiki/Local_model',
+    published_at: '',
+    key_quote: 'Local models run on hardware the operator controls and can switch off.',
+  },
+  {
+    title: 'Weights still call home',
+    url: 'https://news.ycombinator.com/item?id=9',
+    published_at: '',
+    key_quote: 'The same setup still phones home for weights unless the copy is complete.',
+  },
+]);
+assert.ok(packet.confidence >= 0.6, 'two domains are enough to speak a narrow ruling');
+assert.equal(packet.soften, false);
+assert.match(packet.framings.con, /phones home/);
+
+const sourced = synthesizeShow({
+  topic,
+  tone: 'unfiltered',
+  stationId: 'station-algorithmic-wire',
+  ungated: true,
+  host1: 'Devon Cross',
+  host2: 'Dr. Maya Lin',
+  packet,
+});
+assert.ok(
+  sourced.segments.some((s) => /phones home|switch off/i.test(s.text)),
+  'a sourced hour quotes the pages instead of inventing a citation',
+);
+assert.ok(sourced.segments[0].text.includes(topic), 'a sourced cold open still names the topic');
+assert.ok(sourced.durationMs > 7 * 60 * 1000, 'a sourced hour still clears seven minutes');
+assert.ok(
+  !sourced.segments.some((s) => /https?:\/\/|operator notes|return json/i.test(s.text)),
+  'page addresses stay in the notes',
+);
+
+const thin = assembleResearch('local models', 'standard', [
+  {
+    title: 'Only one page',
+    url: 'https://en.wikipedia.org/wiki/Only',
+    published_at: '',
+    key_quote: 'A single encyclopedia page is not enough to settle a live argument about local models.',
+  },
+]);
+assert.equal(thin.soften, true, 'one domain keeps the hour a question');
+const questioned = synthesizeShow({
+  topic,
+  tone: 'unfiltered',
+  stationId: 'station-algorithmic-wire',
+  ungated: true,
+  host1: 'Devon Cross',
+  host2: 'Dr. Maya Lin',
+  packet: thin,
+});
+assert.match(questioned.segments[0].text, /holding this as a question/);
+assert.ok(questioned.segments[0].text.includes(topic), 'a softened cold open still names the topic');
 assert.ok(
   String.fromCharCode(...bytes.slice(bytes.length - 22, bytes.length - 18)) === 'PK\u0005\u0006',
   'the archive ends with an end-of-central-directory record',
