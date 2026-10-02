@@ -16,7 +16,8 @@ import { LYGO_TOPICS, nextLiveStory, parseWitnessMonitor, pickTopic, type DeskTo
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 import { chunkSpeech, speakable } from '../src/lib/speakable';
 import { seedCatalog } from '../src/lib/seedShows';
-import { pickQueuedShow } from '../src/lib/liveQueue';
+import { chooseQueue, pickQueuedShow } from '../src/lib/liveQueue';
+import { clipQuote, quoteFromArticle, stripLeadingTitle } from '../src/lib/pageQuote';
 import { adoptDiscoveredTopic, assembleResearch, rankTopicCandidates } from '../src/lib/agentEngine';
 
 const topic = 'why every agent demo dies in production';
@@ -65,6 +66,11 @@ assert.equal(
   topicCore('The Great Software Rewrite: Are Devs Just Spec Prompters Now?'),
   'Great Software Rewrite Devs Spec Prompters',
 );
+assert.equal(
+  topicCore("WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion"),
+  'WHO Reports More Than 3,200 Attacks',
+);
+assert.match(topicCore("Court agrees with EFF: Utah's VPN law demands a technical impossibility"), /Utah's VPN/);
 assert.ok(mintEpisodeTitle(topic, 'station-algorithmic-wire', () => 0).startsWith('Wire Desk:'), 'Algorithmic Wire titles use the station lens');
 const money = synthesizeShow({
   topic,
@@ -158,6 +164,69 @@ assert.equal(
   pickQueuedShow([liveA, liveB], new Set([liveA.topic || '']), 'station-algorithmic-wire')?.topic,
   liveB.topic,
   'a prepared hour is skipped after it has been heard',
+);
+const pageQuote = 'In his ruling, Judge Barlow noted that the statute requires a technical impossibility on pain of legal liability.';
+const buried = synthesizeShow({
+  topic: "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+  tone: 'unfiltered',
+  stationId: 'station-hn-live',
+  ungated: false,
+  host1: 'Casey Rivera',
+  host2: 'Devon Cross',
+  band: 'hn',
+  live: true,
+  facts: [pageQuote],
+  packet: {
+    sources: [{
+      title: 'A town',
+      url: 'https://en.wikipedia.org/wiki/Example',
+      published_at: '',
+      key_quote: 'The town was incorporated in 1890 and the census counted the houses along the river.',
+    }],
+    framings: { pro: 'A page exists.', con: 'A page is not a thesis.' },
+    concrete_example: 'One page.',
+    open_question: 'What can a stranger retrace?',
+    confidence: 0.45,
+    soften: true,
+  },
+});
+const pageOne = buried.segments.find((s) => s.topicTag === 'Page One')?.text || '';
+assert.match(pageOne, /Judge Barlow/, 'a live hour reads the source page before a loose encyclopedia line');
+assert.ok(!/incorporated in 1890/.test(pageOne), 'the encyclopedia line does not replace the source page');
+const seas = synthesizeShow({
+  topic: 'Rising seas, rising stakes: What increasing sea-levels mean to humanity',
+  tone: 'ungated',
+  stationId: 'station-kernel-panic',
+  ungated: true,
+  host1: '"ZeroDay" Zack',
+  host2: 'Dr. Aris Thorne',
+  band: 'world',
+  live: true,
+  facts: ['The ocean is rising faster now than at any point in recorded history, and coastal towns are already moving what they can.'],
+});
+assert.ok(!/pull the cord|you are renting|when the cord moves/i.test(seas.segments.map((s) => s.text).join(' ')), 'a live world hour does not borrow the unplug scene');
+assert.match(topicCore('WHO reports more than 3,200 attacks'), /3,200/, 'a thousands separator stays in the spoken short name');
+const glued = "WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion Since the beginning of Russia's full-scale invasion of Ukraine, 3,205 attacks on healthcare facilities have been carried out.";
+const lede = stripLeadingTitle(glued, "WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion");
+assert.match(lede, /^Since the beginning/, 'a headline glued to the lede is not spoken as the sentence');
+assert.match(quoteFromArticle("WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion", glued), /3,205 attacks/, 'the article sentence keeps the counted figure');
+const filed = `(file) WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion 28 August 2026 Humanitarian Aid Since the beginning of Russia's full-scale invasion of Ukraine, 3,205 attacks on healthcare facilities have been carried out.`;
+assert.match(quoteFromArticle("WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion", filed), /^Since the beginning/, 'a label in front of the headline stays off the page reading');
+const byline = "Rising seas, rising stakes: What increasing sea-levels mean to humanity By Daniel Dickinson 29 August 2026 Climate and Environment The ocean is rising faster now than at any point in recorded history.";
+const seaQuote = quoteFromArticle("Rising seas, rising stakes: What increasing sea-levels mean to humanity", byline);
+assert.match(seaQuote, /^The ocean is rising/, 'a byline is not part of the page reading');
+assert.ok(!/Daniel Dickinson|Climate and Environment/.test(seaQuote), 'the dateline stays off the air');
+const menu = "Court agrees with EFF: Utah's VPN law demands a technical impossibility | Electronic Frontier Foundation Skip to main content About Contact Press People. In his ruling, Judge Barlow noted that the statute requires a technical impossibility on pain of legal liability.";
+assert.match(quoteFromArticle("Court agrees with EFF: Utah's VPN law demands a technical impossibility", menu), /Judge Barlow/, 'a navigation bar is not the page reading');
+assert.ok(!/'/.test(topicCore("\u2018The lake is our life\u2019: Protecting a shared lifeline in Uganda")), 'a quotation mark does not stick to the short name');
+assert.ok(!/Ukr$/.test(clipQuote(`${lede} World Health Organization Representative for Ukraine said the clinics are still open tonight and the count is not a rumor.`, 120)), 'a clipped quote does not end mid-word');
+assert.equal(
+  chooseQueue([
+    { mintedAt: '2026-10-02T00:00:00.000Z', shows: [liveA, liveB] },
+    { mintedAt: '2026-10-02T03:00:00.000Z', shows: [liveB] },
+  ])?.shows.map((s) => s.id).join(),
+  liveB.id,
+  'a newer runway replaces a stale copy instead of merging the old hours back in',
 );
 assert.ok(
   scoreEnglishVoice('Microsoft Andrew Online (Natural) - English (United States)', 'en-US', 'male', false) >

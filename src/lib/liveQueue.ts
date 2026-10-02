@@ -1,6 +1,7 @@
 /**
  * Hours minted ahead of time from public feeds.
  * Same-origin queue.json is the Pages copy. jsDelivr follows the GitHub mint.
+ * When both answer, the newer mintedAt is the runway. The older file is only a fallback.
  *
  * @license SPDX-License-Identifier: Apache-2.0
  */
@@ -23,6 +24,14 @@ function asQueue(data: unknown): LiveQueue | null {
     mintedAt,
     shows: shows.filter((show) => show && Array.isArray(show.segments) && show.segments.length >= 16),
   };
+}
+
+/** The newest complete runway wins. A stale copy must not put retired hours back on the air. */
+export function chooseQueue(docs: LiveQueue[]): LiveQueue | null {
+  const ready = docs.filter((doc) => doc.shows.length > 0);
+  if (!ready.length) return null;
+  ready.sort((a, b) => b.mintedAt.localeCompare(a.mintedAt));
+  return ready[0];
 }
 
 export function pickQueuedShow(shows: RadioShow[], used: Set<string>, stationId?: string): RadioShow | null {
@@ -53,17 +62,7 @@ export async function loadLiveQueue(): Promise<LiveQueue | null> {
     cache = { at: Date.now(), doc: null };
     return null;
   }
-  docs.sort((a, b) => b.mintedAt.localeCompare(a.mintedAt));
-  const seen = new Set<string>();
-  const shows: RadioShow[] = [];
-  for (const doc of docs) {
-    for (const show of doc.shows) {
-      if (seen.has(show.id)) continue;
-      seen.add(show.id);
-      shows.push(show);
-    }
-  }
-  const doc = { mintedAt: docs[0].mintedAt, shows };
+  const doc = chooseQueue(docs);
   cache = { at: Date.now(), doc };
   return doc;
 }

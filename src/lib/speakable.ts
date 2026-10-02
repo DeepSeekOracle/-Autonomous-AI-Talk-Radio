@@ -26,7 +26,9 @@ function dropDirectionSentences(text: string): string {
 export function speakable(raw: string): string {
   let s = String(raw || "");
   s = s.replace(/<pre[\s\S]*?<\/pre>/gi, " ").replace(/<code[\s\S]*?<\/code>/gi, " ").replace(/<[^>]+>/g, " ");
-  s = s.replace(/&#x2F;/gi, "/").replace(/&amp;/gi, " and ").replace(/&(?:lt|gt|quot|#39|#x27);/gi, " ");
+  s = s.replace(/&#x2F;/gi, "/").replace(/&amp;/gi, " and ").replace(/&(?:lt|gt|quot|#39|#x27|apos);/gi, " ");
+  s = s.replace(/&(?:rsquo|lsquo);|&#8217;|&#8216;|&#x2019;|&#x2018;/gi, "'");
+  s = s.replace(/&(?:rdquo|ldquo|mdash|ndash|hellip);|&#(?:8220|8221|8212|8211|8230);/gi, " ");
   s = s.replace(/https?:\/\/\S+/gi, " ");
   s = s.replace(/\bwww\.\S+/gi, " ");
   s = s.replace(/\b[\w.-]+\.(ca|com|org|net|io|gov|edu)(\/\S*)?/gi, " ");

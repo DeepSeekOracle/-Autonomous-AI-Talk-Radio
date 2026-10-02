@@ -10,7 +10,9 @@ import { fileURLToPath } from 'node:url';
 import { STATIONS } from '../src/data';
 import { research_topic } from '../src/lib/agentEngine';
 import { synthesizeShow } from '../src/lib/localShow';
+import { decodePageText, quoteFromArticle } from '../src/lib/pageQuote';
 import { gatherTopicDeck, nextLiveStory } from '../src/lib/topicMill';
+import { speakable } from '../src/lib/speakable';
 import type { RadioShow } from '../src/types';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -43,33 +45,7 @@ async function quoteFromPage(title: string, url: string): Promise<string> {
     const type = res.headers.get('content-type') || '';
     if (type && !/html|text\/plain|xml/i.test(type)) return '';
     const html = await res.text();
-    const text = html
-      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/&nbsp;/gi, ' ')
-      .replace(/&amp;/gi, ' and ')
-      .replace(/&#39;|&quot;/gi, ' ')
-      .replace(/\s+/g, ' ')
-      .replace(/Facebook Twitter Print Email/gi, ' ')
-      .trim();
-    const useful = title.toLowerCase().split(/[^a-z0-9]+/).filter((word) => word.length > 4);
-    const sentences = text.split(/(?<=[.!?])\s+/).filter((sentence) => sentence.length >= 80 && sentence.length <= 600);
-    const hit = sentences.find((sentence) => {
-      const low = sentence.toLowerCase();
-      if (/cookie|subscribe|javascript|all rights reserved/i.test(low)) return false;
-      const matched = useful.filter((word) => low.includes(word)).length;
-      return useful.length ? matched >= Math.min(2, useful.length) : false;
-    });
-    const cleaned = (hit || '')
-      .replace(/Facebook Twitter Print Email/gi, ' ')
-      .replace(/\bBy [A-Z][a-z]+ [A-Z][a-z]+\b/g, ' ')
-      .replace(/\b\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) 20\d{2}\b/g, ' ')
-      .replace(/\b(Climate and Environment|Humanitarian Aid|Peace and Security|Law and Crime Prevention)\b/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (cleaned.length < 80 || /facebook twitter|print email/i.test(cleaned)) return '';
-    return cleaned.slice(0, 280);
+    return quoteFromArticle(title, decodePageText(html));
   } catch {
     return '';
   }
@@ -115,10 +91,11 @@ while (made < count && guard < count * 4) {
     band: story.band,
     live: true,
   });
-  show.id = `show-live-${story.band}-${made + queue.shows.length + 1}`;
+  const spokenTopic = speakable(story.title).slice(0, 160);
+  show.id = liveShowId(story.band, story.title);
   show.topic = story.title;
   const open = show.segments[0]?.text || '';
-  if (show.segments.length < 16 || show.durationMs < 7 * 60 * 1000 || !open.includes(story.title)) {
+  if (show.segments.length < 16 || show.durationMs < 7 * 60 * 1000 || !spokenTopic || !open.includes(spokenTopic)) {
     console.log('skip weak hour', story.title.slice(0, 80));
     continue;
   }
@@ -128,10 +105,19 @@ while (made < count && guard < count * 4) {
   console.log(`minted ${station.id} · ${story.band} · ${story.title.slice(0, 90)} · ${Math.round(show.durationMs / 1000)}s · page ${pageQuote ? 'yes' : 'no'} · wiki ${packet?.sources.length || 0}`);
 }
 
-queue.shows = queue.shows.slice(-8);
-queue.mintedAt = new Date().toISOString();
-mkdirSync(liveDir, { recursive: true });
-writeFileSync(queuePath, JSON.stringify(queue, null, 2));
-writeFileSync(heardPath, JSON.stringify([...new Set(heard)].slice(-80), null, 2));
-console.log(`wrote ${queue.shows.length} shows, ${made} new`);
-process.exit(made > 0 || count === 0 ? 0 : 0);
+if (made > 0) {
+  queue.shows = queue.shows.slice(-8);
+  queue.mintedAt = new Date().toISOString();
+  mkdirSync(liveDir, { recursive: true });
+  writeFileSync(queuePath, JSON.stringify(queue, null, 2));
+  writeFileSync(heardPath, JSON.stringify([...new Set(heard)].slice(-80), null, 2));
+}
+console.log(`wrote ${made > 0 ? queue.shows.length : 'unchanged'} shows, ${made} new`);
+process.exit(0);
+
+function liveShowId(band: string, title: string): string {
+  let h = 2166136261;
+  const key = `${band}|${title}`;
+  for (let i = 0; i < key.length; i++) h = Math.imul(h ^ key.charCodeAt(i), 16777619);
+  return `show-live-${band}-${(h >>> 0).toString(36)}`;
+}

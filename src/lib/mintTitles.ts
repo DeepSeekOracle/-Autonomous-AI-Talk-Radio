@@ -34,11 +34,18 @@ function titleCase(s: string): string {
 
 /** Short noun phrase from the user's prompt. */
 export function topicCore(topic: string): string {
-  const q = cleanQuery(topic);
+  const q = cleanQuery(topic)
+    .replace(/(\d),(?=\d)/g, "$1\u0000")
+    .replace(/[‘’']/g, "'")
+    .replace(/(^|[^A-Za-z])'|'(?![A-Za-z])/g, "$1 ");
   const words = q
-    .replace(/['’]/g, "")
-    .split(/[^A-Za-z0-9ΔΦ0-9]+/)
-    .filter((w) => w.length > 1 && !STOP.has(w.toLowerCase()));
+    .split(/[^A-Za-z0-9ΔΦ'\u0000]+/)
+    .map((w) => w.replace(/\u0000/g, ","))
+    .filter((w) => {
+      if (w.length <= 1) return false;
+      if (w === w.toUpperCase() && /[A-Z]/.test(w)) return true;
+      return !STOP.has(w.toLowerCase().replace(/['’]/g, ""));
+    });
   const keep = words.slice(0, 6);
   return titleCase(keep.join(" ")) || "Open Hour";
 }

@@ -58,8 +58,24 @@ const airFact = (raw: string): string => {
   const t = speakable(raw).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
   if (t.length < 40 || looksLikeInstruction(t) || /may refer to|disambiguation/i.test(t)) return "";
   const cut = t.split(/(?<=[.!?])\s+/).slice(0, 2).join(" ");
-  return cut.length > 280 ? `${cut.slice(0, 277).replace(/\s+\S*$/, "")}.` : cut;
+  return cut.length > 360 ? `${cut.slice(0, 357).replace(/\s+\S*$/, "")}.` : cut;
 };
+
+function spokenFacts(opts: SynthesizeOptions): string[] {
+  const pack = (opts.packet?.sources || []).map((src) => airFact(src.key_quote)).filter(Boolean);
+  const given = (opts.facts || []).map((fact) => airFact(fact)).filter(Boolean);
+  const ordered = opts.live ? [...given, ...pack] : [...pack, ...given];
+  const kept: string[] = [];
+  for (const fact of ordered) {
+    const key = fact.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    const dup = kept.some((prev) => {
+      const other = prev.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      return other === key || other.includes(key.slice(0, 48)) || key.includes(other.slice(0, 48));
+    });
+    if (!dup) kept.push(fact);
+  }
+  return kept;
+}
 
 export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   const topicRaw = opts.topic.trim() || "The Future of Autonomous Engineering Systems";
@@ -70,9 +86,9 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   const id1 = voiceIdFor(opts.host1 || h1, "devon");
   const id2 = voiceIdFor(opts.host2 || h2, "maya");
   const ungated = opts.ungated || opts.tone.includes("ungated");
-  const quoted = (opts.packet?.sources || []).map((src) => src.key_quote);
-  const fact1 = airFact(quoted[0] || opts.facts?.[0] || "");
-  const fact2 = airFact(quoted[1] || opts.facts?.[1] || "");
+  const facts = spokenFacts(opts);
+  const fact1 = facts[0] || "";
+  const fact2 = facts[1] || "";
   const source = speakable(opts.sourceName || "the public page") || "the public page";
   const seed = hash(`${opts.stationId}|${topic}|${h1}`);
 
