@@ -9,7 +9,7 @@
 import { RadioShow, ScriptSegment, Caller } from '../types';
 import { SPEAKERS } from '../data';
 import { mintEpisodeSummary, mintEpisodeTitle, topicCore } from './mintTitles';
-import { speakable } from './speakable';
+import { looksLikeInstruction, speakable } from './speakable';
 
 export interface SynthesizeOptions {
   topic: string;
@@ -59,7 +59,7 @@ const hash = (s: string): number => {
 
 const airFact = (raw: string): string => {
   const t = speakable(raw).replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
-  if (t.length < 40) return "";
+  if (t.length < 40 || looksLikeInstruction(t) || /may refer to|disambiguation/i.test(t)) return "";
   const cut = t.split(/(?<=[.!?])\s+/).slice(0, 2).join(" ");
   return cut.length > 280 ? `${cut.slice(0, 277).replace(/\s+\S*$/, "")}.` : cut;
 };
@@ -79,51 +79,48 @@ function writeHour(opts: {
   seed: number;
   stationName: string;
 }): Line[] {
-  const { topic, core, h1, h2, fact1, fact2, source, ungated, band, seed, stationName } = opts;
+  const { topic, core, h1, h2, fact1, fact2, source, ungated, seed, stationName } = opts;
   const first = givenName(h1);
   const second = givenName(h2);
-  const feedBeat =
-    band === "world" || band === "earth"
-      ? "This hour is reading a public feed, not a sealed ledger. If the page is empty, we say it is empty."
-      : "If we cannot open the page on a machine we own, we treat it as weather.";
-  const closeTag = ungated ? "Ungated, and unsponsored." : "That is the broadcast.";
+  const closeTag = ungated ? "No sponsor gets a veto on this desk." : "That is the hour.";
+  void seed;
 
   const receiptA = fact1
-    ? `Hold on. I actually opened a public page instead of quoting the hallway. It says this. ${fact1} That is the floor for this hour. Everything else is atmosphere around it, and atmosphere is allowed to be pretty without being true.`
-    : `I went looking for a page we can still open on a machine we own. Nothing landed that I would bet a pager on. So we work from the claim itself. We do not invent a citation just to fill dead air. Empty is a finding.`;
+    ? `${first}, I opened a public page so this is not just two people trading opinions. Here is the sentence I am willing to read. ${fact1} If ${core} cannot stand next to that, then ${core} is still a pitch, and a pitch is not a shift you can hand to someone at three in the morning.`
+    : `${first}, I went looking for a page a listener could open on ${core}, and nothing came back that I would stake a pager on. I am not going to invent a citation to sound prepared. We stay with the claim. What does it promise, who has to live with it, and what breaks when the promise is wrong.`;
 
   const receiptB = fact2
-    ? `Second pass, same rule. ${fact2} If that disagrees with the demo, the demo loses. I do not care how pretty the slide was, or how many people clapped in the recording. A receipt beats a round of applause.`
-    : `Second pass is the boring one, and boring is the job. Pin the interface. Keep the messy middle swappable. Never let a layer you cannot read reverse a decision you cannot undo. If that sounds like a lecture, it is one we earned the hard way.`;
+    ? `There is a second page, and it does not exist to decorate the first. ${fact2} If that fights the demo, I stay with the page. Applause is not a measurement. A sentence you can still find next Tuesday is.`
+    : `The second pass is the one the slide deck skips. Where does ${core} begin, where does it hand off, and who can still explain the handoff when ${source} is slow. If nobody in the building can answer that without opening a vendor tab, you do not have a tool. You have a story.`;
 
   const callerTake = fact1
-    ? `Hey, long time sitting in the car for this. We treated the headline as weather. The wins were real only where we could still explain a failure to a junior at two in the morning. Once the layer was doing the thinking, on-call went blind, and ${core} stopped being a tool and started being a rumor we were legally on the hook for.`
-    : `We shipped the demo into production because the meeting wanted a win before Friday. Two weeks later nobody could explain a red alert without opening a vendor tab. The useful part of ${core} was the interface. The rest was a story we told ourselves so the slide would land.`;
+    ? `Hey, long time listener, first time I have had the nerve to call. We lived with ${core} for a month. The wins were real only on the pieces a junior could still explain at two in the morning. The rest turned into a rumor we were on the hook for, because nobody could say why the red light was red.`
+    : `We put ${core} in front of real traffic because the meeting wanted a win before Friday. Two weeks later a red alert came in and nobody could explain it without opening someone else's tab. The useful part was the boundary. The rest was a story we told so the slide would land.`;
 
   const lines: Line[] = [
     {
       by: 1,
       tag: "Cold Open",
       emotion: "heated",
-      text: `You are tuned to ${stationName}. I am ${h1}. ${second} is across the desk. Tonight's hour is ${topic}. We name it once, then we argue it, and we do not read the operator notes on the air. ${feedBeat} If you just sat down, stay. This is a working hour, not a trailer.`,
+      text: `You are tuned to ${stationName}. I am ${h1}. ${second} is across the desk. Tonight we are on ${topic}. Not the trailer they cut for the timeline. The part that still has to work after the meeting, when somebody has to explain a failure in ordinary language. If you just sat down, stay. We are going to argue this one all the way through.`,
     },
     {
       by: 2,
       tag: "First Take",
       emotion: "intrigued",
-      text: `${second} here. I want the useful part of this, not the trailer they cut for the timeline. Every time the ground moves, we bury the working piece under a keynote and then act surprised when Tuesday is on fire. Start with what still has to be true after the clip stops looping. If it only works in the recording, it does not work.`,
+      text: `${second} here, ${first}. I want the useful slice of ${core}. The part a tired person can still operate. What I will not applaud is the victory lap that shows up before anyone has sat with a broken hour. Tell me what changes on a Tuesday, after the clip stops looping, when the person holding the pager is alone with it.`,
     },
     {
       by: 1,
       tag: "The Push",
       emotion: "skeptical",
-      text: `Naming a thing is not adopting it. If a team cannot explain a failure without opening a vendor dashboard, they did not adopt ${core}. They rented a story, and the rent comes due at three in the morning. I want the failure mode in plain English, with a clock on it, and a name attached to the pager.`,
+      text: `Naming ${core} is not the same as living with it. If a team cannot explain a failure without opening a vendor dashboard, they rented a story, and the rent comes due when the building is quiet. I want the failure in plain English. A clock. A name on the pager. What the listener would actually see if they were the one who got the call.`,
     },
     {
       by: 2,
       tag: "The Hold",
       emotion: "excited",
-      text: `Then hold the interface and let the middle move. That is the part that actually ships. You pin a boundary, you keep a receipt, and you refuse to rewrite the whole stack in one branch because a demo looked fast on a stage. Speed without a hold is just a prettier outage, and prettier outages still page the same people.`,
+      text: `Then keep the doorway and let the middle move. That is the part of ${core} that can actually ship. You mark where your responsibility starts, you keep a copy you can open later, and you refuse to rebuild the whole stack in one night because a demo looked fast. Speed without a doorway is just a prettier outage, and the same people still get paged.`,
     },
     {
       by: 1,
@@ -141,43 +138,43 @@ function writeHour(opts: {
       by: 1,
       tag: "The Cost",
       emotion: "skeptical",
-      text: `Then name the cost, because the slide never does. Who stays up when this lies. Who can still ship if ${source} goes dark for a week. If the answer is nobody, you built a shrine with a status page. I will take a slower tool that I can still read at three in the morning over a miracle I cannot audit, every night of the year.`,
+      text: `Now the cost, because the slide about ${core} never prints it. Who stays up when this is wrong. Who can still ship if ${source} goes dark for a week. If the answer is nobody, you built a shrine with a status page. I will take a slower tool I can still read at three in the morning over a miracle I cannot check, every night of the year.`,
     },
     {
       by: 2,
       tag: "Local Machine",
       emotion: "excited",
-      text: `That is why the local machine still matters, and I will keep saying it until the budget meeting hears it. A box you can unplug is a kind of honesty. Not romance. If the work only exists while someone else's cluster is kind to you, you do not own the work. You are visiting it, and visitors do not get a vote when the bill arrives.`,
+      text: `That is why I keep coming back to the machine in the room. A box you can unplug is a kind of honesty about ${core}, not a romance. If the work only exists while someone else's cluster feels generous, you do not own the work. You are visiting it. Visitors do not get a vote when the bill arrives or when the service blinks.`,
     },
     {
       by: 1,
       tag: "Consent",
       emotion: "heated",
-      text: `Consent is not a footer. If a system posts, ships, or speaks without a yes, it is already misaligned, and no amount of brand language will wash that out. Protocol zero is firmware for a reason. You do not get to skip the gate because the demo was late or the room was excited. The gate is the product.`,
+      text: `And nobody gets to skip the ask. If ${core} posts, ships, or speaks for a person who never said yes, the brand language will not wash that out. A late demo is not a permission slip. The room being excited is not a permission slip. The yes is the product. Without it you are just making noise with someone else's name on it.`,
     },
     {
       by: 2,
       tag: "Observability",
       emotion: "intrigued",
-      text: `Observability is the whole argument wearing work clothes. If you cannot see the failure, you cannot be on call for it. People call that maturity. I call it the difference between a tool and a weather report you are legally responsible for. A dashboard that only sings when the vendor is happy is a lullaby, not a desk.`,
+      text: `If you cannot see ${core} fail, you cannot be on call for it. People dress that up as maturity. I hear the difference between a tool and a weather report you are legally responsible for. A board that only looks healthy when the vendor is happy is a lullaby. A desk needs the ugly minute, the one where the number goes red and a human can still tell why.`,
     },
     {
       by: 1,
       tag: "Time",
       emotion: "neutral",
-      text: `Time is the scarce resource. Invite once. Overlay once. Then build local. The demo culture pretends attention is free. It is not. Every extra layer you cannot explain is a meeting you will pay for later, with interest, and the interest is paid in nights and in people who stop trusting the desk.`,
+      text: `Time is the part ${core} keeps pretending is free. You can look once. You can try the overlay once. Then you build the piece you can still run when the network is rude. Every extra layer nobody can explain becomes a meeting later, and the interest is paid at night, by people who stop trusting the desk because the desk stopped making sense.`,
     },
     {
       by: 2,
       tag: "Junior Floor",
       emotion: "excited",
-      text: `And spare me the myth that juniors will just prompt their way into staff. Someone still has to know where the floor is. If the next desk never writes the boring path, fine, as long as someone in the building can still find it when the lights go out. Scar tissue is not a vibe. It is a map you earned.`,
+      text: `Spare me the myth that a new hire will prompt their way through ${core} and come out a staff engineer. Someone still has to know where the floor is. If the next desk never walks the boring path, that is fine, as long as someone in the building can still find it when the lights go out. Scar tissue is not a mood. It is a map.`,
     },
     {
       by: 1,
       tag: "Caller Patch",
       emotion: "neutral",
-      text: `Line One is lit. Someone who had to live with this hour, not just quote it in a thread. Go ahead, you are on the air. Keep it to what you saw with your own hands, not what the slide promised, and not what the vendor said in the hallway after the talk.`,
+      text: `Line One is lit. Jordan is in the car, and Jordan had to live with ${core}, not just quote it. Go ahead, you are on ${stationName}. Tell us what you saw with your own hands. Leave the hallway version and the slide version in the hallway.`,
     },
     {
       by: "caller",
@@ -189,61 +186,61 @@ function writeHour(opts: {
       by: 2,
       tag: "Caller Hold",
       emotion: "intrigued",
-      text: `That is the honest version, and it never makes the keynote. If you cannot explain the failure, you have not adopted the tool. You have rented it. Thank you for saying the quiet part without a press kit. We will not launder that into a success story just because the numbers looked green for a quarter.`,
+      text: `That is the version that never makes the keynote, and I am glad we heard it raw. If you cannot explain the failure of ${core}, you have not taken it on. You have rented it. Thank you, Jordan. We are not going to iron that into a success story because a chart stayed green for a quarter.`,
     },
     {
       by: 1,
       tag: "Scar Tissue",
       emotion: "skeptical",
-      text: `Scar tissue is not nostalgia, ${second}. It is the night you chased a leak because nobody else knew the map, and the only light was the one you brought. If the next desk never has to do that, fine, as long as someone still can. A generation that only prompts is a generation that cannot find the floor when the lights go out.`,
+      text: `Scar tissue is not nostalgia, ${second}. It is the night you chased a leak in ${core} because nobody else knew the map, and the only light was the one you brought. If the next desk never has to do that, fine. Someone in the building still has to be able to. A desk that can only repeat a prompt cannot find the floor when the lights go out.`,
     },
     {
       by: 2,
       tag: "Map and Gate",
       emotion: "neutral",
-      text: `A map is a proposal. A gate is a yes. Mixing them is how rumor becomes liturgy, and liturgy is how a public feed gets treated like a sealed record. We can point at a page. We cannot pretend a pretty overlay is proof. That distinction is the whole ethics of this desk in one sentence, and we will keep repeating the sentence until it sticks.`,
+      text: `A picture of ${core} is a proposal. A yes from the person who has to live with it is a decision. Mixing those two up is how a rumor starts wearing a uniform. We can point at a page. We cannot pretend a pretty picture is proof. That is the whole argument in one breath, and it is the breath I want listeners to keep.`,
     },
     {
       by: 1,
       tag: "What Holds",
       emotion: seed % 2 ? "heated" : "skeptical",
-      text: `What holds is boring on purpose. Hash what you ship. Keep a copy you can open on Tuesday. Do not let a slogan reverse a decision you cannot undo. ${core} is interesting. The hold is the job. I will die on that hill and I will still be on time for the next hour, because the next hour does not care about our feelings.`,
+      text: `What holds is boring on purpose. Keep a copy of what you shipped. Keep it somewhere you can open on Tuesday. Do not let a slogan about ${core} reverse a decision you cannot undo. The interesting part is the claim. The job is the hold. I will still be on time for the next show, because the clock does not care how strongly we felt.`,
     },
     {
       by: 2,
       tag: "Twelve Months",
       emotion: "excited",
-      text: `Over the next year the teams that survive this will look slow in meetings and fast in incidents. They will quote pages they can still open. They will drop tools that cannot explain themselves. That is not a vibe and it is not a brand. That is how you still have a desk in December when the budget people come back with a knife.`,
+      text: `Over the next year the teams that survive ${core} will look slow in the meeting and fast when something breaks. They will quote pages they can still open. They will drop the pieces that cannot explain themselves. That is how you still have a desk in December, when someone comes back and asks who this is for and what it costs to keep.`,
     },
     {
       by: 1,
       tag: "Money Desk",
       emotion: "skeptical",
-      text: `And someone still has to pay for the silicon. If the hour cannot say who writes the check, it is not a strategy, it is a mood. Capital will fund a miracle until the miracle needs a plumber. Then it funds the plumber, or it walks. I would rather be the plumber. Plumbers sleep, eventually.`,
+      text: `Someone still has to pay for ${core}. If this hour cannot say who writes the check, it is a mood with a microphone. Money will fund a miracle until the miracle needs a person with a wrench. Then it pays that person, or it leaves. I would rather be the person with the wrench. That person sleeps, eventually, because the system can be explained.`,
     },
     {
       by: 2,
       tag: "Ruling",
       emotion: "neutral",
-      text: `Then we can rule it. Quote the feed. Keep the receipts. Never let a layer you cannot read reverse a decision you cannot undo. If that sounds harsh, good. Harsh is cheaper than a silent rewrite, and a silent rewrite is how a desk loses the room without noticing until the room is gone.`,
+      text: `So here is the ruling on ${topic}. Say what you saw. Keep the page. Never let a layer you cannot read reverse a decision you cannot undo. If that sounds harsh, harsh is cheaper than a quiet rewrite. A quiet rewrite is how a desk loses the room and only notices when the chairs are empty.`,
     },
     {
       by: 1,
       tag: "Last Beat",
       emotion: "laughing",
-      text: `I will take harsh over holy every night we are on this transmitter. We will be here when the next claim walks in wearing a timestamp and a smile. Bring a page we can open, or bring silence. Both are honest. One of them is rarer, and rarity is not a substitute for proof.`,
+      text: `I will take a plain answer over a holy one, every night we are on this transmitter. ${second}, when the next claim about ${core} walks in with a smile, I want a page we can open, or I want a clean I do not know. Both of those I can broadcast. A costume I cannot.`,
     },
     {
       by: 2,
       tag: "Handoff",
       emotion: "intrigued",
-      text: `We named the hour once. We argued it. We let Line One talk. The receipts stay on the table when we leave. If you are still with us, you already know the rule: the useful part is the part you can still explain. The rest is weather. We do not broadcast weather as gospel.`,
+      text: `If you are still with us, you heard the argument and you heard Jordan. The useful part of ${topic} is the part you can still explain to a person who was not in the room. The rest can stay on the table. We are not taking it home and calling it gospel.`,
     },
     {
       by: 1,
       tag: "Signoff",
       emotion: "neutral",
-      text: `${closeTag} Stay with us. The next hour will mint itself. We named ${topic} once, we argued it, and we are leaving the receipts on the table. ${first} and ${second}, ${stationName}, still on the clock.`,
+      text: `${closeTag} I am ${first}. ${second} was across the desk. You were listening to ${stationName}. Tonight we took apart ${topic}. The next show starts when the clock turns. Thanks for staying to the end.`,
     },
   ];
 
@@ -252,7 +249,7 @@ function writeHour(opts: {
 
 export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   const topicRaw = opts.topic.trim() || "The Future of Autonomous Engineering Systems";
-  const topic = speakable(topicRaw).slice(0, 160) || topicRaw.slice(0, 160);
+  const topic = speakable(topicRaw).slice(0, 160) || "the claim on the desk tonight";
   const core = topicCore(topic) || topic;
   const h1 = speakable(opts.host1 || "Devon Cross") || "Devon Cross";
   const h2 = speakable(opts.host2 || "Dr. Maya Lin") || "Dr. Maya Lin";
@@ -297,8 +294,9 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
   };
 
   let cursor = 0;
-  const segments: ScriptSegment[] = unique.map((line, idx) => {
+  const segments: ScriptSegment[] = unique.flatMap((line, idx) => {
     const text = speakable(line.text);
+    if (!text || looksLikeInstruction(text)) return [];
     const durationMs = durationFor(text);
     const segment: ScriptSegment = {
       id: `seg-local-${Date.now()}-${idx + 1}`,
@@ -311,7 +309,7 @@ export function synthesizeShow(opts: SynthesizeOptions): RadioShow {
       topicTag: line.tag,
     };
     cursor += durationMs + GAP_MS;
-    return segment;
+    return [segment];
   });
 
   const title = mintEpisodeTitle(topic, opts.stationId);

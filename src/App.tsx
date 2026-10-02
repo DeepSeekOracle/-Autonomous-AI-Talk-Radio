@@ -20,6 +20,7 @@ import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from '.
 import { audioEngine } from './lib/audioEngine';
 import { stationLens } from './lib/mintTitles';
 import { synthesizeShow } from './lib/localShow';
+import { speakable } from './lib/speakable';
 import { gatherTopicDeck, pickTopic, researchFacts, WITNESS_HOME } from './lib/topicMill';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
@@ -243,7 +244,7 @@ export default function App() {
       id: `seg-call-${Date.now()}`,
       speakerId: newCaller.id,
       speakerName: `${newCaller.name} (${newCaller.location})`,
-      text: newCaller.take,
+      text: speakable(newCaller.take),
       timestampMs: activeShow.durationMs,
       durationMs: 8500,
       emotion: 'heated',
@@ -255,7 +256,7 @@ export default function App() {
           id: r.id || `seg-rx-${Date.now()}-${idx}`,
           speakerId: r.speakerId || 'devon',
           speakerName: r.speakerName || 'Devon Cross',
-          text: r.text,
+          text: speakable(r.text),
           timestampMs: activeShow.durationMs + 8500 + idx * 7500,
           durationMs: r.durationMs || 7500,
           emotion: r.emotion || 'excited',

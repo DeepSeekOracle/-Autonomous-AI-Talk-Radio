@@ -175,8 +175,11 @@ Return a JSON array of 3 segments with { speakerId ("devon" or "maya"), speakerN
       });
 
       if (response.text) {
-        const segments = JSON.parse(response.text);
-        return res.json({ success: true, segments });
+        const parsed = JSON.parse(response.text);
+        const segments = (Array.isArray(parsed) ? parsed : [])
+          .map((s: { text?: string }) => ({ ...s, text: speakable(String(s?.text || "")) }))
+          .filter((s: { text?: string }) => s.text && !looksLikeInstruction(s.text));
+        if (segments.length) return res.json({ success: true, segments });
       }
     } catch (err: any) {
       console.warn('Gemini caller response error:', err.message);

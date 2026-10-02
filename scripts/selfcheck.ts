@@ -38,9 +38,13 @@ assert.ok(show.segments.every((s) => s.durationMs > 0 && s.timestampMs >= 0), 'e
 assert.ok(show.segments[0].text.includes(topic), 'the topic reaches the cold open');
 assert.ok(show.durationMs > 7 * 60 * 1000, 'a full episode runs over seven minutes');
 assert.ok(
-  !show.segments.some((s) => /RESOURCE|CANON|Empty is honest|executive showrunner|https?:\/\//.test(s.text)),
-  'protocol notes and URLs stay off the air',
+  !show.segments.some((s) => /RESOURCE|CANON|Empty is honest|executive showrunner|https?:\/\/|operator notes|we do not read|mint itself|we name it once|system prompt|return json|these instructions/i.test(s.text)),
+  'protocol notes and writer directions stay off the air',
 );
+const leaked = speakable('The outage started at three. Do not read the operator notes on the air. Bring a page.');
+assert.ok(!/operator notes/i.test(leaked), 'a direction sentence is cut out of a spoken line');
+assert.match(leaked, /outage started/);
+assert.match(leaked, /Bring a page/);
 assert.ok(!show.segments.some((s) => /Δ9Φ963/.test(s.text)), 'the mark is spoken in English');
 assert.match(speakable('See https://chatagent.ca/signal Δ9Φ963 RESOURCE CANON'), /LYGO mark/);
 assert.ok(

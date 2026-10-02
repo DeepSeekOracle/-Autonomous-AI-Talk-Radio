@@ -6,10 +6,20 @@
  */
 
 const INSTRUCTION_RE =
-  /you are the executive showrunner|return a json|return strict json|system instruction|never echo|segments must have|responseMimeType|empty is honest|atmosphere is not proof|quote a receipt you can open|this is public witness resource|not star chart canon/i;
+  /you are the executive showrunner|return (a |strict )?json|system instruction|system prompt|never echo|segments must have|responseMimeType|empty is honest|atmosphere is not proof|quote a receipt you can open|this is public witness resource|not star chart canon|operator notes|do not read the|these instructions|writer notes \(not spoken\)|we do not read|we name it once|named the hour once|next hour will mint|mint itself|as an ai language model|your task is|follow these rules|paste these rules|rules for spoken|do not paste/i;
+
+/** A sentence that is a direction to the writer or the voice, not a line for the listener. */
+const INSTRUCTION_SENTENCE =
+  /\b(operator notes?|do not read|don't read|these instructions|this instruction|system prompt|system instruction|return (a |strict )?json|response ?mime ?type|executive showrunner|never echo|never say resource|segments must|writer notes|stage direction|read the following|as an ai language model|your task is|follow these rules|paste these rules|rules for spoken|we do not read|will mint itself|we name it once|named the hour once|empty is honest|atmosphere is not proof|quote a receipt you can open|public witness resource|not star chart canon)\b/i;
 
 export function looksLikeInstruction(text: string): boolean {
   return INSTRUCTION_RE.test(text);
+}
+
+function dropDirectionSentences(text: string): string {
+  const parts = text.split(/(?<=[.!?])\s+/);
+  const kept = parts.filter((part) => part.trim() && !INSTRUCTION_SENTENCE.test(part));
+  return kept.join(" ");
 }
 
 /** Turn writer/protocol copy into something a voice can read without stumbling. */
@@ -20,7 +30,11 @@ export function speakable(raw: string): string {
   s = s.replace(/\b[\w.-]+\.(ca|com|org|net|io|gov|edu)(\/\S*)?/gi, " ");
   s = s.replace(/```[\s\S]*?```/g, " ");
   s = s.replace(/\[[^\]]+\]\([^)]+\)/g, " ");
+  s = s.replace(/\[(?:pause|beat|laughs?|music|sfx|intro|outro|cold open|whisper|aside|direction)[^\]]*\]/gi, " ");
+  s = s.replace(/\((?:pause|beat|laughs?|chuckles?|music|sfx|intro|outro|whisper|aside|stage|direction)[^)]*\)/gi, " ");
+  s = dropDirectionSentences(s);
   if (looksLikeInstruction(s)) {
+    s = dropDirectionSentences(s);
     s = s
       .replace(/You are the executive showrunner[\s\S]*$/i, " ")
       .replace(/Return a JSON[\s\S]*$/i, " ")

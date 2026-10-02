@@ -277,7 +277,7 @@ class RadioAudioEngine {
     const seg = this.segments[index];
     const spoken = speakable(seg.text);
     const norm = normalizeSpoken(spoken);
-    if (!spoken || looksLikeInstruction(seg.text) || (norm && norm === this.lastSpokenNorm)) {
+    if (!spoken || looksLikeInstruction(spoken) || (norm && norm === this.lastSpokenNorm)) {
       this.playSegment(index + 1);
       return;
     }
