@@ -25,6 +25,8 @@ function dropDirectionSentences(text: string): string {
 /** Turn writer/protocol copy into something a voice can read without stumbling. */
 export function speakable(raw: string): string {
   let s = String(raw || "");
+  s = s.replace(/<pre[\s\S]*?<\/pre>/gi, " ").replace(/<code[\s\S]*?<\/code>/gi, " ").replace(/<[^>]+>/g, " ");
+  s = s.replace(/&#x2F;/gi, "/").replace(/&amp;/gi, " and ").replace(/&(?:lt|gt|quot|#39|#x27);/gi, " ");
   s = s.replace(/https?:\/\/\S+/gi, " ");
   s = s.replace(/\bwww\.\S+/gi, " ");
   s = s.replace(/\b[\w.-]+\.(ca|com|org|net|io|gov|edu)(\/\S*)?/gi, " ");

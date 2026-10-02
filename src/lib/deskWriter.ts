@@ -308,6 +308,7 @@ function voicePacket(lines: DeskLine[], c: Cast): DeskLine[] {
   const packet = c.b.packet;
   if (!packet) return lines;
   const spare = `We will not add a fact about ${c.b.core} that those pages did not give us.`;
+  const sourced = !packet.soften && packet.sources.length >= 2;
   return lines.map((row) => {
     if (row.tag === "Cold Open" && packet.soften) {
       return line(
@@ -321,13 +322,13 @@ function voicePacket(lines: DeskLine[], c: Cast): DeskLine[] {
         spare,
       );
     }
-    if (row.tag === "First Take") {
+    if (sourced && row.tag === "First Take") {
       return line(2, row.tag, "intrigued", `${c.second} here. I am taking the favorable reading from a page, not from a hunch. ${packet.framings.pro}`, spare);
     }
-    if (row.tag === "The Push") {
+    if (row.tag === "The Push" && (sourced || packet.sources.length < 2)) {
       return line(1, row.tag, "skeptical", `That reading does not get the hour to itself. ${packet.framings.con}`, spare);
     }
-    if (row.tag === "Scene") {
+    if (sourced && row.tag === "Scene") {
       return line(2, row.tag, row.emotion, `Here is the concrete piece, and it is only as solid as the page it came from. ${packet.concrete_example}`, spare);
     }
     if (row.tag === "Ruling") {

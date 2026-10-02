@@ -16,7 +16,7 @@ import { LYGO_TOPICS, parseWitnessMonitor, pickTopic } from '../src/lib/topicMil
 import { pickEnglishVoice, scoreEnglishVoice } from '../src/lib/voices';
 import { chunkSpeech, speakable } from '../src/lib/speakable';
 import { seedCatalog } from '../src/lib/seedShows';
-import { assembleResearch, rankTopicCandidates } from '../src/lib/agentEngine';
+import { adoptDiscoveredTopic, assembleResearch, rankTopicCandidates } from '../src/lib/agentEngine';
 
 const topic = 'why every agent demo dies in production';
 
@@ -158,6 +158,45 @@ assert.equal(ranked.length, 1, 'stale topics fall outside the lookback');
 assert.match(ranked[0].topic, /crash/);
 assert.ok(ranked[0].controversy_score > 0, 'a crash and a leak score as contested');
 
+const deskRank = rankTopicCandidates(
+  [
+    {
+      topic: 'Green forest fire notification in Australia',
+      url: 'https://www.gdacs.org/report.aspx?eventid=1',
+      source: 'Public Witness',
+      published_at: '',
+    },
+    {
+      topic: 'Local model outage versus a cloud leak',
+      url: 'https://news.ycombinator.com/item?id=2',
+      source: 'hn',
+      published_at: new Date(Date.now() - 60 * 60 * 1000).toISOString(),
+      max_age_ms: 48 * 60 * 60 * 1000,
+    },
+  ],
+  { network_theme: 'architecture versus production fire', lookback_minutes: 180, now: Date.now() },
+);
+assert.match(deskRank[0].topic, /outage/, 'a fresh desk story outranks an undated wildfire note');
+assert.equal(
+  adoptDiscoveredTopic(
+    { ...deskRank.find((row) => /forest fire/i.test(row.topic))!, listener_relevance: 0.17 },
+    'lygo',
+  ),
+  false,
+  'one shared word does not move the wire desk onto a wildfire',
+);
+assert.equal(adoptDiscoveredTopic(deskRank[0], 'hn'), true, 'a dated front-page item can open the hacker news desk');
+const outbound = {
+  topic: 'Apple Pass Designer',
+  why_now: 'Fresh on Hacker News inside the lookback. Ranked for the front page.',
+  source_urls: ['https://developer.apple.com/pass-designer/'],
+  sentiment: 'neutral' as const,
+  controversy_score: 0,
+  listener_relevance: 0,
+};
+assert.equal(adoptDiscoveredTopic(outbound, 'hn'), true, 'a front-page story keeps its desk even when the link leaves the site');
+assert.equal(adoptDiscoveredTopic(outbound, 'lygo'), false, 'the wire desk does not inherit an unrelated front-page link');
+
 const packet = assembleResearch('local models', 'standard', [
   {
     title: 'Operator hardware',
@@ -174,7 +213,24 @@ const packet = assembleResearch('local models', 'standard', [
 ]);
 assert.ok(packet.confidence >= 0.6, 'two domains are enough to speak a narrow ruling');
 assert.equal(packet.soften, false);
-assert.match(packet.framings.con, /phones home/);
+assert.match(packet.framings.con, /another site/);
+assert.match(packet.sources[1].key_quote, /phones home/);
+const dirty = assembleResearch('widgets', 'standard', [
+  {
+    title: 'Code drop',
+    url: 'https://news.ycombinator.com/item?id=3',
+    published_at: '',
+    key_quote: '<p><pre><code>exporters: otlp endpoint: :4317</code></pre></p>',
+  },
+  {
+    title: 'Widget',
+    url: 'https://en.wikipedia.org/wiki/Widget',
+    published_at: '',
+    key_quote: 'A widget is a small tool a person can still name after the meeting is over.',
+  },
+]);
+assert.equal(dirty.sources.length, 1, 'a code block is not a citation');
+assert.ok(!/exporters|<pre|otlp/.test(dirty.sources.map((s) => s.key_quote).join(' ')));
 
 const sourced = synthesizeShow({
   topic,

@@ -55,11 +55,22 @@ type RawHit = {
   source: string;
   published_at: string;
   blurb?: string;
+  /** How long this feed stays eligible. News uses the caller's lookback. Front pages live longer. */
+  max_age_ms?: number;
 };
 
 const USGS_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson";
 const EONET_URL = "https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=12";
 const HN_FRONT = "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=16";
+const HN_MAX_AGE_MS = 48 * 60 * 60 * 1000;
+const USGS_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+
+const STOP = new Set([
+  "about", "after", "before", "been", "could", "does", "every", "from", "have", "here",
+  "into", "just", "more", "only", "over", "said", "should", "still", "than", "that",
+  "them", "then", "there", "they", "this", "were", "what", "when", "where", "which",
+  "with", "would", "your",
+]);
 
 const listenerInbox: RawHit[] = [];
 
@@ -114,6 +125,52 @@ function controversyOf(text: string): number {
   return Math.min(1, hits / 3);
 }
 
+function dateFromUrl(url: string): string {
+  const match = url.match(/(20\d{2})[/-](\d{2})(?:[/-](\d{2}))?/);
+  if (!match) return "";
+  const iso = `${match[1]}-${match[2]}-${match[3] || "01"}T00:00:00Z`;
+  return Number.isNaN(Date.parse(iso)) ? "" : iso;
+}
+
+function researchQuery(topic: string): string {
+  const quake = topic.match(/^M\s*[\d.]+\b.*\bof\s+(.+)$/i);
+  if (quake) return `${quake[1]} earthquake`.replace(/\s+/g, " ").trim().slice(0, 140);
+  return topic.replace(/https?:\/\/\S+/g, " ").replace(/\s+/g, " ").trim().slice(0, 140);
+}
+
+function sharesTopic(query: string, text: string): boolean {
+  const useful = [...tokens(query)].filter((word) => !STOP.has(word));
+  if (!useful.length) return true;
+  const body = tokens(text);
+  const matched = useful.filter((word) => body.has(word)).length;
+  if (useful.length >= 4) return matched >= 2;
+  return matched >= 1;
+}
+
+function citesQuery(query: string, title: string, quote: string): boolean {
+  const page = `${title} ${quote}`;
+  if (!sharesTopic(query, page)) return false;
+  if (/\bearthquake\b/i.test(query) && !/earthquake|magnitude|seismic/i.test(page)) return false;
+  const years = page.match(/\b20\d{2}\b/g) || [];
+  const asked = query.match(/\b20\d{2}\b/g) || [];
+  const thisYear = String(new Date().getFullYear());
+  if (years.length && !asked.length && years.every((year) => year !== thisYear)) return false;
+  return true;
+}
+
+/** A discovered row may replace the station deck only when it belongs on that station. */
+export function adoptDiscoveredTopic(row: TopicCandidate, preferBand: string): boolean {
+  if (row.listener_relevance >= 0.34) return true;
+  const url = (row.source_urls[0] || "").toLowerCase();
+  const dated = row.why_now.startsWith("Fresh");
+  if (!dated) return false;
+  const label = `${row.why_now} ${url}`;
+  if (preferBand === "hn" && /hacker news|\bhn\b|ycombinator/i.test(label)) return true;
+  if (preferBand === "world" && /public witness|google news|news\.un\.org|gdacs\.org|witness/i.test(label)) return true;
+  if (preferBand === "earth" && /usgs|earthquake|eonet|nasa|gdacs/i.test(label)) return true;
+  return false;
+}
+
 export function rankTopicCandidates(hits: RawHit[], config: DiscoverConfig): TopicCandidate[] {
   const now = config.now ?? Date.now();
   const lookback = Math.max(15, config.lookback_minutes ?? 120) * 60 * 1000;
@@ -122,15 +179,16 @@ export function rankTopicCandidates(hits: RawHit[], config: DiscoverConfig): Top
     .filter((h) => h.topic.trim().length > 8)
     .map((h) => {
       const published = Date.parse(h.published_at);
+      const windowMs = h.max_age_ms && h.max_age_ms > 0 ? h.max_age_ms : lookback;
       const age = Number.isFinite(published) ? now - published : Number.POSITIVE_INFINITY;
-      if (Number.isFinite(published) && age > lookback) return null;
-      const recency = Number.isFinite(published) ? Math.max(0, 1 - age / lookback) : 0.35;
+      if (Number.isFinite(published) && age > windowMs) return null;
+      const recency = Number.isFinite(published) ? Math.max(0, 1 - age / windowMs) : 0.08;
       const listener_relevance = Math.min(1, overlap(config.network_theme, `${h.topic} ${h.blurb || ""}`));
       const controversy_score = controversyOf(`${h.topic} ${h.blurb || ""}`);
       const score = recency * 0.45 + listener_relevance * 0.4 + controversy_score * 0.15;
       const why_now = Number.isFinite(published)
         ? `Fresh on ${h.source} inside the lookback. Ranked for ${config.network_theme}.`
-        : `Undated item from ${h.source}, kept because a clock was not on the feed.`;
+        : `Undated item from ${h.source}. No clock was on the feed, so it cannot outrank a fresh page.`;
       const candidate: TopicCandidate & { score: number } = {
         topic: h.topic.trim(),
         why_now,
@@ -216,7 +274,8 @@ async function rssFeedHits(): Promise<RawHit[]> {
   for (const row of [...(doc?.world || []), ...(doc?.severe || [])]) {
     const topic = String(row?.title || "").trim();
     if (topic.length < 12) continue;
-    hits.push({ topic, url: String(row.url || WITNESS_HOME), source: "Public Witness", published_at: "" });
+    const url = String(row.url || WITNESS_HOME);
+    hits.push({ topic, url, source: "Public Witness", published_at: dateFromUrl(url) });
   }
   const quakes = (usgs as { features?: Array<{ properties?: { title?: string; url?: string; time?: number } }> } | null)?.features || [];
   for (const q of quakes.slice(0, 8)) {
@@ -228,6 +287,7 @@ async function rssFeedHits(): Promise<RawHit[]> {
       url: String(q.properties?.url || USGS_URL),
       source: "USGS",
       published_at: typeof t === "number" ? new Date(t).toISOString() : "",
+      max_age_ms: USGS_MAX_AGE_MS,
     });
   }
   const events = (eonet as { events?: Array<{ title?: string; link?: string; categories?: Array<{ title?: string }> }> } | null)?.events || [];
@@ -251,6 +311,7 @@ async function rssFeedHits(): Promise<RawHit[]> {
       url: h.url || (h.objectID ? `https://news.ycombinator.com/item?id=${h.objectID}` : "https://news.ycombinator.com"),
       source: "Hacker News",
       published_at: h.created_at || "",
+      max_age_ms: HN_MAX_AGE_MS,
     });
   }
   return hits;
@@ -268,15 +329,28 @@ export async function discover_topics(config: DiscoverConfig): Promise<TopicCand
   return rankTopicCandidates(groups.flat(), { ...config, network_theme: theme });
 }
 
+function plainText(raw: string): string {
+  return String(raw || "")
+    .replace(/<pre[\s\S]*?<\/pre>/gi, " ")
+    .replace(/<code[\s\S]*?<\/code>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&#x2F;/gi, "/")
+    .replace(/&amp;/gi, " and ")
+    .replace(/&(?:lt|gt|quot|#39|#x27);/gi, " ");
+}
+
 const quoteFrom = (raw: string): string => {
-  const clean = speakable(raw).replace(/\s+/g, " ").trim();
-  if (clean.length < 40 || looksLikeInstruction(clean) || /may refer to|disambiguation/i.test(clean)) return "";
+  const clean = speakable(plainText(raw)).replace(/\s+/g, " ").trim();
+  const letters = (clean.match(/[a-z]/gi) || []).length;
+  if (clean.length < 40 || letters / clean.length < 0.65) return "";
+  if (looksLikeInstruction(clean) || /may refer to|disambiguation/i.test(clean)) return "";
+  if (/[{}<>]|<\/|\b(endpoint|exporters|function|const|import)\b/i.test(clean)) return "";
   const cut = clean.split(/(?<=[.!?])\s+/).slice(0, 2).join(" ");
   return cut.length > 280 ? `${cut.slice(0, 277).replace(/\s+\S*$/, "")}.` : cut;
 };
 
 async function wikiSources(query: string, pages: number): Promise<ResearchSource[]> {
-  const q = query.replace(/https?:\/\/\S+/g, " ").trim().slice(0, 140);
+  const q = researchQuery(query);
   if (!q) return [];
   const search = await getJson(
     "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=1&format=json&origin=*" +
@@ -296,7 +370,7 @@ async function wikiSources(query: string, pages: number): Promise<ResearchSource
   for (const page of Object.values(pageMap)) {
     const key_quote = quoteFrom(String(page.extract || ""));
     const title = String(page.title || "").trim();
-    if (!key_quote || !title) continue;
+    if (!key_quote || !title || !citesQuery(q, title, key_quote)) continue;
     out.push({
       title,
       url: `https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_"))}`,
@@ -308,34 +382,62 @@ async function wikiSources(query: string, pages: number): Promise<ResearchSource
 }
 
 async function hnSources(query: string, limit: number): Promise<ResearchSource[]> {
-  const q = query.replace(/https?:\/\/\S+/g, " ").trim().slice(0, 140);
+  const q = researchQuery(query);
   if (!q) return [];
-  const data = await getJson(
-    `https://hn.algolia.com/api/v1/search?tags=story&hitsPerPage=${limit}&query=${encodeURIComponent(q)}`,
-  );
-  const hits = (data as { hits?: Array<{ title?: string; url?: string; objectID?: string; created_at?: string; story_text?: string }> })?.hits || [];
-  return hits.flatMap((h) => {
+  const [stories, comments] = await Promise.all([
+    getJson(`https://hn.algolia.com/api/v1/search?tags=story&hitsPerPage=${limit}&query=${encodeURIComponent(q)}`),
+    getJson(`https://hn.algolia.com/api/v1/search?tags=comment&hitsPerPage=${limit}&query=${encodeURIComponent(q)}`),
+  ]);
+  const storyHits = (stories as { hits?: Array<{ title?: string; url?: string; objectID?: string; created_at?: string; story_text?: string }> })?.hits || [];
+  const commentHits = (comments as { hits?: Array<{ comment_text?: string; story_title?: string; objectID?: string; created_at?: string }> })?.hits || [];
+  const fromStories = storyHits.flatMap((h) => {
     const title = String(h.title || "").trim();
-    const key_quote = quoteFrom(String(h.story_text || "")) || quoteFrom(`The public headline is: ${title}. That is the claim a stranger can still open, and it is not yet a measurement.`);
-    if (!title || !key_quote) return [];
+    const key_quote = quoteFrom(String(h.story_text || ""));
+    if (!title || !key_quote || !citesQuery(q, title, key_quote)) return [];
     return [{
       title,
-      url: h.url || (h.objectID ? `https://news.ycombinator.com/item?id=${h.objectID}` : "https://news.ycombinator.com"),
+      url: h.objectID ? `https://news.ycombinator.com/item?id=${h.objectID}` : (h.url || "https://news.ycombinator.com"),
       published_at: h.created_at || "",
       key_quote,
     }];
   });
+  const fromComments = commentHits.flatMap((h) => {
+    const story = String(h.story_title || "").trim();
+    const key_quote = quoteFrom(String(h.comment_text || ""));
+    if (!key_quote || !citesQuery(q, story, key_quote)) return [];
+    return [{
+      title: story ? `Comment on ${story}` : "Hacker News comment",
+      url: h.objectID ? `https://news.ycombinator.com/item?id=${h.objectID}` : "https://news.ycombinator.com",
+      published_at: h.created_at || "",
+      key_quote,
+    }];
+  });
+  return [...fromStories, ...fromComments];
 }
 
 export function assembleResearch(topic: string, depth: ResearchDepth, found: ResearchSource[]): ResearchPacket {
+  const cleaned = found.flatMap((src) => {
+    const key_quote = quoteFrom(src.key_quote);
+    const domain = domainOf(src.url);
+    if (!key_quote || !domain) return [];
+    return [{ ...src, key_quote }];
+  });
+  const cap = depth === "quick" ? 1 : depth === "deep" ? 4 : 3;
   const sources: ResearchSource[] = [];
   const domains = new Set<string>();
-  for (const src of found) {
+  for (const src of cleaned) {
     const domain = domainOf(src.url);
-    if (!src.key_quote || !domain || domains.has(domain)) continue;
+    if (domains.has(domain)) continue;
     domains.add(domain);
     sources.push(src);
-    if (sources.length >= (depth === "quick" ? 1 : depth === "deep" ? 4 : 3)) break;
+    if (sources.length >= cap) break;
+  }
+  if (sources.length < 2) {
+    for (const src of cleaned) {
+      if (sources.some((kept) => kept.url === src.url)) continue;
+      sources.push(src);
+      if (sources.length >= 2) break;
+    }
   }
   let confidence = 0.22;
   if (sources.length >= 1) confidence = 0.45;
@@ -345,15 +447,15 @@ export function assembleResearch(topic: string, depth: ResearchDepth, found: Res
   if (depth === "deep" && domains.size < 2) confidence = Math.min(confidence, 0.5);
   const soften = confidence < 0.6;
   const first = sources[0];
-  const second = sources[1];
+  const second = domains.size >= 2 ? sources[1] : undefined;
   const pro = first
-    ? `One page, ${first.title}, says this and nothing more. ${first.key_quote}`
+    ? `The favorable reading stops at the page titled ${first.title}. I will read that page, and I will not add a sentence it did not give us.`
     : `No page came back that I would quote on ${topic}. The favorable reading is only the claim itself, and a claim is not evidence.`;
   const con = second
-    ? `A second page from another domain, ${second.title}, does not have to agree. It says this. ${second.key_quote} Where the two pages do not match, we do not pick a winner to fill the gap.`
-    : `There is no second domain on the table. I will not invent the opposing citation. The limit of this hour is that ${topic} still has only one kind of page, or none.`;
+    ? `A second page, from another site, is titled ${second.title}. It does not have to agree, and where the two pages leave a gap I will not fill it.`
+    : `There is no second site on the table. I will not invent the opposing citation. The limit of this hour is that ${topic} still has only one kind of page, or none.`;
   const concrete_example = first
-    ? `The concrete piece is the page titled ${first.title}. ${first.key_quote}`
+    ? `The concrete piece is the page titled ${first.title}. Whatever we cannot point to on that page, we do not say.`
     : `There is no concrete example yet, because no page cleared the bar for ${topic}.`;
   const open_question = soften
     ? `What would a second, independent page have to say before ${topic} is a thesis instead of a question?`

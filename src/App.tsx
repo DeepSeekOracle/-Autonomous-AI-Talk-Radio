@@ -21,14 +21,14 @@ import { audioEngine } from './lib/audioEngine';
 import { stationLens } from './lib/mintTitles';
 import { synthesizeShow } from './lib/localShow';
 import { speakable } from './lib/speakable';
-import { gatherTopicDeck, pickTopic, researchFacts, WITNESS_HOME } from './lib/topicMill';
-import { discover_topics, research_topic } from './lib/agentEngine';
+import { gatherTopicDeck, pickTopic, researchFacts, STATION_BAND, WITNESS_HOME } from './lib/topicMill';
+import { adoptDiscoveredTopic, discover_topics, research_topic } from './lib/agentEngine';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 function bandFromFeed(url: string, title: string): string {
   const u = url.toLowerCase();
   const t = title.toLowerCase();
-  if (/usgs|earthquake|eonet|nasa/.test(u) || /\bm\s*\d/.test(t)) return 'earth';
+  if (/usgs|earthquake|eonet|nasa|gdacs/.test(u) || /\bm\s*\d/.test(t)) return 'earth';
   if (/ycombinator|algolia/.test(u)) return 'hn';
   if (/news\.un\.org|witness/.test(u)) return 'world';
   return 'lygo';
@@ -114,7 +114,8 @@ export default function App() {
       sources: ['rss_feeds', 'google_news'],
       max_candidates: 5,
     }).catch(() => []);
-    const fresh = found.find((row) => row.topic && !usedTopicsRef.current.has(row.topic));
+    const prefer = STATION_BAND[station.id] || 'lygo';
+    const fresh = found.find((row) => row.topic && !usedTopicsRef.current.has(row.topic) && adoptDiscoveredTopic(row, prefer));
     const fallback = pickTopic(deck, station.id, usedTopicsRef.current);
     const matched = fresh
       ? deck.find((row) => row.title === fresh.topic || (fresh.source_urls[0] && row.url === fresh.source_urls[0]))

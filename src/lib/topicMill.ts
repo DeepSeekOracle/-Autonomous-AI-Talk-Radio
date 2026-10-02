@@ -221,7 +221,7 @@ export async function gatherTopicDeck(): Promise<DeskTopic[]> {
   return topics;
 }
 
-const STATION_BAND: Record<string, TopicBand> = {
+export const STATION_BAND: Record<string, TopicBand> = {
   "station-algorithmic-wire": "lygo",
   "station-kernel-panic": "lygo",
   "station-hn-live": "hn",
