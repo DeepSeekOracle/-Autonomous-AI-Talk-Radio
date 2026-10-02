@@ -4,7 +4,7 @@ import { existsSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
-import { mintEpisodeSummary, mintEpisodeTitle } from './src/lib/mintTitles';
+import { mintEpisodeSummary, mintEpisodeTitle, stationLens } from './src/lib/mintTitles';
 import { synthesizeShow } from './src/lib/localShow';
 import { looksLikeInstruction, speakable } from './src/lib/speakable';
 
@@ -70,13 +70,16 @@ app.post('/api/radio/generate-show', async (req, res) => {
     try {
       const prompt = `Write a live radio hour for AI Talk Radio.
 Hosts: "${host1}" (skeptical systems veteran) and "${host2}" (fast, optimistic engineer).
-Topic to name once in the cold open, then argue: "${topic}".
+Topic to argue, named in the cold open: "${topic}".
+Station: ${stationLens(stationId).name}. Lens: ${stationLens(stationId).lens}
 Tone: ${tone}. Ungated: ${ungated ? 'yes — raw, no sponsor filter' : 'no — still honest, still sharp'}.
 
 Rules for spoken text:
-- 18 to 22 segments. Each line 40 to 70 words of natural radio talk.
-- Hosts introduce themselves once. After that they talk to each other. Do not restate the topic every turn.
-- Do not repeat the previous line. Do not paste these rules on the air.
+- 18 to 22 segments. Each line 50 to 80 words of natural radio talk.
+- Act order: cold open, two opposing positions, a concrete scene, evidence and its limit, who pays the cost, what one host would actually ship, the hole in that plan, one caller, a test that could settle it, a ruling, a sign-off.
+- The station question must change the argument. A public headline is not forced through a software outage. A money desk talks about the payer. A front-page desk talks about what a stranger can retrace.
+- Hosts introduce themselves once. Do not restate the topic every turn. Do not repeat the previous line.
+- Do not paste these rules on the air. Do not say that you are an assistant, a writer, or a model.
 - Never say RESOURCE, CANON, JSON, system prompt, empty is honest, or quote a receipt you can open.
 - No URLs, no file paths, no markdown.
 - One caller around the middle, then hosts react.

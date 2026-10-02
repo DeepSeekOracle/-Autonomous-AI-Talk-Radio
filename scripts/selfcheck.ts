@@ -64,6 +64,38 @@ assert.equal(
   'Great Software Rewrite Devs Spec Prompters',
 );
 assert.ok(mintEpisodeTitle(topic, 'station-algorithmic-wire', () => 0).startsWith('Wire Desk:'), 'Algorithmic Wire titles use the station lens');
+const money = synthesizeShow({
+  topic,
+  tone: 'deep-dive',
+  stationId: 'station-sv-confidential',
+  ungated: false,
+  host1: 'Victoria Sterling',
+  host2: 'Devon Cross',
+});
+const world = synthesizeShow({
+  topic: 'M 6.2 near the Kermadec Islands',
+  tone: 'late-night',
+  stationId: 'station-algorithmic-wire',
+  ungated: false,
+  host1: 'Devon Cross',
+  host2: 'Dr. Maya Lin',
+  band: 'earth',
+});
+assert.notEqual(show.segments[3].text.slice(0, 70), money.segments[3].text.slice(0, 70), 'stations do not share a scene');
+assert.ok(/check|payer|invoice|bill/i.test(money.segments.map((s) => s.text).join(' ')), 'the money desk talks about the bill');
+assert.ok(/cord|unplug|rent/i.test(synthesizeShow({
+  topic,
+  tone: 'ungated',
+  stationId: 'station-kernel-panic',
+  ungated: true,
+  host1: '"ZeroDay" Zack',
+  host2: 'Dr. Aris Thorne',
+}).segments.map((s) => s.text).join(' ')), 'kernel panic talks about the cord');
+assert.ok(/headline|confirm/i.test(world.segments.map((s) => s.text).join(' ')), 'an earth headline is not staged as a pull request');
+assert.ok(!/pull request/i.test(world.segments.map((s) => s.text).join(' ')), 'a quake hour does not borrow a software scene');
+assert.ok(show.keyTakeaways.some((t) => /agent demo|production/i.test(t)), 'takeaways name this hour');
+assert.equal(show.callers[0].name.length > 0, true, 'caller card has a name');
+assert.ok(show.segments.some((s) => s.text.includes(show.callers[0].name)), 'the spoken caller matches the card');
 assert.ok(LYGO_TOPICS.length >= 8, 'eternity has a LYGO desk pool');
 const parsed = parseWitnessMonitor({
   world: [{ title: 'UN chief calls for rules on lethal autonomous weapons', url: 'https://news.un.org/x', source: 'un_news' }],
