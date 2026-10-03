@@ -37,6 +37,8 @@ class RadioAudioEngine {
   private lastSpokenNorm = "";
   private reel: HTMLAudioElement | null = null;
   private reelUrl = "";
+  private reelGen = 0;
+  private hourClosed = false;
   private outputVolume = 0.85;
 
   constructor() {
@@ -129,9 +131,12 @@ class RadioAudioEngine {
 
   /** A finished Signal file. Empty clears it and the hour goes back to the desk voices. */
   public armRecording(url: string | null) {
+    const gen = ++this.reelGen;
     this.reelUrl = url || "";
     if (!this.reelUrl) {
       if (this.reel) {
+        this.reel.onended = null;
+        this.reel.onerror = null;
         this.reel.pause();
         this.reel.removeAttribute('src');
       }
@@ -140,20 +145,25 @@ class RadioAudioEngine {
     if (!this.reel && typeof Audio !== 'undefined') {
       this.reel = new Audio();
       this.reel.preload = 'auto';
-      this.reel.onended = () => {
-        if (this.isPlaying && this.reelUrl) this.finishShow();
-      };
-      this.reel.onerror = () => {
-        if (this.isPlaying && this.reelUrl) this.finishShow();
-      };
     }
     if (!this.reel) return;
+    this.reel.onended = () => {
+      if (gen !== this.reelGen || !this.isPlaying || !this.reelUrl) return;
+      this.finishShow();
+    };
+    this.reel.onerror = () => {
+      if (gen !== this.reelGen || !this.isPlaying || !this.reelUrl) return;
+      // 1 is the abort that happens when the next hour replaces this file.
+      if (this.reel?.error?.code === 1) return;
+      this.finishShow();
+    };
     this.reel.src = this.reelUrl;
     this.reel.volume = this.outputVolume;
     this.reel.playbackRate = this.speedMultiplier;
   }
 
   public loadShow(segments: ScriptSegment[], speakers: Record<string, Speaker>, startIndex = 0) {
+    this.hourClosed = false;
     this.stop();
     this.segments = segments;
     this.speakers = speakers;
@@ -165,6 +175,9 @@ class RadioAudioEngine {
   public play() {
     if (this.reelUrl && this.reel) {
       this.initAudioContext();
+      if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
       this.isPlaying = true;
       this.reel.volume = this.outputVolume;
       this.reel.playbackRate = this.speedMultiplier;
@@ -295,6 +308,8 @@ class RadioAudioEngine {
   }
 
   private finishShow() {
+    if (this.hourClosed) return;
+    this.hourClosed = true;
     this.reel?.pause();
     this.stopKeepAlive();
     this.stopProgressTicker();

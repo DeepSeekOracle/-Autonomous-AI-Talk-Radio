@@ -313,6 +313,7 @@ export default function App() {
     const parked = queueRef.current;
     queueRef.current = null;
     releaseKey(hourKey(parked));
+    wantRecordedRef.current = true;
     setEternity(false);
     audioEngine.stop();
     setActiveSegmentIndex(0);

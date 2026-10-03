@@ -114,7 +114,8 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   const segment = show.segments[activeSegmentIndex] || show.segments[0];
   const speakerId = segment?.speakerId || '';
   const hosts = station.hosts.filter((host) => HOSTS[host.id]);
-  const callerOn = Boolean(segment) && !hosts.some((host) => host.id === speakerId);
+  const reelOn = speakerId === 'signal-reel';
+  const callerOn = Boolean(segment) && !reelOn && !hosts.some((host) => host.id === speakerId);
   const line = isPlaying && segment?.text
     ? segment.text
     : 'Pull up a chair. Press play when you want the hour.';
@@ -193,6 +194,15 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
           {isPlaying ? 'On the air' : 'Quiet'} · {clock(elapsedMs)}
         </span>
       </div>
+
+      {reelOn && (
+        <div className="absolute left-1/2 top-12 z-30 w-[min(22rem,86%)] -translate-x-1/2">
+          <div className="tv-bubble rounded-2xl border border-amber-100/20 bg-[#2a2118]/90 px-3 py-2 text-[13px] leading-snug text-amber-50 shadow-xl backdrop-blur-sm">
+            <div className="mb-1 text-[11px] font-medium text-amber-200">LYGO Signal</div>
+            <div className="max-h-24 overflow-y-auto">{segment?.speakerName || 'Finished hour'}</div>
+          </div>
+        </div>
+      )}
 
       {callerOn && (
         <div className="absolute left-1/2 top-12 z-30 w-[min(22rem,86%)] -translate-x-1/2">

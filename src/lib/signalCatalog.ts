@@ -79,7 +79,6 @@ export function pickSignalHour(
   const fresh = episodes.filter((ep) => !used.has(ep.title));
   if (!fresh.length) return null;
   const ep = fresh[Math.floor(Math.random() * fresh.length)];
-  const host = station.hosts[0];
   const cast = ep.speakers.length ? ep.speakers.join(', ') : 'LYGO Signal';
   const durationMs = Math.round(ep.seconds * 1000);
   return {
@@ -95,9 +94,9 @@ export function pickSignalHour(
     segments: [
       {
         id: `seg-signal-${ep.slug}`,
-        speakerId: host?.id || 'devon',
-        speakerName: host?.name || 'LYGO Signal',
-        text: `This hour is already recorded. ${ep.title}. The voices are ${cast}.`,
+        speakerId: 'signal-reel',
+        speakerName: cast,
+        text: ep.title,
         timestampMs: 0,
         durationMs,
         emotion: 'neutral',
