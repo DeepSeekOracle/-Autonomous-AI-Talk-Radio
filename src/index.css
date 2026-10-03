@@ -68,6 +68,13 @@
   background:
     linear-gradient(to bottom, rgba(20, 12, 6, 0.28), transparent 22%, transparent 68%, rgba(20, 12, 6, 0.45));
 }
+.tv-scene-news .tv-vignette {
+  background:
+    linear-gradient(to bottom, rgba(8, 16, 32, 0.34), transparent 22%, transparent 68%, rgba(6, 12, 24, 0.5));
+}
+.tv-scene-radio .tv-host img {
+  filter: sepia(0.28) saturate(0.8) contrast(1.04) brightness(0.96);
+}
 .tv-host {
   -webkit-mask-image: radial-gradient(ellipse 44% 36% at var(--hx, 55%) 40%, #000 74%, transparent 90%);
   mask-image: radial-gradient(ellipse 44% 36% at var(--hx, 55%) 40%, #000 74%, transparent 90%);

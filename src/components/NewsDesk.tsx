@@ -9,6 +9,7 @@
 import React, { useEffect, useState } from 'react';
 import { RadioShow, RadioStation } from '../types';
 import studio from '../assets/tv/studio.jpg';
+import newsroom from '../assets/tv/newsroom.jpg';
 import devon from '../assets/tv/devon.jpg';
 import devonTalk from '../assets/tv/devon-talk.jpg';
 import devonMid from '../assets/tv/devon-mid.jpg';
@@ -68,14 +69,16 @@ interface HostArt {
   ex: string;
   ey: string;
   moods: string[];
+  /** Shift the still up inside the oval. Males sit lower in the frame. */
+  lift?: string;
 }
 
 const HOSTS: Record<string, HostArt> = {
-  devon: { still: devon, mid: devonMid, talk: devonTalk, glance: devonGlance, blink: devonBlink, express: devonExpress, mx: '55%', my: '48%', ex: '58%', ey: '37%', moods: ['skeptical', 'heated'] },
+  devon: { still: devon, mid: devonMid, talk: devonTalk, glance: devonGlance, blink: devonBlink, express: devonExpress, mx: '55%', my: '48%', ex: '58%', ey: '37%', moods: ['skeptical', 'heated'], lift: '-12%' },
   maya: { still: maya, mid: mayaMid, talk: mayaTalk, glance: mayaGlance, blink: mayaBlink, express: mayaExpress, mx: '62%', my: '44%', ex: '60%', ey: '33%', moods: ['laughing', 'excited', 'intrigued'] },
-  zack: { still: zack, mid: zackMid, talk: zackTalk, glance: zackGlance, blink: zackBlink, express: zackExpress, mx: '56%', my: '44%', ex: '53%', ey: '39%', moods: ['laughing', 'excited'] },
+  zack: { still: zack, mid: zackMid, talk: zackTalk, glance: zackGlance, blink: zackBlink, express: zackExpress, mx: '56%', my: '44%', ex: '53%', ey: '39%', moods: ['laughing', 'excited'], lift: '-12%' },
   aris: { still: aris, mid: arisMid, talk: arisTalk, glance: arisGlance, blink: arisBlink, express: arisExpress, mx: '52%', my: '50%', ex: '50%', ey: '37%', moods: ['skeptical', 'heated'] },
-  casey: { still: casey, mid: caseyMid, talk: caseyTalk, glance: caseyGlance, blink: caseyBlink, mx: '56%', my: '48%', ex: '49%', ey: '38%', moods: [] },
+  casey: { still: casey, mid: caseyMid, talk: caseyTalk, glance: caseyGlance, blink: caseyBlink, mx: '56%', my: '48%', ex: '49%', ey: '38%', moods: [], lift: '-12%' },
   victoria: { still: victoria, mid: victoriaMid, talk: victoriaTalk, glance: victoriaGlance, blink: victoriaBlink, express: victoriaExpress, mx: '63%', my: '42%', ex: '58%', ey: '33%', moods: ['skeptical', 'heated'] }
 };
 
@@ -102,6 +105,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   onOpenHotline
 }) => {
   const [beat, setBeat] = useState(0);
+  const [scene, setScene] = useState<'radio' | 'news'>('radio');
   useEffect(() => {
     if (!isPlaying) {
       setBeat(0);
@@ -120,13 +124,17 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
     ? segment.text
     : 'Pull up a chair. Press play when you want the hour.';
   const emotion = segment?.emotion || '';
+  const plate = scene === 'news' ? newsroom : studio;
+  const seats = scene === 'news'
+    ? [{ left: '26%', top: '43%' }, { left: '58%', top: '44%' }]
+    : [{ left: '32.4%', top: '33%' }, { left: '60.5%', top: '31.5%' }];
 
   return (
     <section
       aria-label="The show"
-      className="relative aspect-video overflow-hidden rounded-2xl border border-amber-950/40 bg-[#1a120c] shadow-2xl"
+      className={`relative aspect-video overflow-hidden rounded-2xl border shadow-2xl ${scene === 'news' ? 'tv-scene-news border-slate-800/70 bg-[#0c121a]' : 'tv-scene-radio border-amber-950/40 bg-[#1a120c]'}`}
     >
-      <img src={studio} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={plate} alt="" className="absolute inset-0 h-full w-full object-cover" />
       <div className="tv-vignette pointer-events-none absolute inset-0 z-[5]" />
 
       {hosts.map((host, index) => {
@@ -146,10 +154,11 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
           ['--hx' as string]: art.ex,
           ['--hy' as string]: art.ey
         };
-        const seat = index === 0
-          ? { left: '32.4%', top: '33%' }
-          : { left: '60.5%', top: '31.5%' };
-        const frame = { objectPosition: `${art.ex} 16%` };
+        const seat = seats[index] || seats[seats.length - 1];
+        const frame = {
+          objectPosition: `${art.ex} 16%`,
+          transform: art.lift ? `translateY(${art.lift})` : undefined
+        };
         return (
           <div key={host.id} className="absolute z-10 w-[12.5%]" style={seat}>
             {talking && (
@@ -182,7 +191,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         );
       })}
 
-      <div className="tv-desk" style={{ backgroundImage: `url(${studio})` }} />
+      <div className="tv-desk" style={{ backgroundImage: `url(${plate})` }} />
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 px-3 py-2.5 md:px-4">
         <div className="flex min-w-0 items-center gap-2 rounded-full bg-[#2a2118]/70 px-2.5 py-1 backdrop-blur-sm">
@@ -217,10 +226,31 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         </div>
       )}
 
+      <div
+        role="group"
+        aria-label="Scene"
+        className="absolute left-3 top-12 z-40 inline-flex overflow-hidden rounded-full border border-white/15 bg-black/55 text-[11px] font-bold shadow-lg backdrop-blur-sm"
+      >
+        {([
+          ['radio', 'Radio show'],
+          ['news', 'News room']
+        ] as const).map(([id, label]) => (
+          <button
+            key={id}
+            type="button"
+            aria-pressed={scene === id}
+            onClick={() => setScene(id)}
+            className={`cursor-pointer px-3 py-1.5 ${scene === id ? (id === 'news' ? 'bg-sky-200 text-slate-950' : 'bg-amber-200 text-stone-950') : 'text-amber-50/80 hover:text-amber-50'}`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       <button
         type="button"
         onClick={onOpenHotline}
-        className="absolute bottom-3 right-3 z-30 inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-red-600 px-3 py-1.5 text-[11px] font-bold text-slate-950 shadow-lg shadow-red-950/40 hover:bg-red-500"
+        className="absolute bottom-3 right-3 z-40 inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-red-600 px-3 py-1.5 text-[11px] font-bold text-slate-950 shadow-lg shadow-red-950/40 hover:bg-red-500"
       >
         <span className="relative flex h-2 w-2">
           <span className="tv-ring absolute inline-flex h-full w-full rounded-full bg-red-200" />
@@ -229,7 +259,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         Hot Call
       </button>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-[#1a120c]/80 to-transparent px-4 pb-3 pr-28 pt-8">
+      <div className={`pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t to-transparent px-4 pb-3 pr-28 pt-8 ${scene === 'news' ? 'from-[#0c121a]/85' : 'from-[#1a120c]/80'}`}>
         <div className="truncate text-sm text-amber-50 drop-shadow">{isPlaying ? show.title : line}</div>
         <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (reelOn ? segment?.speakerName : segment?.topicTag || station.genre) : show.title}</div>
       </div>
