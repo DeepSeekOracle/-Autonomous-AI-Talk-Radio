@@ -170,10 +170,14 @@ export default function App() {
       const nxt = nextStation(wheelRef.current.activeStationId);
       show = await mintEternityHour(nxt.id);
     }
-    if (show && eternityRef.current) {
+    if (!eternityRef.current) return;
+    if (show) {
       applyHour(show);
       void prefetchEternity();
+      return;
     }
+    setEternityLabel('public feeds are quiet');
+    advanceHour();
   };
   playQueuedOrMintRef.current = playQueuedOrMint;
 
@@ -260,13 +264,18 @@ export default function App() {
     onAirRef.current = true;
     setEternity(true);
     setEternityLabel('writing the next hour…');
-    if (isPlaying) {
-      void prefetchEternity();
-      return;
+    const currentId = wheelRef.current.activeShowId;
+    let show = await mintEternityHour(wheelRef.current.activeStationId);
+    if (show && show.id === currentId) {
+      show = await mintEternityHour(nextStation(wheelRef.current.activeStationId).id);
     }
-    const show = await mintEternityHour(wheelRef.current.activeStationId);
-    if (show && eternityRef.current) applyHour(show);
-    else if (eternityRef.current) setEternityLabel('public feeds are quiet');
+    if (!eternityRef.current) return;
+    if (show) {
+      applyHour(show);
+      void prefetchEternity();
+    } else {
+      setEternityLabel('public feeds are quiet');
+    }
   };
 
   // Seek to specific segment

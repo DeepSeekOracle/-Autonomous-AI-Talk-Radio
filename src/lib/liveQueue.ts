@@ -58,10 +58,7 @@ export async function loadLiveQueue(): Promise<LiveQueue | null> {
       /* one mirror can miss */
     }
   }
-  if (!docs.length) {
-    cache = { at: Date.now(), doc: null };
-    return null;
-  }
+  if (!docs.length) return null;
   const doc = chooseQueue(docs);
   cache = { at: Date.now(), doc };
   return doc;

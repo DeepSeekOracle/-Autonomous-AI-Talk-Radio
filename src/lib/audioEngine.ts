@@ -32,6 +32,7 @@ class RadioAudioEngine {
   private segmentStartTime: number = 0;
   private accumulatedElapsedMs: number = 0;
   private keepAliveTimer: number | null = null;
+  private chunkWatch: number | null = null;
   private speakGen = 0;
   private lastSpokenNorm = "";
 
@@ -145,6 +146,7 @@ class RadioAudioEngine {
     this.isPlaying = false;
     this.speakGen += 1;
     this.stopKeepAlive();
+    this.clearChunkWatch();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -156,6 +158,7 @@ class RadioAudioEngine {
     this.isPlaying = false;
     this.speakGen += 1;
     this.stopKeepAlive();
+    this.clearChunkWatch();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -231,6 +234,7 @@ class RadioAudioEngine {
     this.stopProgressTicker();
     this.isPlaying = false;
     this.speakGen += 1;
+    this.clearChunkWatch();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -245,20 +249,15 @@ class RadioAudioEngine {
     }
   }
 
+  private clearChunkWatch() {
+    if (this.chunkWatch !== null) {
+      window.clearTimeout(this.chunkWatch);
+      this.chunkWatch = null;
+    }
+  }
+
   private startKeepAlive() {
     this.stopKeepAlive();
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-    this.keepAliveTimer = window.setInterval(() => {
-      if (!this.isPlaying) return;
-      try {
-        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-          window.speechSynthesis.pause();
-          window.speechSynthesis.resume();
-        }
-      } catch {
-        // Chrome can throw if the utterance already ended.
-      }
-    }, 8500);
   }
 
   private stopKeepAlive() {
@@ -324,6 +323,7 @@ class RadioAudioEngine {
     }
 
     const gen = ++this.speakGen;
+    this.clearChunkWatch();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -341,16 +341,25 @@ class RadioAudioEngine {
       utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
       utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
 
-      utterance.onend = () => {
-        if (!this.isPlaying || gen !== this.speakGen) return;
+      let moved = false;
+      const advance = () => {
+        if (moved || !this.isPlaying || gen !== this.speakGen) return;
+        moved = true;
+        this.clearChunkWatch();
         this.speakChunks(chunks, segIndex, chunkIndex + 1);
       };
+      // Chrome often drops onend. The line still has to move, or the hour never changes.
+      const words = chunks[chunkIndex].split(/\s+/).length;
+      const budget = Math.min(20000, Math.max(7000, (words * 520) / this.speedMultiplier));
+      this.chunkWatch = window.setTimeout(() => {
+        try { window.speechSynthesis.cancel(); } catch { /* already idle */ }
+        advance();
+      }, budget);
+
+      utterance.onend = () => advance();
       utterance.onerror = (e) => {
         console.warn('SpeechSynthesis error:', e);
-        if (!this.isPlaying || gen !== this.speakGen) return;
-        window.setTimeout(() => {
-          if (this.isPlaying && gen === this.speakGen) this.speakChunks(chunks, segIndex, chunkIndex + 1);
-        }, 400);
+        window.setTimeout(() => advance(), 400);
       };
 
       this.currentUtterance = utterance;

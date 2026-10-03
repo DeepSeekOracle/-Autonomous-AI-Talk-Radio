@@ -69,7 +69,8 @@ export const ShowGenerator: React.FC<ShowGeneratorProps> = ({
       const response = await fetch('/api/radio/generate-show', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(4000),
       });
 
       // A static host answers an unknown route with its index.html and HTTP 200, so a 200 alone
