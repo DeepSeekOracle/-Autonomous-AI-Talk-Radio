@@ -26,14 +26,21 @@ export const Transcript: React.FC<TranscriptProps> = ({
   const activeItemRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll when activeSegmentIndex changes
+  // Follow the speaking line. The page moves only when follow is on.
+  // Otherwise the list keeps up inside its own box and the show stays put.
   useEffect(() => {
-    if (autoScroll && activeItemRef.current && containerRef.current) {
-      activeItemRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
-      });
+    const item = activeItemRef.current;
+    const box = containerRef.current;
+    if (!item || !box) return;
+    if (autoScroll) {
+      item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
     }
+    const boxRect = box.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+    const delta = itemRect.top - boxRect.top - (box.clientHeight - itemRect.height) / 2;
+    if (Math.abs(delta) < 8) return;
+    box.scrollBy({ top: delta, behavior: 'smooth' });
   }, [activeSegmentIndex, autoScroll]);
 
   const handleCopyLine = (text: string, id: string) => {
@@ -94,10 +101,10 @@ export const Transcript: React.FC<TranscriptProps> = ({
                 ? 'bg-amber-500/10 text-amber-400 border-amber-500/30'
                 : 'bg-slate-900 text-slate-500 border-slate-800 hover:text-slate-300'
             }`}
-            title="Auto-scroll to active speaker"
+            title={autoScroll ? 'The page follows each line' : 'The page stays on the show'}
           >
             <ArrowDownCircle className={`w-3.5 h-3.5 ${autoScroll ? 'text-amber-400' : 'text-slate-500'}`} />
-            <span className="hidden sm:inline">Auto-scroll</span>
+            <span className="hidden sm:inline">{autoScroll ? 'Follow the script' : 'Stay on the show'}</span>
           </button>
         </div>
       </div>

@@ -80,7 +80,7 @@ export default function App() {
     playbackRate: 1.0,
     equalizerPreset: 'broadcast-warmth',
     ungatedMode: false,
-    autoScrollTranscript: true
+    autoScrollTranscript: false
   });
 
   const activeStation = stations.find(s => s.id === activeStationId) || stations[0];
@@ -424,6 +424,38 @@ export default function App() {
               elapsedMs={elapsedMs}
               onSeekSegment={handleSeekSegment}
             />
+            <div className="flex justify-end">
+              <div
+                role="group"
+                aria-label="Where the page stays while the hour plays"
+                className="inline-flex rounded-full border border-amber-950/50 bg-[#1a120c] p-0.5 text-[11px]"
+              >
+                <button
+                  type="button"
+                  aria-pressed={!settings.autoScrollTranscript}
+                  onClick={() => updateSettings({ autoScrollTranscript: false })}
+                  className={`cursor-pointer rounded-full px-3 py-1 transition-colors ${
+                    settings.autoScrollTranscript
+                      ? 'text-amber-100/60 hover:text-amber-50'
+                      : 'bg-amber-100/15 text-amber-50'
+                  }`}
+                >
+                  Stay on the show
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={settings.autoScrollTranscript}
+                  onClick={() => updateSettings({ autoScrollTranscript: true })}
+                  className={`cursor-pointer rounded-full px-3 py-1 transition-colors ${
+                    settings.autoScrollTranscript
+                      ? 'bg-amber-100/15 text-amber-50'
+                      : 'text-amber-100/60 hover:text-amber-50'
+                  }`}
+                >
+                  Follow the script
+                </button>
+              </div>
+            </div>
             {/* Live Studio Audio Player */}
             <LivePlayer
               show={activeShow}
