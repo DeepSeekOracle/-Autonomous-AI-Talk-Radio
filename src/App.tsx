@@ -25,6 +25,7 @@ import { speakable } from './lib/speakable';
 import { gatherTopicDeck, nextLiveStory, WITNESS_HOME } from './lib/topicMill';
 import { research_topic } from './lib/agentEngine';
 import { loadLiveQueue, pickQueuedShow } from './lib/liveQueue';
+import { loadSignalCatalog, pickSignalHour } from './lib/signalCatalog';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 const HEARD_KEY = 'talk-radio-heard';
@@ -65,6 +66,7 @@ export default function App() {
   const usedTopicsRef = useRef<Set<string>>(readHeard());
   // Held until the hour actually reaches the desk. Stop releases it.
   const reservedRef = useRef<Set<string>>(new Set());
+  const wantRecordedRef = useRef(true);
   const mintGateRef = useRef(Promise.resolve());
   const foreverLockRef = useRef(false);
   const [eternity, setEternity] = useState(false);
@@ -120,6 +122,7 @@ export default function App() {
   };
 
   const applyHour = (show: RadioShow) => {
+    wantRecordedRef.current = !show.audioUrl;
     airKey(hourKey(show));
     setShows((prev) => [show, ...prev.filter((s) => s.id !== show.id)].slice(0, 48));
     setStations((prev) =>
@@ -144,6 +147,15 @@ export default function App() {
 
   const writeEternityHour = async (stationId: string): Promise<RadioShow | null> => {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
+    if (wantRecordedRef.current) {
+      const catalog = await loadSignalCatalog().catch(() => []);
+      const recorded = pickSignalHour(catalog, blockedTopics(), station);
+      if (recorded) {
+        holdKey(hourKey(recorded));
+        setEternityLabel(`signal · ${recorded.title}`.slice(0, 72));
+        return recorded;
+      }
+    }
     const queuedDoc = await loadLiveQueue().catch(() => null);
     const queued = pickQueuedShow(queuedDoc?.shows || [], blockedTopics(), station.id);
     if (queued) {
@@ -263,6 +275,7 @@ export default function App() {
   useEffect(() => {
     if (!activeShow) return;
     audioEngine.loadShow(activeShow.segments, SPEAKERS, 0);
+    audioEngine.armRecording(activeShow.audioUrl || null);
     setActiveSegmentIndex(0);
     setElapsedMs(0);
     setTotalMs(activeShow.segments.reduce((acc, s) => acc + (s.durationMs || 7000), 0));
@@ -404,6 +417,7 @@ export default function App() {
 
     setShows(prev => prev.map(s => s.id === updatedShow.id ? updatedShow : s));
     audioEngine.loadShow(updatedSegments, SPEAKERS, activeShow.segments.length);
+    audioEngine.armRecording(null);
     audioEngine.play();
     setCurrentTab('broadcast');
   };

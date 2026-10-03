@@ -35,6 +35,9 @@ class RadioAudioEngine {
   private chunkWatch: number | null = null;
   private speakGen = 0;
   private lastSpokenNorm = "";
+  private reel: HTMLAudioElement | null = null;
+  private reelUrl = "";
+  private outputVolume = 0.85;
 
   constructor() {
     this.initVoices();
@@ -124,6 +127,32 @@ class RadioAudioEngine {
     this.onShowComplete = options.onShowComplete;
   }
 
+  /** A finished Signal file. Empty clears it and the hour goes back to the desk voices. */
+  public armRecording(url: string | null) {
+    this.reelUrl = url || "";
+    if (!this.reelUrl) {
+      if (this.reel) {
+        this.reel.pause();
+        this.reel.removeAttribute('src');
+      }
+      return;
+    }
+    if (!this.reel && typeof Audio !== 'undefined') {
+      this.reel = new Audio();
+      this.reel.preload = 'auto';
+      this.reel.onended = () => {
+        if (this.isPlaying && this.reelUrl) this.finishShow();
+      };
+      this.reel.onerror = () => {
+        if (this.isPlaying && this.reelUrl) this.finishShow();
+      };
+    }
+    if (!this.reel) return;
+    this.reel.src = this.reelUrl;
+    this.reel.volume = this.outputVolume;
+    this.reel.playbackRate = this.speedMultiplier;
+  }
+
   public loadShow(segments: ScriptSegment[], speakers: Record<string, Speaker>, startIndex = 0) {
     this.stop();
     this.segments = segments;
@@ -134,6 +163,24 @@ class RadioAudioEngine {
   }
 
   public play() {
+    if (this.reelUrl && this.reel) {
+      this.initAudioContext();
+      this.isPlaying = true;
+      this.reel.volume = this.outputVolume;
+      this.reel.playbackRate = this.speedMultiplier;
+      this.onPlaybackStateChange?.(true);
+      this.onSegmentChange?.(this.currentSegmentIndex);
+      this.startProgressTicker();
+      void this.reel.play().catch((err: { name?: string }) => {
+        if (err?.name === 'NotAllowedError') {
+          this.isPlaying = false;
+          this.onPlaybackStateChange?.(false);
+          return;
+        }
+        if (this.isPlaying) this.finishShow();
+      });
+      return;
+    }
     if (!this.segments.length) return;
     this.initAudioContext();
     this.isPlaying = true;
@@ -147,6 +194,7 @@ class RadioAudioEngine {
     this.speakGen += 1;
     this.stopKeepAlive();
     this.clearChunkWatch();
+    this.reel?.pause();
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -159,6 +207,10 @@ class RadioAudioEngine {
     this.speakGen += 1;
     this.stopKeepAlive();
     this.clearChunkWatch();
+    if (this.reel) {
+      this.reel.pause();
+      try { this.reel.currentTime = 0; } catch { /* not seekable yet */ }
+    }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -172,6 +224,13 @@ class RadioAudioEngine {
   }
 
   public seekToSegment(index: number) {
+    if (this.reelUrl && this.reel) {
+      try { this.reel.currentTime = 0; } catch { /* not seekable yet */ }
+      this.currentSegmentIndex = 0;
+      this.onSegmentChange?.(0);
+      this.updateProgress();
+      return;
+    }
     const wasPlaying = this.isPlaying;
     this.pause();
     this.currentSegmentIndex = Math.max(0, Math.min(index, this.segments.length - 1));
@@ -185,6 +244,10 @@ class RadioAudioEngine {
 
   public setSpeed(multiplier: number) {
     this.speedMultiplier = multiplier;
+    if (this.reel && this.reelUrl) {
+      this.reel.playbackRate = multiplier;
+      return;
+    }
     if (this.isPlaying) {
       // Re-trigger current segment at new speed
       this.pause();
@@ -193,8 +256,10 @@ class RadioAudioEngine {
   }
 
   public setVolume(vol: number) {
+    this.outputVolume = Math.max(0, Math.min(1, vol));
+    if (this.reel) this.reel.volume = this.outputVolume;
     if (this.masterGain && this.audioCtx) {
-      this.masterGain.gain.setValueAtTime(Math.max(0, Math.min(1, vol)), this.audioCtx.currentTime);
+      this.masterGain.gain.setValueAtTime(this.outputVolume, this.audioCtx.currentTime);
     }
   }
 
@@ -230,6 +295,7 @@ class RadioAudioEngine {
   }
 
   private finishShow() {
+    this.reel?.pause();
     this.stopKeepAlive();
     this.stopProgressTicker();
     this.isPlaying = false;
@@ -423,6 +489,13 @@ class RadioAudioEngine {
   }
 
   private updateProgress() {
+    if (this.reel && this.reelUrl) {
+      const total = Number.isFinite(this.reel.duration) && this.reel.duration > 0
+        ? this.reel.duration * 1000
+        : this.getTotalDuration();
+      this.onProgressUpdate?.(this.reel.currentTime * 1000, total);
+      return;
+    }
     const total = this.getTotalDuration();
     if (!this.isPlaying) {
       this.onProgressUpdate?.(this.accumulatedElapsedMs, total);

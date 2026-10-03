@@ -56,6 +56,8 @@ export interface RadioShow {
   callers: Caller[];
   ungated: boolean;
   createdAt: string;
+  /** Finished LYGO Signal recording. When set, the hour plays this file. */
+  audioUrl?: string;
 }
 
 export interface RadioStation {
