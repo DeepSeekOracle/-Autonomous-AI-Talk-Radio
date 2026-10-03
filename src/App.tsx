@@ -14,6 +14,7 @@ import { Soundboard } from './components/Soundboard';
 import { ShowNotesModal } from './components/ShowNotesModal';
 import { LygoFooter } from './components/LygoFooter';
 import { DeskModule } from './components/DeskModule';
+import { NewsDesk } from './components/NewsDesk';
 import { STATIONS, SPEAKERS } from './data';
 import { seedCatalog } from './lib/seedShows';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
@@ -415,6 +416,14 @@ export default function App() {
         {/* Studio Broadcast Tab View */}
         {currentTab === 'broadcast' && (
           <div className="space-y-6">
+            <NewsDesk
+              show={activeShow}
+              station={activeStation}
+              activeSegmentIndex={activeSegmentIndex}
+              isPlaying={isPlaying}
+              elapsedMs={elapsedMs}
+              onSeekSegment={handleSeekSegment}
+            />
             {/* Live Studio Audio Player */}
             <LivePlayer
               show={activeShow}
