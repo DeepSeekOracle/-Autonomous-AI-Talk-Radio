@@ -1,5 +1,5 @@
 {
-  "mintedAt": "2026-10-02T23:52:27.301Z",
+  "mintedAt": "2026-10-03T02:40:41.141Z",
   "shows": [
     {
       "id": "show-live-world-yl7sci",
@@ -1044,6 +1044,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-02T23:52:27.301Z"
+    },
+    {
+      "id": "show-live-world-gd7z8f",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Aid reaches hundreds of thousands in Gaza amid severe food insecurity",
+      "title": "On the Wire: Aid Reaches Hundreds Thousands Gaza Amid",
+      "episodeNumber": 472,
+      "description": "The Algorithmic Wire is on air. Reads a prompt as architecture versus production fire. Devon Cross and Dr. Maya Lin take On the Wire: Aid Reaches Hundreds Thousands Gaza Amid as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 530700,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Passionate about foundation models, quick-witted, calls out Devon on his nostalgia bias."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1790995241140-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "You are tuned to The Algorithmic Wire. I am Devon Cross. Maya is across the desk. Tonight we are on Aid reaches hundreds of thousands in Gaza amid severe food insecurity. The question on this desk is what this fresh public line does to a service people are already using. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1790995241140-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Maya here. I am reading the claim as it arrived, not as I wish it had arrived. Aid reaches hundreds of thousands in Gaza amid severe food insecurity. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong.",
+          "timestampMs": 30750,
+          "durationMs": 25700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1790995241140-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A headline is not a casualty report, Maya. Aid reaches hundreds of thousands in Gaza amid severe food insecurity is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 57100,
+          "durationMs": 30900,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1790995241140-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture the night desk with this exact line in front of it: Aid reaches hundreds of thousands in Gaza amid severe food insecurity. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 88650,
+          "durationMs": 31700,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1790995241140-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon, I am going to read the page once. I do not have a page I would quote under Aid reaches hundreds of thousands in Gaza amid severe food insecurity. The public line is the headline, and I will not decorate it. That is the sentence in front of me about Aid Reaches Hundreds Thousands Gaza Amid. It answers one question. It does not become a log because I found it exciting.",
+          "timestampMs": 121000,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1790995241140-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If I take Aid reaches hundreds of thousands in Gaza amid severe food insecurity seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. Aid Reaches Hundreds Thousands Gaza Amid is now a public line. Public lines travel faster than corrections. The correction has to be just as plain.",
+          "timestampMs": 151350,
+          "durationMs": 27300,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1790995241140-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "And it does not prove the flattering version of Aid reaches hundreds of thousands in Gaza amid severe food insecurity. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever public witness · un news did not put on the page. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 179300,
+          "durationMs": 30500,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1790995241140-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Second pass, and it does not exist to decorate the first. There is no second site on Aid reaches hundreds of thousands in Gaza amid severe food insecurity. I will not invent the opposing citation. If that fights the first story about Aid Reaches Hundreds Thousands Gaza Amid, I stay with the page I can still find. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 210450,
+          "durationMs": 30500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1790995241140-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Who stays is the person who has to keep a service up while Aid reaches hundreds of thousands in Gaza amid severe food insecurity is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 241600,
+          "durationMs": 27700,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1790995241140-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "What I would ship tonight is a narrower note than the headline. Aid Reaches Hundreds Thousands Gaza Amid gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 269950,
+          "durationMs": 27300,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1790995241140-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The hole, Maya, is treating Aid reaches hundreds of thousands in Gaza amid severe food insecurity as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 297900,
+          "durationMs": 28500,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1790995241141-12",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Line One is lit. Priya is calling from Bangalore, India about this exact item, Aid reaches hundreds of thousands in Gaza amid severe food insecurity. Go ahead, you are on The Algorithmic Wire. Tell us what you can check. Leave the slogan in the hallway. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 327050,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1790995241141-13",
+          "speakerId": "caller-local-1790995241140",
+          "speakerName": "Priya (Bangalore, India)",
+          "text": "I am Priya, in Bangalore, India. We saw Aid reaches hundreds of thousands in Gaza amid severe food insecurity before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 353400,
+          "durationMs": 31300,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1790995241141-14",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Priya separated the feed from the work, and that is the adult version of Aid Reaches Hundreds Thousands Gaza Amid. Thank you. This desk will not round that back into a vibe. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 385350,
+          "durationMs": 20500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1790995241141-15",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Unasked, and necessary. When Aid reaches hundreds of thousands in Gaza amid severe food insecurity is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 406500,
+          "durationMs": 26100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1790995241141-16",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The test is small and it fits this item. Can a person who missed the first post explain Aid Reaches Hundreds Thousands Gaza Amid from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 433250,
+          "durationMs": 28100,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1790995241141-17",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are not ready to rule on Aid reaches hundreds of thousands in Gaza amid severe food insecurity. The honest close is a question, because a matching page did not land. What would a second, independent page have to say before this headline is a thesis? That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 462000,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1790995241141-18",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If you are still here, write the failure sentence for Aid Reaches Hundreds Thousands Gaza Amid before you forward Aid reaches hundreds of thousands in Gaza amid severe food insecurity. Devon and I will still disagree on the pace. We do not disagree on that order. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 488750,
+          "durationMs": 26100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1790995241141-19",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour. I am Devon. Maya was across the desk. You were listening to The Algorithmic Wire. Tonight we took apart Aid reaches hundreds of thousands in Gaza amid severe food insecurity. The next show starts when the clock turns. Thanks for staying to the end. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 515500,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168220",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "No Wikipedia extract landed. Empty is honest.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Aid Reaches Hundreds Thousands Gaza Amid: this hour follows the public line.",
+        "No matching page landed, so the headline stays a question.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168220",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1790995241140",
+          "name": "Priya",
+          "location": "Bangalore, India",
+          "topic": "Aid reaches hundreds of thousands in Gaza amid severe food insecurity",
+          "take": "I am Priya, in Bangalore, India. We saw Aid reaches hundreds of thousands in Gaza amid severe food insecurity before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "status": "on-air",
+          "avatar": "PR"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-03T02:40:41.141Z"
     }
   ]
 }
