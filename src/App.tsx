@@ -149,7 +149,7 @@ export default function App() {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
     if (wantRecordedRef.current) {
       const catalog = await loadSignalCatalog().catch(() => []);
-      const recorded = pickSignalHour(catalog, blockedTopics(), station);
+      const recorded = await pickSignalHour(catalog, blockedTopics(), station);
       if (recorded) {
         holdKey(hourKey(recorded));
         setEternityLabel(`signal · ${recorded.title}`.slice(0, 72));

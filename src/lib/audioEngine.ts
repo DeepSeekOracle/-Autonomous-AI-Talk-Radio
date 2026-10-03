@@ -236,12 +236,20 @@ class RadioAudioEngine {
     this.updateProgress();
   }
 
+  public seekToMs(ms: number) {
+    if (!this.reelUrl || !this.reel) return;
+    const dur = Number.isFinite(this.reel.duration) && this.reel.duration > 0
+      ? this.reel.duration * 1000
+      : this.getTotalDuration();
+    const clamped = Math.max(0, Math.min(ms, Math.max(0, dur - 150)));
+    try { this.reel.currentTime = clamped / 1000; } catch { /* not seekable yet */ }
+    this.updateProgress();
+  }
+
   public seekToSegment(index: number) {
     if (this.reelUrl && this.reel) {
-      try { this.reel.currentTime = 0; } catch { /* not seekable yet */ }
-      this.currentSegmentIndex = 0;
-      this.onSegmentChange?.(0);
-      this.updateProgress();
+      const seg = this.segments[Math.max(0, Math.min(index, this.segments.length - 1))];
+      this.seekToMs(seg?.timestampMs || 0);
       return;
     }
     const wasPlaying = this.isPlaying;
@@ -508,7 +516,16 @@ class RadioAudioEngine {
       const total = Number.isFinite(this.reel.duration) && this.reel.duration > 0
         ? this.reel.duration * 1000
         : this.getTotalDuration();
-      this.onProgressUpdate?.(this.reel.currentTime * 1000, total);
+      const ms = this.reel.currentTime * 1000;
+      let idx = 0;
+      for (let i = 0; i < this.segments.length; i++) {
+        if ((this.segments[i].timestampMs || 0) <= ms + 40) idx = i;
+      }
+      if (idx !== this.currentSegmentIndex) {
+        this.currentSegmentIndex = idx;
+        this.onSegmentChange?.(idx);
+      }
+      this.onProgressUpdate?.(ms, total);
       return;
     }
     const total = this.getTotalDuration();

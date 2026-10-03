@@ -286,11 +286,15 @@ export const LivePlayer: React.FC<LivePlayerProps> = ({
         </div>
 
         {/* Interactive Scrub Bar with segment markers */}
-        <div 
+        <div
+          aria-label={show.audioUrl ? 'Seek through the recording' : 'Seek through the hour'}
           onClick={(e) => {
             const rect = e.currentTarget.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-            const ratio = clickX / rect.width;
+            const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+            if (show.audioUrl && totalMs > 0) {
+              audioEngine.seekToMs(ratio * totalMs);
+              return;
+            }
             const targetSegIndex = Math.floor(ratio * show.segments.length);
             onSeekSegment(Math.min(show.segments.length - 1, targetSegIndex));
           }}

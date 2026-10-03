@@ -197,9 +197,11 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
 
       {reelOn && (
         <div className="absolute left-1/2 top-12 z-30 w-[min(22rem,86%)] -translate-x-1/2">
-          <div className="tv-bubble rounded-2xl border border-amber-100/20 bg-[#2a2118]/90 px-3 py-2 text-[13px] leading-snug text-amber-50 shadow-xl backdrop-blur-sm">
-            <div className="mb-1 text-[11px] font-medium text-amber-200">LYGO Signal</div>
-            <div className="max-h-24 overflow-y-auto">{segment?.speakerName || 'Finished hour'}</div>
+          <div key={activeSegmentIndex} className="tv-bubble rounded-2xl border border-amber-100/20 bg-[#2a2118]/90 px-3 py-2 text-[13px] leading-snug text-amber-50 shadow-xl backdrop-blur-sm">
+            <div className="mb-1 text-[11px] font-medium text-amber-200">
+              LYGO Signal · {segment?.speakerName || 'Finished hour'}
+            </div>
+            <div className="max-h-24 overflow-y-auto">{segment?.text || show.title}</div>
           </div>
         </div>
       )}
@@ -229,7 +231,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-[#1a120c]/80 to-transparent px-4 pb-3 pr-28 pt-8">
         <div className="truncate text-sm text-amber-50 drop-shadow">{isPlaying ? show.title : line}</div>
-        <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (segment?.topicTag || station.genre) : show.title}</div>
+        <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (reelOn ? segment?.speakerName : segment?.topicTag || station.genre) : show.title}</div>
       </div>
     </section>
   );

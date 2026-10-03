@@ -21,6 +21,11 @@ const ORIGIN = 'https://chatagent.ca/signal/shows.json';
 
 let cache: { at: number; episodes: SignalEpisode[] } | null = null;
 
+type SignalTurn = { seconds: number; speaker: string; text: string };
+type SignalScript = { summary: string; turns: SignalTurn[] };
+
+const scripts = new Map<string, SignalScript | null>();
+
 function asEpisode(row: unknown): SignalEpisode | null {
   if (!row || typeof row !== 'object') return null;
   const item = row as Record<string, unknown>;
@@ -70,39 +75,98 @@ export async function loadSignalCatalog(): Promise<SignalEpisode[]> {
   return [];
 }
 
+function asTurn(row: unknown): SignalTurn | null {
+  if (!row || typeof row !== 'object') return null;
+  const item = row as Record<string, unknown>;
+  const text = String(item.text || '').replace(/\s+/g, ' ').trim();
+  const speaker = String(item.speaker || '').trim();
+  const seconds = Number(item.seconds);
+  if (!text || !speaker || !Number.isFinite(seconds) || seconds < 0) return null;
+  return { seconds, speaker, text };
+}
+
+/** The published timestamped script, when the episode page has one. */
+export async function loadSignalScript(slug: string): Promise<SignalScript | null> {
+  if (scripts.has(slug)) return scripts.get(slug) || null;
+  const urls = [
+    `/signal/${slug}/show_notes.json`,
+    `https://cdn.jsdelivr.net/gh/DeepSeekOracle/chatagent@main/signal/${slug}/show_notes.json`,
+    `https://chatagent.ca/signal/${slug}/show_notes.json`,
+  ];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+      if (!res.ok) continue;
+      const data = await res.json() as { summary?: unknown; transcript?: unknown[] };
+      const turns = Array.isArray(data.transcript)
+        ? data.transcript.map(asTurn).filter((turn): turn is SignalTurn => Boolean(turn))
+        : [];
+      if (turns.length < 4) continue;
+      const script = { summary: String(data.summary || '').replace(/\s+/g, ' ').trim(), turns };
+      scripts.set(slug, script);
+      return script;
+    } catch {
+      /* the next copy can answer */
+    }
+  }
+  scripts.set(slug, null);
+  return null;
+}
+
+function scriptSegments(ep: SignalEpisode, turns: SignalTurn[], durationMs: number) {
+  return turns.map((turn, index) => {
+    const start = Math.round(turn.seconds * 1000);
+    const next = turns[index + 1] ? Math.round(turns[index + 1].seconds * 1000) : durationMs;
+    return {
+      id: `seg-signal-${ep.slug}-${index}`,
+      speakerId: 'signal-reel',
+      speakerName: turn.speaker,
+      text: turn.text,
+      timestampMs: start,
+      durationMs: Math.max(1000, next - start),
+      emotion: 'neutral' as const,
+      topicTag: 'LYGO Signal',
+    };
+  });
+}
+
 /** One unheard finished hour, on the desk that asked for the next show. */
-export function pickSignalHour(
+export async function pickSignalHour(
   episodes: SignalEpisode[],
   used: Set<string>,
   station: RadioStation,
-): RadioShow | null {
+): Promise<RadioShow | null> {
   const fresh = episodes.filter((ep) => !used.has(ep.title));
   if (!fresh.length) return null;
   const ep = fresh[Math.floor(Math.random() * fresh.length)];
   const cast = ep.speakers.length ? ep.speakers.join(', ') : 'LYGO Signal';
   const durationMs = Math.round(ep.seconds * 1000);
+  const script = await loadSignalScript(ep.slug).catch(() => null);
+  const segments = script?.turns.length
+    ? scriptSegments(ep, script.turns, durationMs)
+    : [
+        {
+          id: `seg-signal-${ep.slug}`,
+          speakerId: 'signal-reel',
+          speakerName: cast,
+          text: ep.title,
+          timestampMs: 0,
+          durationMs,
+          emotion: 'neutral' as const,
+          topicTag: 'LYGO Signal',
+        },
+      ];
   return {
     id: `show-signal-${ep.slug}`,
     stationId: station.id,
     topic: ep.title,
     title: ep.title,
     episodeNumber: 1,
-    description: `Finished LYGO Signal hour with ${cast}.`,
+    description: script?.summary || `Finished LYGO Signal hour with ${cast}.`,
     durationMs,
     hosts: station.hosts,
     audioUrl: ep.audio,
-    segments: [
-      {
-        id: `seg-signal-${ep.slug}`,
-        speakerId: 'signal-reel',
-        speakerName: cast,
-        text: ep.title,
-        timestampMs: 0,
-        durationMs,
-        emotion: 'neutral',
-        topicTag: 'LYGO Signal',
-      },
-    ],
+    segments,
     showNotes: [`Finished recording: ${ep.page}`, `Voices: ${cast}.`],
     keyTakeaways: [`${ep.title} is a finished LYGO Signal hour.`],
     references: [{ title: ep.title, url: ep.page, type: 'news' }],
