@@ -154,7 +154,11 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
           ['--hx' as string]: art.ex,
           ['--hy' as string]: art.ey
         };
-        const seat = seats[index] || seats[seats.length - 1];
+        const seat = { ...(seats[index] || seats[seats.length - 1]) };
+        if (scene === 'news' && (host.id === 'maya' || host.id === 'aris')) {
+          seat.left = '59.5%';
+          seat.top = '40%';
+        }
         const frame = {
           objectPosition: `${art.ex} 16%`,
           transform: art.lift ? `translateY(${art.lift})` : undefined
