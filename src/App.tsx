@@ -423,6 +423,7 @@ export default function App() {
               isPlaying={isPlaying}
               elapsedMs={elapsedMs}
               onSeekSegment={handleSeekSegment}
+              onOpenHotline={() => setCurrentTab('hotline')}
             />
             <div className="flex justify-end">
               <div

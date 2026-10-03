@@ -52,6 +52,7 @@ interface NewsDeskProps {
   isPlaying: boolean;
   elapsedMs: number;
   onSeekSegment: (index: number) => void;
+  onOpenHotline: () => void;
 }
 
 interface HostArt {
@@ -97,7 +98,8 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   activeSegmentIndex,
   isPlaying,
   elapsedMs,
-  onSeekSegment
+  onSeekSegment,
+  onOpenHotline
 }) => {
   const [beat, setBeat] = useState(0);
   useEffect(() => {
@@ -203,7 +205,19 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-[#1a120c]/80 to-transparent px-4 pb-3 pt-8">
+      <button
+        type="button"
+        onClick={onOpenHotline}
+        className="absolute bottom-3 right-3 z-30 inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-red-600 px-3 py-1.5 text-[11px] font-bold text-slate-950 shadow-lg shadow-red-950/40 hover:bg-red-500"
+      >
+        <span className="relative flex h-2 w-2">
+          <span className="tv-ring absolute inline-flex h-full w-full rounded-full bg-red-200" />
+          <span className="relative h-2 w-2 rounded-full bg-slate-950" />
+        </span>
+        Hot Call
+      </button>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-[#1a120c]/80 to-transparent px-4 pb-3 pr-28 pt-8">
         <div className="truncate text-sm text-amber-50 drop-shadow">{isPlaying ? show.title : line}</div>
         <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (segment?.topicTag || station.genre) : show.title}</div>
       </div>
