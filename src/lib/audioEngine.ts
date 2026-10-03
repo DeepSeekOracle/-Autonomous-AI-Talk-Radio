@@ -312,6 +312,20 @@ class RadioAudioEngine {
     this.speakChunks(chunks, index, 0);
   }
 
+  private voiceUtterance(text: string, segIndex: number): SpeechSynthesisUtterance {
+    const seg = this.segments[segIndex];
+    const speaker = this.speakers[seg?.speakerId];
+    const utterance = new SpeechSynthesisUtterance(text);
+    const gender = speaker ? speaker.voiceGender : (segIndex % 2 === 0 ? 'male' : 'female');
+    const matchedVoice = gender === 'female' ? this.voiceMap.female : this.voiceMap.male;
+    if (matchedVoice) utterance.voice = matchedVoice;
+    const neural = /natural|neural|online/i.test(matchedVoice?.name || '');
+    const rawPitch = speaker?.voicePitch || 1.0;
+    utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
+    utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
+    return utterance;
+  }
+
   private speakChunks(chunks: string[], segIndex: number, chunkIndex: number) {
     if (!this.isPlaying) return;
     if (chunkIndex >= chunks.length) {
@@ -330,16 +344,7 @@ class RadioAudioEngine {
 
     window.setTimeout(() => {
       if (!this.isPlaying || gen !== this.speakGen) return;
-      const seg = this.segments[segIndex];
-      const speaker = this.speakers[seg?.speakerId];
-      const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
-      const gender = speaker ? speaker.voiceGender : (segIndex % 2 === 0 ? 'male' : 'female');
-      const matchedVoice = gender === 'female' ? this.voiceMap.female : this.voiceMap.male;
-      if (matchedVoice) utterance.voice = matchedVoice;
-      const neural = /natural|neural|online/i.test(matchedVoice?.name || '');
-      const rawPitch = speaker?.voicePitch || 1.0;
-      utterance.pitch = neural ? Math.min(1.15, Math.max(0.9, 1 + (rawPitch - 1) * 0.35)) : rawPitch;
-      utterance.rate = (speaker?.voiceRate || 1.0) * this.speedMultiplier;
+      const utterance = this.voiceUtterance(chunks[chunkIndex], segIndex);
 
       let moved = false;
       const advance = () => {
@@ -356,9 +361,33 @@ class RadioAudioEngine {
         advance();
       }, budget);
 
+      const speakAgain = () => {
+        if (moved || !this.isPlaying || gen !== this.speakGen) return;
+        const again = this.voiceUtterance(chunks[chunkIndex], segIndex);
+        again.onend = () => advance();
+        again.onerror = (againEvent) => {
+          // A second interrupted/canceled is our own cancel. The watchdog moves the line.
+          if (againEvent.error === 'interrupted' || againEvent.error === 'canceled') return;
+          console.warn('SpeechSynthesis error:', againEvent.error);
+          window.setTimeout(() => advance(), 400);
+        };
+        this.currentUtterance = again;
+        try {
+          window.speechSynthesis.speak(again);
+        } catch {
+          /* watchdog still moves the line */
+        }
+      };
+
       utterance.onend = () => advance();
-      utterance.onerror = (e) => {
-        console.warn('SpeechSynthesis error:', e);
+      utterance.onerror = (event) => {
+        // cancel() at the start of the next chunk reports interrupted. That is not a missed line.
+        if (event.error === 'interrupted' || event.error === 'canceled') {
+          if (moved || !this.isPlaying || gen !== this.speakGen) return;
+          window.setTimeout(speakAgain, 180);
+          return;
+        }
+        console.warn('SpeechSynthesis error:', event.error);
         window.setTimeout(() => advance(), 400);
       };
 

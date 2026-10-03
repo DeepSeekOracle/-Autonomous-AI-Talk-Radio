@@ -63,6 +63,10 @@ export default function App() {
   const mintingRef = useRef(false);
   const queueRef = useRef<RadioShow | null>(null);
   const usedTopicsRef = useRef<Set<string>>(readHeard());
+  // Held until the hour actually reaches the desk. Stop releases it.
+  const reservedRef = useRef<Set<string>>(new Set());
+  const mintGateRef = useRef(Promise.resolve());
+  const foreverLockRef = useRef(false);
   const [eternity, setEternity] = useState(false);
   const [eternityLabel, setEternityLabel] = useState('next hour writes itself');
   const wheelRef = useRef({
@@ -93,7 +97,30 @@ export default function App() {
     return list[(i + 1) % list.length] || list[0];
   };
 
+  const hourKey = (show: { topic?: string; title?: string } | null | undefined) =>
+    show?.topic || show?.title || '';
+
+  const blockedTopics = () => new Set([...usedTopicsRef.current, ...reservedRef.current]);
+
+  const holdKey = (key: string) => {
+    if (key) reservedRef.current.add(key);
+  };
+
+  const airKey = (key: string) => {
+    if (!key) return;
+    reservedRef.current.delete(key);
+    if (usedTopicsRef.current.has(key)) return;
+    usedTopicsRef.current.add(key);
+    writeHeard(usedTopicsRef.current);
+  };
+
+  const releaseKey = (key: string) => {
+    if (!key || usedTopicsRef.current.has(key)) return;
+    reservedRef.current.delete(key);
+  };
+
   const applyHour = (show: RadioShow) => {
+    airKey(hourKey(show));
     setShows((prev) => [show, ...prev.filter((s) => s.id !== show.id)].slice(0, 48));
     setStations((prev) =>
       prev.map((s) => (s.id === show.stationId ? { ...s, currentShowId: show.id } : s)),
@@ -105,47 +132,62 @@ export default function App() {
     setCurrentTab('broadcast');
   };
 
-  const mintEternityHour = async (stationId: string): Promise<RadioShow | null> => {
+  const mintEternityHour = (stationId: string): Promise<RadioShow | null> => {
+    const prev = mintGateRef.current;
+    let open = () => {};
+    const gate = new Promise<void>((resolve) => {
+      open = resolve;
+    });
+    mintGateRef.current = prev.then(() => gate);
+    return prev.then(() => writeEternityHour(stationId)).finally(open);
+  };
+
+  const writeEternityHour = async (stationId: string): Promise<RadioShow | null> => {
     const station = wheelRef.current.stations.find((s) => s.id === stationId) || wheelRef.current.stations[0];
     const queuedDoc = await loadLiveQueue().catch(() => null);
-    const queued = pickQueuedShow(queuedDoc?.shows || [], usedTopicsRef.current, station.id);
+    const queued = pickQueuedShow(queuedDoc?.shows || [], blockedTopics(), station.id);
     if (queued) {
-      const key = queued.topic || queued.title;
-      usedTopicsRef.current.add(key);
-      writeHeard(usedTopicsRef.current);
+      const key = hourKey(queued);
+      holdKey(key);
       setEternityLabel(`${queued.stationId.replace('station-', '')} · ${key}`.slice(0, 72));
       return queued;
     }
     const deck = await gatherTopicDeck();
-    let story = nextLiveStory(deck, station.id, usedTopicsRef.current);
-    if (!story && usedTopicsRef.current.size) {
-      usedTopicsRef.current = new Set([...usedTopicsRef.current].slice(-8));
-      story = nextLiveStory(deck, station.id, usedTopicsRef.current);
+    let heard = usedTopicsRef.current;
+    let story = nextLiveStory(deck, station.id, new Set([...heard, ...reservedRef.current]));
+    if (!story && heard.size) {
+      heard = new Set([...heard].slice(-8));
+      story = nextLiveStory(deck, station.id, new Set([...heard, ...reservedRef.current]));
+      if (story) usedTopicsRef.current = heard;
     }
     if (!story) {
       setEternityLabel('public feeds are quiet');
       return null;
     }
-    usedTopicsRef.current.add(story.title);
-    writeHeard(usedTopicsRef.current);
-    const packet = await research_topic(story.title, 'standard').catch(() => undefined);
-    setEternityLabel(`${story.band} · ${story.title}`.slice(0, 72));
-    const h1 = station.hosts[0];
-    const h2 = station.hosts[1] || station.hosts[0];
-    return synthesizeShow({
-      topic: story.title,
-      tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
-      stationId: station.id,
-      ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
-      host1: h1.name,
-      host2: h2.name,
-      facts: packet?.sources.map((src) => src.key_quote) || [],
-      packet,
-      sourceUrl: story.url || '',
-      sourceName: story.source,
-      band: story.band,
-      live: true,
-    });
+    holdKey(story.title);
+    try {
+      const packet = await research_topic(story.title, 'standard').catch(() => undefined);
+      setEternityLabel(`${story.band} · ${story.title}`.slice(0, 72));
+      const h1 = station.hosts[0];
+      const h2 = station.hosts[1] || station.hosts[0];
+      return synthesizeShow({
+        topic: story.title,
+        tone: station.id === 'station-kernel-panic' ? 'ungated' : 'unfiltered-debate',
+        stationId: station.id,
+        ungated: station.id === 'station-kernel-panic' || settings.ungatedMode,
+        host1: h1.name,
+        host2: h2.name,
+        facts: packet?.sources.map((src) => src.key_quote) || [],
+        packet,
+        sourceUrl: story.url || '',
+        sourceName: story.source,
+        band: story.band,
+        live: true,
+      });
+    } catch (err) {
+      releaseKey(story.title);
+      throw err;
+    }
   };
 
   const prefetchEternity = async () => {
@@ -170,7 +212,10 @@ export default function App() {
       const nxt = nextStation(wheelRef.current.activeStationId);
       show = await mintEternityHour(nxt.id);
     }
-    if (!eternityRef.current) return;
+    if (!eternityRef.current) {
+      releaseKey(hourKey(show));
+      return;
+    }
     if (show) {
       applyHour(show);
       void prefetchEternity();
@@ -252,7 +297,9 @@ export default function App() {
   const handleStopBroadcast = () => {
     onAirRef.current = false;
     eternityRef.current = false;
+    const parked = queueRef.current;
     queueRef.current = null;
+    releaseKey(hourKey(parked));
     setEternity(false);
     audioEngine.stop();
     setActiveSegmentIndex(0);
@@ -260,21 +307,35 @@ export default function App() {
   };
 
   const handlePlayForever = async () => {
+    if (foreverLockRef.current) return;
+    foreverLockRef.current = true;
     eternityRef.current = true;
     onAirRef.current = true;
     setEternity(true);
     setEternityLabel('writing the next hour…');
     const currentId = wheelRef.current.activeShowId;
-    let show = await mintEternityHour(wheelRef.current.activeStationId);
-    if (show && show.id === currentId) {
-      show = await mintEternityHour(nextStation(wheelRef.current.activeStationId).id);
-    }
-    if (!eternityRef.current) return;
-    if (show) {
-      applyHour(show);
-      void prefetchEternity();
-    } else {
-      setEternityLabel('public feeds are quiet');
+    try {
+      let show = await mintEternityHour(wheelRef.current.activeStationId);
+      if (!eternityRef.current) {
+        releaseKey(hourKey(show));
+        return;
+      }
+      if (show && show.id === currentId) {
+        airKey(hourKey(show));
+        show = await mintEternityHour(nextStation(wheelRef.current.activeStationId).id);
+      }
+      if (!eternityRef.current) {
+        releaseKey(hourKey(show));
+        return;
+      }
+      if (show) {
+        applyHour(show);
+        void prefetchEternity();
+      } else {
+        setEternityLabel('public feeds are quiet');
+      }
+    } finally {
+      foreverLockRef.current = false;
     }
   };
 
@@ -297,11 +358,13 @@ export default function App() {
       topicTag: 'Caller Line 1'
     };
 
+    const hostA = activeStation.hosts[0];
+    const hostB = activeStation.hosts[1] || hostA;
     const reactionSegments: ScriptSegment[] = (reactions && reactions.length > 0)
       ? reactions.map((r, idx) => ({
           id: r.id || `seg-rx-${Date.now()}-${idx}`,
-          speakerId: r.speakerId || 'devon',
-          speakerName: r.speakerName || 'Devon Cross',
+          speakerId: r.speakerId || hostA.id,
+          speakerName: r.speakerName || hostA.name,
           text: speakable(r.text),
           timestampMs: activeShow.durationMs + 8500 + idx * 7500,
           durationMs: r.durationMs || 7500,
@@ -311,9 +374,9 @@ export default function App() {
       : [
           {
             id: `seg-rx-${Date.now()}-1`,
-            speakerId: 'devon',
-            speakerName: 'Devon Cross',
-            text: `Hold on ${newCaller.name}, that is a fiery perspective! You are touching on a real sore spot for engineering leadership.`,
+            speakerId: hostA.id,
+            speakerName: hostA.name,
+            text: `${newCaller.name}, hold on. That is the sore spot on this desk, and I want it on the record.`,
             timestampMs: activeShow.durationMs + 8500,
             durationMs: 7800,
             emotion: 'excited',
@@ -321,9 +384,9 @@ export default function App() {
           },
           {
             id: `seg-rx-${Date.now()}-2`,
-            speakerId: 'maya',
-            speakerName: 'Dr. Maya Lin',
-            text: `I agree with Devon, but let's look at the broader architectural trend before writing off the entire paradigm. Great call-in, ${newCaller.name}!`,
+            speakerId: hostB.id,
+            speakerName: hostB.name,
+            text: `${hostA.name.replace(/"/g, '').split(/\s+/).find((part) => part !== 'Dr.') || hostA.name} is right to stop there. ${newCaller.name}, the part that still has to be proven stays on the desk.`,
             timestampMs: activeShow.durationMs + 16300,
             durationMs: 8200,
             emotion: 'intrigued',
