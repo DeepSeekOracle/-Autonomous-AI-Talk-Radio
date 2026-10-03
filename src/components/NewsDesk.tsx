@@ -1,5 +1,5 @@
 /**
- * Live news desk for the hour already on the player.
+ * The hour, seen from across the radio desk.
  * Mouth, blink, and glance frames are pasted onto the closed still, then masked
  * so only the lips or the eyes change.
  *
@@ -115,134 +115,97 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   const callerOn = Boolean(segment) && !hosts.some((host) => host.id === speakerId);
   const line = isPlaying && segment?.text
     ? segment.text
-    : 'The desk is standing by. Press play and this hour reads on the set.';
+    : 'Pull up a chair. Press play when you want the hour.';
   const emotion = segment?.emotion || '';
 
   return (
     <section
-      aria-label="Live news desk"
-      className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 shadow-2xl min-h-[36rem] md:min-h-0 md:aspect-video"
+      aria-label="The show"
+      className="relative aspect-video overflow-hidden rounded-2xl border border-amber-950/40 bg-[#1a120c] shadow-2xl"
     >
       <img src={studio} alt="" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="tv-vignette pointer-events-none absolute inset-0" />
-      <div className="tv-scan pointer-events-none absolute inset-0" />
+      <div className="tv-vignette pointer-events-none absolute inset-0 z-[5]" />
 
-      <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between gap-3 px-3 py-2.5 md:px-4">
-        <div className="flex min-w-0 items-center gap-2">
-          <span
-            className={`inline-flex items-center gap-1.5 rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.18em] ${
-              isPlaying ? 'bg-red-600 text-white' : 'bg-slate-800 text-slate-300'
-            }`}
-          >
-            <span className={`h-1.5 w-1.5 rounded-full ${isPlaying ? 'bg-white animate-on-air' : 'bg-slate-500'}`} />
-            {isPlaying ? 'Live' : 'Standby'}
-          </span>
-          <span className="truncate text-xs font-semibold uppercase tracking-wider text-white/90">
-            {station.name}
-          </span>
-          <span className="hidden font-mono text-[11px] text-white/70 sm:inline">{station.frequency}</span>
-        </div>
-        <span className="shrink-0 font-mono text-xs tabular-nums text-white/90">{clock(elapsedMs)}</span>
-      </div>
-
-      {!isPlaying && (
-        <div className="absolute left-1/2 top-14 z-30 w-[min(28rem,88%)] -translate-x-1/2">
-          <div className="rounded-2xl border border-white/15 bg-slate-950/80 px-3 py-2 text-center text-[13px] leading-snug text-slate-200 shadow-xl backdrop-blur-sm">
-            {line}
-          </div>
-        </div>
-      )}
-
-      <div className="absolute inset-x-0 bottom-16 z-10 flex items-end justify-center gap-3 px-3 md:bottom-[4.75rem] md:justify-between md:px-12">
-        {hosts.map((host) => {
-          const art = HOSTS[host.id];
-          const talking = isPlaying && speakerId === host.id;
-          const phase = beat % 4;
-          const mouthSrc = talking ? (phase === 2 ? art.talk : phase === 0 ? null : art.mid) : null;
-          const blinkNow = isPlaying && beat % 16 === 3;
-          const glanceNow = isPlaying && (talking ? beat % 16 === 8 : beat % 16 === 12);
-          const eyeSrc = blinkNow ? art.blink : glanceNow || (talking && emotion === 'intrigued') ? art.glance : null;
-          const showMood = talking && art.express && art.moods.includes(emotion);
-          const mask = {
-            ['--mx' as string]: art.mx,
-            ['--my' as string]: art.my,
-            ['--ex' as string]: art.ex,
-            ['--ey' as string]: art.ey
-          };
-          return (
-            <div key={host.id} className="flex w-[44%] max-w-[11.5rem] flex-col items-stretch md:max-w-[12.5rem] xl:max-w-[16rem]">
-              {talking && (
-                <div
-                  key={activeSegmentIndex}
-                  className="tv-bubble mb-2 max-h-36 overflow-y-auto rounded-2xl rounded-bl-sm border border-white/15 bg-slate-950/88 px-3 py-2 text-[13px] leading-snug text-slate-100 shadow-xl backdrop-blur-sm"
-                >
-                  <div className="mb-1 text-[10px] font-bold uppercase tracking-wider" style={{ color: station.accentColor }}>
-                    {segment?.speakerName || host.name}
-                  </div>
-                  {line}
-                </div>
-              )}
-              <button
-                type="button"
-                onClick={() => {
-                  const index = nextLine(show, host.id, activeSegmentIndex);
-                  if (index >= 0) onSeekSegment(index);
-                }}
-                className="group cursor-pointer text-left"
-                aria-label={`Jump to the next line from ${host.name}`}
+      {hosts.map((host, index) => {
+        const art = HOSTS[host.id];
+        const talking = isPlaying && speakerId === host.id;
+        const phase = beat % 4;
+        const mouthSrc = talking ? (phase === 2 ? art.talk : phase === 0 ? null : art.mid) : null;
+        const blinkNow = isPlaying && beat % 16 === 3;
+        const glanceNow = isPlaying && (talking ? beat % 16 === 8 : beat % 16 === 12);
+        const eyeSrc = blinkNow ? art.blink : glanceNow || (talking && emotion === 'intrigued') ? art.glance : null;
+        const showMood = talking && art.express && art.moods.includes(emotion);
+        const mask = {
+          ['--mx' as string]: art.mx,
+          ['--my' as string]: art.my,
+          ['--ex' as string]: art.ex,
+          ['--ey' as string]: art.ey,
+          ['--hx' as string]: art.ex,
+          ['--hy' as string]: art.ey
+        };
+        const seat = index === 0
+          ? { left: '32.4%', top: '33%' }
+          : { left: '60.5%', top: '31.5%' };
+        const frame = { objectPosition: `${art.ex} 16%` };
+        return (
+          <div key={host.id} className="absolute z-10 w-[12.5%]" style={seat}>
+            {talking && (
+              <div
+                key={activeSegmentIndex}
+                className="tv-bubble absolute bottom-[103%] left-1/2 z-30 w-[min(18rem,42vw)] -translate-x-1/2 max-h-28 overflow-y-auto rounded-2xl border border-amber-100/20 bg-[#2a2118]/90 px-3 py-2 text-[13px] leading-snug text-amber-50 shadow-xl backdrop-blur-sm"
               >
-                <div
-                  className="relative overflow-hidden rounded-lg bg-slate-900 ring-2 ring-white/15"
-                  style={talking ? { boxShadow: `0 0 0 2px ${station.accentColor}, 0 12px 40px ${station.accentColor}55` } : undefined}
-                >
-                  <img src={showMood ? art.express : art.still} alt="" className="block w-full" />
-                  {mouthSrc && <img src={mouthSrc} alt="" className="tv-part tv-mouth" style={mask} />}
-                  {eyeSrc && <img src={eyeSrc} alt="" className="tv-part tv-eyes" style={mask} />}
-                  {talking && (
-                    <span className="absolute right-2 top-2 rounded bg-red-600 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
-                      Mic
-                    </span>
-                  )}
+                <div className="mb-1 text-[11px] font-medium text-amber-200/90">
+                  {segment?.speakerName || host.name}
                 </div>
-                <div className="mt-1.5 rounded bg-slate-950/80 px-2 py-1">
-                  <div className="truncate text-xs font-semibold text-white">{host.name}</div>
-                  <div className="truncate text-[10px] uppercase tracking-wide text-slate-400">{host.title}</div>
-                </div>
-              </button>
-            </div>
-          );
-        })}
+                {line}
+              </div>
+            )}
+            <button
+              type="button"
+              onClick={() => {
+                const index = nextLine(show, host.id, activeSegmentIndex);
+                if (index >= 0) onSeekSegment(index);
+              }}
+              className="block w-full cursor-pointer"
+              aria-label={`Jump to the next line from ${host.name}`}
+            >
+              <div className="tv-host relative aspect-[11/20] overflow-hidden" style={mask}>
+                <img src={showMood ? art.express : art.still} alt="" className="absolute inset-0 h-full w-full object-cover" style={frame} />
+                {mouthSrc && <img src={mouthSrc} alt="" className="tv-part tv-mouth" style={{ ...mask, ...frame }} />}
+                {eyeSrc && <img src={eyeSrc} alt="" className="tv-part tv-eyes" style={{ ...mask, ...frame }} />}
+              </div>
+            </button>
+          </div>
+        );
+      })}
+
+      <div className="tv-desk" style={{ backgroundImage: `url(${studio})` }} />
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-start justify-between gap-3 px-3 py-2.5 md:px-4">
+        <div className="flex min-w-0 items-center gap-2 rounded-full bg-[#2a2118]/70 px-2.5 py-1 backdrop-blur-sm">
+          <span className={`h-1.5 w-1.5 rounded-full ${isPlaying ? 'bg-amber-300' : 'bg-stone-500'}`} />
+          <span className="truncate text-xs text-amber-50">{station.name}</span>
+          <span className="hidden text-[11px] text-amber-100/70 sm:inline">{station.frequency}</span>
+        </div>
+        <span className="rounded-full bg-[#2a2118]/70 px-2.5 py-1 font-mono text-[11px] tabular-nums text-amber-50 backdrop-blur-sm">
+          {isPlaying ? 'On the air' : 'Quiet'} · {clock(elapsedMs)}
+        </span>
       </div>
 
       {callerOn && (
-        <div className="absolute left-1/2 top-14 z-30 w-[min(22rem,86%)] -translate-x-1/2">
-          <div key={activeSegmentIndex} className="tv-bubble rounded-2xl border border-white/15 bg-slate-950/90 px-3 py-2 text-[13px] leading-snug text-slate-100 shadow-xl backdrop-blur-sm">
-            <div className="mb-1 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-red-300">
-              <span className="relative flex h-3 w-3 items-center justify-center">
-                <span className="tv-ring absolute inset-0 rounded-full border border-red-400" />
-                <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
-              </span>
-              Line 1
+        <div className="absolute left-1/2 top-12 z-30 w-[min(22rem,86%)] -translate-x-1/2">
+          <div key={activeSegmentIndex} className="tv-bubble rounded-2xl border border-amber-100/20 bg-[#2a2118]/90 px-3 py-2 text-[13px] leading-snug text-amber-50 shadow-xl backdrop-blur-sm">
+            <div className="mb-1 text-[11px] font-medium text-amber-200">
+              Line 1 · {segment?.speakerName || 'Caller'}
             </div>
-            <div className="mb-1 text-xs font-semibold text-white">{segment?.speakerName || 'Caller'}</div>
-            <div className="max-h-28 overflow-y-auto">{line}</div>
+            <div className="max-h-24 overflow-y-auto">{line}</div>
           </div>
         </div>
       )}
 
-      <div className="absolute inset-x-0 bottom-0 z-20">
-        <div className="h-1" style={{ background: station.accentColor }} />
-        <div className="flex items-stretch bg-slate-950/92 backdrop-blur-sm">
-          <div className="flex items-center px-3 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-950 md:px-4" style={{ background: station.accentColor }}>
-            {station.frequency}
-          </div>
-          <div className="min-w-0 flex-1 px-3 py-2">
-            <div className="truncate text-sm font-semibold text-white">{show.title}</div>
-            <div className="truncate text-[11px] uppercase tracking-wider text-slate-400">
-              {segment?.topicTag || station.genre}
-            </div>
-          </div>
-        </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-[#1a120c]/80 to-transparent px-4 pb-3 pt-8">
+        <div className="truncate text-sm text-amber-50 drop-shadow">{isPlaying ? show.title : line}</div>
+        <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (segment?.topicTag || station.genre) : show.title}</div>
       </div>
     </section>
   );

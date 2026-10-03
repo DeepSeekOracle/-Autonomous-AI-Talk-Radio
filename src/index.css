@@ -64,21 +64,24 @@
   mask-image: radial-gradient(ellipse 30% 8% at var(--ex, 50%) var(--ey, 36%), #000 52%, transparent 78%);
 }
 
-.tv-scan {
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.04) 0px,
-    rgba(255, 255, 255, 0.04) 1px,
-    transparent 2px,
-    transparent 4px
-  );
-  mix-blend-mode: overlay;
-  opacity: 0.28;
-}
 .tv-vignette {
   background:
-    linear-gradient(to bottom, rgba(2, 6, 23, 0.55), transparent 18%, transparent 72%, rgba(2, 6, 23, 0.78)),
-    radial-gradient(ellipse at center, transparent 45%, rgba(2, 6, 23, 0.55) 100%);
+    linear-gradient(to bottom, rgba(20, 12, 6, 0.28), transparent 22%, transparent 68%, rgba(20, 12, 6, 0.45));
+}
+.tv-host {
+  -webkit-mask-image: radial-gradient(ellipse 44% 36% at var(--hx, 55%) 40%, #000 74%, transparent 90%);
+  mask-image: radial-gradient(ellipse 44% 36% at var(--hx, 55%) 40%, #000 74%, transparent 90%);
+}
+.tv-desk {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 20;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 60%, #000 68%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 60%, #000 68%, #000 100%);
 }
 
 @keyframes callerRing {
