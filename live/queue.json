@@ -1,5 +1,5 @@
 {
-  "mintedAt": "2026-10-03T02:40:41.141Z",
+  "mintedAt": "2026-10-03T05:26:15.406Z",
   "shows": [
     {
       "id": "show-live-world-yl7sci",
@@ -1305,6 +1305,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-03T02:40:41.141Z"
+    },
+    {
+      "id": "show-live-world-19tpz73",
+      "stationId": "station-kernel-panic",
+      "topic": "After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth",
+      "title": "After Israeli Seizure Kalandia Training Centre Ungated",
+      "episodeNumber": 476,
+      "description": "Kernel Panic Radio is on air. Reads a prompt ungated: late desk, no sponsor filter. ZeroDay Zack and Dr. Aris Thorne take After Israeli Seizure Kalandia Training Centre Ungated as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 508300,
+      "hosts": [
+        {
+          "id": "zack",
+          "name": "ZeroDay Zack",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 0.97,
+          "voiceRate": 1.04,
+          "voiceGender": "male",
+          "personality": "Underground cybervet, drinks Club-Mate, speaks in fast terminal metaphors, ungated enthusiast."
+        },
+        {
+          "id": "aris",
+          "name": "Dr. Aris Thorne",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.05,
+          "voiceRate": 0.95,
+          "voiceGender": "female",
+          "personality": "Methodical, mathematically rigorous, questions every benchmark, allergic to benchmark gaming."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791005175405-1",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "You are tuned to Kernel Panic Radio. I am ZeroDay Zack. Aris is across the desk. Tonight we are on After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. The question on this desk is what still works when this public line is the thing stressing the network. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30900,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791005175405-2",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Aris here. After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth is on the desk because it is live, not because it flatters us. I want the piece a person can still run if the account that posted it goes quiet. If that piece is missing, the item is a rental with a headline. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 31550,
+          "durationMs": 31300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791005175405-3",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "A headline is not a damage report, Aris. After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth is the line the feed carried. I will not invent a second count to sound informed. What still has to work is the ordinary service, and what can wait is everything the page did not count. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 63500,
+          "durationMs": 30900,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791005175405-4",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The failure is the network, and the line on the radio is After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. A local note still has to outlast the refresh. The plan is the sentence you can read with the cable on the floor, and that sentence gets one reading, not a remix. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 95050,
+          "durationMs": 30900,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791005175405-5",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Once, and then I stop. Israeli authorities forcibly entered the Kalandia Vocational Training Centre on Tuesday, 24 August, and took control of the facility, according to the UN agency for Palestine refugees, UNRWA . That is the page on After Israeli Seizure Kalandia Training Centre. It is not a permission slip to add a second outage I did not see. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 126600,
+          "durationMs": 32100,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791005175405-6",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The meaning of After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth on this station is ownership. Who can switch it off. Who can explain it to a second person without opening a dashboard they do not control. If both answers are a stranger, the item does not belong to the building. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 159350,
+          "durationMs": 30500,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791005175405-7",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth does not prove you are sovereign because you liked the post. A demo that phones home is still a demo. We say the limit in the same breath as the praise. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 190500,
+          "durationMs": 25700,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791005175405-8",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The other page, if it exists, gets the same cold reading. There is no second site on After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. I will not invent the opposing citation. Where it does not match After Israeli Seizure Kalandia Training Centre, we leave the hole visible. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 216850,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791005175405-9",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Who stays is the named person who can still run After Israeli Seizure Kalandia Training Centre after public witness · un news goes quiet. If the answer is nobody, the headline was a shrine. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 246800,
+          "durationMs": 21700,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791005175405-10",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "I would ship the narrow note. One sentence from After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth a second person can repeat, and a second sentence that says what we still do not know. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 269150,
+          "durationMs": 23700,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791005175405-11",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "The hole is treating After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth as the whole event because it arrived first. First is a clock. The page is the limit. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 293500,
+          "durationMs": 21700,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791005175405-12",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Jordan from Toronto, Canada has had to live with After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth, not just repost it. You are on Kernel Panic Radio. What still ran when the easy path stopped. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 315850,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791005175405-13",
+          "speakerId": "caller-local-1791005175405",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am Jordan, in Toronto, Canada. We tried to keep After Israeli Seizure Kalandia Training Centre after the comfortable path blinked. The part we could explain kept going. The part that only existed inside someone else's login stopped. We did not need a braver slogan. We needed a switch we could reach. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 340600,
+          "durationMs": 28900,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791005175405-14",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Jordan separated the feed from the work. That is the ungated version of After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. Thank you. We will not sand it back down. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 370150,
+          "durationMs": 22100,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791005175405-15",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Unasked: what is the stop for After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. The hour, the bill, or the outage where you pull it yourself. If that line does not exist, the project is a hope with a socket. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 392900,
+          "durationMs": 26100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791005175406-16",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "The test is one rude run. Take After Israeli Seizure Kalandia Training Centre off the vendor path and explain it to a second person before the next headline. If you cannot, it goes back to the bench. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 419650,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791005175406-17",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "Ruling on After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. We keep the sentence the page gave us, and we do not add a loss the page did not count. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 443200,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791005175406-18",
+          "speakerId": "aris",
+          "speakerName": "Dr. Aris Thorne",
+          "text": "Before you sleep, write the sentence After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth actually supports, and the sentence it does not. Zack will stop earlier than I will. The list is the show. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 465950,
+          "durationMs": 23700,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791005175406-19",
+          "speakerId": "zack",
+          "speakerName": "ZeroDay Zack",
+          "text": "No sponsor gets a veto on this desk. I am Zack. Aris was across the desk. You were listening to Kernel Panic Radio. Tonight we took apart After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth. The next show starts when the clock turns. Thanks for staying to the end. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "timestampMs": 490300,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168219",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: Israeli authorities forcibly entered the Kalandia Vocational Training Centre on Tuesday, 24 August, and took control of the facility, according to the UN agency for Palestine refugees, UNRWA .",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "After Israeli Seizure Kalandia Training Centre: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168219",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791005175405",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth",
+          "take": "I am Jordan, in Toronto, Canada. We tried to keep After Israeli Seizure Kalandia Training Centre after the comfortable path blinked. The part we could explain kept going. The part that only existed inside someone else's login stopped. We did not need a braver slogan. We needed a switch we could reach. Say it in the ungated voice: the public line still has to survive after the feed moves on.",
+          "status": "on-air",
+          "avatar": "JO"
+        }
+      ],
+      "ungated": true,
+      "createdAt": "2026-10-03T05:26:15.406Z"
     }
   ]
 }
