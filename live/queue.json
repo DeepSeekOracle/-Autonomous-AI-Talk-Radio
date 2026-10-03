@@ -1,5 +1,5 @@
 {
-  "mintedAt": "2026-10-03T05:26:15.406Z",
+  "mintedAt": "2026-10-03T11:47:41.401Z",
   "shows": [
     {
       "id": "show-live-world-yl7sci",
@@ -1566,6 +1566,267 @@
       ],
       "ungated": true,
       "createdAt": "2026-10-03T05:26:15.406Z"
+    },
+    {
+      "id": "show-live-hn-hfucj0",
+      "stationId": "station-hn-live",
+      "topic": "Mike Tomlin spent 12 years building a Minecraft city",
+      "title": "Hacker News Live — Mike Tomlin Spent 12 Years Building",
+      "episodeNumber": 556,
+      "description": "Hacker News Live is on air. Reads a prompt as a front-page teardown. Casey Rivera and Devon Cross take Hacker News Live — Mike Tomlin Spent 12 Years Building as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 435500,
+      "hosts": [
+        {
+          "id": "casey",
+          "name": "Casey Rivera",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.02,
+          "voiceRate": 1.03,
+          "voiceGender": "male",
+          "personality": "Fast-talking morning broadcast host, tracks GitHub trending like Wall Street stock tickers."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791028061400-1",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "You are tuned to Hacker News Live. I am Casey Rivera. Devon is across the desk. Tonight we are on Mike Tomlin spent 12 years building a Minecraft city. The question on this desk is what in this public claim a stranger can retrace without joining the thread. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 29300,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791028061400-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. The board moved, and the item is Mike Tomlin spent 12 years building a Minecraft city. I am not grading the comments. I am asking which sentence a person who missed the thread can still check. If the answer is none, it was a mood. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 29950,
+          "durationMs": 25300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791028061400-3",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "A confident title is not a source, Devon. Mike Tomlin spent 12 years building a Minecraft city can be sharp and still be a claim. Show me the step. If the step is behind a login, the public part of this hour is over, and we should say that out loud. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 55900,
+          "durationMs": 26900,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791028061400-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A stranger opens the item called Mike Tomlin spent 12 years building a Minecraft city with no context and no friends in the thread. The only fair reading is the page, not the pile-on. If they cannot repeat the page and then stop, the post was atmosphere. Atmosphere is not a step. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 83450,
+          "durationMs": 27300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791028061400-5",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Receipt, once. I do not have a page I would quote under Mike Tomlin spent 12 years building a Minecraft city. The public line is the headline, and I will not decorate it. I am not going to add a benchmark the item did not bring. Mike Tomlin Spent 12 Years Building gets the words that are actually there. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 111400,
+          "durationMs": 30100,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791028061400-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning on this station is retraceability. Mike Tomlin spent 12 years building a Minecraft city is large if a second person can follow it, and small if they have to trust the author. Small is allowed. Calling it large is the failure. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 142150,
+          "durationMs": 23700,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791028061400-7",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "It does not prove the replies. Replies are weather. Mike Tomlin spent 12 years building a Minecraft city is the claim. We do not let the weather write the ruling. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 166500,
+          "durationMs": 18500,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791028061400-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If another page showed up, here it is, unimproved. There is no second site on Mike Tomlin spent 12 years building a Minecraft city. I will not invent the opposing citation. A fight between pages is useful. A fight between moods is a different program. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 185650,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791028061400-9",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Who stays is the reader who can still find Mike Tomlin Spent 12 Years Building tomorrow, not the account that posted Mike Tomlin spent 12 years building a Minecraft city first. First is a clock. The page is the work. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 210800,
+          "durationMs": 22500,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791028061400-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the failure note. What Mike Tomlin spent 12 years building a Minecraft city tried, what a stranger can rerun, and what broke. That note saves the next reader an afternoon. A victory lap does not. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 233950,
+          "durationMs": 21700,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791028061400-11",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "The hole is a demo that only runs on the author's machine while the title says Mike Tomlin spent 12 years building a Minecraft city as if it were general. General is a word you earn with a second machine. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 256300,
+          "durationMs": 22500,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791028061400-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena, Munich, Germany, you are on Hacker News Live. You saw Mike Tomlin spent 12 years building a Minecraft city the way a stranger sees it. What could you actually retrace. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 279450,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791028061400-13",
+          "speakerId": "caller-local-1791028061400",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. I opened Mike Tomlin Spent 12 Years Building the way anyone could. The part with a step, I could follow. The part that was only confidence, I could not. I do not need the thread to clap. I need the step to exist tomorrow. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 299000,
+          "durationMs": 26500,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791028061400-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena did the stranger's job on Mike Tomlin spent 12 years building a Minecraft city. That is the whole craft of this station. Thank you. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 326150,
+          "durationMs": 16500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791028061400-15",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Unasked: what would falsify Mike Tomlin spent 12 years building a Minecraft city by tomorrow morning. If nothing could, it was not a claim. It was a jersey. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 343300,
+          "durationMs": 17700,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791028061400-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is one clean rerun, by someone who did not write Mike Tomlin Spent 12 Years Building, reported without adjectives. Pass, fail, or not public. Those are the only scores this desk prints. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 361650,
+          "durationMs": 20100,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791028061400-17",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "No ruling on Mike Tomlin spent 12 years building a Minecraft city. The title is public and the page is not, and this board will not pretend those are the same thing. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 382400,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791028061400-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If you post about Mike Tomlin Spent 12 Years Building, post the step that failed too. Casey will ask for it. The listener who includes it will save a stranger an afternoon. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 402350,
+          "durationMs": 19300,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791028061400-19",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "That is the hour. I am Casey. Devon was across the desk. You were listening to Hacker News Live. Tonight we took apart Mike Tomlin spent 12 years building a Minecraft city. The next show starts when the clock turns. Thanks for staying to the end. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "timestampMs": 422300,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Hacker News): https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "No Wikipedia extract landed. Empty is honest.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Mike Tomlin Spent 12 Years Building: this hour follows the public line.",
+        "No matching page landed, so the headline stays a question.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Hacker News",
+          "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
+          "type": "hn"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791028061400",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "Mike Tomlin spent 12 years building a Minecraft city",
+          "take": "I am Elena, in Munich, Germany. I opened Mike Tomlin Spent 12 Years Building the way anyone could. The part with a step, I could follow. The part that was only confidence, I could not. I do not need the thread to clap. I need the step to exist tomorrow. Front page only: the claim is exactly as large as a stranger can retrace.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-03T11:47:41.400Z"
     }
   ]
 }
