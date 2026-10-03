@@ -47,25 +47,21 @@
 }
 .tv-bubble { animation: bubbleIn 0.28s ease-out both; }
 
-@keyframes tvBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-.tv-talk { animation: tvBob 0.42s ease-in-out infinite; }
-
-@keyframes mouth {
-  0%, 46% { opacity: 1; }
-  54%, 100% { opacity: 0; }
-}
-.tv-mouth {
+.tv-part {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: mouth 0.2s steps(1) infinite;
-  -webkit-mask-image: radial-gradient(ellipse 22% 9% at var(--mx, 50%) var(--my, 50%), #000 42%, transparent 72%);
-  mask-image: radial-gradient(ellipse 22% 9% at var(--mx, 50%) var(--my, 50%), #000 42%, transparent 72%);
+  pointer-events: none;
+}
+.tv-mouth {
+  -webkit-mask-image: radial-gradient(ellipse 14% 6.5% at var(--mx, 50%) var(--my, 50%), #000 58%, transparent 80%);
+  mask-image: radial-gradient(ellipse 14% 6.5% at var(--mx, 50%) var(--my, 50%), #000 58%, transparent 80%);
+}
+.tv-eyes {
+  -webkit-mask-image: radial-gradient(ellipse 30% 8% at var(--ex, 50%) var(--ey, 36%), #000 52%, transparent 78%);
+  mask-image: radial-gradient(ellipse 30% 8% at var(--ex, 50%) var(--ey, 36%), #000 52%, transparent 78%);
 }
 
 .tv-scan {

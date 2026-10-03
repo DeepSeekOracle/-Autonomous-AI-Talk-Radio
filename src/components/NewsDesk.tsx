@@ -1,26 +1,49 @@
 /**
  * Live news desk for the hour already on the player.
- * Portraits are stills; the open-mouth frame only shows through a small mask while that host has the mic.
- * The spoken line, clock, and lower third are HTML so they follow the script.
+ * Mouth, blink, and glance frames are pasted onto the closed still, then masked
+ * so only the lips or the eyes change.
  *
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RadioShow, RadioStation } from '../types';
 import studio from '../assets/tv/studio.jpg';
 import devon from '../assets/tv/devon.jpg';
 import devonTalk from '../assets/tv/devon-talk.jpg';
+import devonMid from '../assets/tv/devon-mid.jpg';
+import devonGlance from '../assets/tv/devon-glance.jpg';
+import devonBlink from '../assets/tv/devon-blink.jpg';
+import devonExpress from '../assets/tv/devon-express.jpg';
 import maya from '../assets/tv/maya.jpg';
 import mayaTalk from '../assets/tv/maya-talk.jpg';
+import mayaMid from '../assets/tv/maya-mid.jpg';
+import mayaGlance from '../assets/tv/maya-glance.jpg';
+import mayaBlink from '../assets/tv/maya-blink.jpg';
+import mayaExpress from '../assets/tv/maya-express.jpg';
 import zack from '../assets/tv/zack.jpg';
 import zackTalk from '../assets/tv/zack-talk.jpg';
+import zackMid from '../assets/tv/zack-mid.jpg';
+import zackGlance from '../assets/tv/zack-glance.jpg';
+import zackBlink from '../assets/tv/zack-blink.jpg';
+import zackExpress from '../assets/tv/zack-express.jpg';
 import aris from '../assets/tv/aris.jpg';
 import arisTalk from '../assets/tv/aris-talk.jpg';
+import arisMid from '../assets/tv/aris-mid.jpg';
+import arisGlance from '../assets/tv/aris-glance.jpg';
+import arisBlink from '../assets/tv/aris-blink.jpg';
+import arisExpress from '../assets/tv/aris-express.jpg';
 import casey from '../assets/tv/casey.jpg';
 import caseyTalk from '../assets/tv/casey-talk.jpg';
+import caseyMid from '../assets/tv/casey-mid.jpg';
+import caseyGlance from '../assets/tv/casey-glance.jpg';
+import caseyBlink from '../assets/tv/casey-blink.jpg';
 import victoria from '../assets/tv/victoria.jpg';
 import victoriaTalk from '../assets/tv/victoria-talk.jpg';
+import victoriaMid from '../assets/tv/victoria-mid.jpg';
+import victoriaGlance from '../assets/tv/victoria-glance.jpg';
+import victoriaBlink from '../assets/tv/victoria-blink.jpg';
+import victoriaExpress from '../assets/tv/victoria-express.jpg';
 
 interface NewsDeskProps {
   show: RadioShow;
@@ -31,14 +54,28 @@ interface NewsDeskProps {
   onSeekSegment: (index: number) => void;
 }
 
-/** Mouth center on the source still, as a percentage of the frame. */
-const HOSTS: Record<string, { still: string; talk: string; mx: string; my: string }> = {
-  devon: { still: devon, talk: devonTalk, mx: '48%', my: '57%' },
-  maya: { still: maya, talk: mayaTalk, mx: '54%', my: '44%' },
-  zack: { still: zack, talk: zackTalk, mx: '52%', my: '45%' },
-  aris: { still: aris, talk: arisTalk, mx: '52%', my: '51%' },
-  casey: { still: casey, talk: caseyTalk, mx: '56%', my: '41%' },
-  victoria: { still: victoria, talk: victoriaTalk, mx: '60%', my: '39%' }
+interface HostArt {
+  still: string;
+  mid: string;
+  talk: string;
+  glance: string;
+  blink: string;
+  express?: string;
+  /** Lip center and eye center, as percentages of the frame. */
+  mx: string;
+  my: string;
+  ex: string;
+  ey: string;
+  moods: string[];
+}
+
+const HOSTS: Record<string, HostArt> = {
+  devon: { still: devon, mid: devonMid, talk: devonTalk, glance: devonGlance, blink: devonBlink, express: devonExpress, mx: '55%', my: '48%', ex: '58%', ey: '37%', moods: ['skeptical', 'heated'] },
+  maya: { still: maya, mid: mayaMid, talk: mayaTalk, glance: mayaGlance, blink: mayaBlink, express: mayaExpress, mx: '62%', my: '44%', ex: '60%', ey: '33%', moods: ['laughing', 'excited', 'intrigued'] },
+  zack: { still: zack, mid: zackMid, talk: zackTalk, glance: zackGlance, blink: zackBlink, express: zackExpress, mx: '56%', my: '44%', ex: '53%', ey: '39%', moods: ['laughing', 'excited'] },
+  aris: { still: aris, mid: arisMid, talk: arisTalk, glance: arisGlance, blink: arisBlink, express: arisExpress, mx: '52%', my: '50%', ex: '50%', ey: '37%', moods: ['skeptical', 'heated'] },
+  casey: { still: casey, mid: caseyMid, talk: caseyTalk, glance: caseyGlance, blink: caseyBlink, mx: '56%', my: '48%', ex: '49%', ey: '38%', moods: [] },
+  victoria: { still: victoria, mid: victoriaMid, talk: victoriaTalk, glance: victoriaGlance, blink: victoriaBlink, express: victoriaExpress, mx: '63%', my: '42%', ex: '58%', ey: '33%', moods: ['skeptical', 'heated'] }
 };
 
 function clock(ms: number): string {
@@ -62,6 +99,16 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   elapsedMs,
   onSeekSegment
 }) => {
+  const [beat, setBeat] = useState(0);
+  useEffect(() => {
+    if (!isPlaying) {
+      setBeat(0);
+      return;
+    }
+    const id = window.setInterval(() => setBeat((n) => (n + 1) % 16), 130);
+    return () => window.clearInterval(id);
+  }, [isPlaying]);
+
   const segment = show.segments[activeSegmentIndex] || show.segments[0];
   const speakerId = segment?.speakerId || '';
   const hosts = station.hosts.filter((host) => HOSTS[host.id]);
@@ -69,6 +116,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   const line = isPlaying && segment?.text
     ? segment.text
     : 'The desk is standing by. Press play and this hour reads on the set.';
+  const emotion = segment?.emotion || '';
 
   return (
     <section
@@ -109,6 +157,18 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         {hosts.map((host) => {
           const art = HOSTS[host.id];
           const talking = isPlaying && speakerId === host.id;
+          const phase = beat % 4;
+          const mouthSrc = talking ? (phase === 2 ? art.talk : phase === 0 ? null : art.mid) : null;
+          const blinkNow = isPlaying && beat % 16 === 3;
+          const glanceNow = isPlaying && (talking ? beat % 16 === 8 : beat % 16 === 12);
+          const eyeSrc = blinkNow ? art.blink : glanceNow || (talking && emotion === 'intrigued') ? art.glance : null;
+          const showMood = talking && art.express && art.moods.includes(emotion);
+          const mask = {
+            ['--mx' as string]: art.mx,
+            ['--my' as string]: art.my,
+            ['--ex' as string]: art.ex,
+            ['--ey' as string]: art.ey
+          };
           return (
             <div key={host.id} className="flex w-[44%] max-w-[11.5rem] flex-col items-stretch md:max-w-[12.5rem] xl:max-w-[16rem]">
               {talking && (
@@ -131,30 +191,22 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
                 className="group cursor-pointer text-left"
                 aria-label={`Jump to the next line from ${host.name}`}
               >
-                <div className={talking ? 'tv-talk' : undefined}>
-                  <div
-                    className="relative overflow-hidden rounded-lg bg-slate-900 ring-2 ring-white/15"
-                    style={talking ? { boxShadow: `0 0 0 2px ${station.accentColor}, 0 12px 40px ${station.accentColor}55` } : undefined}
-                  >
-                    <img src={art.still} alt="" className="block w-full" />
-                    {talking && (
-                      <img
-                        src={art.talk}
-                        alt=""
-                        className="tv-mouth"
-                        style={{ ['--mx' as string]: art.mx, ['--my' as string]: art.my }}
-                      />
-                    )}
-                    {talking && (
-                      <span className="absolute right-2 top-2 rounded bg-red-600 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
-                        Mic
-                      </span>
-                    )}
-                  </div>
-                  <div className="mt-1.5 rounded bg-slate-950/80 px-2 py-1">
-                    <div className="truncate text-xs font-semibold text-white">{host.name}</div>
-                    <div className="truncate text-[10px] uppercase tracking-wide text-slate-400">{host.title}</div>
-                  </div>
+                <div
+                  className="relative overflow-hidden rounded-lg bg-slate-900 ring-2 ring-white/15"
+                  style={talking ? { boxShadow: `0 0 0 2px ${station.accentColor}, 0 12px 40px ${station.accentColor}55` } : undefined}
+                >
+                  <img src={showMood ? art.express : art.still} alt="" className="block w-full" />
+                  {mouthSrc && <img src={mouthSrc} alt="" className="tv-part tv-mouth" style={mask} />}
+                  {eyeSrc && <img src={eyeSrc} alt="" className="tv-part tv-eyes" style={mask} />}
+                  {talking && (
+                    <span className="absolute right-2 top-2 rounded bg-red-600 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
+                      Mic
+                    </span>
+                  )}
+                </div>
+                <div className="mt-1.5 rounded bg-slate-950/80 px-2 py-1">
+                  <div className="truncate text-xs font-semibold text-white">{host.name}</div>
+                  <div className="truncate text-[10px] uppercase tracking-wide text-slate-400">{host.title}</div>
                 </div>
               </button>
             </div>
