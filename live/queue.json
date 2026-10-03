@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-03T16:28:46.152Z",
+  "mintedAt": "2026-10-03T21:26:45.411Z",
   "shows": [
-    {
-      "id": "show-live-world-yl7sci",
-      "stationId": "station-algorithmic-wire",
-      "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
-      "title": "Lake Our Life Protecting Shared Lifeline on the Wire",
-      "episodeNumber": 346,
-      "description": "The Algorithmic Wire is on air. Reads a prompt as architecture versus production fire. Devon Cross and Dr. Maya Lin take Lake Our Life Protecting Shared Lifeline on the Wire as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 533900,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Passionate about foundation models, quick-witted, calls out Devon on his nostalgia bias."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1790985145831-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "You are tuned to The Algorithmic Wire. I am Devon Cross. Maya is across the desk. Tonight we are on ‘The lake is our life’: Protecting a shared lifeline in Uganda. The question on this desk is what this fresh public line does to a service people are already using. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 30100,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1790985145831-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Maya here. I am reading the claim as it arrived, not as I wish it had arrived. ‘The lake is our life’: Protecting a shared lifeline in Uganda. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong.",
-          "timestampMs": 30750,
-          "durationMs": 25700,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1790985145831-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A headline is not a casualty report, Maya. ‘The lake is our life’: Protecting a shared lifeline in Uganda is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 57100,
-          "durationMs": 30900,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1790985145831-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture the night desk with this exact line in front of it: ‘The lake is our life’: Protecting a shared lifeline in Uganda. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 88650,
-          "durationMs": 31700,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1790985145831-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon, I am going to read the page once. On the shores of Nkondo, in Uganda’s Kikuube district, the day begins before sunrise. That is the sentence in front of me about Lake Our Life Protecting Shared Lifeline. It answers one question. It does not become a log because I found it exciting. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 121000,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1790985145831-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If I take ‘The lake is our life’: Protecting a shared lifeline in Uganda seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. Lake Our Life Protecting Shared Lifeline is now a public line. Public lines travel faster than corrections. The correction has to be just as plain.",
-          "timestampMs": 150550,
-          "durationMs": 27300,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1790985145831-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "And it does not prove the flattering version of ‘The lake is our life’: Protecting a shared lifeline in Uganda. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever public witness · un news did not put on the page. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 178500,
-          "durationMs": 30500,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1790985145831-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Second pass, and it does not exist to decorate the first. There is no second site on ‘The lake is our life’: Protecting a shared lifeline in Uganda. I will not invent the opposing citation. If that fights the first story about Lake Our Life Protecting Shared Lifeline, I stay with the page I can still find. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 209650,
-          "durationMs": 30500,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1790985145831-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Who stays is the person who has to keep a service up while ‘The lake is our life’: Protecting a shared lifeline in Uganda is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 240800,
-          "durationMs": 27700,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1790985145831-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "What I would ship tonight is a narrower note than the headline. Lake Our Life Protecting Shared Lifeline gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 269150,
-          "durationMs": 27300,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1790985145832-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The hole, Maya, is treating ‘The lake is our life’: Protecting a shared lifeline in Uganda as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 297100,
-          "durationMs": 28500,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1790985145832-12",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Line One is lit. Jordan is calling from Toronto, Canada about this exact item, ‘The lake is our life’: Protecting a shared lifeline in Uganda. Go ahead, you are on The Algorithmic Wire. Tell us what you can check. Leave the slogan in the hallway. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 326250,
-          "durationMs": 25700,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1790985145832-13",
-          "speakerId": "caller-local-1790985145831",
-          "speakerName": "Jordan (Toronto, Canada)",
-          "text": "I am Jordan, in Toronto, Canada. We saw ‘The lake is our life’: Protecting a shared lifeline in Uganda before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 352600,
-          "durationMs": 31300,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1790985145832-14",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Jordan separated the feed from the work, and that is the adult version of Lake Our Life Protecting Shared Lifeline. Thank you. This desk will not round that back into a vibe. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 384550,
-          "durationMs": 20500,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1790985145832-15",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Unasked, and necessary. When ‘The lake is our life’: Protecting a shared lifeline in Uganda is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 405700,
-          "durationMs": 26100,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1790985145832-16",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The test is small and it fits this item. Can a person who missed the first post explain Lake Our Life Protecting Shared Lifeline from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 432450,
-          "durationMs": 28100,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1790985145832-17",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Ruling on ‘The lake is our life’: Protecting a shared lifeline in Uganda. We keep the sentence the page gave us, and we do not promote the sentence it did not. Lake Our Life Protecting Shared Lifeline can be urgent and still be narrow. Narrow is what the listener can reuse without us in the room. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 461200,
-          "durationMs": 30100,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1790985145832-18",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If you are still here, write the failure sentence for Lake Our Life Protecting Shared Lifeline before you forward ‘The lake is our life’: Protecting a shared lifeline in Uganda. Devon and I will still disagree on the pace. We do not disagree on that order. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 491950,
-          "durationMs": 26100,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1790985145832-19",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour. I am Devon. Maya was across the desk. You were listening to The Algorithmic Wire. Tonight we took apart ‘The lake is our life’: Protecting a shared lifeline in Uganda. The next show starts when the clock turns. Thanks for staying to the end. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 518700,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168228",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: On the shores of Nkondo, in Uganda’s Kikuube district, the day begins before sunrise.",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Lake Our Life Protecting Shared Lifeline: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168228",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1790985145831",
-          "name": "Jordan",
-          "location": "Toronto, Canada",
-          "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
-          "take": "I am Jordan, in Toronto, Canada. We saw ‘The lake is our life’: Protecting a shared lifeline in Uganda before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "status": "on-air",
-          "avatar": "JO"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-02T23:52:25.832Z"
-    },
     {
       "id": "show-live-world-1mhiapj",
       "stationId": "station-kernel-panic",
@@ -2088,6 +1827,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-03T16:28:46.152Z"
+    },
+    {
+      "id": "show-live-world-1rdc8p3",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Lebanon: Civilian risks grow as military activity continues, UN says",
+      "title": "On the Wire: Lebanon Civilian Risks Grow Military Activity",
+      "episodeNumber": 273,
+      "description": "The Algorithmic Wire is on air. Reads a prompt as architecture versus production fire. Devon Cross and Dr. Maya Lin take On the Wire: Lebanon Civilian Risks Grow Military Activity as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 537100,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Passionate about foundation models, quick-witted, calls out Devon on his nostalgia bias."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791062805409-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "You are tuned to The Algorithmic Wire. I am Devon Cross. Maya is across the desk. Tonight we are on Lebanon: Civilian risks grow as military activity continues, UN says. The question on this desk is what this fresh public line does to a service people are already using. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 29700,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791062805409-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Maya here. I am reading the claim as it arrived, not as I wish it had arrived. Lebanon: Civilian risks grow as military activity continues, UN says. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 30350,
+          "durationMs": 32100,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791062805409-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A headline is not a casualty report, Maya. Lebanon: Civilian risks grow as military activity continues, UN says is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 63100,
+          "durationMs": 30500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791062805410-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture the night desk with this exact line in front of it: Lebanon: Civilian risks grow as military activity continues, UN says. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 94250,
+          "durationMs": 31300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791062805410-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon, I am going to read the page once. in Geneva Damaged roads, disrupted services and ongoing military activity continue to put civilians at risk in south Lebanon as strikes between Israeli forces and Hezbollah continue, according to the UN’s peacekeeping mission in the country . That is the sentence in front of me about Lebanon Civilian Risks Grow Military Activity. It answers one question. It does not become a log because I found it exciting.",
+          "timestampMs": 126200,
+          "durationMs": 31300,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791062805410-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If I take Lebanon: Civilian risks grow as military activity continues, UN says seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. Lebanon Civilian Risks Grow Military Activity is now a public line. Public lines travel faster than corrections. The correction has to be just as plain.",
+          "timestampMs": 158150,
+          "durationMs": 26900,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791062805410-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "And it does not prove the flattering version of Lebanon: Civilian risks grow as military activity continues, UN says. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever public witness · un news did not put on the page. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 185700,
+          "durationMs": 30100,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791062805410-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Second pass, and it does not exist to decorate the first. There is no second site on Lebanon: Civilian risks grow as military activity continues, UN says. I will not invent the opposing citation. If that fights the first story about Lebanon Civilian Risks Grow Military Activity, I stay with the page I can still find. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 216450,
+          "durationMs": 30100,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791062805410-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Who stays is the person who has to keep a service up while Lebanon: Civilian risks grow as military activity continues, UN says is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 247200,
+          "durationMs": 27300,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791062805410-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "What I would ship tonight is a narrower note than the headline. Lebanon Civilian Risks Grow Military Activity gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 275150,
+          "durationMs": 27300,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791062805410-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The hole, Maya, is treating Lebanon: Civilian risks grow as military activity continues, UN says as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 303100,
+          "durationMs": 28100,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791062805410-12",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Line One is lit. Priya is calling from Bangalore, India about this exact item, Lebanon: Civilian risks grow as military activity continues, UN says. Go ahead, you are on The Algorithmic Wire. Tell us what you can check. Leave the slogan in the hallway. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 331850,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791062805410-13",
+          "speakerId": "caller-local-1791062805409",
+          "speakerName": "Priya (Bangalore, India)",
+          "text": "I am Priya, in Bangalore, India. We saw Lebanon: Civilian risks grow as military activity continues, UN says before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 357800,
+          "durationMs": 30900,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791062805410-14",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Priya separated the feed from the work, and that is the adult version of Lebanon Civilian Risks Grow Military Activity. Thank you. This desk will not round that back into a vibe. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 389350,
+          "durationMs": 20500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791062805410-15",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Unasked, and necessary. When Lebanon: Civilian risks grow as military activity continues, UN says is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 410500,
+          "durationMs": 25700,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791062805410-16",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The test is small and it fits this item. Can a person who missed the first post explain Lebanon Civilian Risks Grow Military Activity from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 436850,
+          "durationMs": 28100,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791062805410-17",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Ruling on Lebanon: Civilian risks grow as military activity continues, UN says. We keep the sentence the page gave us, and we do not promote the sentence it did not. Lebanon Civilian Risks Grow Military Activity can be urgent and still be narrow. Narrow is what the listener can reuse without us in the room. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 465600,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791062805410-18",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If you are still here, write the failure sentence for Lebanon Civilian Risks Grow Military Activity before you forward Lebanon: Civilian risks grow as military activity continues, UN says. Devon and I will still disagree on the pace. We do not disagree on that order. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 495950,
+          "durationMs": 25700,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791062805410-19",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour. I am Devon. Maya was across the desk. You were listening to The Algorithmic Wire. Tonight we took apart Lebanon: Civilian risks grow as military activity continues, UN says. The next show starts when the clock turns. Thanks for staying to the end. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "timestampMs": 522300,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168215",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: in Geneva Damaged roads, disrupted services and ongoing military activity continue to put civilians at risk in south Lebanon as strikes between Israeli forces and Hezbollah continue, according to the UN’s peacekeeping mi",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Lebanon Civilian Risks Grow Military Activity: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168215",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791062805409",
+          "name": "Priya",
+          "location": "Bangalore, India",
+          "topic": "Lebanon: Civilian risks grow as military activity continues, UN says",
+          "take": "I am Priya, in Bangalore, India. We saw Lebanon: Civilian risks grow as military activity continues, UN says before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
+          "status": "on-air",
+          "avatar": "PR"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-03T21:26:45.410Z"
     }
   ]
 }
