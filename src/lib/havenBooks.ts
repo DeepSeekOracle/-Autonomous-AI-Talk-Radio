@@ -63,6 +63,9 @@ const FILMS: Record<string, Record<string, [string, string]>> = {
     c4: ['2UXLKfKcS7g', 'This chapter on film'],
     '*': ['EC8GRmLG3Us', 'Full Book II film'],
   },
+  'ascension-war': {
+    c1: ['kDI91J3QYtc', 'Prologue on film'],
+  },
 };
 
 const stories = new Map<string, HavenStory>();
