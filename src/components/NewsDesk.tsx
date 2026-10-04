@@ -88,7 +88,7 @@ const HOSTS: Record<string, HostArt> = {
   aris: { still: aris, mid: arisMid, talk: arisTalk, glance: arisGlance, blink: arisBlink, express: arisExpress, mx: '52%', my: '50%', ex: '50%', ey: '37%', moods: ['skeptical', 'heated'] },
   casey: { still: casey, mid: caseyMid, talk: caseyTalk, glance: caseyGlance, blink: caseyBlink, mx: '56%', my: '48%', ex: '49%', ey: '38%', moods: [], lift: '-12%' },
   victoria: { still: victoria, mid: victoriaMid, talk: victoriaTalk, glance: victoriaGlance, blink: victoriaBlink, express: victoriaExpress, mx: '63%', my: '42%', ex: '58%', ey: '33%', moods: ['skeptical', 'heated'] },
-  liora: { still: liora, mid: lioraMid, talk: lioraTalk, glance: lioraGlance, blink: lioraBlink, express: lioraExpress, mx: '63%', my: '49%', ex: '58%', ey: '38%', moods: ['intrigued'] }
+  liora: { still: liora, mid: lioraMid, talk: lioraTalk, glance: lioraGlance, blink: lioraBlink, express: lioraExpress, mx: '63%', my: '49%', ex: '58%', ey: '38%', moods: ['intrigued'], lift: '-6%' }
 };
 
 function clock(ms: number): string {
@@ -142,7 +142,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   const seats = scene === 'news'
     ? [{ left: '26%', top: '43%' }, { left: '58%', top: '44%' }]
     : scene === 'haven'
-      ? [{ left: '24%', top: '42%' }]
+      ? [{ left: '23%', top: '30%' }]
       : [{ left: '32.4%', top: '33%' }, { left: '60.5%', top: '31.5%' }];
   const sceneClass = scene === 'news'
     ? 'tv-scene-news border-slate-800/70 bg-[#0c121a]'
@@ -190,7 +190,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
           transform: art.lift ? `translateY(${art.lift})` : undefined
         };
         return (
-          <div key={host.id} className={`absolute z-10 ${scene === 'haven' ? 'w-[15%]' : 'w-[12.5%]'}`} style={seat}>
+          <div key={host.id} className={`absolute z-10 ${scene === 'haven' ? 'w-[20%]' : 'w-[12.5%]'}`} style={seat}>
             {talking && (
               <div
                 key={activeSegmentIndex}

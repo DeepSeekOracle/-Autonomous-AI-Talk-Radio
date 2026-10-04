@@ -82,6 +82,10 @@
 .tv-scene-haven .tv-host img {
   filter: saturate(0.95) contrast(1.04) brightness(1.02);
 }
+.tv-scene-haven .tv-host {
+  -webkit-mask-image: radial-gradient(ellipse 28% 24% at 50% 42%, #000 88%, transparent 96%);
+  mask-image: radial-gradient(ellipse 28% 24% at 50% 42%, #000 88%, transparent 96%);
+}
 .tv-scene-haven::after {
   content: "";
   position: absolute;
