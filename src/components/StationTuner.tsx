@@ -107,7 +107,7 @@ export const StationTuner: React.FC<StationTunerProps> = ({
       </div>
 
       {/* Station Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3">
         {stations.map((st) => {
           const isActive = st.id === activeStationId;
 

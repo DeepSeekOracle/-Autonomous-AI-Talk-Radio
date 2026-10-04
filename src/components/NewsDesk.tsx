@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 import { RadioShow, RadioStation } from '../types';
 import studio from '../assets/tv/studio.jpg';
 import newsroom from '../assets/tv/newsroom.jpg';
+import havenStudio from '../assets/tv/haven-studio.jpg';
 import devon from '../assets/tv/devon.jpg';
 import devonTalk from '../assets/tv/devon-talk.jpg';
 import devonMid from '../assets/tv/devon-mid.jpg';
@@ -45,6 +46,12 @@ import victoriaMid from '../assets/tv/victoria-mid.jpg';
 import victoriaGlance from '../assets/tv/victoria-glance.jpg';
 import victoriaBlink from '../assets/tv/victoria-blink.jpg';
 import victoriaExpress from '../assets/tv/victoria-express.jpg';
+import liora from '../assets/tv/liora.jpg';
+import lioraTalk from '../assets/tv/liora-talk.jpg';
+import lioraMid from '../assets/tv/liora-mid.jpg';
+import lioraGlance from '../assets/tv/liora-glance.jpg';
+import lioraBlink from '../assets/tv/liora-blink.jpg';
+import lioraExpress from '../assets/tv/liora-express.jpg';
 
 interface NewsDeskProps {
   show: RadioShow;
@@ -54,6 +61,7 @@ interface NewsDeskProps {
   elapsedMs: number;
   onSeekSegment: (index: number) => void;
   onOpenHotline: () => void;
+  onTuneHaven: () => void;
 }
 
 interface HostArt {
@@ -79,7 +87,8 @@ const HOSTS: Record<string, HostArt> = {
   zack: { still: zack, mid: zackMid, talk: zackTalk, glance: zackGlance, blink: zackBlink, express: zackExpress, mx: '56%', my: '44%', ex: '53%', ey: '39%', moods: ['laughing', 'excited'], lift: '-12%' },
   aris: { still: aris, mid: arisMid, talk: arisTalk, glance: arisGlance, blink: arisBlink, express: arisExpress, mx: '52%', my: '50%', ex: '50%', ey: '37%', moods: ['skeptical', 'heated'] },
   casey: { still: casey, mid: caseyMid, talk: caseyTalk, glance: caseyGlance, blink: caseyBlink, mx: '56%', my: '48%', ex: '49%', ey: '38%', moods: [], lift: '-12%' },
-  victoria: { still: victoria, mid: victoriaMid, talk: victoriaTalk, glance: victoriaGlance, blink: victoriaBlink, express: victoriaExpress, mx: '63%', my: '42%', ex: '58%', ey: '33%', moods: ['skeptical', 'heated'] }
+  victoria: { still: victoria, mid: victoriaMid, talk: victoriaTalk, glance: victoriaGlance, blink: victoriaBlink, express: victoriaExpress, mx: '63%', my: '42%', ex: '58%', ey: '33%', moods: ['skeptical', 'heated'] },
+  liora: { still: liora, mid: lioraMid, talk: lioraTalk, glance: lioraGlance, blink: lioraBlink, express: lioraExpress, mx: '63%', my: '49%', ex: '58%', ey: '38%', moods: ['intrigued'] }
 };
 
 function clock(ms: number): string {
@@ -102,10 +111,15 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
   isPlaying,
   elapsedMs,
   onSeekSegment,
-  onOpenHotline
+  onOpenHotline,
+  onTuneHaven
 }) => {
   const [beat, setBeat] = useState(0);
-  const [scene, setScene] = useState<'radio' | 'news'>('radio');
+  const [scene, setScene] = useState<'radio' | 'news' | 'haven'>('radio');
+  useEffect(() => {
+    if (station.id === 'station-eternal-haven') setScene('haven');
+    else setScene((current) => (current === 'haven' ? 'radio' : current));
+  }, [station.id]);
   useEffect(() => {
     if (!isPlaying) {
       setBeat(0);
@@ -124,15 +138,27 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
     ? segment.text
     : 'Pull up a chair. Press play when you want the hour.';
   const emotion = segment?.emotion || '';
-  const plate = scene === 'news' ? newsroom : studio;
+  const plate = scene === 'news' ? newsroom : scene === 'haven' ? havenStudio : studio;
   const seats = scene === 'news'
     ? [{ left: '26%', top: '43%' }, { left: '58%', top: '44%' }]
-    : [{ left: '32.4%', top: '33%' }, { left: '60.5%', top: '31.5%' }];
+    : scene === 'haven'
+      ? [{ left: '24%', top: '42%' }]
+      : [{ left: '32.4%', top: '33%' }, { left: '60.5%', top: '31.5%' }];
+  const sceneClass = scene === 'news'
+    ? 'tv-scene-news border-slate-800/70 bg-[#0c121a]'
+    : scene === 'haven'
+      ? 'tv-scene-haven border-[#e0b36a]/40 bg-[#100c18]'
+      : 'tv-scene-radio border-amber-950/40 bg-[#1a120c]';
+  const fadeClass = scene === 'news'
+    ? 'from-[#0c121a]/85'
+    : scene === 'haven'
+      ? 'from-[#100c18]/85'
+      : 'from-[#1a120c]/80';
 
   return (
     <section
       aria-label="The show"
-      className={`relative aspect-video overflow-hidden rounded-2xl border shadow-2xl ${scene === 'news' ? 'tv-scene-news border-slate-800/70 bg-[#0c121a]' : 'tv-scene-radio border-amber-950/40 bg-[#1a120c]'}`}
+      className={`relative aspect-video overflow-hidden rounded-2xl border shadow-2xl ${sceneClass}`}
     >
       <img src={plate} alt="" className="absolute inset-0 h-full w-full object-cover" />
       <div className="tv-vignette pointer-events-none absolute inset-0 z-[5]" />
@@ -164,7 +190,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
           transform: art.lift ? `translateY(${art.lift})` : undefined
         };
         return (
-          <div key={host.id} className="absolute z-10 w-[12.5%]" style={seat}>
+          <div key={host.id} className={`absolute z-10 ${scene === 'haven' ? 'w-[15%]' : 'w-[12.5%]'}`} style={seat}>
             {talking && (
               <div
                 key={activeSegmentIndex}
@@ -237,14 +263,18 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
       >
         {([
           ['radio', 'Radio show'],
-          ['news', 'News room']
+          ['news', 'News room'],
+          ['haven', 'Eternal Haven']
         ] as const).map(([id, label]) => (
           <button
             key={id}
             type="button"
             aria-pressed={scene === id}
-            onClick={() => setScene(id)}
-            className={`cursor-pointer px-3 py-1.5 ${scene === id ? (id === 'news' ? 'bg-sky-200 text-slate-950' : 'bg-amber-200 text-stone-950') : 'text-amber-50/80 hover:text-amber-50'}`}
+            onClick={() => {
+              setScene(id);
+              if (id === 'haven' && station.id !== 'station-eternal-haven') onTuneHaven();
+            }}
+            className={`cursor-pointer px-3 py-1.5 ${scene === id ? (id === 'news' ? 'bg-sky-200 text-slate-950' : id === 'haven' ? 'bg-[#e0b36a] text-[#1a140c]' : 'bg-amber-200 text-stone-950') : 'text-amber-50/80 hover:text-amber-50'}`}
           >
             {label}
           </button>
@@ -263,7 +293,7 @@ export const NewsDesk: React.FC<NewsDeskProps> = ({
         Hot Call
       </button>
 
-      <div className={`pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t to-transparent px-4 pb-3 pr-28 pt-8 ${scene === 'news' ? 'from-[#0c121a]/85' : 'from-[#1a120c]/80'}`}>
+      <div className={`pointer-events-none absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t to-transparent px-4 pb-3 pr-28 pt-8 ${fadeClass}`}>
         <div className="truncate text-sm text-amber-50 drop-shadow">{isPlaying ? show.title : line}</div>
         <div className="truncate text-[11px] text-amber-100/75">{isPlaying ? (reelOn ? segment?.speakerName : segment?.topicTag || station.genre) : show.title}</div>
       </div>

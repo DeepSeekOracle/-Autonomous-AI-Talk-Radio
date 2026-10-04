@@ -6,6 +6,7 @@
  */
 import { SPEAKERS } from '../data';
 import { RadioShow } from '../types';
+import { havenWelcomeShow } from './havenBooks';
 import { synthesizeShow } from './localShow';
 
 export function seedCatalog(): RadioShow[] {
@@ -66,7 +67,7 @@ export function seedCatalog(): RadioShow[] {
     },
   ];
 
-  return specs.map((s) => {
+  const seeded = specs.map((s) => {
     const show = synthesizeShow({
       topic: s.topic,
       tone: s.ungated ? 'ungated' : 'unfiltered-debate',
@@ -83,4 +84,5 @@ export function seedCatalog(): RadioShow[] {
       createdAt: s.createdAt,
     };
   });
+  return [...seeded, havenWelcomeShow()];
 }

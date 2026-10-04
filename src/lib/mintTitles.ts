@@ -1,7 +1,8 @@
 /**
  * Episode titles for the always-on autonomous studio.
  *
- * Station identity stays the four desks (how each one reads a prompt).
+ * Station identity stays the desks (how each one reads a prompt).
+ * Eternal Haven is the book desk and is not minted from a news topic.
  * The episode name is minted from the user's topic — never a leftover
  * Wikipedia / Hacker News headline, never "The Firestorm Over {full prompt}".
  *
@@ -94,6 +95,15 @@ export const STATION_LENS: Record<string, { name: string; lens: string; frames: 
       `93.5 Confidential — ${c}`,
       `${c} on the Money`,
       `Compute Hour: ${c}`,
+    ],
+  },
+  "station-eternal-haven": {
+    name: "Eternal Haven",
+    lens: "Reads the Eternal Haven Chronicles, chapter by chapter.",
+    frames: (c) => [
+      `Eternal Haven: ${c}`,
+      `Moonlit Desk — ${c}`,
+      `${c}`,
     ],
   },
 };

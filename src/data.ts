@@ -66,6 +66,17 @@ export const SPEAKERS: Record<string, Speaker> = {
     voiceRate: 1.0,
     voiceGender: 'female',
     personality: 'Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision.'
+  },
+  liora: {
+    id: 'liora',
+    name: 'Liora Hale',
+    role: 'host-1',
+    title: 'Night Reader of Eternal Haven',
+    avatar: 'LH',
+    voicePitch: 1.0,
+    voiceRate: 0.92,
+    voiceGender: 'female',
+    personality: 'Reads the Eternal Haven Chronicles in a calm human voice and lets the chapter film play when one exists.'
   }
 };
 
@@ -112,6 +123,17 @@ export const STATIONS: RadioStation[] = [
     hosts: [SPEAKERS.victoria, SPEAKERS.devon],
     currentShowId: 'show-compute-wars',
     accentColor: '#10b981', // emerald-500
+    bitrateKbps: 320
+  },
+  {
+    id: 'station-eternal-haven',
+    name: 'Eternal Haven',
+    frequency: '101.7 FM',
+    genre: 'The Eternal Haven Chronicles',
+    tagline: 'Reads the books, chapter by chapter, and plays the films.',
+    hosts: [SPEAKERS.liora],
+    currentShowId: 'show-eternal-haven',
+    accentColor: '#e0b36a',
     bitrateKbps: 320
   }
 ];

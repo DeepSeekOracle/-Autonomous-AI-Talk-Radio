@@ -15,6 +15,7 @@ import { ShowNotesModal } from './components/ShowNotesModal';
 import { LygoFooter } from './components/LygoFooter';
 import { DeskModule } from './components/DeskModule';
 import { NewsDesk } from './components/NewsDesk';
+import { HavenShelf } from './components/HavenShelf';
 import { STATIONS, SPEAKERS } from './data';
 import { seedCatalog } from './lib/seedShows';
 import { RadioStation, RadioShow, AudioSettings, Caller, ScriptSegment } from './types';
@@ -26,6 +27,7 @@ import { gatherTopicDeck, nextLiveStory, WITNESS_HOME } from './lib/topicMill';
 import { research_topic } from './lib/agentEngine';
 import { loadLiveQueue, pickQueuedShow } from './lib/liveQueue';
 import { loadSignalCatalog, pickSignalHour } from './lib/signalCatalog';
+import { advanceHavenReading, HAVEN_STATION } from './lib/havenBooks';
 import { Infinity as InfinityIcon, Radio, Flame, Sparkles, Volume2, Info, Headphones } from 'lucide-react';
 
 const HEARD_KEY = 'talk-radio-heard';
@@ -94,7 +96,7 @@ export default function App() {
   const lens = stationLens(activeStation.id);
 
   const nextStation = (fromId: string) => {
-    const list = wheelRef.current.stations;
+    const list = wheelRef.current.stations.filter((s) => s.id !== HAVEN_STATION);
     const i = list.findIndex((s) => s.id === fromId);
     return list[(i + 1) % list.length] || list[0];
   };
@@ -204,6 +206,7 @@ export default function App() {
 
   const prefetchEternity = async () => {
     if (!eternityRef.current || mintingRef.current || queueRef.current) return;
+    if (wheelRef.current.activeStationId === HAVEN_STATION) return;
     mintingRef.current = true;
     try {
       const nxt = nextStation(wheelRef.current.activeStationId);
@@ -214,6 +217,11 @@ export default function App() {
   };
 
   const playQueuedOrMint = async () => {
+    if (wheelRef.current.activeStationId === HAVEN_STATION && onAirRef.current) {
+      const show = await advanceHavenReading().catch(() => null);
+      if (show && onAirRef.current && wheelRef.current.activeStationId === HAVEN_STATION) applyHour(show);
+      return;
+    }
     if (!eternityRef.current) {
       if (onAirRef.current) advanceHour();
       return;
@@ -326,6 +334,16 @@ export default function App() {
     eternityRef.current = true;
     onAirRef.current = true;
     setEternity(true);
+    if (wheelRef.current.activeStationId === HAVEN_STATION) {
+      setEternityLabel('reading the next chapter…');
+      try {
+        const show = await advanceHavenReading().catch(() => null);
+        if (show && eternityRef.current) applyHour(show);
+      } finally {
+        foreverLockRef.current = false;
+      }
+      return;
+    }
     setEternityLabel('writing the next hour…');
     const currentId = wheelRef.current.activeShowId;
     try {
@@ -511,7 +529,16 @@ export default function App() {
               elapsedMs={elapsedMs}
               onSeekSegment={handleSeekSegment}
               onOpenHotline={() => setCurrentTab('hotline')}
+              onTuneHaven={() => handleSelectStation(HAVEN_STATION)}
             />
+            {activeStationId === HAVEN_STATION && (
+              <HavenShelf
+                onRead={(show) => {
+                  onAirRef.current = true;
+                  applyHour(show);
+                }}
+              />
+            )}
             <div className="flex justify-end">
               <div
                 role="group"
