@@ -146,6 +146,16 @@ export const HavenShelf: React.FC<HavenShelfProps> = ({ onRead }) => {
             Play film
           </button>
         )}
+        {film?.extra && (
+          <a
+            href={`https://youtu.be/${film.extra}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-2 text-xs font-bold text-[#e0b36a] underline underline-offset-4"
+          >
+            Prologue
+          </a>
+        )}
       </div>
       <p className="mt-2 text-[11px] text-slate-500">{status}</p>
 
