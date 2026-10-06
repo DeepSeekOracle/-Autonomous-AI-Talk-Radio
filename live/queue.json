@@ -1,272 +1,6 @@
 {
-  "mintedAt": "2026-10-06T06:30:17.673Z",
+  "mintedAt": "2026-10-06T16:00:57.740Z",
   "shows": [
-    {
-      "id": "show-live-world-13kaz00",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Security Council LIVE: Tracking Syria’s transition",
-      "title": "Wire Desk: Security Council LIVE Tracking Syria's Transition",
-      "episodeNumber": 724,
-      "description": "The Algorithmic Wire is on air. Reads a prompt as architecture versus production fire. Devon Cross and Dr. Maya Lin take Wire Desk: Security Council LIVE Tracking Syria's Transition as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 528700,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Passionate about foundation models, quick-witted, calls out Devon on his nostalgia bias."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791093678901-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "You are tuned to The Algorithmic Wire. I am Devon Cross. Maya is across the desk. Tonight we are on Security Council LIVE: Tracking Syria’s transition. The question on this desk is what this fresh public line does to a service people are already using. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791093678901-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Maya here. I am reading the claim as it arrived, not as I wish it had arrived. Security Council LIVE: Tracking Syria’s transition. If that line is the whole story, we say so. If a page expands it, we read the page and then we stop. I would rather be early and narrow than colorful and wrong. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 28750,
-          "durationMs": 30500,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791093678901-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A headline is not a casualty report, Maya. Security Council LIVE: Tracking Syria’s transition is words on a feed. I will not invent a number to sound informed. I want the ordinary service that bends if the line is as large as it sounds, and the service that does not bend at all. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 59900,
-          "durationMs": 28900,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791093678901-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture the night desk with this exact line in front of it: Security Council LIVE: Tracking Syria’s transition. What they can confirm is the sentence on the page, read once and then left alone. What they must refuse to confirm is every detail that page left out. The map can wait. The phone does not. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 89450,
-          "durationMs": 29700,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791093678901-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon, I am going to read the page once. As Damascus continues to rebuild after more than a decade of war – from the recent dissolution of the Kurdish-led Syrian Democratic Forces to the United States’ removal of Syria from its sponsors of terrorism list – a top UN official warned the Security Council on Thursday that international support can help tackle. That is the sentence in front of me about Security Council LIVE Tracking Syria's Transition. It answers one question. It does not become a log because I found it exciting.",
-          "timestampMs": 119800,
-          "durationMs": 37700,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791093678901-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If I take Security Council LIVE: Tracking Syria’s transition seriously, the meaning is the handoff. A person who was not in the room has to be able to repeat the true part and refuse the rest. Security Council LIVE Tracking Syria's Transition is now a public line. Public lines travel faster than corrections. The correction has to be just as plain. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 158150,
-          "durationMs": 32100,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791093678901-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "And it does not prove the flattering version of Security Council LIVE: Tracking Syria’s transition. A clean paragraph is not a quiet night. We owe the listener the limit, said in the same tone as the claim. The limit is whatever public witness · un news did not put on the page. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 190900,
-          "durationMs": 28500,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791093678901-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Second pass, and it does not exist to decorate the first. The United Nations Security Council is one of the six principal organs of the United Nations, and is the United Nations' executive branch, having primary responsibility for the maintenance of international peace and security. Its powers, outlined in the UN Charter, include. If that fights the first story about Security Council LIVE Tracking Syria's Transition, I stay with the page I can still find.",
-          "timestampMs": 220050,
-          "durationMs": 30900,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791093678901-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Who stays is the person who has to keep a service up while Security Council LIVE: Tracking Syria’s transition is still thin. Name that person before you name the lesson. A feed can be loud and still leave the night shift alone with the work. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 251600,
-          "durationMs": 25700,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791093678901-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "What I would ship tonight is a narrower note than the headline. Security Council LIVE Tracking Syria's Transition gets one sentence a new person can learn, one way to tell the line was wrong, and one way to stop repeating it. The rest can wait for a better page. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 277950,
-          "durationMs": 27300,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791093678901-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The hole, Maya, is treating Security Council LIVE: Tracking Syria’s transition as finished because it was first. First is a clock. Finished is a page that still says the same thing after the replies. If we skip that wait, we shipped a favor to the loudest feed. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 305900,
-          "durationMs": 26500,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791093678901-12",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Line One is lit. Elena is calling from Munich, Germany about this exact item, Security Council LIVE: Tracking Syria’s transition. Go ahead, you are on The Algorithmic Wire. Tell us what you can check. Leave the slogan in the hallway. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 333050,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791093678901-13",
-          "speakerId": "caller-local-1791093678901",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. We saw Security Council LIVE: Tracking Syria’s transition before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 357400,
-          "durationMs": 29300,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791093678901-14",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Elena separated the feed from the work, and that is the adult version of Security Council LIVE Tracking Syria's Transition. Thank you. This desk will not round that back into a vibe. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 387350,
-          "durationMs": 20500,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791093678901-15",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Unasked, and necessary. When Security Council LIVE: Tracking Syria’s transition is wrong halfway, what is the first true sentence the operator can say. Not the lesson. The sentence. If we cannot write it, we are not ready to recommend the item. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 408500,
-          "durationMs": 24100,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791093678901-16",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The test is small and it fits this item. Can a person who missed the first post explain Security Council LIVE Tracking Syria's Transition from the page alone, and can they stop repeating it if the page changes. If yes, it earned the next hour. If no, it stays a headline. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 433250,
-          "durationMs": 28100,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791093678901-17",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Ruling on Security Council LIVE: Tracking Syria’s transition. We keep the sentence the page gave us, and we do not promote the sentence it did not. Security Council LIVE Tracking Syria's Transition can be urgent and still be narrow. Narrow is what the listener can reuse without us in the room. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 462000,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791093678901-18",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If you are still here, write the failure sentence for Security Council LIVE Tracking Syria's Transition before you forward Security Council LIVE: Tracking Syria’s transition. Devon and I will still disagree on the pace. We do not disagree on that order. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 490750,
-          "durationMs": 24100,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791093678901-19",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour. I am Devon. Maya was across the desk. You were listening to The Algorithmic Wire. Tonight we took apart Security Council LIVE: Tracking Syria’s transition. The next show starts when the clock turns. Thanks for staying to the end. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "timestampMs": 515500,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168214",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: As Damascus continues to rebuild after more than a decade of war – from the recent dissolution of the Kurdish-led Syrian Democratic Forces to the United States’ removal of Syria from its sponsors of terrorism list – a to",
-        "Research packet: 1 page(s), confidence 0.45, held as a question."
-      ],
-      "keyTakeaways": [
-        "Security Council LIVE Tracking Syria's Transition: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168214",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        },
-        {
-          "title": "United Nations Security Council",
-          "url": "https://en.wikipedia.org/wiki/United_Nations_Security_Council",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791093678901",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "Security Council LIVE: Tracking Syria’s transition",
-          "take": "I am Elena, in Munich, Germany. We saw Security Council LIVE: Tracking Syria’s transition before we had anything we could verify. The useful work was marking what the page said, what it did not say, and which service had to keep running. The loud version traveled faster. The careful one is what we used. That is the live line on this hour, taken from the feed, not from a saved essay.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-04T06:01:18.902Z"
-    },
     {
       "id": "show-live-world-ly198y",
       "stationId": "station-sv-confidential",
@@ -2113,6 +1847,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-06T06:30:17.673Z"
+    },
+    {
+      "id": "show-live-world-ei99bi",
+      "stationId": "station-sv-confidential",
+      "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
+      "title": "Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty",
+      "episodeNumber": 482,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 454700,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791302457740-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 29700,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791302457740-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 30350,
+          "durationMs": 26900,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791302457740-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty can be important and still have no buyer. Attention is not solvency. If Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 57900,
+          "durationMs": 26500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791302457740-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 85050,
+          "durationMs": 26500,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791302457740-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. Human Rights Members of the minority ethnic Rohingya Muslim group in Myanmar are suffering, misery, and cruelty on multiple levels and across the country that is heartbreaking, according to the UN High Commissioner for Human Rights. I will not turn Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty into a market it did not claim.",
+          "timestampMs": 112200,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791302457740-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 138950,
+          "durationMs": 23700,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791302457740-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 163300,
+          "durationMs": 19300,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791302457740-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. I will not invent the opposing citation. If neither page names a payer, then Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 183250,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791302457740-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 211600,
+          "durationMs": 18500,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791302457740-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 230750,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791302457740-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 254300,
+          "durationMs": 22100,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791302457740-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 277050,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791302457740-13",
+          "speakerId": "caller-local-1791302457739",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 299400,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791302457740-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena priced the part Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 328150,
+          "durationMs": 20100,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791302457740-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 348900,
+          "durationMs": 21700,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791302457740-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 371250,
+          "durationMs": 24900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791302457740-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 396800,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791302457740-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty, write the stop under Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 417950,
+          "durationMs": 22100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791302457740-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 440700,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168200",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: Human Rights Members of the minority ethnic Rohingya Muslim group in Myanmar are suffering, misery, and cruelty on multiple levels and across the country that is heartbreaking, according to the UN High Commissioner for H",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168200",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791302457739",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
+          "take": "I am Elena, in Munich, Germany. Rohingyas Myanmar Suffering Heartbreaking Misery Cruelty looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-06T16:00:57.740Z"
     }
   ]
 }
