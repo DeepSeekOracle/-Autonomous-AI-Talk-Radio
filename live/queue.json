@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-08T01:03:37.767Z",
+  "mintedAt": "2026-10-08T10:43:24.564Z",
   "shows": [
-    {
-      "id": "show-live-world-1000lm6",
-      "stationId": "station-sv-confidential",
-      "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
-      "title": "Compute Hour: Haiti Ramps Up Fight Against Gangs",
-      "episodeNumber": 634,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Compute Hour: Haiti Ramps Up Fight Against Gangs as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 493900,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791237842891-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 32100,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791237842891-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 32750,
-          "durationMs": 29300,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791237842891-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere can be important and still have no buyer. Attention is not solvency. If Haiti Ramps Up Fight Against Gangs has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 62700,
-          "durationMs": 28900,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791237842891-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 92250,
-          "durationMs": 28900,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791237842891-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the hills overlooking Haiti’s capital, setting homes ablaze and attacking residents. I will not turn Haiti Ramps Up Fight Against Gangs into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 121800,
-          "durationMs": 29300,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791237842892-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 151750,
-          "durationMs": 26100,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791237842892-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 178500,
-          "durationMs": 21700,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791237842892-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. I will not invent the opposing citation. If neither page names a payer, then Haiti Ramps Up Fight Against Gangs does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 200850,
-          "durationMs": 30100,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791237842892-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 231600,
-          "durationMs": 20900,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791237842892-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Haiti Ramps Up Fight Against Gangs gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 253150,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791237842892-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 276700,
-          "durationMs": 24500,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791237842892-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 301850,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791237842892-13",
-          "speakerId": "caller-local-1791237842891",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. Haiti Ramps Up Fight Against Gangs looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 326600,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791237842892-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena priced the part Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 355350,
-          "durationMs": 22500,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791237842892-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 378500,
-          "durationMs": 24100,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791237842892-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Haiti Ramps Up Fight Against Gangs. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 403250,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791237842892-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Ruling on Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 428800,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791237842892-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Haiti Ramps Up Fight Against Gangs, write the stop under Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 452350,
-          "durationMs": 24500,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791237842892-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 477500,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168203",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the hills overlooking Haiti’s capital, setting homes ablaze and attacking residents.",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Haiti Ramps Up Fight Against Gangs: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168203",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791237842891",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
-          "take": "I am Elena, in Munich, Germany. Haiti Ramps Up Fight Against Gangs looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-05T22:04:02.892Z"
-    },
     {
       "id": "show-live-world-pd2ape",
       "stationId": "station-sv-confidential",
@@ -2098,6 +1837,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-08T01:03:37.766Z"
+    },
+    {
+      "id": "show-live-world-18f4046",
+      "stationId": "station-sv-confidential",
+      "topic": "Gaza: Children still at risk despite drop in acute hunger",
+      "title": "Confidential: Gaza Children Still Risk Despite Drop",
+      "episodeNumber": 669,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Confidential: Gaza Children Still Risk Despite Drop as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 467900,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791456204563-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Gaza: Children still at risk despite drop in acute hunger. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30500,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791456204563-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. Gaza: Children still at risk despite drop in acute hunger arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 31150,
+          "durationMs": 27700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791456204563-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. Gaza: Children still at risk despite drop in acute hunger can be important and still have no buyer. Attention is not solvency. If Gaza Children Still Risk Despite Drop has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 59500,
+          "durationMs": 27300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791456204563-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of Gaza: Children still at risk despite drop in acute hunger. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 87450,
+          "durationMs": 27300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791456204563-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat. I will not turn Gaza Children Still Risk Despite Drop into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 115400,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791456204563-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of Gaza: Children still at risk despite drop in acute hunger here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 143350,
+          "durationMs": 24500,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791456204563-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Gaza: Children still at risk despite drop in acute hunger does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 168500,
+          "durationMs": 20100,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791456204563-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on Gaza: Children still at risk despite drop in acute hunger. I will not invent the opposing citation. If neither page names a payer, then Gaza Children Still Risk Despite Drop does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 189250,
+          "durationMs": 28500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791456204563-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after Gaza: Children still at risk despite drop in acute hunger leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 218400,
+          "durationMs": 19300,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791456204563-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Gaza Children Still Risk Despite Drop gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 238350,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791456204563-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around Gaza: Children still at risk despite drop in acute hunger. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 261900,
+          "durationMs": 22900,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791456204563-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Gaza: Children still at risk despite drop in acute hunger, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 285450,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791456204563-13",
+          "speakerId": "caller-local-1791456204562",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. Gaza Children Still Risk Despite Drop looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 308600,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791456204563-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena priced the part Gaza: Children still at risk despite drop in acute hunger treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 337350,
+          "durationMs": 20900,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791456204563-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for Gaza: Children still at risk despite drop in acute hunger. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 358900,
+          "durationMs": 22500,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791456204563-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Gaza Children Still Risk Despite Drop. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 382050,
+          "durationMs": 24900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791456204564-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on Gaza: Children still at risk despite drop in acute hunger. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 407600,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791456204564-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Gaza Children Still Risk Despite Drop, write the stop under Gaza: Children still at risk despite drop in acute hunger where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 429550,
+          "durationMs": 22900,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791456204564-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Gaza: Children still at risk despite drop in acute hunger. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 453100,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168193",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Gaza Children Still Risk Despite Drop: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168193",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791456204562",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "Gaza: Children still at risk despite drop in acute hunger",
+          "take": "I am Elena, in Munich, Germany. Gaza Children Still Risk Despite Drop looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-08T10:43:24.564Z"
     }
   ]
 }
