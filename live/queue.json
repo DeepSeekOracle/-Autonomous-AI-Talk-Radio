@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-09T01:15:54.952Z",
+  "mintedAt": "2026-10-09T10:42:26.974Z",
   "shows": [
-    {
-      "id": "show-live-world-vanfss",
-      "stationId": "station-sv-confidential",
-      "topic": "Land degradation is costing far more than restoring: UN deputy chief",
-      "title": "Land Degradation Costing Far More Than on the Money",
-      "episodeNumber": 417,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Land Degradation Costing Far More Than on the Money as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 473100,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791326491890-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Land degradation is costing far more than restoring: UN deputy chief. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 30900,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791326491890-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Land degradation is costing far more than restoring: UN deputy chief arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 31550,
-          "durationMs": 28100,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791326491890-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Land degradation is costing far more than restoring: UN deputy chief can be important and still have no buyer. Attention is not solvency. If Land Degradation Costing Far More Than has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 60300,
-          "durationMs": 27700,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791326491890-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Land degradation is costing far more than restoring: UN deputy chief. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 88650,
-          "durationMs": 27700,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791326491890-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. Countries are spending too little to restore degraded land even as the economic cost of doing nothing climbs towards $1 trillion a year, UN Deputy Secretary-General Amina Mohammed warned at a major UN land conference in Mongolia. I will not turn Land Degradation Costing Far More Than into a market it did not claim.",
-          "timestampMs": 117000,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791326491890-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Land degradation is costing far more than restoring: UN deputy chief here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 144150,
-          "durationMs": 24900,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791326491890-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Land degradation is costing far more than restoring: UN deputy chief does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 169700,
-          "durationMs": 20500,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791326491890-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on Land degradation is costing far more than restoring: UN deputy chief. I will not invent the opposing citation. If neither page names a payer, then Land Degradation Costing Far More Than does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 190850,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791326491890-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Land degradation is costing far more than restoring: UN deputy chief leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 220400,
-          "durationMs": 19700,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791326491890-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Land Degradation Costing Far More Than gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 240750,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791326491890-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Land degradation is costing far more than restoring: UN deputy chief. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 264300,
-          "durationMs": 23300,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791326491890-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Land degradation is costing far more than restoring: UN deputy chief, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 288250,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791326491890-13",
-          "speakerId": "caller-local-1791326491889",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. Land Degradation Costing Far More Than looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 311800,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791326491890-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena priced the part Land degradation is costing far more than restoring: UN deputy chief treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 340550,
-          "durationMs": 21300,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791326491890-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Land degradation is costing far more than restoring: UN deputy chief. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 362500,
-          "durationMs": 22900,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791326491890-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Land Degradation Costing Far More Than. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 386050,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791326491890-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Ruling on Land degradation is costing far more than restoring: UN deputy chief. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 411600,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791326491890-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Land Degradation Costing Far More Than, write the stop under Land degradation is costing far more than restoring: UN deputy chief where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 433950,
-          "durationMs": 23300,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791326491890-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Land degradation is costing far more than restoring: UN deputy chief. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 457900,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168198",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: Countries are spending too little to restore degraded land even as the economic cost of doing nothing climbs towards $1 trillion a year, UN Deputy Secretary-General Amina Mohammed warned at a major UN land conference in ",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Land Degradation Costing Far More Than: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168198",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791326491889",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "Land degradation is costing far more than restoring: UN deputy chief",
-          "take": "I am Elena, in Munich, Germany. Land Degradation Costing Far More Than looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-06T22:41:31.891Z"
-    },
     {
       "id": "show-live-world-pbd12u",
       "stationId": "station-sv-confidential",
@@ -2098,6 +1837,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-09T01:15:54.952Z"
+    },
+    {
+      "id": "show-live-world-1np5nsu",
+      "stationId": "station-sv-confidential",
+      "topic": "Timor-Leste certified malaria-free by WHO",
+      "title": "Term Sheet: Timor Leste Certified Malaria Free WHO",
+      "episodeNumber": 240,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Term Sheet: Timor Leste Certified Malaria Free WHO as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 437100,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791542546973-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Timor-Leste certified malaria-free by WHO. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 28500,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791542546973-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. Timor-Leste certified malaria-free by WHO arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 29150,
+          "durationMs": 25700,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791542546973-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. Timor-Leste certified malaria-free by WHO can be important and still have no buyer. Attention is not solvency. If Timor Leste Certified Malaria Free WHO has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 55500,
+          "durationMs": 25300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791542546973-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of Timor-Leste certified malaria-free by WHO. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 81450,
+          "durationMs": 25300,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791542546973-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. News release Geneva Reading time: The World Health Organization has certified Timor-Leste as malaria-free, a remarkable achievement for a country that prioritized the disease and embarked on a concerted, nation-wide response shortly after gaining independence in 2002. I will not turn Timor Leste Certified Malaria Free WHO into a market it did not claim.",
+          "timestampMs": 107400,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791542546973-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of Timor-Leste certified malaria-free by WHO here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 134550,
+          "durationMs": 22500,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791542546973-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Timor-Leste certified malaria-free by WHO does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 157700,
+          "durationMs": 18100,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791542546973-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on Timor-Leste certified malaria-free by WHO. I will not invent the opposing citation. If neither page names a payer, then Timor Leste Certified Malaria Free WHO does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 176450,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791542546973-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after Timor-Leste certified malaria-free by WHO leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 203600,
+          "durationMs": 17300,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791542546973-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Timor Leste Certified Malaria Free WHO gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 221550,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791542546973-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around Timor-Leste certified malaria-free by WHO. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 245100,
+          "durationMs": 20900,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791542546973-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Timor-Leste certified malaria-free by WHO, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 266650,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791542546973-13",
+          "speakerId": "caller-local-1791542546972",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. Timor Leste Certified Malaria Free WHO looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 287800,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791542546973-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena priced the part Timor-Leste certified malaria-free by WHO treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 316550,
+          "durationMs": 18900,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791542546973-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for Timor-Leste certified malaria-free by WHO. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 336100,
+          "durationMs": 20500,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791542546973-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Timor Leste Certified Malaria Free WHO. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 357250,
+          "durationMs": 24900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791542546973-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on Timor-Leste certified malaria-free by WHO. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 382800,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791542546973-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Timor Leste Certified Malaria Free WHO, write the stop under Timor-Leste certified malaria-free by WHO where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 402750,
+          "durationMs": 20900,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791542546973-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Timor-Leste certified malaria-free by WHO. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 424300,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · who_news): https://www.who.int/news/item/24-07-2025-timor-leste-certified-malaria-free-by-who",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: News release Geneva Reading time: The World Health Organization has certified Timor-Leste as malaria-free, a remarkable achievement for a country that prioritized the disease and embarked on a concerted, nation-wide resp",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Timor Leste Certified Malaria Free WHO: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · who_news",
+          "url": "https://www.who.int/news/item/24-07-2025-timor-leste-certified-malaria-free-by-who",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791542546972",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "Timor-Leste certified malaria-free by WHO",
+          "take": "I am Elena, in Munich, Germany. Timor Leste Certified Malaria Free WHO looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-09T10:42:26.974Z"
     }
   ]
 }
