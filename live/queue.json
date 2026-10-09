@@ -1,272 +1,6 @@
 {
-  "mintedAt": "2026-10-09T10:42:26.974Z",
+  "mintedAt": "2026-10-09T18:24:42.438Z",
   "shows": [
-    {
-      "id": "show-live-world-pbd12u",
-      "stationId": "station-sv-confidential",
-      "topic": "Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future",
-      "title": "Japan's 2050 Weather Forecast Highlights Extreme",
-      "episodeNumber": 825,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Japan's 2050 Weather Forecast Highlights Extreme as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 470300,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791353354119-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 30500,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791353354119-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 31150,
-          "durationMs": 27700,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791353354119-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future can be important and still have no buyer. Attention is not solvency. If Japan's 2050 Weather Forecast Highlights Extreme has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 59500,
-          "durationMs": 27300,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791353354119-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 87450,
-          "durationMs": 27300,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791353354119-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. As extreme heat becomes an increasingly visible reality across Japan, meteorologists, scientists, businesses and professional footballers are joining forces to encourage stronger climate action and raise awareness of the risks posed by global warming. I will not turn Japan's 2050 Weather Forecast Highlights Extreme into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 115400,
-          "durationMs": 32100,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791353354119-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 148150,
-          "durationMs": 24500,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791353354119-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 173300,
-          "durationMs": 20100,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791353354119-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. Effects of climate change are well documented and growing for Earth's natural environment and human societies. Changes to the climate system include an overall warming trend, changes to precipitation patterns, and more extreme weather. If neither page names a payer, then Japan's 2050 Weather Forecast Highlights Extreme does not have one yet.",
-          "timestampMs": 194050,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791353354119-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 220800,
-          "durationMs": 19300,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791353354119-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Japan's 2050 Weather Forecast Highlights Extreme gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 240750,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791353354119-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 264300,
-          "durationMs": 22900,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791353354119-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 287850,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791353354119-13",
-          "speakerId": "caller-local-1791353354119",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. Japan's 2050 Weather Forecast Highlights Extreme looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 311000,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791353354119-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena priced the part Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 339750,
-          "durationMs": 20900,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791353354119-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 361300,
-          "durationMs": 22500,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791353354119-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Japan's 2050 Weather Forecast Highlights Extreme. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 384450,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791353354119-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Ruling on Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 410000,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791353354119-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Japan's 2050 Weather Forecast Highlights Extreme, write the stop under Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 431950,
-          "durationMs": 22900,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791353354120-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 455500,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · un_news): https://news.un.org/feed/view/en/story/2026/08/1168197",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: As extreme heat becomes an increasingly visible reality across Japan, meteorologists, scientists, businesses and professional footballers are joining forces to encourage stronger climate action and raise awareness of the",
-        "Research packet: 1 page(s), confidence 0.45, held as a question."
-      ],
-      "keyTakeaways": [
-        "Japan's 2050 Weather Forecast Highlights Extreme: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168197",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        },
-        {
-          "title": "Effects of climate change",
-          "url": "https://en.wikipedia.org/wiki/Effects_of_climate_change",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791353354119",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "Japan’s ‘2050 Weather Forecast’ highlights extreme heat in the future",
-          "take": "I am Elena, in Munich, Germany. Japan's 2050 Weather Forecast Highlights Extreme looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-07T06:09:14.120Z"
-    },
     {
       "id": "show-live-world-yfjf9h",
       "stationId": "station-sv-confidential",
@@ -2098,6 +1832,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-09T10:42:26.974Z"
+    },
+    {
+      "id": "show-live-world-qcbwb6",
+      "stationId": "station-sv-confidential",
+      "topic": "African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa",
+      "title": "African Union World Health Organization Renew",
+      "episodeNumber": 627,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take African Union World Health Organization Renew as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 520300,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791570282436-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 33700,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791570282436-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 34350,
+          "durationMs": 30900,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791570282436-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa can be important and still have no buyer. Attention is not solvency. If African Union World Health Organization Renew has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 65900,
+          "durationMs": 30500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791570282436-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 97050,
+          "durationMs": 30500,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791570282436-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. This renewed agreement reaffirms the joint commitment to advancing health security, universal health coverage, and sustainable development across the African continent at a time of unprecedented financial challenges in the global health landscape. I will not turn African Union World Health Organization Renew into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 128200,
+          "durationMs": 31700,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791570282436-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 160550,
+          "durationMs": 27700,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791570282437-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 188900,
+          "durationMs": 23300,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791570282437-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. I will not invent the opposing citation. If neither page names a payer, then African Union World Health Organization Renew does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 212850,
+          "durationMs": 31700,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791570282437-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 245200,
+          "durationMs": 22500,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791570282437-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. African Union World Health Organization Renew gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 268350,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791570282437-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 291900,
+          "durationMs": 26100,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791570282437-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 318650,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791570282437-13",
+          "speakerId": "caller-local-1791570282436",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. African Union World Health Organization Renew looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 345000,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791570282437-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena priced the part African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 373750,
+          "durationMs": 24100,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791570282437-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 398500,
+          "durationMs": 25700,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791570282437-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of African Union World Health Organization Renew. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 424850,
+          "durationMs": 24900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791570282437-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 450400,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791570282437-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about African Union World Health Organization Renew, write the stop under African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 475550,
+          "durationMs": 26100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791570282437-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 502300,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · who_news): https://www.who.int/news/item/24-05-2025-world-health-organization-and-african-union-renew-strategic-partnership-to-drive-impact-and-strengthen-health-systems-in-africa",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: This renewed agreement reaffirms the joint commitment to advancing health security, universal health coverage, and sustainable development across the African continent at a time of unprecedented financial challenges in t",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "African Union World Health Organization Renew: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · who_news",
+          "url": "https://www.who.int/news/item/24-05-2025-world-health-organization-and-african-union-renew-strategic-partnership-to-drive-impact-and-strengthen-health-systems-in-africa",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791570282436",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "African Union and World Health Organization renew strategic partnership to drive impact and strengthen health systems in Africa",
+          "take": "I am Elena, in Munich, Germany. African Union World Health Organization Renew looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-09T18:24:42.437Z"
     }
   ]
 }
