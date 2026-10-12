@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-12T11:02:38.336Z",
+  "mintedAt": "2026-10-12T21:18:45.269Z",
   "shows": [
-    {
-      "id": "show-live-world-9np2pw",
-      "stationId": "station-sv-confidential",
-      "topic": "Worldwide rally for maternal and newborn health marks World Health Day 2025",
-      "title": "Worldwide Rally Maternal Newborn Health Marks",
-      "episodeNumber": 366,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Worldwide Rally Maternal Newborn Health Marks as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 482300,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791626297738-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Worldwide rally for maternal and newborn health marks World Health Day 2025. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 31300,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791626297738-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Worldwide rally for maternal and newborn health marks World Health Day 2025 arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 31950,
-          "durationMs": 28500,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791626297738-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Worldwide rally for maternal and newborn health marks World Health Day 2025 can be important and still have no buyer. Attention is not solvency. If Worldwide Rally Maternal Newborn Health Marks has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 61100,
-          "durationMs": 28100,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791626297739-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Worldwide rally for maternal and newborn health marks World Health Day 2025. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 89850,
-          "durationMs": 28100,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791626297739-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. Departmental update Reading time: On the occasion of the World Health Day 2025 dedicated to the theme of Healthier beginnings, hopeful futures , over 100 global offices of the World Health Organization have organized wide-ranging public advocacy actions in collaboration with Member States, communities, health. I will not turn Worldwide Rally Maternal Newborn Health Marks into a market it did not claim.",
-          "timestampMs": 118600,
-          "durationMs": 29700,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791626297739-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Worldwide rally for maternal and newborn health marks World Health Day 2025 here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 148950,
-          "durationMs": 25300,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791626297739-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Worldwide rally for maternal and newborn health marks World Health Day 2025 does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 174900,
-          "durationMs": 20900,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791626297739-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on Worldwide rally for maternal and newborn health marks World Health Day 2025. I will not invent the opposing citation. If neither page names a payer, then Worldwide Rally Maternal Newborn Health Marks does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 196450,
-          "durationMs": 29300,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791626297739-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Worldwide rally for maternal and newborn health marks World Health Day 2025 leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 226400,
-          "durationMs": 20100,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791626297739-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Worldwide Rally Maternal Newborn Health Marks gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 247150,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791626297739-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Worldwide rally for maternal and newborn health marks World Health Day 2025. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 270700,
-          "durationMs": 23700,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791626297739-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Jordan in Toronto, Canada, you are on Silicon Valley Confidential. You had to pay for something like Worldwide rally for maternal and newborn health marks World Health Day 2025, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 295050,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791626297739-13",
-          "speakerId": "caller-local-1791626297738",
-          "speakerName": "Jordan (Toronto, Canada)",
-          "text": "I am Jordan, in Toronto, Canada. Worldwide Rally Maternal Newborn Health Marks looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 319000,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791626297739-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Jordan priced the part Worldwide rally for maternal and newborn health marks World Health Day 2025 treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 347750,
-          "durationMs": 21700,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791626297739-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Worldwide rally for maternal and newborn health marks World Health Day 2025. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 370100,
-          "durationMs": 23300,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791626297739-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Worldwide Rally Maternal Newborn Health Marks. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 394050,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791626297739-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Ruling on Worldwide rally for maternal and newborn health marks World Health Day 2025. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 419600,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791626297739-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Worldwide Rally Maternal Newborn Health Marks, write the stop under Worldwide rally for maternal and newborn health marks World Health Day 2025 where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 442350,
-          "durationMs": 23700,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791626297739-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Worldwide rally for maternal and newborn health marks World Health Day 2025. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 466700,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · who_news): https://www.who.int/news/item/10-04-2025-worldwide-rally-for-maternal-and-newborn-health-marks-world-health-day-2025",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: Departmental update Reading time: On the occasion of the World Health Day 2025 dedicated to the theme of Healthier beginnings, hopeful futures , over 100 global offices of the World Health Organization have organized wid",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Worldwide Rally Maternal Newborn Health Marks: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · who_news",
-          "url": "https://www.who.int/news/item/10-04-2025-worldwide-rally-for-maternal-and-newborn-health-marks-world-health-day-2025",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791626297738",
-          "name": "Jordan",
-          "location": "Toronto, Canada",
-          "topic": "Worldwide rally for maternal and newborn health marks World Health Day 2025",
-          "take": "I am Jordan, in Toronto, Canada. Worldwide Rally Maternal Newborn Health Marks looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "JO"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-10T09:58:17.739Z"
-    },
     {
       "id": "show-live-world-zujdwf",
       "stationId": "station-sv-confidential",
@@ -2098,6 +1837,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-12T11:02:38.335Z"
+    },
+    {
+      "id": "show-live-world-1awqaq8",
+      "stationId": "station-sv-confidential",
+      "topic": "Signing ceremony for contribution agreements between WHO and France",
+      "title": "Signing Ceremony Contribution Agreements Between WHO",
+      "episodeNumber": 768,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Signing Ceremony Contribution Agreements Between WHO as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 463100,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1791839925268-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Signing ceremony for contribution agreements between WHO and France. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1791839925268-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. Signing ceremony for contribution agreements between WHO and France arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 30750,
+          "durationMs": 27300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1791839925268-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. Signing ceremony for contribution agreements between WHO and France can be important and still have no buyer. Attention is not solvency. If Signing Ceremony Contribution Agreements Between WHO has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 58700,
+          "durationMs": 26900,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1791839925268-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of Signing ceremony for contribution agreements between WHO and France. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 86250,
+          "durationMs": 26900,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1791839925268-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. France is a strong supporter of a fully and flexibly financed WHO, providing leadership and support to the increase of assessed contributions to the Organization. I will not turn Signing Ceremony Contribution Agreements Between WHO into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 113800,
+          "durationMs": 28500,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1791839925268-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of Signing ceremony for contribution agreements between WHO and France here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 142950,
+          "durationMs": 24100,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1791839925268-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Signing ceremony for contribution agreements between WHO and France does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 167700,
+          "durationMs": 19700,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1791839925268-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on Signing ceremony for contribution agreements between WHO and France. I will not invent the opposing citation. If neither page names a payer, then Signing Ceremony Contribution Agreements Between WHO does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 188050,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1791839925268-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after Signing ceremony for contribution agreements between WHO and France leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 216800,
+          "durationMs": 18900,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1791839925268-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Signing Ceremony Contribution Agreements Between WHO gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 236350,
+          "durationMs": 22900,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1791839925268-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around Signing ceremony for contribution agreements between WHO and France. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 259900,
+          "durationMs": 22500,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1791839925268-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Jordan in Toronto, Canada, you are on Silicon Valley Confidential. You had to pay for something like Signing ceremony for contribution agreements between WHO and France, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 283050,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1791839925268-13",
+          "speakerId": "caller-local-1791839925268",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am Jordan, in Toronto, Canada. Signing Ceremony Contribution Agreements Between WHO looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 305800,
+          "durationMs": 28100,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1791839925268-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Jordan priced the part Signing ceremony for contribution agreements between WHO and France treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 334550,
+          "durationMs": 20500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1791839925268-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for Signing ceremony for contribution agreements between WHO and France. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 355700,
+          "durationMs": 22100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1791839925268-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Signing Ceremony Contribution Agreements Between WHO. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 378450,
+          "durationMs": 24900,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1791839925268-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on Signing ceremony for contribution agreements between WHO and France. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 404000,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1791839925268-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Signing Ceremony Contribution Agreements Between WHO, write the stop under Signing ceremony for contribution agreements between WHO and France where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 425550,
+          "durationMs": 22500,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1791839925268-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Signing ceremony for contribution agreements between WHO and France. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 448700,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · who_news): https://www.who.int/news/item/17-10-2024-signing-ceremony-for-contribution-agreements-between-who-and-france",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: France is a strong supporter of a fully and flexibly financed WHO, providing leadership and support to the increase of assessed contributions to the Organization.",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Signing Ceremony Contribution Agreements Between WHO: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · who_news",
+          "url": "https://www.who.int/news/item/17-10-2024-signing-ceremony-for-contribution-agreements-between-who-and-france",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1791839925268",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Signing ceremony for contribution agreements between WHO and France",
+          "take": "I am Jordan, in Toronto, Canada. Signing Ceremony Contribution Agreements Between WHO looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "JO"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-12T21:18:45.269Z"
     }
   ]
 }
