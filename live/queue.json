@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-16T04:40:52.207Z",
+  "mintedAt": "2026-10-16T11:34:35.937Z",
   "shows": [
-    {
-      "id": "show-live-earth-rqtsll",
-      "stationId": "station-sv-confidential",
-      "topic": "Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].",
-      "title": "93.5 Confidential — Green Earthquake Magnitude 8M Depth 35km",
-      "episodeNumber": 655,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take 93.5 Confidential — Green Earthquake Magnitude 8M Depth 35km as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 495100,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1791979426332-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 32100,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1791979426333-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 32750,
-          "durationMs": 29300,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1791979426333-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. can be important and still have no buyer. Attention is not solvency. If Green Earthquake Magnitude 8M Depth 35km has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 62700,
-          "durationMs": 28900,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1791979426333-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 92250,
-          "durationMs": 28900,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1791979426333-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. Overall Green Earthquake in Kermadec Islands, New Zealand on 30 Aug 2026 09:02 UTC admin register/login contact us term of use GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve awareness, information exchange and coordination in the first. I will not turn Green Earthquake Magnitude 8M Depth 35km into a market it did not claim.",
-          "timestampMs": 121800,
-          "durationMs": 30500,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1791979426333-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 152950,
-          "durationMs": 26100,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1791979426333-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 179700,
-          "durationMs": 21700,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1791979426333-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. I will not invent the opposing citation. If neither page names a payer, then Green Earthquake Magnitude 8M Depth 35km does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 202050,
-          "durationMs": 30100,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1791979426333-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 232800,
-          "durationMs": 20900,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1791979426333-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Green Earthquake Magnitude 8M Depth 35km gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 254350,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1791979426333-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 277900,
-          "durationMs": 24500,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1791979426333-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Priya in Bangalore, India, you are on Silicon Valley Confidential. You had to pay for something like Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]., in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 303050,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1791979426333-13",
-          "speakerId": "caller-local-1791979426332",
-          "speakerName": "Priya (Bangalore, India)",
-          "text": "I am Priya, in Bangalore, India. Green Earthquake Magnitude 8M Depth 35km looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 327800,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1791979426333-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Priya priced the part Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 356550,
-          "durationMs": 22500,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1791979426333-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 379700,
-          "durationMs": 24100,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1791979426333-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Green Earthquake Magnitude 8M Depth 35km. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 404450,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1791979426333-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Ruling on Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 430000,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1791979426333-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Green Earthquake Magnitude 8M Depth 35km, write the stop under Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown]. where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 453550,
-          "durationMs": 24500,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1791979426333-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 478700,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · gdacs): https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1562607",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "Receipt 1: Overall Green Earthquake in Kermadec Islands, New Zealand on 30 Aug 2026 09:02 UTC admin register/login contact us term of use GDACS is a cooperation framework between the United Nations, the European Commission and disa",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Green Earthquake Magnitude 8M Depth 35km: this hour follows the public line.",
-        "A page that mentions it was read once.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · gdacs",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=EQ&eventid=1562607",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1791979426332",
-          "name": "Priya",
-          "location": "Bangalore, India",
-          "topic": "Green earthquake (Magnitude 5.8M, Depth:35km) in Kermadec Islands, New Zealand 30/08/2026 09:02 UTC, [unknown].",
-          "take": "I am Priya, in Bangalore, India. Green Earthquake Magnitude 8M Depth 35km looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "PR"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-14T12:03:46.333Z"
-    },
     {
       "id": "show-live-earth-1vjwpc7",
       "stationId": "station-sv-confidential",
@@ -2093,6 +1832,267 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-16T04:40:52.206Z"
+    },
+    {
+      "id": "show-live-earth-ttt98a",
+      "stationId": "station-sv-confidential",
+      "topic": "Green flood alert in New Zealand",
+      "title": "Compute Hour: Green Flood Alert New Zealand",
+      "episodeNumber": 658,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Compute Hour: Green Flood Alert New Zealand as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 445500,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1792150475936-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Green flood alert in New Zealand. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 28900,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1792150475936-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. Green flood alert in New Zealand arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 29550,
+          "durationMs": 26100,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1792150475936-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. Green flood alert in New Zealand can be important and still have no buyer. Attention is not solvency. If Green Flood Alert New Zealand has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 56300,
+          "durationMs": 25300,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1792150475936-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of Green flood alert in New Zealand. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 82250,
+          "durationMs": 25700,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1792150475936-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. Overall Green Flood in New Zealand from 27 Aug 2026 01:00 UTC to 29 Aug 2026 01:00 UTC admin register/login contact us term of use GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve awareness, information exchange and coordination in the. I will not turn Green Flood Alert New Zealand into a market it did not claim.",
+          "timestampMs": 108600,
+          "durationMs": 31300,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1792150475936-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of Green flood alert in New Zealand here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 140550,
+          "durationMs": 22900,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1792150475936-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Green flood alert in New Zealand does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 164100,
+          "durationMs": 18500,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1792150475936-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on Green flood alert in New Zealand. I will not invent the opposing citation. If neither page names a payer, then Green Flood Alert New Zealand does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 183250,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1792150475936-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after Green flood alert in New Zealand leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 210400,
+          "durationMs": 17700,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1792150475936-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. Green Flood Alert New Zealand gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 228750,
+          "durationMs": 22500,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1792150475936-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around Green flood alert in New Zealand. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 251900,
+          "durationMs": 21300,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1792150475936-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Jordan in Toronto, Canada, you are on Silicon Valley Confidential. You had to pay for something like Green flood alert in New Zealand, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 273850,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1792150475936-13",
+          "speakerId": "caller-local-1792150475936",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am Jordan, in Toronto, Canada. Green Flood Alert New Zealand looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 295400,
+          "durationMs": 27700,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1792150475936-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Jordan priced the part Green flood alert in New Zealand treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 323750,
+          "durationMs": 19300,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1792150475936-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for Green flood alert in New Zealand. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 343700,
+          "durationMs": 20900,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1792150475936-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Green Flood Alert New Zealand. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 365250,
+          "durationMs": 24500,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1792150475936-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on Green flood alert in New Zealand. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 390400,
+          "durationMs": 19700,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1792150475936-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about Green Flood Alert New Zealand, write the stop under Green flood alert in New Zealand where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 410750,
+          "durationMs": 20900,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1792150475936-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Green flood alert in New Zealand. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 432300,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · gdacs): https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104126",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: Overall Green Flood in New Zealand from 27 Aug 2026 01:00 UTC to 29 Aug 2026 01:00 UTC admin register/login contact us term of use GDACS is a cooperation framework between the United Nations, the European Commission and ",
+        "Research packet: 0 page(s), confidence 0.22, held as a question."
+      ],
+      "keyTakeaways": [
+        "Green Flood Alert New Zealand: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · gdacs",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104126",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1792150475936",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Green flood alert in New Zealand",
+          "take": "I am Jordan, in Toronto, Canada. Green Flood Alert New Zealand looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "JO"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-16T11:34:35.937Z"
     }
   ]
 }
