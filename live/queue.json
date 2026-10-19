@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-19T13:33:17.745Z",
+  "mintedAt": "2026-10-19T20:37:54.831Z",
   "shows": [
-    {
-      "id": "show-live-earth-15xwuo",
-      "stationId": "station-sv-confidential",
-      "topic": "Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).",
-      "title": "Term Sheet: Green Notification Tropical Cyclone BANG LANG",
-      "episodeNumber": 389,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Term Sheet: Green Notification Tropical Cyclone BANG LANG as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 521900,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1792278720965-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 35700,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1792278720965-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage.",
-          "timestampMs": 36350,
-          "durationMs": 26100,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1792278720965-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). can be important and still have no buyer. Attention is not solvency. If Green Notification Tropical Cyclone BANG LANG has a cost, the cost gets said on this desk before the applause.",
-          "timestampMs": 63100,
-          "durationMs": 25700,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1792278720965-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there.",
-          "timestampMs": 89450,
-          "durationMs": 25700,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1792278720965-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. I do not have a page I would quote under Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. The public line is the headline, and I will not decorate it. I will not turn Green Notification Tropical Cyclone BANG LANG into a market it did not claim.",
-          "timestampMs": 115800,
-          "durationMs": 29700,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1792278720965-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 146150,
-          "durationMs": 29700,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1792278720965-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 176500,
-          "durationMs": 25300,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1792278720965-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. I will not invent the opposing citation. If neither page names a payer, then Green Notification Tropical Cyclone BANG LANG does not have one yet.",
-          "timestampMs": 202450,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1792278720965-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 230000,
-          "durationMs": 24500,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1792278720965-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. Green Notification Tropical Cyclone BANG LANG gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 255150,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1792278720965-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 278700,
-          "durationMs": 28100,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1792278720965-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm)., in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 307450,
-          "durationMs": 27700,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1792278720965-13",
-          "speakerId": "caller-local-1792278720964",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. Green Notification Tropical Cyclone BANG LANG looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 335800,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1792278720965-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena priced the part Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 364550,
-          "durationMs": 26100,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1792278720965-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 391300,
-          "durationMs": 27700,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1792278720965-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of Green Notification Tropical Cyclone BANG LANG. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 419650,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1792278720965-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "No ruling on Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. We have the headline and we do not have a page that mentions it. A check cannot be written from a headline alone. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 445200,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1792278720965-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about Green Notification Tropical Cyclone BANG LANG, write the stop under Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm). where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 473150,
-          "durationMs": 28100,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1792278720965-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 501900,
-          "durationMs": 31700,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · gdacs): https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001311",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "No Wikipedia extract landed. Empty is honest.",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "Green Notification Tropical Cyclone BANG LANG: this hour follows the public line.",
-        "No matching page landed, so the headline stays a question.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · gdacs",
-          "url": "https://www.gdacs.org/report.aspx?eventtype=TC&eventid=1001311",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1792278720964",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "Green notification for tropical cyclone BANG-LANG-26. Population affected by Category 1 (120 km/h) wind speeds or higher is 0 (0 in Tropical Storm).",
-          "take": "I am Elena, in Munich, Germany. Green Notification Tropical Cyclone BANG LANG looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-17T23:12:00.966Z"
-    },
     {
       "id": "show-live-earth-r20652",
       "stationId": "station-sv-confidential",
@@ -2103,6 +1842,277 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-19T13:33:17.744Z"
+    },
+    {
+      "id": "show-live-earth-h66o5i",
+      "stationId": "station-sv-confidential",
+      "topic": "M 4.9 - 13 km SSE of Union, Philippines",
+      "title": "93.5 Confidential — 13 Km SSE Union Philippines",
+      "episodeNumber": 237,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take 93.5 Confidential — 13 Km SSE Union Philippines as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 459900,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1792442274830-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on M 4.9 - 13 km SSE of Union, Philippines. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1792442274830-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. M 4.9 - 13 km SSE of Union, Philippines arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 30750,
+          "durationMs": 27300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1792442274830-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. M 4.9 - 13 km SSE of Union, Philippines can be important and still have no buyer. Attention is not solvency. If 13 Km SSE Union Philippines has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 58700,
+          "durationMs": 26500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1792442274830-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of M 4.9 - 13 km SSE of Union, Philippines. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 85850,
+          "durationMs": 26900,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1792442274830-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. The Philippines lies within the zone of complex interaction between several tectonic plates, involving multiple subduction zones and one large zone of strike-slip, all of which are associated with major earthquakes. Many intraplate earthquakes of smaller magnitude also occur. I will not turn 13 Km SSE Union Philippines into a market it did not claim.",
+          "timestampMs": 113400,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1792442274830-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of M 4.9 - 13 km SSE of Union, Philippines here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 140950,
+          "durationMs": 24100,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1792442274830-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "M 4.9 - 13 km SSE of Union, Philippines does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 165700,
+          "durationMs": 19700,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1792442274830-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. On June 8, 2026, at 07:37:40 PhST , a Mw 7.8 earthquake struck offshore southern Mindanao in the Philippines. The United States Geological Survey located the epicenter approximately 25 km southwest of Kablalan at a depth of about 57 km ,. If neither page names a payer, then 13 Km SSE Union Philippines does not have one yet.",
+          "timestampMs": 186050,
+          "durationMs": 28500,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1792442274830-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after M 4.9 - 13 km SSE of Union, Philippines leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 215200,
+          "durationMs": 18900,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1792442274830-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. 13 Km SSE Union Philippines gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 234750,
+          "durationMs": 22500,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1792442274830-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around M 4.9 - 13 km SSE of Union, Philippines. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 257900,
+          "durationMs": 22500,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1792442274830-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like M 4.9 - 13 km SSE of Union, Philippines, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 281050,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1792442274830-13",
+          "speakerId": "caller-local-1792442274830",
+          "speakerName": "Elena (Munich, Germany)",
+          "text": "I am Elena, in Munich, Germany. 13 Km SSE Union Philippines looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 303800,
+          "durationMs": 27700,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1792442274830-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Elena priced the part M 4.9 - 13 km SSE of Union, Philippines treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 332150,
+          "durationMs": 20500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1792442274830-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for M 4.9 - 13 km SSE of Union, Philippines. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 353300,
+          "durationMs": 22100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1792442274830-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of 13 Km SSE Union Philippines. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 376050,
+          "durationMs": 24500,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1792442274830-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on M 4.9 - 13 km SSE of Union, Philippines. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 401200,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1792442274830-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about 13 Km SSE Union Philippines, write the stop under M 4.9 - 13 km SSE of Union, Philippines where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 422750,
+          "durationMs": 22100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1792442274830-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart M 4.9 - 13 km SSE of Union, Philippines. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 445500,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Public Witness · usgs_m45): https://earthquake.usgs.gov/earthquakes/eventpage/us7000td2c",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: The Philippines lies within the zone of complex interaction between several tectonic plates, involving multiple subduction zones and one large zone of strike-slip, all of which are associated with major earthquakes. Many",
+        "Research packet: 2 page(s), confidence 0.45, held as a question."
+      ],
+      "keyTakeaways": [
+        "13 Km SSE Union Philippines: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "Public Witness · usgs_m45",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000td2c",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        },
+        {
+          "title": "List of earthquakes in the Philippines",
+          "url": "https://en.wikipedia.org/wiki/List_of_earthquakes_in_the_Philippines",
+          "type": "news"
+        },
+        {
+          "title": "2026 Mindanao earthquake",
+          "url": "https://en.wikipedia.org/wiki/2026_Mindanao_earthquake",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1792442274830",
+          "name": "Elena",
+          "location": "Munich, Germany",
+          "topic": "M 4.9 - 13 km SSE of Union, Philippines",
+          "take": "I am Elena, in Munich, Germany. 13 Km SSE Union Philippines looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "EL"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-19T20:37:54.831Z"
     }
   ]
 }
