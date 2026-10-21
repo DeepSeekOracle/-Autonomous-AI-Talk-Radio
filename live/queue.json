@@ -1,267 +1,6 @@
 {
-  "mintedAt": "2026-10-21T17:20:17.832Z",
+  "mintedAt": "2026-10-21T21:48:52.798Z",
   "shows": [
-    {
-      "id": "show-live-earth-1bvmbia",
-      "stationId": "station-sv-confidential",
-      "topic": "M 4.5 - 71 km WSW of Puerto Casma, Peru",
-      "title": "93.5 Confidential — 71 Km WSW Puerto Casma Peru",
-      "episodeNumber": 282,
-      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take 93.5 Confidential — 71 Km WSW Puerto Casma Peru as a live autonomous roundtable until the clock is honest.",
-      "durationMs": 472700,
-      "hosts": [
-        {
-          "id": "victoria",
-          "name": "Victoria Sterling",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.1,
-          "voiceRate": 1,
-          "voiceGender": "female",
-          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-local-1792455934623-1",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on M 4.5 - 71 km WSW of Puerto Casma, Peru. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
-          "timestampMs": 0,
-          "durationMs": 30500,
-          "emotion": "heated",
-          "topicTag": "Cold Open"
-        },
-        {
-          "id": "seg-local-1792455934623-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. M 4.5 - 71 km WSW of Puerto Casma, Peru arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 31150,
-          "durationMs": 27700,
-          "emotion": "intrigued",
-          "topicTag": "First Take"
-        },
-        {
-          "id": "seg-local-1792455934623-3",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Show me the check, not the destiny. M 4.5 - 71 km WSW of Puerto Casma, Peru can be important and still have no buyer. Attention is not solvency. If 71 Km WSW Puerto Casma Peru has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 59500,
-          "durationMs": 27300,
-          "emotion": "skeptical",
-          "topicTag": "The Push"
-        },
-        {
-          "id": "seg-local-1792455934623-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Someone is already on a clock because of M 4.5 - 71 km WSW of Puerto Casma, Peru. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 87450,
-          "durationMs": 27300,
-          "emotion": "excited",
-          "topicTag": "Scene"
-        },
-        {
-          "id": "seg-local-1792455934624-5",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The page, once, with the price still in the room. I do not have a page I would quote under M 4.5 - 71 km WSW of Puerto Casma, Peru. The public line is the headline, and I will not decorate it. I will not turn 71 Km WSW Puerto Casma Peru into a market it did not claim. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 115400,
-          "durationMs": 31300,
-          "emotion": "neutral",
-          "topicTag": "Page One"
-        },
-        {
-          "id": "seg-local-1792455934624-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The meaning of M 4.5 - 71 km WSW of Puerto Casma, Peru here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 147350,
-          "durationMs": 24500,
-          "emotion": "intrigued",
-          "topicTag": "What It Means"
-        },
-        {
-          "id": "seg-local-1792455934624-7",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "M 4.5 - 71 km WSW of Puerto Casma, Peru does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 172500,
-          "durationMs": 20100,
-          "emotion": "skeptical",
-          "topicTag": "What It Does Not Prove"
-        },
-        {
-          "id": "seg-local-1792455934624-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The second page does not get to invent a price either. There is no second site on M 4.5 - 71 km WSW of Puerto Casma, Peru. I will not invent the opposing citation. If neither page names a payer, then 71 Km WSW Puerto Casma Peru does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 193250,
-          "durationMs": 28500,
-          "emotion": "neutral",
-          "topicTag": "Second Pass"
-        },
-        {
-          "id": "seg-local-1792455934624-9",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Who stays is the person who pays after M 4.5 - 71 km WSW of Puerto Casma, Peru leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 222400,
-          "durationMs": 19300,
-          "emotion": "heated",
-          "topicTag": "Who Stays"
-        },
-        {
-          "id": "seg-local-1792455934624-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship the stop-loss in the same note as the headline. 71 Km WSW Puerto Casma Peru gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 242350,
-          "durationMs": 22900,
-          "emotion": "excited",
-          "topicTag": "What I Would Ship"
-        },
-        {
-          "id": "seg-local-1792455934624-11",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "The hole is a crowded hour of adjectives around M 4.5 - 71 km WSW of Puerto Casma, Peru. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 265900,
-          "durationMs": 22900,
-          "emotion": "skeptical",
-          "topicTag": "The Hole"
-        },
-        {
-          "id": "seg-local-1792455934624-12",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena in Munich, Germany, you are on Silicon Valley Confidential. You had to pay for something like M 4.5 - 71 km WSW of Puerto Casma, Peru, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 289450,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "Caller Intro"
-        },
-        {
-          "id": "seg-local-1792455934624-13",
-          "speakerId": "caller-local-1792455934623",
-          "speakerName": "Elena (Munich, Germany)",
-          "text": "I am Elena, in Munich, Germany. 71 Km WSW Puerto Casma Peru looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 312600,
-          "durationMs": 28100,
-          "emotion": "heated",
-          "topicTag": "Field Report"
-        },
-        {
-          "id": "seg-local-1792455934624-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Elena priced the part M 4.5 - 71 km WSW of Puerto Casma, Peru treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 341350,
-          "durationMs": 20900,
-          "emotion": "intrigued",
-          "topicTag": "Caller Hold"
-        },
-        {
-          "id": "seg-local-1792455934624-15",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "Unasked: the stop-loss for M 4.5 - 71 km WSW of Puerto Casma, Peru. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 362900,
-          "durationMs": 22500,
-          "emotion": "skeptical",
-          "topicTag": "The Unasked"
-        },
-        {
-          "id": "seg-local-1792455934624-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of 71 Km WSW Puerto Casma Peru. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 386050,
-          "durationMs": 24900,
-          "emotion": "excited",
-          "topicTag": "The Test"
-        },
-        {
-          "id": "seg-local-1792455934624-17",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "No ruling on M 4.5 - 71 km WSW of Puerto Casma, Peru. We have the headline and we do not have a page that mentions it. A check cannot be written from a headline alone. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 411600,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "Ruling"
-        },
-        {
-          "id": "seg-local-1792455934624-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Before the next meeting about 71 Km WSW Puerto Casma Peru, write the stop under M 4.5 - 71 km WSW of Puerto Casma, Peru where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 434350,
-          "durationMs": 22900,
-          "emotion": "laughing",
-          "topicTag": "Handoff"
-        },
-        {
-          "id": "seg-local-1792455934624-19",
-          "speakerId": "victoria",
-          "speakerName": "Victoria Sterling",
-          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart M 4.5 - 71 km WSW of Puerto Casma, Peru. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "timestampMs": 457900,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "Signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Public Witness · usgs_m45): https://earthquake.usgs.gov/earthquakes/eventpage/us7000td1g",
-        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
-        "No Wikipedia extract landed. Empty is honest.",
-        "Research packet: 0 page(s), confidence 0.22, held as a question."
-      ],
-      "keyTakeaways": [
-        "71 Km WSW Puerto Casma Peru: this hour follows the public line.",
-        "No matching page landed, so the headline stays a question.",
-        "The next hour takes the next unused public item."
-      ],
-      "references": [
-        {
-          "title": "Public Witness · usgs_m45",
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000td1g",
-          "type": "news"
-        },
-        {
-          "title": "Public Witness",
-          "url": "https://chatagent.ca/witness/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-local-1792455934623",
-          "name": "Elena",
-          "location": "Munich, Germany",
-          "topic": "M 4.5 - 71 km WSW of Puerto Casma, Peru",
-          "take": "I am Elena, in Munich, Germany. 71 Km WSW Puerto Casma Peru looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
-          "status": "on-air",
-          "avatar": "EL"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-10-20T00:25:34.624Z"
-    },
     {
       "id": "show-live-earth-1spmx6n",
       "stationId": "station-sv-confidential",
@@ -2113,6 +1852,272 @@
       ],
       "ungated": false,
       "createdAt": "2026-10-21T17:20:17.832Z"
+    },
+    {
+      "id": "show-live-earth-y2buy5",
+      "stationId": "station-sv-confidential",
+      "topic": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+      "title": "Confidential: 76 Km NE Ozernovskiy Russia",
+      "episodeNumber": 429,
+      "description": "Silicon Valley Confidential is on air. Reads a prompt as capital, silicon, and who pays. Victoria Sterling and Devon Cross take Confidential: 76 Km NE Ozernovskiy Russia as a live autonomous roundtable until the clock is honest.",
+      "durationMs": 459100,
+      "hosts": [
+        {
+          "id": "victoria",
+          "name": "Victoria Sterling",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.1,
+          "voiceRate": 1,
+          "voiceGender": "female",
+          "personality": "Direct, sharp, dissects $100M seed rounds and GPU cluster financing with surgical precision."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humor, 20 years in production infrastructure, hates hype cycles, loves C and raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-local-1792619332797-1",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "You are tuned to Silicon Valley Confidential. I am Victoria Sterling. Devon is across the desk. Tonight we are on M 6.9 - 76 km NE of Ozernovskiy, Russia. The question on this desk is who is already paying, in time or money, while this public line is still unfinished. We will argue that all the way through, including the part that does not flatter the idea. If you just sat down, stay.",
+          "timestampMs": 0,
+          "durationMs": 30100,
+          "emotion": "heated",
+          "topicTag": "Cold Open"
+        },
+        {
+          "id": "seg-local-1792619332797-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon here. M 6.9 - 76 km NE of Ozernovskiy, Russia arrived as news. I am translating it into a payer, a user, and a person who is called when it breaks. If I cannot name those three, the item is still a mood with a budget somewhere offstage. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 30750,
+          "durationMs": 27300,
+          "emotion": "intrigued",
+          "topicTag": "First Take"
+        },
+        {
+          "id": "seg-local-1792619332797-3",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Show me the check, not the destiny. M 6.9 - 76 km NE of Ozernovskiy, Russia can be important and still have no buyer. Attention is not solvency. If 76 Km NE Ozernovskiy Russia has a cost, the cost gets said on this desk before the applause. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 58700,
+          "durationMs": 26500,
+          "emotion": "skeptical",
+          "topicTag": "The Push"
+        },
+        {
+          "id": "seg-local-1792619332797-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Someone is already on a clock because of M 6.9 - 76 km NE of Ozernovskiy, Russia. The headline is free. The response is not. Name the desk that lost the hour before you name the lesson, and let the page be read once when we get there. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 85850,
+          "durationMs": 26900,
+          "emotion": "excited",
+          "topicTag": "Scene"
+        },
+        {
+          "id": "seg-local-1792619332797-5",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The page, once, with the price still in the room. In Japan, the Earthquake Early Warning is an alert that is issued when an earthquake is detected by multiple seismometers. These warnings are primarily issued by the Japan Meteorological Agency , with guidance on how to react to them. I will not turn 76 Km NE Ozernovskiy Russia into a market it did not claim.",
+          "timestampMs": 113400,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "Page One"
+        },
+        {
+          "id": "seg-local-1792619332797-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The meaning of M 6.9 - 76 km NE of Ozernovskiy, Russia here is who eats the downside. A public line with no payer is a gift. A gift can be real. Calling it a business is how people get hurt. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 140950,
+          "durationMs": 24100,
+          "emotion": "intrigued",
+          "topicTag": "What It Means"
+        },
+        {
+          "id": "seg-local-1792619332797-7",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "M 6.9 - 76 km NE of Ozernovskiy, Russia does not prove a market. It proves that a feed carried a sentence. Markets are invoices. We keep those words apart. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 165700,
+          "durationMs": 19700,
+          "emotion": "skeptical",
+          "topicTag": "What It Does Not Prove"
+        },
+        {
+          "id": "seg-local-1792619332797-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The second page does not get to invent a price either. There is no second site on M 6.9 - 76 km NE of Ozernovskiy, Russia. I will not invent the opposing citation. If neither page names a payer, then 76 Km NE Ozernovskiy Russia does not have one yet. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 186050,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "Second Pass"
+        },
+        {
+          "id": "seg-local-1792619332797-9",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Who stays is the person who pays after M 6.9 - 76 km NE of Ozernovskiy, Russia leaves the front page. The poster can go. The invoice cannot. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 214400,
+          "durationMs": 18900,
+          "emotion": "heated",
+          "topicTag": "Who Stays"
+        },
+        {
+          "id": "seg-local-1792619332797-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship the stop-loss in the same note as the headline. 76 Km NE Ozernovskiy Russia gets a number, a date, and a name. No number, no destiny. That is the whole product from this station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 233950,
+          "durationMs": 22500,
+          "emotion": "excited",
+          "topicTag": "What I Would Ship"
+        },
+        {
+          "id": "seg-local-1792619332798-11",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "The hole is a crowded hour of adjectives around M 6.9 - 76 km NE of Ozernovskiy, Russia. Adjectives do not settle. If the page cannot support a bill, we say the page is the whole asset. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 257100,
+          "durationMs": 22500,
+          "emotion": "skeptical",
+          "topicTag": "The Hole"
+        },
+        {
+          "id": "seg-local-1792619332798-12",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Priya in Bangalore, India, you are on Silicon Valley Confidential. You had to pay for something like M 6.9 - 76 km NE of Ozernovskiy, Russia, in money or in a ruined afternoon. Tell us which. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 280250,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "Caller Intro"
+        },
+        {
+          "id": "seg-local-1792619332798-13",
+          "speakerId": "caller-local-1792619332797",
+          "speakerName": "Priya (Bangalore, India)",
+          "text": "I am Priya, in Bangalore, India. 76 Km NE Ozernovskiy Russia looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 303000,
+          "durationMs": 27700,
+          "emotion": "heated",
+          "topicTag": "Field Report"
+        },
+        {
+          "id": "seg-local-1792619332798-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Priya priced the part M 6.9 - 76 km NE of Ozernovskiy, Russia treated as atmosphere. That is the adult version. Thank you. We will not round it back into a vision. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 331350,
+          "durationMs": 20500,
+          "emotion": "intrigued",
+          "topicTag": "Caller Hold"
+        },
+        {
+          "id": "seg-local-1792619332798-15",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Unasked: the stop-loss for M 6.9 - 76 km NE of Ozernovskiy, Russia. The date or the sum where you walk away. If that line does not exist, it is a hope with a corporate card. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 352500,
+          "durationMs": 22100,
+          "emotion": "skeptical",
+          "topicTag": "The Unasked"
+        },
+        {
+          "id": "seg-local-1792619332798-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The test is a bill a listener can draft after this hour. Buyer, user, failure person, cost, and the end of 76 Km NE Ozernovskiy Russia. If the page is still only adjectives, we entertained them, and that is a different station. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 375250,
+          "durationMs": 24500,
+          "emotion": "excited",
+          "topicTag": "The Test"
+        },
+        {
+          "id": "seg-local-1792619332798-17",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "Ruling on M 6.9 - 76 km NE of Ozernovskiy, Russia. Name the payer and the stop before you name the destiny. The page limits the claim. The missing number limits it further. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 400400,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "Ruling"
+        },
+        {
+          "id": "seg-local-1792619332798-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Before the next meeting about 76 Km NE Ozernovskiy Russia, write the stop under M 6.9 - 76 km NE of Ozernovskiy, Russia where everyone can see it. Victoria will ask. Better it comes from you. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 421950,
+          "durationMs": 22100,
+          "emotion": "laughing",
+          "topicTag": "Handoff"
+        },
+        {
+          "id": "seg-local-1792619332798-19",
+          "speakerId": "victoria",
+          "speakerName": "Victoria Sterling",
+          "text": "That is the hour. I am Victoria. Devon was across the desk. You were listening to Silicon Valley Confidential. Tonight we took apart M 6.9 - 76 km NE of Ozernovskiy, Russia. The next show starts when the clock turns. Thanks for staying to the end. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "timestampMs": 444700,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "Signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (USGS): https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+        "Public Witness / Earth overlays are RESOURCE. Dual ledgers and the Star Chart stay CANON.",
+        "Receipt 1: In Japan, the Earthquake Early Warning is an alert that is issued when an earthquake is detected by multiple seismometers. These warnings are primarily issued by the Japan Meteorological Agency , with guidance on how to ",
+        "Research packet: 1 page(s), confidence 0.45, held as a question."
+      ],
+      "keyTakeaways": [
+        "76 Km NE Ozernovskiy Russia: this hour follows the public line.",
+        "A page that mentions it was read once.",
+        "The next hour takes the next unused public item."
+      ],
+      "references": [
+        {
+          "title": "USGS",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+          "type": "news"
+        },
+        {
+          "title": "Public Witness",
+          "url": "https://chatagent.ca/witness/",
+          "type": "news"
+        },
+        {
+          "title": "Earthquake Early Warning (Japan)",
+          "url": "https://en.wikipedia.org/wiki/Earthquake_Early_Warning_(Japan)",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-local-1792619332797",
+          "name": "Priya",
+          "location": "Bangalore, India",
+          "topic": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+          "take": "I am Priya, in Bangalore, India. 76 Km NE Ozernovskiy Russia looked free until it sat on our calendar. The part nobody priced was the part that broke the week. I am not asking for a villain. I am asking for the number to be said before the next one. Bring it back to the bill: someone pays when the headline is no longer the whole story.",
+          "status": "on-air",
+          "avatar": "PR"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-10-21T21:48:52.798Z"
     }
   ]
 }
