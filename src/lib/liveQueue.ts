@@ -46,7 +46,9 @@ export function pickQueuedShow(shows: RadioShow[], used: Set<string>, stationId?
 export async function loadLiveQueue(): Promise<LiveQueue | null> {
   if (cache && Date.now() - cache.at < 10 * 60 * 1000) return cache.doc;
   const base = import.meta.env.BASE_URL || '/';
-  const urls = [`${base}queue.json`, MIRROR];
+  // The studio is served from /talk-radio/ but built with base '/', so the Pages copy
+  // lives beside it. Try the folder first, then the root alias, then the jsDelivr mirror.
+  const urls = ['/talk-radio/queue.json', `${base}queue.json`, MIRROR];
   const docs: LiveQueue[] = [];
   for (const url of urls) {
     try {

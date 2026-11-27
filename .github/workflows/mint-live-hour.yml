@@ -1,8 +1,8 @@
 name: Mint live hour
 
 on:
-  schedule:
-    - cron: '17 */3 * * *'
+  # Minting moved to the local LLM writer (scripts/mint_llm.py on the studio PC).
+  # The template synth would overwrite those hours, so the cron is off. Run by hand if needed.
   workflow_dispatch:
 
 permissions:

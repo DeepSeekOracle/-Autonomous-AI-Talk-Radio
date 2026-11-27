@@ -70,9 +70,56 @@ const words = (text: string): number => text.trim().split(/\s+/).filter(Boolean)
 
 /** Keep a turn long enough to be a spoken paragraph, without adding a second essay. */
 function spoken(text: string, spare: string): string {
-  const clean = text.replace(/\s+/g, " ").trim();
-  if (words(clean) >= 62) return clean;
-  return `${clean} ${spare}`.replace(/\s+/g, " ").trim();
+  // The old build padded every short turn with ONE sentence per show, which is why
+  // eighteen of nineteen turns ended the same way. Padding now happens in padLines(),
+  // which draws from a pool and never repeats inside a show. `spare` is kept in the
+  // signature so the station writers do not all have to change.
+  void spare;
+  return text.replace(/\s+/g, " ").trim();
+}
+
+/** Closing thoughts used only to top a short turn up to a spoken paragraph. */
+const CLOSERS = [
+  "That is the part we can actually check.",
+  "Everything else waits for a better page.",
+  "Hold that against what you already knew.",
+  "The desk will stay on it.",
+  "Say it plainly and it still holds.",
+  "That is the distance between a claim and a receipt.",
+  "It is a small sentence and it does a lot of work.",
+  "We can be wrong about the scale without being wrong about the shape.",
+  "The people doing the work will recognise it.",
+  "Nothing there needs a slide to survive.",
+  "That is where the hour actually turns.",
+  "It is boring, and boring is what survives a Tuesday.",
+  "Write it down before you forward it.",
+  "One honest line beats a paragraph of atmosphere.",
+  "We are not going to decorate it.",
+  "The rest is somebody else's press release.",
+  "That is the version I would defend on the record.",
+  "Keep it narrow enough to be useful.",
+  "If it cannot be repeated by a tired person, it is not finished.",
+  "The evidence is thin and we said so.",
+  "That is the whole of what we know tonight.",
+  "Nobody in this room gets to skip that step.",
+  "It holds until someone shows us the page that does not.",
+  "And that is as far as the receipts go.",
+];
+
+/** Top short turns up to a spoken paragraph from the pool, never repeating one. */
+function padLines(lines: DeskLine[]): DeskLine[] {
+  const used = new Set<number>();
+  return lines.map((row, index) => {
+    if (words(row.text) >= 62) return row;
+    let pick = (index * 7 + row.text.length) % CLOSERS.length;
+    let guard = 0;
+    while (used.has(pick) && guard < CLOSERS.length) {
+      pick = (pick + 1) % CLOSERS.length;
+      guard += 1;
+    }
+    used.add(pick);
+    return { ...row, text: `${row.text} ${CLOSERS[pick]}`.replace(/\s+/g, " ").trim() };
+  });
 }
 
 type Cast = {
@@ -298,12 +345,12 @@ export function writeDeskScript(brief: DeskBrief): DeskLine[] {
   const write = SCRIPTS[brief.stationId] || wire;
   const lines = brief.live ? writeLiveHour(cast) : voicePacket(write(cast), cast);
   const seen = new Set<string>();
-  return lines.filter((row) => {
+  return padLines(lines.filter((row) => {
     const key = row.text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 80);
     if (!key || seen.has(key)) return false;
     seen.add(key);
     return true;
-  });
+  }));
 }
 
 function voicePacket(lines: DeskLine[], c: Cast): DeskLine[] {

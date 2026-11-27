@@ -89,8 +89,11 @@ function asTurn(row: unknown): SignalTurn | null {
 export async function loadSignalScript(slug: string): Promise<SignalScript | null> {
   if (scripts.has(slug)) return scripts.get(slug) || null;
   const urls = [
+    `/signal/shows/${slug}/show_notes.json`,
     `/signal/${slug}/show_notes.json`,
+    `https://cdn.jsdelivr.net/gh/DeepSeekOracle/chatagent@main/signal/shows/${slug}/show_notes.json`,
     `https://cdn.jsdelivr.net/gh/DeepSeekOracle/chatagent@main/signal/${slug}/show_notes.json`,
+    `https://chatagent.ca/signal/shows/${slug}/show_notes.json`,
     `https://chatagent.ca/signal/${slug}/show_notes.json`,
   ];
   for (const url of urls) {
