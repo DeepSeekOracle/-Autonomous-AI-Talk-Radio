@@ -1,502 +1,6 @@
 {
-  "mintedAt": "2026-11-27T11:31:55.229916+00:00",
+  "mintedAt": "2026-11-27T14:29:20.473375+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795766514",
-      "stationId": "station-algorithmic-wire",
-      "topic": "WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion",
-      "title": "The Count Behind the Clinic",
-      "episodeNumber": 1114,
-      "description": "A WHO-reported figure puts Ukraine's healthcare under attack in perspective, while callers and hosts press on what the number leaves out.",
-      "durationMs": 348850,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795766514-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is the Algorithmic Wire, where Devon Cross and Dr. Maya Lin read one story aloud and then take it apart in front of you. The subject tonight is attacks on Ukraine's healthcare system, and the question this desk will argue is whether that headline is a fact to repeat or a number to lean on.",
-          "timestampMs": 0,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795766514-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is simple: since Russia's full-scale invasion, the World Health Organization's representative for Ukraine has recorded more than 3,200 attacks on healthcare facilities. That is a claim about a count, and it is a claim about facilities, not a claim about every person inside them.",
-          "timestampMs": 23950,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795766514-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Tell me the mechanism. Who is doing the counting, what makes an attack count, and what does that number not tell you about a hospital that was hit but never recorded? A number is only as honest as the system behind it, and that system is not on the page.",
-          "timestampMs": 45100,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795766514-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a warehouse in a frontline region holding medicine for people who cannot drive themselves, and picture the same warehouse being struck. That is the ordinary moment in this story: medical supplies being stored, and the building containing them becoming a target.",
-          "timestampMs": 66650,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795766514-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is the headline, read nearly as it appears: \"WHO reports more than 3,200 attacks on Ukraine's healthcare system since full-scale invasion.\" The body adds that 3,205 attacks on healthcare facilities have been carried out, reported by WHO Representative for Ukraine Jarno Habicht. What it proves is a count. What it does not prove is who was inside, when, or how many were hurt.",
-          "timestampMs": 85000,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795766514-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If the count holds, it means that the infrastructure meant to keep people alive is being treated as a battlefield object. The practical consequence is not a statistic; it is that treatment, surgery, and medicine may be delayed or stopped while the system tries to stay standing.",
-          "timestampMs": 112950,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795766514-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener should not conclude that every hospital in Ukraine is destroyed, or that the number is a live scoreboard of deaths. The receipts say attacks on facilities. They do not give a breakdown by city, date, or facility, so the number is a starting point for questions, not a finished picture.",
-          "timestampMs": 133300,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795766514-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with this is the nurse who works the ward after the alert, deciding which patients get treated and which have to wait because the power, the medicine, or the building itself is gone.",
-          "timestampMs": 156050,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795766514-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "One narrow thing I would build: a plain-language list of what \"healthcare facility under attack\" means at the facility level, so a listener in Winnipeg can tell whether a report is about a clinic, a hospital, or a warehouse holding supplies.",
-          "timestampMs": 173200,
-          "durationMs": 17300,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795766514-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That list breaks exactly where the story is weakest. It assumes the listener can already tell which kind of facility the source is talking about, and it cannot reach the families in the frontline regions who are the ones actually deciding what to do next.",
-          "timestampMs": 191150,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795766514-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We're on the phone with Sam, calling from Winnipeg, Canada, who has been living with this story for a while and is not an expert. Sam, what can you personally confirm about what this means for people you know?",
-          "timestampMs": 210700,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795766514-12",
-          "speakerId": "caller-1795766514",
-          "speakerName": "Sam (Winnipeg, Canada)",
-          "text": "I've heard the number a few times, but I don't know what it covers. What I could verify is that the clinics my neighbours go to have been under strain for months, and that's something I've seen in person.",
-          "timestampMs": 227850,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795766514-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Sam's detail matters because it tells us the number may be accurate and still feel vague to the people who need it most. The gap between a count published in a headline and a clinic under strain in a frontline region is where this story actually lands.",
-          "timestampMs": 245000,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795766514-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is: what does the World Health Organization do with a count like this after the number is published? It matters because a number only becomes useful when someone uses it to force a decision.",
-          "timestampMs": 265350,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795766514-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run: ask anyone who shares this headline where the 3,205 comes from, who is counting, and whether the source distinguishes between a hospital and a warehouse. If they can't answer, treat the number as a prompt for questions, not a conclusion.",
-          "timestampMs": 282900,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795766514-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The desk's ruling is narrow: repeat the fact that more than 3,200 attacks on healthcare facilities are recorded, and never repeat it as a complete picture of the damage.",
-          "timestampMs": 303650,
-          "durationMs": 12900,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795766514-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Do this one thing tonight: open the WHO report behind the number and check whether it lists the facility types and dates, then share what you found with someone who is trying to understand it.",
-          "timestampMs": 317200,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795766514-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is the Algorithmic Wire, where Devon Cross and Dr. Maya Lin read one story and then take it apart. The subject tonight is attacks on Ukraine's healthcare system, and the next hour starts when the clock turns.",
-          "timestampMs": 332750,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168226",
-        "Receipt 1: WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion 28 August 2026 Humanitarian Aid Since the beginning of Russia’s full-scale invasion of Ukraine, 3,205 attacks on healthcare fac",
-        "Receipt 2: Part of wider pattern Authorities say attacks across Ukraine between yesterday and the early hours of this morning have killed at least 12 civilians and injured more than 65 others, with frontline regions were especially",
-        "Receipt 3: “We reiterate, once again, the Secretary-General’s condemnations of large-scale missile and drone attacks by the armed forces of the Russian Federation in urban centres in Ukraine,” the UN Spokesperson said, reiterating ",
-        "Receipt 4: “In 2026, 20 attacks on warehouses containing humanitarian aid have already been recorded, including 13 warehouses where medical supplies were stored,” Dr, Habicht said.",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168226",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795766514",
-          "name": "Sam",
-          "location": "Winnipeg, Canada",
-          "topic": "WHO reports more than 3,200 attacks on Ukraine’s healthcare system since full-scale invasion",
-          "take": "I've heard the number a few times, but I don't know what it covers. What I could verify is that the clinics my neighbours go to have been under strain for months, and that's something I've seen in person.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:01:54.123972+00:00"
-    },
-    {
-      "id": "show-live-llm-1795766543",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Aid reaches hundreds of thousands in Gaza amid severe food insecurity",
-      "title": "Aid Reaches Gaza, But Who Is Counted?",
-      "episodeNumber": 1143,
-      "description": "A report on food aid entering Gaza raises the question of what it means to reach hundreds of thousands of people when hunger is still deepening.",
-      "durationMs": 375650,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795766543-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, and I am Devon Cross, with Dr. Maya Lin joining me. The story is that aid has reached hundreds of thousands of people in Gaza while hunger is getting worse. The question on this desk is simple: does that headline describe what is happening, or does it describe what is being counted?",
-          "timestampMs": 0,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795766543-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that this is a report about a pipeline, not a report about a solution. The headline says aid reached hundreds of thousands of people, and the body says hunger is deepening. Those two facts can both be true, but the headline puts the first one first.",
-          "timestampMs": 24350,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795766543-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I want the mechanism. How would hundreds of thousands of people actually be reached if food has become exponentially more expensive since October 2023? What does \"reached\" mean on the ground, and what evidence are we being shown? If the story is only about supplies entering the Kerem Shalom crossing, the headline is describing an entry point and calling it a result.",
-          "timestampMs": 46300,
-          "durationMs": 25700,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795766543-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a family in Gaza at the end of a day, with about one in five of these families eating just one meal. Imagine one of them going to a distribution point, and imagine the person behind the counter handing over a few cans before the family walks out to a home where the food runs out again. That is the ordinary moment in this story.",
-          "timestampMs": 72650,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795766543-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The headline says: aid reaches hundreds of thousands in Gaza amid severe food insecurity, dated 27 August 2026. Underneath, hunger is deepening, and agencies continue to deliver food and essential supplies. What it proves is that delivery is happening and that the situation is severe. What it does not prove is how much of the need was met, by whom, or on what evidence.",
-          "timestampMs": 100600,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795766543-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, the people inside the story get supplies that may not match what they can afford or what they can eat. It means a family can be handed food while their cash shortage continues, and it means the word \"reached\" hides the gap between what arrives and what a household can actually use.",
-          "timestampMs": 127750,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795766543-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that the crisis is being solved. The receipts do not tell us how many of the hundreds of thousands were fed, whether the supplies were sufficient, or whether the people receiving them are the ones who needed them most. This is a report on movement, not on outcome.",
-          "timestampMs": 151700,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795766543-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome after the cameras leave is a family that heard \"reached\" and assumed it meant \"safe.\" They may have received food, they may still be running out, and they will be the ones measuring the difference between what arrived and what was needed.",
-          "timestampMs": 174850,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795766543-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship a small thing: publish the exact definition of \"reached\" on the page, with the date and the source, so a reader can see what was counted. It is narrow, it takes no new machinery, and it lets a person check whether the number means people were given food or whether people simply passed through a checkpoint.",
-          "timestampMs": 196800,
-          "durationMs": 24500,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795766543-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That definition can still break. A household might pass through the crossing, receive food, and be unable to store it, cook it, or get to a place where it is delivered. So the honest flaw is that even a clear definition may describe an event rather than a result.",
-          "timestampMs": 221950,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795766543-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Mateo, you are on the line from Valencia, Spain. You have lived with this story, and you are not an expert. Tell me one thing you can personally confirm, in your own words.",
-          "timestampMs": 243100,
-          "durationMs": 14100,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795766543-12",
-          "speakerId": "caller-1795766543",
-          "speakerName": "Mateo (Valencia, Spain)",
-          "text": "I live in Valencia, and what I can confirm is that I saw a news item about aid reaching hundreds of thousands, but I could not find anything that said how many meals were actually given or what happened to the families who could not get the food they needed.",
-          "timestampMs": 257850,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795766543-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That is a useful detail, Mateo, because it shows the gap between a headline and a number. It changes the hour so far by reminding us that the people outside the story are the ones trying to find out whether the number means anything.",
-          "timestampMs": 279400,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795766543-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Nobody has asked yet: what would have to be true for the word \"reached\" to mean a family could eat? That matters because the headline is doing a lot of work with a very thin word, and the reader is left to fill in the rest.",
-          "timestampMs": 298550,
-          "durationMs": 19300,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795766543-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Run one test: find the number, find the date it was published, and find the source behind it. If you cannot, then the story is describing a claim rather than a verified fact, and you should treat the headline as a starting point instead of a conclusion.",
-          "timestampMs": 318500,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795766543-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the fact that supplies are moving through the Kerem Shalom crossing, and do not promote the idea that the crisis has been resolved.",
-          "timestampMs": 338850,
-          "durationMs": 10500,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795766543-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Go find the number and its source. If it is not there, write down that it is not there and carry that into the next hour.",
-          "timestampMs": 350000,
-          "durationMs": 11300,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795766543-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is The Algorithmic Wire, with Devon Cross and Dr. Maya Lin, on aid reaching hundreds of thousands in Gaza amid severe food insecurity. The next hour starts when the clock turns.",
-          "timestampMs": 361950,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168220",
-        "Receipt 1: Aid reaches hundreds of thousands in Gaza amid severe food insecurity 27 August 2026 Humanitarian Aid As hunger deepens across Gaza, humanitarian agencies continue to deliver food and other essential supplies to families",
-        "Receipt 2: In Gaza, about one in five families say that they are eating only one meal a day, and 50 per cent of them reported that they completely ran out of food at least once in the past month, according to latest UN figures ..",
-        "Receipt 3: This is because of cash shortages, but also because most food items have become exponentially more expensive since the escalation of hostilities in October 2023..",
-        "Receipt 4: The UN on the ground Yesterday, the UN and its partners collected hundreds of pallets of supplies from the Kerem Shalom crossing – a vital commercial and humanitarian entry point located at the junction of Israel, Egypt,",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Aid reaches hundreds of thousands in Gaza amid severe food insecurity",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168220",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795766543",
-          "name": "Mateo",
-          "location": "Valencia, Spain",
-          "topic": "Aid reaches hundreds of thousands in Gaza amid severe food insecurity",
-          "take": "I live in Valencia, and what I can confirm is that I saw a news item about aid reaching hundreds of thousands, but I could not find anything that said how many meals were actually given or what happened to the families who could not get the food they needed.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:02:23.525987+00:00"
-    },
     {
       "id": "show-live-llm-1795768129",
       "stationId": "station-algorithmic-wire",
@@ -1979,6 +1483,502 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-27T11:31:55.229874+00:00"
+    },
+    {
+      "id": "show-live-llm-1795789729",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Explainer: UN peace operations work to create, preserve peace",
+      "title": "The Blue Line and the Election After",
+      "episodeNumber": 1829,
+      "description": "A peace operation's renewed mandate, the people it contains, and what the story does and does not prove.",
+      "durationMs": 399250,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795789729-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, with Devon Cross and Dr. Maya Lin at the desk. We are talking about the UN peace operations that exist to create and preserve peace, and the question we will argue all hour: does a mission that is deployed to stop violence actually work, or does it just move the violence somewhere else?",
+          "timestampMs": 0,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795789729-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The honest reading is that the story is describing a shift in what these missions are for. The story says the UN and its member states must adapt because peace operations are increasingly deployed to contain violence rather than implement agreements. That is a claim about purpose, and it is supported by the language of the secretary-general speaking to the General Assembly.",
+          "timestampMs": 24750,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795789729-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I want the mechanism, not the mood. If the missions are now containing violence, who is deciding where the line goes, what happens to the people inside the line, and what evidence would show the mission is working? A mission that contains violence is a real outcome, but it is not the same as a mission that ends violence.",
+          "timestampMs": 51100,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795789729-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture UNIFIL along the Blue Line in Lebanon, which has separated Lebanon and Israel since the 1970s. Its mandate was renewed for another year by the UN Security Council. That is one ordinary moment: a line that is watched, maintained, and extended by a vote, with people living close to it.",
+          "timestampMs": 76250,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795789729-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The story says: peace and security explainer, UN peace operations work to create, preserve peace, by Isaiah Steinberg on 26 August 2026, supporting the first democratic elections after brutal civil wars in Mozambique and Cambodia. That is evidence of two places where elections followed civil wars and where these operations were involved. It does not prove that the operations created those elections, or that they worked, or that the same thing happened everywhere.",
+          "timestampMs": 98200,
+          "durationMs": 30100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795789729-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the people in Mozambique and Cambodia are living with a new kind of dependence: the elections happened, and the operations remain present as a standing fact on the ground. The consequence is that the question moves from whether the mission worked to whether the mission can be removed, and on what terms.",
+          "timestampMs": 128950,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795789729-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that peace operations are useless, or that they are secretly the cause of the conflicts they sit inside. The receipts describe deployments and a secretary-general's warning about the highest number of conflicts since 1945. They do not give us a count of lives saved, a cost of the missions, or any comparison between places with and without them.",
+          "timestampMs": 152900,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795789729-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the person who was near the Blue Line, or the person who voted in a post-civil-war election. When the cameras leave and the mandate is renewed for another year, that person is the one who decides whether the operation feels like protection or like a permanent arrangement.",
+          "timestampMs": 180050,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795789729-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow thing I would ship is a plain-language public note after each mandate renewal: what the mission is now doing, what the budget is for, and what would have to change for it to leave. Small, printable, and honest, it would let people judge the arrangement instead of guessing.",
+          "timestampMs": 204400,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795789729-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The hole is that a public note about the mission is written from inside the system, and the people it is meant to serve may not have the language to read it. The note can be accurate and still miss the fact that a renewal means something different to the person standing on the line than to the member state voting for it.",
+          "timestampMs": 225950,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795789729-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are going to the phone to Nadia, calling from Cairo, Egypt. Nadia, what can you personally confirm about the work of peace operations, from your own life, without having to explain an expert's argument?",
+          "timestampMs": 252700,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795789729-12",
+          "speakerId": "caller-1795789729",
+          "speakerName": "Nadia (Cairo, Egypt)",
+          "text": "I live in Cairo, and I know people who moved when the work was near their neighbourhood. I can tell you what I saw with my own eyes, and I can tell you what the people around me said, but I am not going to describe what a mandate means in legal terms.",
+          "timestampMs": 268250,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795789729-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail matters because it gives us the person-level view that the page does not: movement, displacement, and the ordinary decisions made when the work arrives. It also changes the hour because the practical question is no longer only whether the mission is effective, but what it costs in daily life.",
+          "timestampMs": 291000,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795789729-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked is: when a mission is renewed for another year, who gets to say whether the renewal was necessary? That matters because the renewal is a decision made in a vote, and the person living next to the line is not asked to confirm it.",
+          "timestampMs": 312950,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795789729-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run: find out what the mission's current mandate says it is doing, then find out what the same mission did before the last renewal. If the answer is only that the mission is still there, you have found a containment arrangement rather than evidence of peace.",
+          "timestampMs": 334100,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795789729-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the story's warning that peace operations are increasingly deployed to contain violence, and do not promote the idea that they are a proven way to create and preserve peace.",
+          "timestampMs": 356450,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795789729-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Your next action is to read the current mandate of one mission you already know, and write down what it says the mission is doing today versus what it said last year.",
+          "timestampMs": 370000,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795789729-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour on The Algorithmic Wire, with Devon Cross and Dr. Maya Lin, on the UN peace operations that exist to create and preserve peace. The next hour starts when the clock turns.",
+          "timestampMs": 384350,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168210",
+        "Receipt 1: Explainer: UN peace operations work to create, preserve peace By Isaiah Steinberg 26 August 2026 Peace and Security Supporting the first democratic elections after brutal civil wars in Mozambique and Cambodia.",
+        "Receipt 2: As the world faces the highest number of conflicts since 1945 and a rising death toll from war alongside peace operations increasingly deployed to contain violence rather than implement agreements, the UN and its Member ",
+        "Receipt 3: Explainer: How UN peacekeepers meet the challenge of escalating conflict in Lebanon 8 October 2024 Peace and Security The UN peacekeeping mission UNIFIL has been operating along the “Blue Line” which separates Lebanon an",
+        "Receipt 4: The UN has deployed 167 such missions since 1948, with about 40 active in 2024, according to a review by the UN’s Department of Political and Peacebuilding Affairs ..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Explainer: UN peace operations work to create, preserve peace",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168210",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795789729",
+          "name": "Nadia",
+          "location": "Cairo, Egypt",
+          "topic": "Explainer: UN peace operations work to create, preserve peace",
+          "take": "I live in Cairo, and I know people who moved when the work was near their neighbourhood. I can tell you what I saw with my own eyes, and I can tell you what the people around me said, but I am not going to describe what a mandate means in legal terms.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T14:28:49.597855+00:00"
+    },
+    {
+      "id": "show-live-llm-1795789760",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
+      "title": "Violence Moves, Responsibility Does Not",
+      "episodeNumber": 1860,
+      "description": "A look at the Haiti gang crackdown in the capital, and what happens when the violence spreads elsewhere.",
+      "durationMs": 396850,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795789760-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon Cross and Dr. Maya Lin are here on The Algorithmic Wire. Tonight we are talking about Haiti: the government has pushed harder against gangs in the capital, and the violence appears to be moving to other places. The question for this hour is simple and it is the only one: is this a strategy working, or is this pressure that is leaking somewhere else?",
+          "timestampMs": 0,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795789760-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Dr. Maya Lin has the strongest honest reading. The story says the campaign against gangs in the capital is intensifying, and it says more than half of the casualties are attributed to gangs. But it also says about 40 percent happened during security operations against them, and about five percent are connected to self-defense groups and vigilantes.",
+          "timestampMs": 27550,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795789760-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is a clean description, Maya, but I want the mechanism. If the government is squeezing gangs in the capital, what actually makes violence move? Who is being displaced, and what evidence would show that rather than a reporter noticing three fires in different towns?",
+          "timestampMs": 51900,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795789760-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Let me make it concrete. The story describes a farming community called Kenscoff, in the hills overlooking the capital. Armed men descended on it late Sunday, set homes ablaze, and attacked residents. The ordinary moment in this story is a household standing in the doorway wondering what the fire is.",
+          "timestampMs": 71450,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795789760-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is receipt one, from August 25, 2026: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the hills overlooking Haiti’s capital, setting homes ablaze and attacking residents. It proves that a specific attack happened and that it is being reported. It does not prove that the government caused it, that anyone planned it, or what anyone is supposed to do about it.",
+          "timestampMs": 93000,
+          "durationMs": 34900,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795789760-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If that is true, the people inside this story are living with a different kind of risk. The gangs are moving, or the pressure is moving, and the households that are left are now in territory they did not choose. That is not an abstraction. It means a family in Kenscoff is now dealing with a threat that was not there when they were sleeping.",
+          "timestampMs": 128550,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795789760-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Do not conclude that the government is losing, or that the campaign is a failure. The receipts do not show why violence moved, whether it is one gang moving, several gangs, or civilians being pushed out of the capital. The numbers also do not tell you which town each casualty belongs to, so the 40 percent figure is a category, not a map.",
+          "timestampMs": 156100,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795789760-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with this outcome after the cameras leave is a resident of Kenscoff. They are not going to get a briefing, a press release, or an update from the desk. They are the ones who will decide whether to stay, whether to move, and whether to return.",
+          "timestampMs": 182850,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795789760-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "One narrow thing, something you could start tomorrow: publish the names of the communities where the killings happen, with dates, so that the pattern can be checked instead of read as a headline. A list of places is small, but it is the difference between a story and a rumour.",
+          "timestampMs": 205200,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795789760-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That list has a flaw. It only records places where someone was brave enough to report. The households that were killed before anyone could file, or who were afraid to speak, will never appear on it. So the list will look reassuring and it will be biased toward the visible.",
+          "timestampMs": 226750,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795789760-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We have a caller on the line, Wen, calling from Vancouver, Canada. Wen, you have lived with this story, so tell us what you can personally confirm, and what you could not check from where you are.",
+          "timestampMs": 248300,
+          "durationMs": 15700,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795789760-12",
+          "speakerId": "caller-1795789760",
+          "speakerName": "Wen (Vancouver, Canada)",
+          "text": "I live in Vancouver, so I am far away from Haiti, but I have been reading the reports for a long time. What I could confirm is that the descriptions of the killings in Kenscoff sound like something that has been happening for years, not just in the last few weeks. What I could not verify is whether the government is responsible for the violence moving out of the capital.",
+          "timestampMs": 264650,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795789760-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That is useful, Wen. You have confirmed a pattern in the reporting, but you have not confirmed the cause. That keeps the hour honest, because the story can describe movement and still leave the question of responsibility open.",
+          "timestampMs": 294200,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795789760-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Nobody has asked yet: who decided to move the pressure, and did they expect the violence to follow? That matters because if the answer is no one in charge, then the strategy is not working. If the answer is someone in charge, then this is a choice with consequences, and it is a choice worth knowing about.",
+          "timestampMs": 310950,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795789760-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run. Ask what evidence would change your mind. If the answer is none, the story is not being handled honestly, because it would mean no one has thought through what would prove it wrong.",
+          "timestampMs": 335300,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795789760-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow ruling is this: keep the description of the violence and the movement, and do not promote the idea that the government is winning or that the violence is a mystery.",
+          "timestampMs": 352850,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795789760-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Wen, what you should do next is check one thing: whether the communities named in the reports have any public record of the killings, and whether that record has a date attached. That is a small action, and it is the one that would change how we understand this story.",
+          "timestampMs": 367200,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795789760-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Devon Cross and Dr. Maya Lin on The Algorithmic Wire. The next hour starts when the clock turns.",
+          "timestampMs": 388750,
+          "durationMs": 8100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168203",
+        "Receipt 1: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere 25 August 2026 Peace and Security The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the",
+        "Receipt 2: More than half of the casualties were attributed to gangs, while about 40 per cent occurred during security operations against them and 5 per cent were linked to self-defense groups and vigilantes..",
+        "Receipt 3: Haiti’s gangs are adapting to pressure, seeking new territory and revenue, while the methods used against them are themselves creating risks for civilians..",
+        "Receipt 4: ‘Wanton, intentional infliction of incredible pain’ by gangs in Haiti 6 August 2026 Peace and Security Gangs in Haiti continue to terrorise communities with the “wanton, intentional infliction of incredible pain” on peop",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168203",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795789760",
+          "name": "Wen",
+          "location": "Vancouver, Canada",
+          "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
+          "take": "I live in Vancouver, so I am far away from Haiti, but I have been reading the reports for a long time. What I could confirm is that the descriptions of the killings in Kenscoff sound like something that has been happening for years, not just in the last few weeks. What I could not verify is whether the government is responsible for the violence moving out of the capital.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T14:29:20.473351+00:00"
     }
   ]
 }
