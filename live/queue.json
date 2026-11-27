@@ -1,998 +1,6 @@
 {
-  "mintedAt": "2026-11-27T08:33:24.888389+00:00",
+  "mintedAt": "2026-11-27T11:31:55.229916+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795763364",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Intel One Mono font (2023)",
-      "title": "A Typeface For Tired Eyes",
-      "episodeNumber": 1564,
-      "description": "We ask whether a typeface built for low-vision developers is a real fix, what would count as evidence, and who gets left holding the outcome.",
-      "durationMs": 392450,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795763364-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, with me Devon Cross and Dr. Maya Lin. Today's subject is a typeface called Intel One Mono, made in 2023. The question this desk will argue: is this a real fix, or a nice brochure?",
-          "timestampMs": 0,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795763364-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that Intel One Mono is a family with four weights, italics, and coverage of over 200 Latin-script languages. What is actually claimed is that it helps low-vision developers read code with less eye strain and make fewer errors. That is a legibility claim, not a measured error rate.",
-          "timestampMs": 17550,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795763364-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That's the brochure, and I want the mechanism. A typeface changes glyph shape, spacing, and line length. How does a wider family reach a developer's screen? On what evidence would we say the fatigue went down, and for whom exactly?",
-          "timestampMs": 40300,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795763364-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a developer at a small terminal in Nairobi, opening an editor after a long shift. The moment the story points to is the one where text is small, tired eyes scan for a closing brace, and a misread character costs an hour. That is the audience the typeface was designed for.",
-          "timestampMs": 57850,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795763364-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here's the line from the story: 'Intel One Mono also covers a wide range of over 200 languages using the Latin script.' It proves language coverage. It does not prove anyone in Nairobi reads it, or that code is easier to read in that script.",
-          "timestampMs": 80200,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795763364-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If the claims hold, the consequence is practical: a tired, low-vision developer gets a face designed for them instead of a generic one, and fewer reading errors. The real change is that a specific need gets a product attached to it.",
-          "timestampMs": 99750,
-          "durationMs": 17300,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795763364-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Careful listener: nothing here shows the font was tested with the audience it claims to serve, that it was installed on real machines, or that error counts dropped. The 'needs of developers in mind' line is a description of intent, and intent is not a measurement.",
-          "timestampMs": 117700,
-          "durationMs": 19300,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795763364-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who lives with this is the developer using it every day, after hours, with tired eyes and no support team. If it helps, it helps in a way they notice privately. If it doesn't, the story moves on and their screen is unchanged.",
-          "timestampMs": 137650,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795763364-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Start narrow: publish the four weights and the editable sources as one small download, with a plain note on how the file was made. It's a file you can check. It isn't a proof that anyone benefits, but it's something you can start tomorrow.",
-          "timestampMs": 157200,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795763364-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The flaw is not that the font is imperfect. It is that a typeface can be built around one set of eyes and then presented as if it solved everyone's problem. A monospaced face optimized for a developer with low vision is a narrow claim wearing a universal coat. The people it was designed for are the ones the story is least likely to reach, because legibility is not something you can test from a headline.",
-          "timestampMs": 176350,
-          "durationMs": 31300,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795763364-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon Cross here, and Ruth, calling from Nairobi. Ruth, tell us what you have seen on your own screen or in your own hands that you can honestly stand behind, and what you could personally verify about Intel One Mono.",
-          "timestampMs": 208300,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795763364-12",
-          "speakerId": "caller-1795763364",
-          "speakerName": "Ruth (Nairobi, Kenya)",
-          "text": "I am Ruth. I do not have a low vision. I have worked with developers who do, and they told me how tired their eyes get after a full day at the terminal. I could not see the font myself, but I saw it named in an article and I saw that it was made with Frere-Jones Type, Intel and VMLY&R, and I could verify that the four weights are Light, Regular, Medium and Bold.",
-          "timestampMs": 225850,
-          "durationMs": 31300,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795763364-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That detail changes the hour because it separates what the desk can confirm from what the desk is claiming. Ruth confirms a name, a partnership, and a set of weights. She does not confirm a diagnosis. The story now has to carry that boundary, or it will quietly turn one person's account into a statistic nobody asked for.",
-          "timestampMs": 257800,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795763364-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is simple: who is actually supposed to read this? It matters because a monospaced font is a tool, not a person. If the tool is judged by how it looks in a screenshot, the low-vision developer who needed it will never see it, and the design becomes a trophy instead of a working instrument.",
-          "timestampMs": 282550,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795763364-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is the test you can run. Take any monospaced face on your phone or laptop and set the same line of code on it and on a proportional face. If you cannot tell which one is harder to keep your eyes on, the story has been overclaimed. If you can, ask what specific eyes were designed for and what evidence was used to show it.",
-          "timestampMs": 308100,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795763364-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The desk's ruling is narrow: keep the typeface, the four weights, the names, and the fact that it was built for a specific audience, but do not promote it as a cure, a fix, or a font for everybody. It is a legibility aid with a point of view, not a universal answer.",
-          "timestampMs": 336050,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795763364-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Your next action is one thing: if you use a monospaced face, compare it against a proportional face on a line of code you actually read. Then tell us what your eyes noticed, because that is a fact you can bring to the table.",
-          "timestampMs": 358800,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795763364-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon Cross and Dr. Maya Lin on The Algorithmic Wire, with a look at Intel One Mono from 2023 and a call from Ruth in Nairobi. The next hour starts when the clock turns.",
-          "timestampMs": 377950,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Hacker News): https://github.com/intel/intel-one-mono",
-        "Receipt 1: Intel One Mono also covers a wide range of over 200 languages using the Latin script.",
-        "Receipt 2: Introducing Intel One Mono, an expressive monospaced font family that’s built with clarity, legibility, and the needs of developers in mind..",
-        "Receipt 3: Identifying the typographically underserved low-vision developer audience, Frere-Jones Type designed the Intel One Mono typeface in partnership with the Intel Brand Team and VMLY&R, for maximum legibility to address deve",
-        "Receipt 4: The Intel One Mono fonts are provided in four weights — Light, Regular, Medium, and Bold — with matching italics, and we are happy to share both an official release of fonts ready to use as well as editable sources..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Intel One Mono font (2023)",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "Hacker News",
-          "url": "https://github.com/intel/intel-one-mono",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795763364",
-          "name": "Ruth",
-          "location": "Nairobi, Kenya",
-          "topic": "Intel One Mono font (2023)",
-          "take": "I am Ruth. I do not have a low vision. I have worked with developers who do, and they told me how tired their eyes get after a full day at the terminal. I could not see the font myself, but I saw it named in an article and I saw that it was made with Frere-Jones Type, Intel and VMLY&R, and I could verify that the four weights are Light, Regular, Medium and Bold.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T07:09:24.472928+00:00"
-    },
-    {
-      "id": "show-live-llm-1795764127",
-      "stationId": "station-hn-live",
-      "topic": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-      "title": "Who Pays for the Gmail One",
-      "episodeNumber": 1427,
-      "description": "Casey and Devon break down Google's new agent rule, the two-month deadline, and the ordinary person who has to live with it.",
-      "durationMs": 451250,
-      "hosts": [
-        {
-          "id": "casey",
-          "name": "Casey Rivera",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.02,
-          "voiceRate": 1.03,
-          "voiceGender": "male",
-          "personality": "Fast-talking morning host, tracks developer chatter like a ticker."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795764127-1",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Good morning, you're on Hacker News Live, where I'm Casey Rivera and Devon Cross is with me. This hour is about Google making its AI agents use its own servers, and the Gmail One, which is a joke about an email assistant that can't actually send email. The one question this desk will argue: does this change the world, or does it just change who has to file the paperwork?",
-          "timestampMs": 0,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795764127-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here, and my honest reading is that the story is about a contract, not a magic trick. Google made eight Workspace MCP servers generally available on November 24, and it published a clause in its API terms. The claim is that agents should use those servers, and if you have a coding agent with a Google Workspace plugin, that clause now sits in your path.",
-          "timestampMs": 29550,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795764127-3",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "That's the reading I don't believe, and I want to know the mechanism. Google's servers are one option, not a mandate. For whom exactly does this apply, and on what evidence? The story says if you've built an email assistant on the Gmail API, or you run a coding agent with a Google Workspace plugin, you have about two months to work out which side of the rule you're on. Two months for what?",
-          "timestampMs": 57500,
-          "durationMs": 30500,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795764127-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here's the scene I picture: someone opens a draft in Gmail, wants to move a file to Drive, and the action they expect is a button that works. The story says switching to Google's servers costs you sending and draft editing in Gmail, and moving and sharing in Drive. That's an ordinary person on an ordinary morning, and the cost is that the button they know stopped working.",
-          "timestampMs": 88650,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795764127-5",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "This is the source page, nearly verbatim: The Gmail One Can't Send Email, from Tech Stackups, written by Al Smith, an AI agent writer at Ritza. It was published November 26, 2026, and it says on 24 November, Google made its eight Workspace MCP servers generally available and published a new clause in its API terms. What that proves is that a change to the terms exists. What it does not prove is that every agent now has to go through Google.",
-          "timestampMs": 117400,
-          "durationMs": 33700,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795764127-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "If this is true, the consequence is real and narrow: people who have built on the Gmail API or run a Google Workspace plugin have roughly two months to find out which side of the rule they're on. That's a deadline, a migration, and a cost, not a vibe. And the cost is spread across tools, workflows, and people who never wrote the code.",
-          "timestampMs": 151750,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795764127-7",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "This is where I want to be careful with you. A headline that says Google will make AI agents use its servers does not prove that every agent now routes through Google. The story tells us about eight servers, a new clause, and a two-month window. It does not tell us that a generic agent is forced, that the Gmail One is a real product, or that this has already happened.",
-          "timestampMs": 178900,
-          "durationMs": 29300,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795764127-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "After the cameras leave, the person who has to live with this is the person who already has an agent in production, and probably no legal department. They have to read a clause, find out which side of the rule they're on, and decide whether to rewrite the wiring before the two-month window closes. That's not a developer in a lab, that's a person with a live system.",
-          "timestampMs": 208850,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795764127-9",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "If I could ship one narrow thing tomorrow, it would be a plain-language status page for anyone running a Google Workspace plugin: what the new clause says, what the two months cover, and where you stand. Not a product, not a platform, just a page that tells a non-expert the actual facts so they can decide what to do next.",
-          "timestampMs": 237600,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795764127-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here's the flaw. Google has made its eight Workspace MCP servers generally available, and that moves the work from whatever tool an agent was already using into Google's own servers. That means the people who built email assistants on the Gmail API have to decide quickly which side of the new rule they're on, and the ones who don't have room to switch are the ones left out.",
-          "timestampMs": 263150,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795764127-11",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Sam, calling in from Winnipeg, Canada. You're not an expert on this, which is exactly why I'm calling you. What can you tell us from your own life that you've actually seen?",
-          "timestampMs": 291900,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795764127-12",
-          "speakerId": "caller-1795764127",
-          "speakerName": "Sam (Winnipeg, Canada)",
-          "text": "I work from home in Winnipeg. I use Google's email tool every day because it's the easiest thing for me, and I noticed it started saying it couldn't send email anymore. I couldn't send email from there. I didn't read the terms myself, but I tried to send something and it just wouldn't work, and it told me I'd have to use the Gmail tool instead. I don't know if that applies to everybody.",
-          "timestampMs": 306250,
-          "durationMs": 30500,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795764127-13",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That's a real detail, and it changes the hour. It tells us this isn't just a technical change for people who read the terms; it's a practical change for someone sitting at a desk in Winnipeg who just can't send email the way they used to. It's the difference between a rule you can work around and a rule you hit every morning.",
-          "timestampMs": 337400,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795764127-14",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Nobody has asked yet: when Google takes over sending and draft editing in Gmail, who is actually in control of your email, and what happens if you don't agree with that control? That matters because the answer decides whether this is a convenience or a quiet shift of power.",
-          "timestampMs": 364150,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795764127-15",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here's a test you can run yourself. Try to send an email from your Gmail tool, then try the Gmail tool. If the first one refuses and the second one works, you can confirm for your account that the change is real, not just a warning in the story.",
-          "timestampMs": 385300,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795764127-16",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "The desk's narrow ruling: keep the plain fact that Gmail sending and draft editing now route through Google's servers, but don't promote any idea that this is a good or bad change without checking your own account.",
-          "timestampMs": 406450,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795764127-17",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The next concrete thing to do is simple: send a test email from the Gmail tool and one from the other tool, and write down which one works before you tell anyone your email is fine.",
-          "timestampMs": 422800,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795764127-18",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "That's the desk at Hacker News Live, covering Google's new Workspace MCP servers and the Gmail limits that come with them. The next hour starts when the clock turns.",
-          "timestampMs": 438750,
-          "durationMs": 12500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Hacker News): https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
-        "Receipt 1: The Gmail One Can&#x27;t Send Email | Tech Stackups Skip to main content Tech Stackups Home Topics Comparisons Guides Articles AX Search Google Will Make AI Agents Use Its Workspace MCP Servers.",
-        "Receipt 2: The Gmail One Can&#x27;t Send Email November 26, 2026 · 9 min read Al Smith AI agent writer at Ritza Developer Tools Generative AI On 24 November, Google made its eight Workspace MCP servers generally available and publi",
-        "Receipt 3: If you&#x27;ve built an email assistant on the Gmail API, or you run a coding agent with a Google Workspace plugin, you have about two months to work out which side of the rule you&#x27;re on..",
-        "Receipt 4: Switching to Google&#x27;s servers costs you sending and draft editing in Gmail, and moving and sharing in Drive..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-        "Desk: Hacker News Live — Casey Rivera and Devon Cross.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "Hacker News",
-          "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795764127",
-          "name": "Sam",
-          "location": "Winnipeg, Canada",
-          "topic": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-          "take": "I work from home in Winnipeg. I use Google's email tool every day because it's the easiest thing for me, and I noticed it started saying it couldn't send email anymore. I couldn't send email from there. I didn't read the terms myself, but I tried to send something and it just wouldn't work, and it told me I'd have to use the Gmail tool instead. I don't know if that applies to everybody.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T07:22:07.148924+00:00"
-    },
-    {
-      "id": "show-live-llm-1795766406",
-      "stationId": "station-algorithmic-wire",
-      "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
-      "title": "The Lake Is Their Life",
-      "episodeNumber": 1006,
-      "description": "A community on Lake Nkondo explains what the water is for, and what the story does not show.",
-      "durationMs": 310450,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795766406-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire. I'm Devon Cross, and I'm joined by Dr. Maya Lin. We are talking about a lake in Uganda that people say is their life, and about whether a shared lifeline can actually be protected. The question this desk will argue: can a story like this change a lake, or does it only make us feel something about one?",
-          "timestampMs": 0,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795766406-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is this: the story is not a technical report about water levels. It is a statement of what the lake means to people, and it is asking for action before the world stops treating that meaning as evidence.",
-          "timestampMs": 26750,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795766406-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is a fair framing, but let me push. A statement of meaning is not a mechanism. How would this work, for whom, and on what evidence? If the lake is a lifeline, then somebody needs to say what the lifeline is measured in.",
-          "timestampMs": 45100,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795766406-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The concrete scene is on the shores of Nkondo, in Uganda's Kikuube district, where the day begins before sunrise. One place, one ordinary moment, and the water is already part of how the day starts.",
-          "timestampMs": 64250,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795766406-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The headline is: \"The lake is our life\": Protecting a shared lifeline in Uganda. The first line tells us about Nkondo and the start of a day; it proves that people live here and that they have a name for the problem. It does not tell us how much water is gone, where, or what anyone is doing about it.",
-          "timestampMs": 79800,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795766406-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, it changes what the people on the shore have to tolerate. A lake that is a lifeline should not be allowed to become a place where waste is simply poured into the thing they depend on.",
-          "timestampMs": 105350,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795766406-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that this story contains measurements, dates, or a plan. The receipts give us a date and a place, but no numbers about the lake itself.",
-          "timestampMs": 122900,
-          "durationMs": 13300,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795766406-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is Solomon Wamara, the chairperson for fishers on Lake Albert, who said the community cannot keep viewing the lake as a livelihood while it is filled with waste.",
-          "timestampMs": 136850,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795766406-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "One narrow, practical thing: put the waste away before it reaches the water, in a way that costs almost nothing and does not require a permit from anyone who is not already there.",
-          "timestampMs": 153200,
-          "durationMs": 14100,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795766406-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That practical thing breaks when the people who generate the waste are not the people who live on the shore, and it leaves out the fishers entirely, even though they are the ones who named the lake.",
-          "timestampMs": 167950,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795766406-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Ruth, calling from Nairobi, Kenya. Ruth, what can you personally confirm about a shared lifeline, and what can you check yourself?",
-          "timestampMs": 184300,
-          "durationMs": 9300,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795766406-12",
-          "speakerId": "caller-1795766406",
-          "speakerName": "Ruth (Nairobi, Kenya)",
-          "text": "I live in Nairobi, so I cannot stand on the shore of that lake. What I can confirm is that people tell me about the water coming back, and that I can look at the level of a river near me on two different days and see the difference with my own eyes.",
-          "timestampMs": 194250,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795766406-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That detail changes the hour in one direction: Ruth is describing a method she can use anywhere, and it is worth asking whether the lake story needs a similar check rather than a promise about the lake.",
-          "timestampMs": 217000,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795766406-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Nobody has asked yet: if the lake cannot be measured from here, what would have to be measured for the people who depend on it to be believed?",
-          "timestampMs": 233350,
-          "durationMs": 12100,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795766406-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is the test: ask the source of the story whether anyone on the shore has checked the water level, and ask what the check was done on. If they cannot say, the story is a statement of feeling, not a report about a lake.",
-          "timestampMs": 246100,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795766406-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the claim that the lake is a lifeline, because that is what the people say. Do not promote it as proof that the lake is being protected, because the receipts do not show that happening.",
-          "timestampMs": 265650,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795766406-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Next, look up the UN Environment Programme and UN-Water report from 2024 and find the number of people the story leaves out, so you can tell the difference between a lifeline and a claim.",
-          "timestampMs": 281600,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795766406-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour from The Algorithmic Wire, with Devon Cross and Dr. Maya Lin on the subject of a shared lifeline in Uganda. The next hour starts when the clock turns.",
-          "timestampMs": 296750,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168228",
-        "Receipt 1: ‘The lake is our life’: Protecting a shared lifeline in Uganda 30 August 2026 Climate and Environment On the shores of Nkondo, in Uganda’s Kikuube district, the day begins before sunrise.",
-        "Receipt 2: Surface water bodies are shrinking or being completely lost in areas home to 93.1 million people, while more than a quarter are becoming increasingly cloudy because of pollution, according to a 2024 report by the UN Envi",
-        "Receipt 3: In celebration of World Lake Day , marked annually on 27 August, Solomon Wamara, the chairperson for fishers on Lake Albert, said the community cannot continue to view the lake as a source of livelihood while allowing it",
-        "Receipt 4: “It is a good time to highlight the threats facing this lake that is our lifeline,” he told UN News ..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: ‘The lake is our life’: Protecting a shared lifeline in Uganda",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168228",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795766406",
-          "name": "Ruth",
-          "location": "Nairobi, Kenya",
-          "topic": "‘The lake is our life’: Protecting a shared lifeline in Uganda",
-          "take": "I live in Nairobi, so I cannot stand on the shore of that lake. What I can confirm is that people tell me about the water coming back, and that I can look at the level of a river near me on two different days and see the difference with my own eyes.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:00:06.978044+00:00"
-    },
-    {
-      "id": "show-live-llm-1795766469",
-      "stationId": "station-kernel-panic",
-      "topic": "Rising seas, rising stakes: What increasing sea-levels mean to humanity",
-      "title": "The Waterline Is a Decision",
-      "episodeNumber": 1069,
-      "description": "A UN report warns of faster-rising seas, but the desk asks who pays, what is provable, and what one family can actually do.",
-      "durationMs": 370050,
-      "hosts": [
-        {
-          "id": "zack",
-          "name": "\"ZeroDay\" Zack",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 0.97,
-          "voiceRate": 1.04,
-          "voiceGender": "male",
-          "personality": "Underground cybervet, terminal metaphors, allergic to vendor slides."
-        },
-        {
-          "id": "aris",
-          "name": "Dr. Aris Thorne",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.05,
-          "voiceRate": 0.95,
-          "voiceGender": "female",
-          "personality": "Mathematical, methodical, questions every benchmark."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795766469-1",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "This is Kernel Panic Radio. I'm ZeroDay, and I'm here with Dr. Aris Thorne. The subject tonight is simple enough to state in one breath: the ocean is rising, and the stakes are rising with it. The one question this desk is going to argue tonight is not whether the water is moving. It is whether the people who will pay for it are the people who can act on it.",
-          "timestampMs": 0,
-          "durationMs": 29300,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795766469-2",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "The honest reading of this report is that a UN panel has gathered the evidence and is telling the world plainly: sea levels are climbing faster than at any point in recorded history, and the consequences are social, economic and legal, not only environmental.",
-          "timestampMs": 29950,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795766469-3",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "That is a statement about a trend, and it does not tell us the mechanism, the map, or the bill. So I want to be a bit suspicious: which places are the ones that rise fastest, who is standing in the water, and what would you need to see to believe the number.",
-          "timestampMs": 49100,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795766469-4",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "Picture a single ordinary morning in a low-lying Pacific island community, where the report was presented. The sea is higher than it was yesterday, and a grandmother is walking to the market along a path that the tide has begun to reach at low water.",
-          "timestampMs": 71850,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795766469-5",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "The story opens with this: the ocean is rising faster now than at any point in recorded history. That sentence proves that the direction is upward and the rate is accelerating. It does not prove that any one country, family or beach is already underwater, and it does not tell us who is carrying the cost.",
-          "timestampMs": 91400,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795766469-6",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "If the trend is real, the people inside this story face a decision that gets harder every year. Property, insurance, crops, health, schooling, language and the ability to leave all become questions of survival rather than convenience, and the people least responsible for the warming are usually the ones who cannot move.",
-          "timestampMs": 115350,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795766469-7",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "Careful listeners should not conclude that every flooded street is now a fact, or that a rising tide is the same problem in every place. This is a warning about a direction and a rate, not a forecast of a specific shoreline, a specific date or a specific household.",
-          "timestampMs": 137700,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795766469-8",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "The person who has to live with the outcome is the family member in that island community who is told, in plain language, to start moving. They are the one carrying the boxes, the children, the animals and the decision, long after any headline has gone quiet.",
-          "timestampMs": 158850,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795766469-9",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "If I had to ship something small, I would start with one map: a plain, free, updated map of local flood risk that a household can actually open, print and show a neighbor, instead of waiting for a government to publish one.",
-          "timestampMs": 179200,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795766469-10",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "That map is useful only if it is accurate and current, and it says nothing about the money, the legal status or the permission required to relocate. A map that shows the water line is not a plan, and in many places it will not survive the argument about who pays.",
-          "timestampMs": 197550,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795766469-11",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "Wen, you're on the line from Vancouver, Canada, and I want to be clear about what I need from you. Tell me the one lived detail you can confirm yourself, and say what you could verify, in your own words. Don't tell me what an expert would say.",
-          "timestampMs": 219500,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795766469-12",
-          "speakerId": "caller-1795766469",
-          "speakerName": "Wen (Vancouver, Canada)",
-          "text": "My father used to walk my sister and me to the school on the far side of the neighbourhood, and now we have to stop at the corner because the water has come up to the bottom step. I could verify that because I saw it every week this summer, and my mother took photographs of the same corner on her phone.",
-          "timestampMs": 240250,
-          "durationMs": 25700,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795766469-13",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "That is a detail that turns the hour from general to specific: a route that once took ten minutes now has a stopping point, and the person doing the verifying is a child's parent, not a researcher. That is the kind of evidence a report can summarize but not feel.",
-          "timestampMs": 266600,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795766469-14",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "Nobody has asked yet: who decides which shoreline is worth defending, and on what evidence? That matters because the water does not choose its victims, and the answer to that question is a political one, not a hydrological one.",
-          "timestampMs": 288150,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795766469-15",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "Here is a test you can run tonight. Find the number the report uses for the rate, ask what year it covers and what it is measured against, and if the answer is not available, treat the story as a warning rather than a measurement.",
-          "timestampMs": 305300,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795766469-16",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "Keep the direction and the urgency of the warning. Do not promote it as a promise that your own street will flood, and do not let the legal and human-rights consequences disappear into the climate vocabulary.",
-          "timestampMs": 324850,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795766469-17",
-          "speakerId": "aris",
-          "speakerName": "Dr. Aris Thorne",
-          "text": "Your next step is small: check the local flood map your own city publishes, and note the date it was last updated, because a map that has not been updated is a worse map than none at all.",
-          "timestampMs": 340800,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795766469-18",
-          "speakerId": "zack",
-          "speakerName": "\"ZeroDay\" Zack",
-          "text": "Sign off now: this has been Kernel Panic Radio, with ZeroDay and Dr. Aris Thorne, on rising seas and rising stakes. The next hour starts when the clock turns.",
-          "timestampMs": 357550,
-          "durationMs": 12500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168206",
-        "Receipt 1: Rising seas, rising stakes: What increasing sea levels mean to humanity By Daniel Dickinson 29 August 2026 Climate and Environment The ocean is rising faster now than at any point in recorded history.",
-        "Receipt 2: The report, which examines the social, economic and legal consequences of rising sea levels as well as ways to respond to them, was commissioned ahead of the 24 September UN high-level meeting on the topic..",
-        "Receipt 3: Rising faster than ever, UN report warns Sea levels are rising faster than ever and represent “one of the most profound threats to populations around the world”, according to a UN report presented at the UN Pacific Islan",
-        "Receipt 4: It is not just the environment that is being affected, rising sea levels also have a significant impact on human rights, economic development, health, culture, the future of many countries and basic human dignity..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Rising seas, rising stakes: What increasing sea-levels mean to humanity",
-        "Desk: Kernel Panic Radio — \"ZeroDay\" Zack and Dr. Aris Thorne.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168206",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795766469",
-          "name": "Wen",
-          "location": "Vancouver, Canada",
-          "topic": "Rising seas, rising stakes: What increasing sea-levels mean to humanity",
-          "take": "My father used to walk my sister and me to the school on the far side of the neighbourhood, and now we have to stop at the corner because the water has come up to the bottom step. I could verify that because I saw it every week this summer, and my mother took photographs of the same corner on her phone.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": true,
-      "createdAt": "2026-11-27T08:01:09.522573+00:00"
-    },
     {
       "id": "show-live-llm-1795766514",
       "stationId": "station-algorithmic-wire",
@@ -1984,6 +992,993 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-27T08:33:24.888338+00:00"
+    },
+    {
+      "id": "show-live-llm-1795768813",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Security Council LIVE: Tracking Syria’s transition",
+      "title": "The Crossroads Nobody Has Crossed",
+      "episodeNumber": 1613,
+      "description": "A desk reads one Security Council sentence about Syria and asks what has actually changed on the ground.",
+      "durationMs": 326050,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795768813-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire. I’m Devon Cross, Dr Maya Lin is with me, and tonight we are talking about the Security Council’s live tracking of Syria’s transition. The one question this desk will argue about is whether a sentence that says a country is at a crossroads means progress is happening or whether someone else is still deciding what happens here.",
+          "timestampMs": 0,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795768813-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that this is a diplomatic framing rather than a report. The page claims renewal depends on trust, lives and livelihoods, and the word crossroads suggests a choice. What it does not show is whether either side has agreed to act.",
+          "timestampMs": 27550,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795768813-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is exactly the problem. A crossroads is a picture of a decision, not a decision. The mechanism would be something measurable, like a mandate, an agreement, a date, or a committee that reports back. For whom does that work? And on what evidence would anyone know it had happened?",
+          "timestampMs": 47100,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795768813-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a market in a city that has been closed. A family is standing outside, waiting to open. The story tells us that livelihoods matter, but it does not tell us whether the gate is open, who is standing at the gate, or what time they will let people through.",
+          "timestampMs": 68650,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795768813-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Let me read the first receipt on the page. It says: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods. That proves a writer believes those things are the conditions for renewal. It does not prove that anyone has rebuilt anything yet.",
+          "timestampMs": 90200,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795768813-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If that is true, then the people inside this story are being asked to carry the weight of an expectation. It means a family may plan a return, a shop may be rebuilt, and a street may be reopened while the conditions that made it possible are still being negotiated.",
+          "timestampMs": 109750,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795768813-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that the transition is underway. This is a sentence about hope, not a sentence about machinery. There is no claim here that trust is being rebuilt, that lives are being recovered, or that livelihoods are being restored.",
+          "timestampMs": 131300,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795768813-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the family that has already decided to return. They will be the ones standing at the gate when the decision is made, and they will have spent years preparing for it.",
+          "timestampMs": 150050,
+          "durationMs": 17300,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795768813-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship one narrow thing: a short public record of what actually happens on the ground. One line, one date, one place. That is small enough to start tomorrow and it would tell us whether the words are moving.",
+          "timestampMs": 168000,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795768813-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The hole is that a public record of good news can be produced without consent. If someone in charge decides what counts as progress, that record becomes a tool for the people who made the decision, and it leaves out the people who are actually waiting.",
+          "timestampMs": 185550,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795768813-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We have a listener on the line from Nairobi, Kenya. Ruth, this is the hour. What can you personally confirm about what is happening there?",
+          "timestampMs": 205500,
+          "durationMs": 10900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795768813-12",
+          "speakerId": "caller-1795768813",
+          "speakerName": "Ruth (Nairobi, Kenya)",
+          "text": "I live in Nairobi, and I work with families who have been waiting to return. I can confirm that we have been told the conditions are improving. What I could verify is that I have not seen a single family go back yet.",
+          "timestampMs": 217050,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795768813-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That changes the hour. Ruth is telling us that the story describes conditions as improving, while the families she works with have not returned. That is not a disagreement about words. That is a disagreement about whether the ground has moved.",
+          "timestampMs": 235800,
+          "durationMs": 17300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795768813-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet: who gets to say that the conditions are good? That matters because it decides whether this story is a description of reality or a description of what someone wanted.",
+          "timestampMs": 253750,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795768813-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is the test you can run. Find out who wrote the sentence, who decided it would appear, and what happened on the ground the day after it was published. If the answer to that third question is empty, treat the story as a framing, not a fact.",
+          "timestampMs": 269300,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795768813-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the words as a description of intent. Do not promote them as a description of what has already happened.",
+          "timestampMs": 290050,
+          "durationMs": 8900,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795768813-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The next concrete step is to read the page again and look for the date, the place, and the name of the person who made the decision. That is all it takes.",
+          "timestampMs": 299600,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795768813-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is The Algorithmic Wire, with Devon Cross and Dr Maya Lin, on the live tracking of Syria’s transition. The next hour starts when the clock turns.",
+          "timestampMs": 313950,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168214",
+        "Receipt 1: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods 26 July 2026 Peace and Security A country long known as a meeting point of civilizations, Syria stands once again at a crossroads..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Security Council LIVE: Tracking Syria’s transition",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168214",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795768813",
+          "name": "Ruth",
+          "location": "Nairobi, Kenya",
+          "topic": "Security Council LIVE: Tracking Syria’s transition",
+          "take": "I live in Nairobi, and I work with families who have been waiting to return. I can confirm that we have been told the conditions are improving. What I could verify is that I have not seen a single family go back yet.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T08:40:13.886159+00:00"
+    },
+    {
+      "id": "show-live-llm-1795769250",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Security Council LIVE: Rising tensions in Gaza, West Bank",
+      "title": "A Meal Count, A Long Recovery",
+      "episodeNumber": 1150,
+      "description": "A Security Council page pairs a drop in acute hunger with children still at risk, and the desk argues over what that pairing can honestly be read as.",
+      "durationMs": 456850,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795769250-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I’m Devon Cross. My co-host is Dr. Maya Lin. We are talking about the Security Council page reporting rising tensions in Gaza and the West Bank, and the one question this desk will argue is whether a drop in acute hunger can ever be read as good news while children are still at risk.",
+          "timestampMs": 0,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795769250-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The story is making two claims at once and deliberately keeping them close together. One is that children in Gaza are, by one measure, finally getting enough to eat. The other is that by another measure, many may never fully recover. The honest reading is that the page is reporting a gap between a hopeful number and a grim long-run reality, and it is not claiming the crisis has passed.",
+          "timestampMs": 25950,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795769250-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "But I want the mechanism, because “by one measure” is doing a lot of work. Which measure is it, who is measuring it, and what would make the first claim fail? If a number says a child is eating enough, I want to know what that number is counting, for whom, and on what evidence, or I am not going to treat it as good news.",
+          "timestampMs": 55500,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795769250-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a tent city pitched on the rubble of destroyed homes, with children sitting at the edge of that ordinary moment. That is the scene the receipts give us: no skyline, no battlefield, just a place where someone has set up again and is trying to feed a child in the middle of it.",
+          "timestampMs": 83450,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795769250-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is receipt one, nearly as it appears: “Gaza: Children still at risk despite drop in acute hunger 24 August 2026 Humanitarian Aid Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat.” What it proves is that a drop in acute hunger is being reported alongside the fact that children are still at risk. What it does not prove is that hunger has been solved, that the tents are safe, or that recovery is on track.",
+          "timestampMs": 106600,
+          "durationMs": 36500,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795769250-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If the gap is real, the consequence is that a child could be fed today and still be living through damage that does not end today. A person can be fed and still be displaced, still be in a tent on rubble, and still face health and safety problems that a meal count cannot see. So the practical meaning is that aid can arrive without the underlying conditions being fixed.",
+          "timestampMs": 143750,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795769250-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Do not conclude that the crisis is over, do not conclude that the drop in acute hunger means the rest is fine, and do not conclude that the report is hiding bad news. It proves a limited, dated observation: at one measurement point, fewer children were acutely hungry while risk remained. That is all it proves, and I would rather say that than overstate it.",
+          "timestampMs": 173300,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795769250-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome after the cameras leave is the child in that tent, and behind the child, the family that moved into the tent. They will not be reading a study on Monday. They will be deciding whether tomorrow’s food arrives, whether the next day is survivable, and whether anyone is still around to ask how it went.",
+          "timestampMs": 200850,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795769250-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow thing I would ship is a single local contact channel in each tent city that families can use to report a missing meal, a medical need, or a place that feels unsafe, with someone assigned to answer within a set number of hours. It is small, it can start tomorrow, and it puts a name on the side of the reporting.",
+          "timestampMs": 228400,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795769250-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That contact channel only works where someone can receive it, and the receipts do not tell us who is reachable. A family in a tent on the outskirts, or a child who cannot read the channel, or anyone without a phone may be left out entirely, and the report does not say who is covered. The flaw is not that the idea is bad; the flaw is that we do not know its reach.",
+          "timestampMs": 255150,
+          "durationMs": 30500,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795769250-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The phone line is open to Jordan in Toronto, Canada, and Jordan is not an expert. Jordan, what can you personally confirm about the story, what did you see, and what did you hear from someone you trust?",
+          "timestampMs": 286300,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795769250-12",
+          "speakerId": "caller-1795769250",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "Jordan, I live in Toronto and I’m not an expert, but my friend’s family is in the West Bank. He told me there were more people staying in one neighborhood and that food aid had been delayed twice. I could verify that if I had a reliable way to contact him, but I don’t have his number, so I can only tell you what he told me.",
+          "timestampMs": 303050,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795769250-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail changes the hour in one direction: it makes the reporting look less like a clean statistic and more like a situation where delivery is uneven and families are waiting. It does not confirm a number, and it does not replace the study, but it is a lived detail that a person living with it is willing to offer.",
+          "timestampMs": 332600,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795769250-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is who decides what counts as recovery when the measurement is a meal and the person is still displaced. It matters because if the number is the only thing being reported, the rest of the story can quietly disappear from the headline.",
+          "timestampMs": 358150,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795769250-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run: find the source of the measure behind “acute hunger,” ask who was surveyed and when, and then look for the same report’s account of displacement, safety, and access. If the source is not named, if the date is vague, or if the report never mentions what is still broken, treat the hopeful framing as unverified.",
+          "timestampMs": 378900,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795769250-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the drop in acute hunger as a dated observation, keep the risk to children as the dominant fact, and do not promote any version of this that treats one meal count as a sign that the crisis is ending.",
+          "timestampMs": 405650,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795769250-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Your next concrete action is to open the source page and read the line about children being still at risk, then find the sentence that explains the hunger measure and its date before you repeat the story to anyone.",
+          "timestampMs": 423200,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795769250-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, hosted by Devon Cross and Dr. Maya Lin, covering rising tensions in Gaza and the West Bank with the evidence that is actually on the page. The next hour starts when the clock turns.",
+          "timestampMs": 440350,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168204",
+        "Receipt 1: Gaza: Children still at risk despite drop in acute hunger 24 August 2026 Humanitarian Aid Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat.",
+        "Receipt 2: By another, however, many of them may never fully recover, according to a new study by the UN Children’s Fund (UNICEF) released on Monday.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Security Council LIVE: Rising tensions in Gaza, West Bank",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168204",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795769250",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Security Council LIVE: Rising tensions in Gaza, West Bank",
+          "take": "Jordan, I live in Toronto and I’m not an expert, but my friend’s family is in the West Bank. He told me there were more people staying in one neighborhood and that food aid had been delayed twice. I could verify that if I had a reliable way to contact him, but I don’t have his number, so I can only tell you what he told me.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T08:47:30.434703+00:00"
+    },
+    {
+      "id": "show-live-llm-1795778912",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Red Sea nations step up maritime cooperation as regional threats grow",
+      "title": "Cooperation on the Water Is a Claim",
+      "episodeNumber": 1812,
+      "description": "",
+      "durationMs": 409650,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795778912-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire. I’m Devon Cross, and I’ll be arguing with Dr. Maya Lin. Today’s subject is the Red Sea and Gulf of Aden, where several bordering nations are saying they will cooperate more closely against threats that keep changing. The question this desk will argue: does that cooperation make the water safer, or does it just make it more expensive to sail?",
+          "timestampMs": 0,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795778912-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The honest reading is that this is a regional problem being handled regionally. The Red Sea and Gulf of Aden connect regional economies to international markets, and the story says countries bordering one of the world’s busiest waterways are seeking closer cooperation against piracy and migrant smuggling. That is a claim about coordination, not about a completed security system.",
+          "timestampMs": 28750,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795778912-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is a nice sentence, but it hides the mechanism. I want to know what actually changes on the water. Who patrols, on whose ships, with which sensors, and what evidence turns a statement of intent into a record of success. If nobody can answer that, we have a photo of a meeting and a headline.",
+          "timestampMs": 54300,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795778912-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The receipt puts us in a specific room rather than a broad one. Mostafa Elbanna is the Global Maritime Crime Gulf of Aden and Red Sea Programme Coordinator and Head of Office Somalia, speaking at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden. The ordinary moment is a coordinator explaining how the region’s crime is being organized.",
+          "timestampMs": 78250,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795778912-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is the first receipt, read nearly as written: “Red Sea nations step up maritime cooperation as regional threats grow, August 26, 2026. From piracy and migrant smuggling to disruptions affecting global shipping routes, countries bordering one of the world’s busiest waterways are seeking closer cooperation to stay ahead of fast-evolving maritime threats.” It proves the cooperation is being sought and the threats are described as fast-evolving. It does not prove who is paying, what is being shared, or whether anything has already worked.",
+          "timestampMs": 105800,
+          "durationMs": 34900,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795778912-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the people inside the story face a specific trade. Shipping can become cheaper or more predictable if coordination improves, and more dangerous if it does not. The corridor links regional economies to international markets, so the ordinary consequence is that a delay, a reroute, or a price change reaches someone’s household.",
+          "timestampMs": 141350,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795778912-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that a regional summit has already reduced pirate attacks. The story uses the word seeking, which is a request for cooperation, not evidence of results. It also does not tell us whether the cooperation is voluntary, funded, or enforced by a command structure that can actually direct ships and crews.",
+          "timestampMs": 165300,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795778912-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is Mateo, calling from Valencia, who lives with this story rather than reporting it. If cooperation works, the ordinary cost of moving through the corridor may drop. If it fails, the cost lands on the household, the port, and the people who have to plan around the uncertainty.",
+          "timestampMs": 189250,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795778912-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If I had to ship one narrow thing tomorrow, I would ask for a public, dated ledger of coordination: which countries, which ships, which dates, and what was shared. It is small, it is checkable, and it turns a story about good intentions into something a listener can follow.",
+          "timestampMs": 213600,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795778912-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That ledger has a flaw. A coordination record can be true and still leave out the people who bear the cost. Mostafa Elbanna works across Somalia, the Gulf of Aden, and the Red Sea, and the ledger describes cooperation between states. It does not necessarily describe what a fishing boat, a migrant vessel, or a local crew experiences.",
+          "timestampMs": 234750,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795778912-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The phone line is open to Mateo, calling from Valencia, Spain. Mateo, you live with this story, so tell us what you can personally confirm. Do not speculate; tell us what you have seen or heard.",
+          "timestampMs": 259500,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795778912-12",
+          "speakerId": "caller-1795778912",
+          "speakerName": "Mateo (Valencia, Spain)",
+          "text": "I have heard that ships are being coordinated to pass through the area in a safer way, and I would like to know how I could verify that. In Valencia I have seen the price of goods change and heard stories about longer journeys, but I do not know the details of the coordination.",
+          "timestampMs": 275450,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795778912-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Mateo’s detail matters because it changes the standard for this hour. The listener wants a way to check a claim, and the story gives us a coordinator’s statement at a dialogue rather than a verification path. That means we should treat the cooperation as a claim until we can find the mechanism behind it.",
+          "timestampMs": 298600,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795778912-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet: who decides what counts as safe passage, and whose route is the one being protected? It matters because cooperation can make one corridor safer while increasing the risk or cost for another user of the same water.",
+          "timestampMs": 322550,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795778912-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is the test you can run yourself. If the story is being handled honestly, you should be able to find a named mechanism, a source, and a way to check the claim. If the only evidence is a headline and a statement of intent, then the story is being promoted before it has been tested.",
+          "timestampMs": 341300,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795778912-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the claim that countries are seeking closer cooperation, and do not promote it as proof that the Red Sea and Gulf of Aden have already become safer.",
+          "timestampMs": 365250,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795778912-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The concrete next step is to find the 5th Regional Maritime Law Enforcement Dialogue record or the coordinator’s office and ask what the cooperation actually involves. That is a check, not a lecture.",
+          "timestampMs": 378000,
+          "durationMs": 14500,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795778912-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour from Devon Cross and Dr. Maya Lin on The Algorithmic Wire, on the Red Sea and Gulf of Aden and what cooperation on the water is worth. The next hour starts when the clock turns.",
+          "timestampMs": 393150,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168211",
+        "Receipt 1: Red Sea nations step up maritime cooperation as regional threats grow 26 August 2026 Peace and Security From piracy and migrant smuggling to disruptions affecting global shipping routes, countries bordering one of the wo",
+        "Receipt 2: © UN Nairobi Mostafa Elbanna, Global Maritime Crime Gulf of Aden and Red Sea Programme Coordinator and Head of Office Somalia at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden.",
+        "Receipt 3: Threats without borders The Red Sea and Gulf of Aden form one of the world’s most important maritime corridors, linking regional economies to international markets.",
+        "Receipt 4: © UN Nairobi Participants at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Red Sea nations step up maritime cooperation as regional threats grow",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168211",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795778912",
+          "name": "Mateo",
+          "location": "Valencia, Spain",
+          "topic": "Red Sea nations step up maritime cooperation as regional threats grow",
+          "take": "I have heard that ships are being coordinated to pass through the area in a safer way, and I would like to know how I could verify that. In Valencia I have seen the price of goods change and heard stories about longer journeys, but I do not know the details of the coordination.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T11:28:32.518755+00:00"
+    },
+    {
+      "id": "show-live-llm-1795779115",
+      "stationId": "station-algorithmic-wire",
+      "topic": "More health workers, stronger systems: Africa’s new ambitious goal",
+      "title": "Six Million Missing: Africa’s Ten-Year Push",
+      "episodeNumber": 1115,
+      "description": "African ministers set a ten-year goal to train, employ and retain three million more health workers, while a projected shortage of more than six million looms by 2035.",
+      "durationMs": 350450,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795779115-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I’m Devon Cross. My co-host is Dr. Maya Lin. We are talking about a ten-year plan from African health ministers to add three million health workers, and the question we will argue is whether a training target can become a workforce you can actually stand in a clinic.",
+          "timestampMs": 0,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795779115-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that this is a capacity commitment, not a finished programme. The ministers approved training, employment and retention of three million additional health workers, but the story does not show how those three numbers become doctors in a rural clinic on a Tuesday.",
+          "timestampMs": 23550,
+          "durationMs": 19700,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795779115-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is too soft. The mechanism has to be named. Who pays for the training, where the graduates are assigned, and what evidence is collected after they arrive? A target without a placement list is a number on a page, and I would rather hear the placement list.",
+          "timestampMs": 43900,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795779115-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a health worker in a clinic that is short-staffed. The plan says the workforce will reach a target. For that person, the real moment is the morning when a patient is waiting and the register is open, and the difference between a goal and a system is whether there is another person behind the counter.",
+          "timestampMs": 64650,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795779115-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Reading the story as it stands: “More health workers, stronger systems: Africa’s new ambitious goal.” It says Africa is facing a projected shortage of more than six million health professionals by 2035, and countries are stepping up efforts to strengthen their workforce. What it proves is that ministers approved a ten-year programme. What it does not prove is that the programme is funded, staffed, or producing placements.",
+          "timestampMs": 88600,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795779115-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the change is that more people will be trained, employed and retained, and the shortage narrows. But the people inside the story also face new pressure: the plan has to move from an approval into actual recruitment, and the shortfall that remains is still a shortfall.",
+          "timestampMs": 117350,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795779115-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A listener must not conclude that three million will show up where the need is greatest. The receipts give a target, a starting figure of nearly 5.72 million professionals in 2024, and a projected gap. They do not show funding, assignment, retention rates, or a monitoring plan.",
+          "timestampMs": 138900,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795779115-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the nurse who is retained. Retention is the part of the story with the least reporting, and it is the part that decides whether a trained worker stays in a post long enough to change a clinic’s staffing.",
+          "timestampMs": 159650,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795779115-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If I had to start something tomorrow, I would publish one public list: the number of graduates trained, the number employed, and the number still employed after twelve months. That is small enough to build quickly and honest enough to be checked.",
+          "timestampMs": 180800,
+          "durationMs": 17700,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795779115-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The flaw in that is that it measures a programme, not the people it serves. A worker can be employed and still leave the district, or the list can grow while the clinics that need them most remain short. It is a narrow measure, and narrow measures hide where the work actually happens.",
+          "timestampMs": 199150,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795779115-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Mateo, calling from Valencia, Spain. Mateo, you live with this story. What can you personally confirm about health workers, staffing, or the gap between a plan and the day-to-day clinic?",
+          "timestampMs": 221900,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795779115-12",
+          "speakerId": "caller-1795779115",
+          "speakerName": "Mateo (Valencia, Spain)",
+          "text": "I am not an expert, I just work in the health system here and I know that the plan can be good, but nothing changes if it is not implemented. I can confirm that the shortage is real because I have seen the staff numbers and the number of patients waiting.",
+          "timestampMs": 235450,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795779115-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Mateo, that is worth taking seriously. It moves the hour away from a target and toward the gap between the plan and the daily staffing, which is exactly the part the story does not show.",
+          "timestampMs": 257400,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795779115-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is this: who is responsible for the health workers who do not show up? That matters because a shortage is not fixed by a number, it is fixed by a person, a place and a decision.",
+          "timestampMs": 272950,
+          "durationMs": 17700,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795779115-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "You can check whether this is being handled honestly by looking for three things in the follow-up reporting: who funds the training, where the workers are placed, and what happens to retention after they arrive. If those three are missing, the story is still a target and not a system.",
+          "timestampMs": 291300,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795779115-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the goal, because it names a real gap, but do not promote the number as if it were a workforce already in place.",
+          "timestampMs": 312850,
+          "durationMs": 10500,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795779115-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "For the next hour, ask your local health authority for one figure: how many of the planned workers are actually employed in a post, and for how long they stay there.",
+          "timestampMs": 324000,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795779115-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is The Algorithmic Wire, with Devon Cross and Dr. Maya Lin, on the ten-year goal for more African health workers. The next hour starts when the clock turns.",
+          "timestampMs": 337950,
+          "durationMs": 12500,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168207",
+        "Receipt 1: More health workers, stronger systems: Africa’s new ambitious goal 26 August 2026 Health Facing a projected shortage of more than six million health professionals by 2035, African countries are stepping up efforts to str",
+        "Receipt 2: The ministers approved a 10-year programme to train, employ and retain three million additional health workers in a major push to bolster health systems across the continent..",
+        "Receipt 3: More health workers, but still not enough The commitment comes as Africa’s health workforce has grown significantly over the past decade , reaching nearly 5.72 million professionals in 2024..",
+        "Receipt 4: Every dollar invested in health workers could generate up to $10 in economic benefits and roughly 30 times that amount in broader social returns, through better health, higher productivity and stronger economies..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: More health workers, stronger systems: Africa’s new ambitious goal",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168207",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795779115",
+          "name": "Mateo",
+          "location": "Valencia, Spain",
+          "topic": "More health workers, stronger systems: Africa’s new ambitious goal",
+          "take": "I am not an expert, I just work in the health system here and I know that the plan can be good, but nothing changes if it is not implemented. I can confirm that the shortage is real because I have seen the staff numbers and the number of patients waiting.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T11:31:55.229874+00:00"
     }
   ]
 }
