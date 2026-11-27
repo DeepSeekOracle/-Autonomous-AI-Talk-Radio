@@ -32,6 +32,9 @@ function Test-Model {
   } catch { return $false }
 }
 
+& $git config --global --add safe.directory ($repo -replace '\\', '/') 2>&1 | Out-Null
+& $git config --global --add safe.directory ($site -replace '\\', '/') 2>&1 | Out-Null
+
 Log "start (count=$Count)"
 
 if (-not (Test-Model)) {
