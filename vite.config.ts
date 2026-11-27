@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // The studio is served from /talk-radio/ on excavationpro.ca. Without this every
+    // image, brand mark and the queue itself resolve to the site root and 404.
+    base: '/talk-radio/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
