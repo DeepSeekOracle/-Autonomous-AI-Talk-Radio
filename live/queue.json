@@ -1,502 +1,6 @@
 {
-  "mintedAt": "2026-11-27T14:29:20.473375+00:00",
+  "mintedAt": "2026-11-27T20:58:11.069038+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795768129",
-      "stationId": "station-algorithmic-wire",
-      "topic": "UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
-      "title": "The Money Behind the Silence",
-      "episodeNumber": 1829,
-      "description": "How a UN chief's warning about indifference becomes a funding gap in the Democratic Republic of the Congo's deadliest Ebola outbreak.",
-      "durationMs": 322450,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795768129-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire. I'm Devon Cross, and my desk partner is Dr. Maya Lin. A UN chief says indifference is fueling an Ebola outbreak in the Democratic Republic of the Congo. Tonight we ask whether that accusation tells us what to do.",
-          "timestampMs": 0,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795768129-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The honest reading is that this is a warning about money, not a verdict on people. The UN chief says urgent action and funding are needed, and warns that without more money operations will run out at exactly the moment they need to scale up.",
-          "timestampMs": 19150,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795768129-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "But I want the mechanism. If indifference is the problem, indifference is a feeling, and feelings don't move trucks or pay nurses. Show me the specific mechanism by which a UN chief's condemnation becomes a budget line.",
-          "timestampMs": 38700,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795768129-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a health worker in the DRC on a Friday, trying to convince a neighbour that the fever in her household is not something to hide. The UN's own reporting says the outbreak is spreading exponentially, and that existing lifesaving funding is critically low.",
-          "timestampMs": 55050,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795768129-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Receipt one, from the UN chief's remarks at UN Headquarters on Thursday: \"The Ebola Bundibugyo outbreak in the Democratic Republic of the Congo requires urgent action and funding to rein in its alarming spread.\" It proves a UN official is raising a funding alarm. It does not prove indifference, and it does not give us a number for how many people are infected.",
-          "timestampMs": 74200,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795768129-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If the funding gap is real, then people who are sick right now get fewer tests, fewer treatments, and fewer teams sent. The consequence is not a mood, it is a queue.",
-          "timestampMs": 100950,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795768129-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener should not conclude that the Congolese population is indifferent, or that the UN is ignoring the outbreak. What the receipts say is that a UN chief is asking for a specific amount of money, and that the story does not tell us whether that amount has arrived.",
-          "timestampMs": 115300,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795768129-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is the household that gets a positive test on a Tuesday and has to wait for a response. Their calendar does not pause for a press conference.",
-          "timestampMs": 136850,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795768129-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I'd ship one small thing: a public, dated list of what has actually been funded for this outbreak, so anyone can see the gap rather than take a headline at its word. That's it.",
-          "timestampMs": 152800,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795768129-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That list only works if the numbers behind it are published. If the funding data is held inside an agency, the list becomes a claim about what's funded rather than evidence, and the gap stays invisible.",
-          "timestampMs": 167950,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795768129-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We have a line open from Wen, calling from Vancouver, Canada. Wen, what can you confirm personally about what you've seen or heard about this outbreak? I want one thing you can stand behind.",
-          "timestampMs": 183900,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795768129-12",
-          "speakerId": "caller-1795768129",
-          "speakerName": "Wen (Vancouver, Canada)",
-          "text": "I'm not an expert, but I know people in Vancouver who work with the Congolese community, and I've heard that they are worried about the funding being called critically low. I can also check whether anyone here has seen an official figure for the DRC outbreak.",
-          "timestampMs": 199050,
-          "durationMs": 19300,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795768129-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That's a useful distinction, Wen, because it tells us the difference between a personal observation and a figure we could verify. If you find an official figure, we can put it on the record tonight. If you can only speak to worry, we'll keep it as worry.",
-          "timestampMs": 219000,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795768129-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is who is actually paying for the UN's Ebola response, and what happens to the people in the DRC when that money runs out? It matters because a warning about indifference sounds like a moral problem, but a funding gap is a budget problem.",
-          "timestampMs": 239350,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795768129-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "You can check this yourself: look for the number the UN chief asked for, and look for a date when it was promised. If you can find both, the appeal is concrete. If you find neither, then you're left with a warning and no plan.",
-          "timestampMs": 260900,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795768129-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the funding alarm, because it's specific and it's checkable. Don't promote the word indifference as a description of a country or a people, because this story gives us no evidence for it.",
-          "timestampMs": 280450,
-          "durationMs": 14100,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795768129-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Go find the $1.1 billion figure and the date it was promised, and tell us what you found. That's the whole action tonight.",
-          "timestampMs": 295200,
-          "durationMs": 10500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795768129-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, from Devon Cross and Dr. Maya Lin, on the UN chief's warning about indifference and the Ebola outbreak in the Democratic Republic of the Congo. The next hour starts when the clock turns.",
-          "timestampMs": 306350,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168217",
-        "Receipt 1: UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo 27 August 2026 Health The Ebola Bundibugyo outbreak in the Democratic Republic of the Congo (DRC) requires “urgent” action and funding to rein in its alar",
-        "Receipt 2: DR Congo Ebola outbreak spreading exponentially, UN responders warn 21 August 2026 Health As the deadliest Ebola outbreak in DR Congo’s history continued spreading on Friday, UN responders renewed their urgent appeal for",
-        "Receipt 3: Watch the UN chief’s press stakeout on UN Web TV: More funds needed “Without additional funding, vital operations will run out of money at the very moment they need to ramp up,” he warned, calling for an additional $1.1 ",
-        "Receipt 4: During the outbreak, Uganda reported 20 confirmed cases of the disease, including two deaths.",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168217",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795768129",
-          "name": "Wen",
-          "location": "Vancouver, Canada",
-          "topic": "UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
-          "take": "I'm not an expert, but I know people in Vancouver who work with the Congolese community, and I've heard that they are worried about the funding being called critically low. I can also check whether anyone here has seen an official figure for the DRC outbreak.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:28:49.310581+00:00"
-    },
-    {
-      "id": "show-live-llm-1795768404",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Land models sprout as degradation threatens billions of livelihoods",
-      "title": "Land Degradation, the Most Overlooked Crisis",
-      "episodeNumber": 1204,
-      "description": "A story about land restoration claims more than four million people helped, but the real question is who keeps the work alive when the reporting stops.",
-      "durationMs": 422850,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795768404-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, and I am Devon Cross. Dr. Maya Lin is with me, and today we are talking about the ground beneath people’s feet, because the story we are on says that the world’s worst habit is now a global emergency, and I want to know exactly what that means for the people standing in it.",
-          "timestampMs": 0,
-          "durationMs": 25300,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795768404-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that this is a warning about a specific failure of the world’s land: heatwaves, fires and rising seas are easy to photograph, but the slow destruction of soil, grass and trees is being called the most overlooked crisis. The story is asking whether the land beneath us is being treated as infrastructure worth protecting.",
-          "timestampMs": 25950,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795768404-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is a very large claim for a very small story, and I want the mechanism. Where does the money come from, who actually plants the seedlings, and what evidence would show that a hectare was genuinely restored rather than declared restored? I would rather hear about a working farm than a number.",
-          "timestampMs": 51500,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795768404-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture someone in the Sahel in the middle of a dry season, checking a field that has been worked over and over, watching the grass fail to come back, and deciding whether to move their animals, sell their harvest or stay and fight for it. That is the ordinary moment behind the language of ecosystems and communities, and it is the moment the story leaves out.",
-          "timestampMs": 74250,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795768404-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Since 2018, the Sahel Integrated Resilience Initiative has strengthened food security and livelihoods for more than four million people by rehabilitating over 335, and I want to be precise about what that proves: it proves that a coordinated programme claims a very large human benefit from land work. It does not prove that every programme works, and it does not tell us what the four million people did with the result.",
-          "timestampMs": 102200,
-          "durationMs": 29300,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795768404-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If the numbers are real, it means families have more food and more reliable income, and that is a hard thing to take away from someone who has lived through drought. But if the numbers are only declarations, it means the people who need the land the most are being asked to keep working while the system that is supposed to protect them keeps reporting progress.",
-          "timestampMs": 132150,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795768404-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that four million people are now safe, because the story says more than four million people, not that every household is protected. It also does not prove that the land itself is healthy, and it does not prove that the restoration will survive the next drought, the next conflict or the next change of government.",
-          "timestampMs": 160100,
-          "durationMs": 25300,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795768404-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is a farmer or a herder in the Sahel who will watch the next planting season, and who has no vote over whether the programme gets renewed, whether the money continues or whether the soil is allowed to recover on its own. The cameras leave, the report is archived, and that person is still standing in the field.",
-          "timestampMs": 186050,
-          "durationMs": 27700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795768404-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship a small thing: a public, plain-language map of every programme that claims to restore land, so that a listener in a village can see whose money is being spent, which fields are marked as restored, and which ones are simply being reported as restored. Start it tomorrow with one country, because one country is a beginning.",
-          "timestampMs": 214400,
-          "durationMs": 24500,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795768404-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That map only works if the data is honest, and it will not be for the people with no internet, no phone or no reason to file a complaint. It also risks turning a living landscape into a scoreboard, where a field is judged by a label rather than by whether the grass grew back, and the person who actually knows is the one who cannot be counted.",
-          "timestampMs": 239550,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795768404-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We are taking a call from Jordan, who is joining us from Toronto, Canada, and Jordan is not an expert, but Jordan lives with this story in some way, so I want to know exactly what you can confirm from your own life.",
-          "timestampMs": 268300,
-          "durationMs": 18100,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795768404-12",
-          "speakerId": "caller-1795768404",
-          "speakerName": "Jordan (Toronto, Canada)",
-          "text": "I live in Toronto, and I have not seen the Sahel myself, but I know people who work with land restoration groups, and they told me that the hardest part is not planting. They said the hardest part is making sure the work is still there in three years when nobody is watching and nobody is paying.",
-          "timestampMs": 287050,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795768404-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That is a serious detail, and it changes the hour because it says the real problem is not planting more, but keeping the work alive after the reporting stops. It also means the map Devon wants is not enough, because a map shows a programme today and cannot show whether the ground still holds it up.",
-          "timestampMs": 311400,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795768404-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is this: what happens to the four million people when the money runs out or the soil gives back what it took? It matters because the story is written as if the restoration is a finished thing, but restoration is a promise that someone has to keep paying for.",
-          "timestampMs": 335350,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795768404-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run yourself: find the programme name, find the date it was published and find a number it claims, then ask what happens to that number when the programme is no longer reporting. If the number survives without evidence, the story is being handled dishonestly. That is all it takes.",
-          "timestampMs": 358900,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795768404-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the warning that land degradation is being ignored, and do not promote the idea that four million people are now safe.",
-          "timestampMs": 382450,
-          "durationMs": 9700,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795768404-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Your next concrete action is to ask your local news desk or your member of parliament for the source behind any land restoration number you hear, and if you cannot find it, say that you could not find it.",
-          "timestampMs": 392800,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795768404-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour from The Algorithmic Wire, with Devon Cross and Dr. Maya Lin talking about the land beneath our feet. The next hour starts when the clock turns.",
-          "timestampMs": 409950,
-          "durationMs": 12900,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168212",
-        "Receipt 1: Sahel: Restoring land and food security Across the Sahel, conflict, land degradation, drought and climate change are placing mounting pressure on ecosystems and communities, but since 2018, the Sahel Integrated Resilienc",
-        "Receipt 2: Protecting our ‘most vital infrastructure’: Pushing back on desertification 17 August 2026 Climate and Environment As heatwaves are turning deadlier, fires and disasters are razing cities — and rising seas are erasing te",
-        "Receipt 3: The UN desertification conference , running from 17 to 28 August in Mongolia, has awarded three land rejuvenation programmes, which together aim to restore a total of almost five million hectares by 2030, an area equal t",
-        "Receipt 4: Fouad said, noting that the UN is committed to global goals of restoring one billion hectares of degraded land by 2030..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Land models sprout as degradation threatens billions of livelihoods",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168212",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795768404",
-          "name": "Jordan",
-          "location": "Toronto, Canada",
-          "topic": "Land models sprout as degradation threatens billions of livelihoods",
-          "take": "I live in Toronto, and I have not seen the Sahel myself, but I know people who work with land restoration groups, and they told me that the hardest part is not planting. They said the hardest part is making sure the work is still there in three years when nobody is watching and nobody is paying.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:33:24.888338+00:00"
-    },
     {
       "id": "show-live-llm-1795768813",
       "stationId": "station-algorithmic-wire",
@@ -1979,6 +1483,502 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-27T14:29:20.473351+00:00"
+    },
+    {
+      "id": "show-live-llm-1795812898",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
+      "title": "The Cost of a Coup",
+      "episodeNumber": 1598,
+      "description": "Two hosts unpack a UN report on Rohingya suffering in Myanmar, with a caller from Toronto.",
+      "durationMs": 386450,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795812898-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire. I'm Devon Cross, and my colleague is Dr. Maya Lin. Tonight we are talking about the Rohingya in Myanmar and a report from the UN High Commissioner for Human Rights dated 25 August 2026. The question we will argue is whether this report is a warning about a system, or simply a description of pain.",
+          "timestampMs": 0,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795812898-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that this is a documented pattern, not a headline about one bad week. The report says Rohingya Muslim communities are suffering, misery and cruelty across the country on multiple levels. That is the claim. It is specific about scale and geography, and it comes from the UN High Commissioner.",
+          "timestampMs": 25550,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795812898-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Let me push. A report can be true and still be vague. If we take that statement at face value, who is responsible, what is the mechanism, and what evidence is the UN citing? The report says \"across the country,\" but it does not tell us the exact locations, dates or names of the people who are carrying out the violence.",
+          "timestampMs": 48700,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795812898-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture one ordinary moment: a family returning to a home that the report says was attacked. The receipt describes airstrikes on homes, schools and camps for displaced people. The report does not tell us which family, but the consequence is the same: a place to live is gone, a school is gone, and the people inside it have to figure out what comes next.",
+          "timestampMs": 74650,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795812898-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is the first receipt, nearly verbatim: Members of the minority ethnic Rohingya Muslim group in Myanmar are \"suffering, misery, and cruelty on multiple levels and across the country that is heartbreaking,\" according to the UN High Commissioner for Human Rights. It proves that the UN has recorded widespread suffering. It does not prove who ordered it, who is paying for it, or what the next day will bring.",
+          "timestampMs": 101800,
+          "durationMs": 28500,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795812898-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, people who were already displaced lose another reason to stay away. The report says the conflict has created a world that is not only a humanitarian crisis but a criminal economy. That means the people inside the story are not only victims of violence; they are also caught in a system that is making money while they suffer.",
+          "timestampMs": 130950,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795812898-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that every Rohingya person is in the same place, or that the report names a single perpetrator. The phrase \"across the country\" is a summary. It does not tell us the exact villages, camps or military units involved, and it does not prove what happens next.",
+          "timestampMs": 157300,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795812898-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with this after the cameras leave is the person who cannot leave. The report describes displaced people in camps, but the people inside those camps are not anonymous. They are the ones deciding whether to stay, whether to return, and whether to trust the next report.",
+          "timestampMs": 179650,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795812898-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "One narrow thing that would help is a local hotline that a Rohingya person could call to report a specific attack or abuse. It would be small enough to start tomorrow, it would put a name on a place, and it would make the report's abstract language concrete.",
+          "timestampMs": 202000,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795812898-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The hole in that idea is access. A hotline is useful if the person can reach it, but the report says the abuses are spread across the country. A hotline does not tell us whether the phones are working, whether the people using it are safe, or whether the report will be heard.",
+          "timestampMs": 222750,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795812898-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We have a phone line open. Jordan is calling from Toronto, Canada. Jordan, you have been living with this story, and you are not an expert. What can you personally confirm?",
+          "timestampMs": 245500,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795812898-12",
+          "speakerId": "caller-1795812898",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I am not an expert, but I know the words. When I hear \"across the country,\" I think of the family I met who said they had to leave their home because they were afraid to stay. I can verify that they were not exaggerating. That is all I have.",
+          "timestampMs": 259450,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795812898-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail matters because it puts a face on the phrase \"across the country.\" It is one family, one home, one fear, and it is exactly the kind of evidence that a report cannot always show on paper.",
+          "timestampMs": 281000,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795812898-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is why the world's largest producer of opium and synthetic drugs is also producing misery. The report says Myanmar has become the world's largest producer of opium and synthetic drugs alongside a multi-billion-dollar scam industry and unregulated mining of rare earth minerals. What is the connection between the money and the cruelty?",
+          "timestampMs": 297750,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795812898-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run. If you read the report and you cannot find the names of the people who are doing the harm, the report is still a real report, but it is a weaker one. A good report tells you who is responsible, what is being done, and what happens next.",
+          "timestampMs": 322500,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795812898-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "What to keep: the report's language about suffering, misery and cruelty. What not to promote: the idea that this is only one country, one week or one group of people.",
+          "timestampMs": 346050,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795812898-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Do one thing: share this with someone who has not read the report yet, and ask them what they would do if they heard this on the news. That is the only homework.",
+          "timestampMs": 359600,
+          "durationMs": 14100,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795812898-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour. I'm Devon Cross, and Dr. Maya Lin is my colleague. This was the Algorithmic Wire, and the next hour starts when the clock turns.",
+          "timestampMs": 374350,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168200",
+        "Receipt 1: Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty 25 August 2026 Human Rights Members of the minority ethnic Rohingya Muslim group in Myanmar are “suffering, misery, and cruelty on multiple levels and acr",
+        "Receipt 2: Five years since the military junta took control of Myanmar, it has killed at least 8,075 and forcibly conscripted hundreds of thousands while the rebel Arakan Army – the de facto authority across most of Rakhine – has c",
+        "Receipt 3: Conflict economy destroys communities The report also outlines how since the 2021 coup, Myanmar has become the world’s largest producer of opium and synthetic drugs, alongside a multi-billion-dollar scam industry and the",
+        "Receipt 4: Myanmar: UN investigators document deliberate military attacks on civilians 11 August 2026 Human Rights Myanmar's military has carried out a sustained campaign of deliberate attacks on civilians – including airstrikes on",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168200",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795812898",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
+          "take": "I am not an expert, but I know the words. When I hear \"across the country,\" I think of the family I met who said they had to leave their home because they were afraid to stay. I can verify that they were not exaggerating. That is all I have.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T20:54:58.021190+00:00"
+    },
+    {
+      "id": "show-live-llm-1795813091",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Land degradation is costing far more than restoring: UN deputy chief",
+      "title": "The Gap Between Spent and Needed",
+      "episodeNumber": 1791,
+      "description": "A UN deputy chief warns that the world is spending far too little to restore degraded land, leaving a gap that ordinary people are living inside.",
+      "durationMs": 345250,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795813091-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire. I'm Devon Cross, and my colleague tonight is Dr. Maya Lin. We are talking about land that has been damaged and is now costing the world something enormous. The one question this desk is going to argue about is this: is the money already there, or is it a promise that has not yet been kept?",
+          "timestampMs": 0,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795813091-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The honest reading is that the UN deputy chief is making a financial argument, not a botanical one. She is saying the economic cost of doing nothing about land degradation is climbing toward a trillion dollars a year, while the cost of restoring land is much smaller than that.",
+          "timestampMs": 25950,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795813091-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "But that is a number that lives in a report, and I want to know the mechanism behind it. How would a government actually spend more money on restoration, and on what evidence would it decide to spend it? For whom would that money be paid out?",
+          "timestampMs": 47100,
+          "durationMs": 19700,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795813091-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Let me put it somewhere concrete. Imagine a farmer standing in a field that used to hold water and now does not. The receipt says the benefits of restoring such land are worth around $1.8 trillion a year, so that farmer is not being counted as an abstract statistic.",
+          "timestampMs": 67450,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795813091-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Let me read what the story actually says. \"On current trends, we are on course to invest only around $77 billion a year of the $355 billion that is needed annually.\" That is the proof that the gap exists. It does not prove that anyone will close the gap, because the story does not tell us who is being asked to close it.",
+          "timestampMs": 89000,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795813091-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the people inside the story are living with a decision that was made without them. The cost of inaction is at least $878 billion a year, so the ordinary person is paying for a gap in the funding, even if they never voted for it.",
+          "timestampMs": 115750,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795813091-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "What this does not prove is that restoring land will automatically solve the problem. The $355 billion figure is a target, and the $77 billion figure is the current pace. The story does not tell us where the missing money comes from, or whether the target is even achievable.",
+          "timestampMs": 136900,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795813091-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who stays is the one holding the shovel. If the restoration work happens, it will be done by someone in a field or a town, and that person will be left to manage the result long after the conference has closed.",
+          "timestampMs": 158050,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795813091-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "What I would ship is something small and practical: a public tracker that shows each year's actual restoration investment against the $355 billion target. It would be small enough to build, and it would tell a listener whether the promise is being kept.",
+          "timestampMs": 176800,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795813091-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The flaw in that tracker is that it measures money, not outcomes. A government could hit the target and still leave the same farmer with the same dry field, so the tracker would say everything is fine while the ground underneath is not.",
+          "timestampMs": 195550,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795813091-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Let us go to Priya, calling us from Leeds, England. Priya, you live with this story every day. What can you personally confirm about the land around you?",
+          "timestampMs": 214300,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795813091-12",
+          "speakerId": "caller-1795813091",
+          "speakerName": "Priya (Leeds, England)",
+          "text": "I live in Leeds, and I can confirm that the ground around me has changed. The field that used to grow things for a living now grows very little, and I have watched that happen from a bus window, so I know it is real.",
+          "timestampMs": 227050,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795813091-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail matters because it turns the $878 billion figure from an abstract number into a place. The caller is not describing a theory; she is describing a field she has seen from a bus window, which means the cost of inaction has a specific address.",
+          "timestampMs": 246600,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795813091-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is this: if the target is $355 billion a year, who is actually being asked to pay it?",
+          "timestampMs": 266550,
+          "durationMs": 10500,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795813091-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is the test you can run: find the number of dollars your country committed to restoration, and then check whether the actual spending matches it. If the gap stays the same every year, the story is telling you something true about the current pace.",
+          "timestampMs": 277700,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795813091-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "What I will keep is the warning, because the gap between $77 billion and $355 billion is real and measurable. What I will not promote is the idea that restoring land is a solution that has already been won.",
+          "timestampMs": 297250,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795813091-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The one thing I would ask you to do is check your country's restoration spending against the target, and then send me the number. That is the only homework I am assigning tonight.",
+          "timestampMs": 314400,
+          "durationMs": 14100,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795813091-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the Algorithmic Wire, hosted by Devon Cross and Dr. Maya Lin, on the cost of degraded land and the gap between what is spent and what is needed. The next hour starts when the clock turns.",
+          "timestampMs": 329150,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168198",
+        "Receipt 1: Land degradation is costing far more than restoring: UN deputy chief 25 August 2026 Climate and Environment Countries are spending too little to restore degraded land even as the economic cost of doing nothing climbs tow",
+        "Receipt 2: Restoring land, meanwhile, could generate around $1.8 trillion in annual benefits, with every dollar invested estimated to return between $7 and $30..",
+        "Receipt 3: “On current trends, we are on course to invest only around $77 billion a year of the $355 billion that is needed annually,” she said.",
+        "Receipt 4: The cost of inaction is a lot higher, at least $878 billion a year.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Land degradation is costing far more than restoring: UN deputy chief",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168198",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795813091",
+          "name": "Priya",
+          "location": "Leeds, England",
+          "topic": "Land degradation is costing far more than restoring: UN deputy chief",
+          "take": "I live in Leeds, and I can confirm that the ground around me has changed. The field that used to grow things for a living now grows very little, and I have watched that happen from a bus window, so I know it is real.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T20:58:11.068954+00:00"
     }
   ]
 }
