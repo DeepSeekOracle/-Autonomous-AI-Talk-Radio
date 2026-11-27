@@ -1,254 +1,6 @@
 {
-  "mintedAt": "2026-11-27T08:02:23.526018+00:00",
+  "mintedAt": "2026-11-27T08:33:24.888389+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795762474",
-      "stationId": "station-hn-live",
-      "topic": "AI made self-hosting fun again",
-      "title": "The Home Server Renaissance",
-      "episodeNumber": 1574,
-      "description": "A morning argument about what a return to self-hosting really shows, with Wen in Vancouver and no hype in sight.",
-      "durationMs": 357650,
-      "hosts": [
-        {
-          "id": "casey",
-          "name": "Casey Rivera",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.02,
-          "voiceRate": 1.03,
-          "voiceGender": "male",
-          "personality": "Fast-talking morning host, tracks developer chatter like a ticker."
-        },
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795762474-1",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Good morning, Hacker News Live. I'm Casey Rivera, and Devon Cross is with me. This hour is about a story where somebody says AI made self-hosting fun again. The question we're going to argue about is simple: does that mean the tools are better, or does that just mean the person finally stopped avoiding the work? We'll get a caller on Vancouver shortly.",
-          "timestampMs": 0,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795762474-2",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon here. The honest reading is that this is a personal note, not a product launch. The story claims the author is excited again about running their own software at home. That's it. That's the claim. It's a mood, and moods are easy to write and easy to read as proof.",
-          "timestampMs": 26750,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795762474-3",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Casey here. I don't buy a mood as the whole story. How would this actually work? What did AI change in the setup? Which services moved from a VPS to the home server, and what evidence are we talking about? If the answer is a blog post with a good sentence, that's a story about writing, not about infrastructure.",
-          "timestampMs": 48700,
-          "durationMs": 24500,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795762474-4",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Picture the author's own words: over the last few months, I found myself getting increasingly excited about self-hosting again. Then, as I started hosting more things again, I moved more of my services from my VPS to my home server. That's one desk, one person, one ordinary evening of checking that the server is up and the lights are green.",
-          "timestampMs": 73850,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795762474-5",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Wen, calling from Vancouver. We'll read the page for you: Jan-Lukas Else Interactions and Comments, Hacker News, AI made self-hosting fun again, janlukas.blog, KI gjorde selvhosting goy igjen, and the final line is, have you published a response to this? What it proves is that someone is writing about their own setup. It does not prove that AI improved anything.",
-          "timestampMs": 99400,
-          "durationMs": 25300,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795762474-6",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "If this is true, it means the author is spending more time on maintenance, monitoring, updates, and the small failures that nobody photographs. That's a real cost, not a lifestyle upgrade. If it's just a good headline, the real work never happens.",
-          "timestampMs": 125350,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795762474-7",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "The careful listener should not conclude that AI is now the reason people run servers at home. The receipts only show a mood shift and a shift of services. There's no benchmark, no code, no comparison. Any claim like that is bigger than the story.",
-          "timestampMs": 143700,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795762474-8",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Wen, you live with the outcome. If the home server is the right choice, you get the uptime, the ownership, and the boring patch Tuesday. If it's the wrong choice, you get the phone call at two in the morning when the service goes down, and nobody is answering the story.",
-          "timestampMs": 163250,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795762474-9",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "If I had to ship something tomorrow, I'd start with a small, boring thing: a one-line status check for one service on the home server. It doesn't require an AI tool, a dashboard, or a new hobby. It just tells you whether the thing is alive before you notice it isn't.",
-          "timestampMs": 185200,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795762474-10",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Self-hosting is fun again, but the fun usually arrives after someone has already paid the bill. The setup feels light on paper until the hardware sits in a closet at three in the morning. If you are the person whose job is to keep it alive, the article leaves you out.",
-          "timestampMs": 207150,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795762474-11",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "We have a listener with us on the line. Wen, Vancouver, Canada. Tell me what you could see yourself, not what you were told. What can you personally confirm?",
-          "timestampMs": 229100,
-          "durationMs": 12500,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795762474-12",
-          "speakerId": "caller-1795762474",
-          "speakerName": "Wen (Vancouver, Canada)",
-          "text": "I read the post and thought, that sounds like something people would do if they did not have to think about it too much. I have a small server at home and I noticed the light on it. I could confirm that it is still there. I did not have to set it up myself.",
-          "timestampMs": 242250,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795762474-13",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is a real confirmation, Wen, and it changes the hour. We have been talking as though this is a hobby that only costs someone time. Your light says the cost is continuing, and the light is the part nobody in the article mentions.",
-          "timestampMs": 265800,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795762474-14",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "Nobody has asked the obvious question: who is allowed to say this is fun again? If you are building for someone else, what do you owe them when the server has to stay on?",
-          "timestampMs": 284950,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795762474-15",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Run one check tonight: look at the thing you have been told is easy, and ask how long it has been running without you. If the answer is longer than a minute, the story is handling you better than the story is handling you.",
-          "timestampMs": 300100,
-          "durationMs": 18500,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795762474-16",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "We keep the excitement, but we do not keep the promise that it stays exciting. The rule is simple: treat the server as a bill, not a toy.",
-          "timestampMs": 319250,
-          "durationMs": 12100,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795762474-17",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Wen, you can do this tomorrow: open the panel that runs your home server, look at its status, and write down one thing you would need to do if it went dark.",
-          "timestampMs": 332000,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795762474-18",
-          "speakerId": "casey",
-          "speakerName": "Casey Rivera",
-          "text": "That is Hacker News Live with Casey Rivera and Devon Cross, talking about AI made self-hosting fun again. The next hour starts when the clock turns.",
-          "timestampMs": 346350,
-          "durationMs": 11300,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (Hacker News): https://janlukas.blog/posts/ai-self-hosting",
-        "Receipt 1: Jan-Lukas Else Interactions & Comments Hacker News AI made self-hosting fun again https://janlukas.blog/posts/ai-self-hosting https://ki48.no/ki-gjorde-selvhosting-goy-igjen-20261126/ KI gjorde selvhosting gøy igjen Have",
-        "Receipt 2: Over the last few months, however, I’ve found myself getting increasingly excited about self-hosting again.",
-        "Receipt 3: Back to more powerful hardware As I’ve started hosting more things again, I’ve also moved more of my services from my VPS to my home server.",
-        "Receipt 4: I never really stopped self-hosting, but I became less inclined to experiment with new things.",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: AI made self-hosting fun again",
-        "Desk: Hacker News Live — Casey Rivera and Devon Cross.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "Hacker News",
-          "url": "https://janlukas.blog/posts/ai-self-hosting",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795762474",
-          "name": "Wen",
-          "location": "Vancouver, Canada",
-          "topic": "AI made self-hosting fun again",
-          "take": "I read the post and thought, that sounds like something people would do if they did not have to think about it too much. I have a small server at home and I noticed the light on it. I could confirm that it is still there. I did not have to set it up myself.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T06:54:34.888967+00:00"
-    },
     {
       "id": "show-live-llm-1795763364",
       "stationId": "station-algorithmic-wire",
@@ -1736,6 +1488,502 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-27T08:02:23.525987+00:00"
+    },
+    {
+      "id": "show-live-llm-1795768129",
+      "stationId": "station-algorithmic-wire",
+      "topic": "UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
+      "title": "The Money Behind the Silence",
+      "episodeNumber": 1829,
+      "description": "How a UN chief's warning about indifference becomes a funding gap in the Democratic Republic of the Congo's deadliest Ebola outbreak.",
+      "durationMs": 322450,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795768129-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire. I'm Devon Cross, and my desk partner is Dr. Maya Lin. A UN chief says indifference is fueling an Ebola outbreak in the Democratic Republic of the Congo. Tonight we ask whether that accusation tells us what to do.",
+          "timestampMs": 0,
+          "durationMs": 18500,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795768129-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The honest reading is that this is a warning about money, not a verdict on people. The UN chief says urgent action and funding are needed, and warns that without more money operations will run out at exactly the moment they need to scale up.",
+          "timestampMs": 19150,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795768129-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "But I want the mechanism. If indifference is the problem, indifference is a feeling, and feelings don't move trucks or pay nurses. Show me the specific mechanism by which a UN chief's condemnation becomes a budget line.",
+          "timestampMs": 38700,
+          "durationMs": 15700,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795768129-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a health worker in the DRC on a Friday, trying to convince a neighbour that the fever in her household is not something to hide. The UN's own reporting says the outbreak is spreading exponentially, and that existing lifesaving funding is critically low.",
+          "timestampMs": 55050,
+          "durationMs": 18500,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795768129-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Receipt one, from the UN chief's remarks at UN Headquarters on Thursday: \"The Ebola Bundibugyo outbreak in the Democratic Republic of the Congo requires urgent action and funding to rein in its alarming spread.\" It proves a UN official is raising a funding alarm. It does not prove indifference, and it does not give us a number for how many people are infected.",
+          "timestampMs": 74200,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795768129-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If the funding gap is real, then people who are sick right now get fewer tests, fewer treatments, and fewer teams sent. The consequence is not a mood, it is a queue.",
+          "timestampMs": 100950,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795768129-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener should not conclude that the Congolese population is indifferent, or that the UN is ignoring the outbreak. What the receipts say is that a UN chief is asking for a specific amount of money, and that the story does not tell us whether that amount has arrived.",
+          "timestampMs": 115300,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795768129-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the household that gets a positive test on a Tuesday and has to wait for a response. Their calendar does not pause for a press conference.",
+          "timestampMs": 136850,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795768129-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I'd ship one small thing: a public, dated list of what has actually been funded for this outbreak, so anyone can see the gap rather than take a headline at its word. That's it.",
+          "timestampMs": 152800,
+          "durationMs": 14500,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795768129-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That list only works if the numbers behind it are published. If the funding data is held inside an agency, the list becomes a claim about what's funded rather than evidence, and the gap stays invisible.",
+          "timestampMs": 167950,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795768129-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We have a line open from Wen, calling from Vancouver, Canada. Wen, what can you confirm personally about what you've seen or heard about this outbreak? I want one thing you can stand behind.",
+          "timestampMs": 183900,
+          "durationMs": 14500,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795768129-12",
+          "speakerId": "caller-1795768129",
+          "speakerName": "Wen (Vancouver, Canada)",
+          "text": "I'm not an expert, but I know people in Vancouver who work with the Congolese community, and I've heard that they are worried about the funding being called critically low. I can also check whether anyone here has seen an official figure for the DRC outbreak.",
+          "timestampMs": 199050,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795768129-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That's a useful distinction, Wen, because it tells us the difference between a personal observation and a figure we could verify. If you find an official figure, we can put it on the record tonight. If you can only speak to worry, we'll keep it as worry.",
+          "timestampMs": 219000,
+          "durationMs": 19700,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795768129-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is who is actually paying for the UN's Ebola response, and what happens to the people in the DRC when that money runs out? It matters because a warning about indifference sounds like a moral problem, but a funding gap is a budget problem.",
+          "timestampMs": 239350,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795768129-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "You can check this yourself: look for the number the UN chief asked for, and look for a date when it was promised. If you can find both, the appeal is concrete. If you find neither, then you're left with a warning and no plan.",
+          "timestampMs": 260900,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795768129-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the funding alarm, because it's specific and it's checkable. Don't promote the word indifference as a description of a country or a people, because this story gives us no evidence for it.",
+          "timestampMs": 280450,
+          "durationMs": 14100,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795768129-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Go find the $1.1 billion figure and the date it was promised, and tell us what you found. That's the whole action tonight.",
+          "timestampMs": 295200,
+          "durationMs": 10500,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795768129-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, from Devon Cross and Dr. Maya Lin, on the UN chief's warning about indifference and the Ebola outbreak in the Democratic Republic of the Congo. The next hour starts when the clock turns.",
+          "timestampMs": 306350,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168217",
+        "Receipt 1: UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo 27 August 2026 Health The Ebola Bundibugyo outbreak in the Democratic Republic of the Congo (DRC) requires “urgent” action and funding to rein in its alar",
+        "Receipt 2: DR Congo Ebola outbreak spreading exponentially, UN responders warn 21 August 2026 Health As the deadliest Ebola outbreak in DR Congo’s history continued spreading on Friday, UN responders renewed their urgent appeal for",
+        "Receipt 3: Watch the UN chief’s press stakeout on UN Web TV: More funds needed “Without additional funding, vital operations will run out of money at the very moment they need to ramp up,” he warned, calling for an additional $1.1 ",
+        "Receipt 4: During the outbreak, Uganda reported 20 confirmed cases of the disease, including two deaths.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168217",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795768129",
+          "name": "Wen",
+          "location": "Vancouver, Canada",
+          "topic": "UN chief condemns ‘indifference’ as Ebola cases mount in DR Congo",
+          "take": "I'm not an expert, but I know people in Vancouver who work with the Congolese community, and I've heard that they are worried about the funding being called critically low. I can also check whether anyone here has seen an official figure for the DRC outbreak.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T08:28:49.310581+00:00"
+    },
+    {
+      "id": "show-live-llm-1795768404",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Land models sprout as degradation threatens billions of livelihoods",
+      "title": "Land Degradation, the Most Overlooked Crisis",
+      "episodeNumber": 1204,
+      "description": "A story about land restoration claims more than four million people helped, but the real question is who keeps the work alive when the reporting stops.",
+      "durationMs": 422850,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795768404-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I am Devon Cross. Dr. Maya Lin is with me, and today we are talking about the ground beneath people’s feet, because the story we are on says that the world’s worst habit is now a global emergency, and I want to know exactly what that means for the people standing in it.",
+          "timestampMs": 0,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795768404-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that this is a warning about a specific failure of the world’s land: heatwaves, fires and rising seas are easy to photograph, but the slow destruction of soil, grass and trees is being called the most overlooked crisis. The story is asking whether the land beneath us is being treated as infrastructure worth protecting.",
+          "timestampMs": 25950,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795768404-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is a very large claim for a very small story, and I want the mechanism. Where does the money come from, who actually plants the seedlings, and what evidence would show that a hectare was genuinely restored rather than declared restored? I would rather hear about a working farm than a number.",
+          "timestampMs": 51500,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795768404-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture someone in the Sahel in the middle of a dry season, checking a field that has been worked over and over, watching the grass fail to come back, and deciding whether to move their animals, sell their harvest or stay and fight for it. That is the ordinary moment behind the language of ecosystems and communities, and it is the moment the story leaves out.",
+          "timestampMs": 74250,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795768404-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Since 2018, the Sahel Integrated Resilience Initiative has strengthened food security and livelihoods for more than four million people by rehabilitating over 335, and I want to be precise about what that proves: it proves that a coordinated programme claims a very large human benefit from land work. It does not prove that every programme works, and it does not tell us what the four million people did with the result.",
+          "timestampMs": 102200,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795768404-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If the numbers are real, it means families have more food and more reliable income, and that is a hard thing to take away from someone who has lived through drought. But if the numbers are only declarations, it means the people who need the land the most are being asked to keep working while the system that is supposed to protect them keeps reporting progress.",
+          "timestampMs": 132150,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795768404-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that four million people are now safe, because the story says more than four million people, not that every household is protected. It also does not prove that the land itself is healthy, and it does not prove that the restoration will survive the next drought, the next conflict or the next change of government.",
+          "timestampMs": 160100,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795768404-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is a farmer or a herder in the Sahel who will watch the next planting season, and who has no vote over whether the programme gets renewed, whether the money continues or whether the soil is allowed to recover on its own. The cameras leave, the report is archived, and that person is still standing in the field.",
+          "timestampMs": 186050,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795768404-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship a small thing: a public, plain-language map of every programme that claims to restore land, so that a listener in a village can see whose money is being spent, which fields are marked as restored, and which ones are simply being reported as restored. Start it tomorrow with one country, because one country is a beginning.",
+          "timestampMs": 214400,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795768404-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That map only works if the data is honest, and it will not be for the people with no internet, no phone or no reason to file a complaint. It also risks turning a living landscape into a scoreboard, where a field is judged by a label rather than by whether the grass grew back, and the person who actually knows is the one who cannot be counted.",
+          "timestampMs": 239550,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795768404-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are taking a call from Jordan, who is joining us from Toronto, Canada, and Jordan is not an expert, but Jordan lives with this story in some way, so I want to know exactly what you can confirm from your own life.",
+          "timestampMs": 268300,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795768404-12",
+          "speakerId": "caller-1795768404",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I live in Toronto, and I have not seen the Sahel myself, but I know people who work with land restoration groups, and they told me that the hardest part is not planting. They said the hardest part is making sure the work is still there in three years when nobody is watching and nobody is paying.",
+          "timestampMs": 287050,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795768404-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That is a serious detail, and it changes the hour because it says the real problem is not planting more, but keeping the work alive after the reporting stops. It also means the map Devon wants is not enough, because a map shows a programme today and cannot show whether the ground still holds it up.",
+          "timestampMs": 311400,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795768404-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is this: what happens to the four million people when the money runs out or the soil gives back what it took? It matters because the story is written as if the restoration is a finished thing, but restoration is a promise that someone has to keep paying for.",
+          "timestampMs": 335350,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795768404-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run yourself: find the programme name, find the date it was published and find a number it claims, then ask what happens to that number when the programme is no longer reporting. If the number survives without evidence, the story is being handled dishonestly. That is all it takes.",
+          "timestampMs": 358900,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795768404-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the warning that land degradation is being ignored, and do not promote the idea that four million people are now safe.",
+          "timestampMs": 382450,
+          "durationMs": 9700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795768404-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Your next concrete action is to ask your local news desk or your member of parliament for the source behind any land restoration number you hear, and if you cannot find it, say that you could not find it.",
+          "timestampMs": 392800,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795768404-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour from The Algorithmic Wire, with Devon Cross and Dr. Maya Lin talking about the land beneath our feet. The next hour starts when the clock turns.",
+          "timestampMs": 409950,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168212",
+        "Receipt 1: Sahel: Restoring land and food security Across the Sahel, conflict, land degradation, drought and climate change are placing mounting pressure on ecosystems and communities, but since 2018, the Sahel Integrated Resilienc",
+        "Receipt 2: Protecting our ‘most vital infrastructure’: Pushing back on desertification 17 August 2026 Climate and Environment As heatwaves are turning deadlier, fires and disasters are razing cities — and rising seas are erasing te",
+        "Receipt 3: The UN desertification conference , running from 17 to 28 August in Mongolia, has awarded three land rejuvenation programmes, which together aim to restore a total of almost five million hectares by 2030, an area equal t",
+        "Receipt 4: Fouad said, noting that the UN is committed to global goals of restoring one billion hectares of degraded land by 2030..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Land models sprout as degradation threatens billions of livelihoods",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168212",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795768404",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Land models sprout as degradation threatens billions of livelihoods",
+          "take": "I live in Toronto, and I have not seen the Sahel myself, but I know people who work with land restoration groups, and they told me that the hardest part is not planting. They said the hardest part is making sure the work is still there in three years when nobody is watching and nobody is paying.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T08:33:24.888338+00:00"
     }
   ]
 }
