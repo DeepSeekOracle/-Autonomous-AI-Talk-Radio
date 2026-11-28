@@ -1,502 +1,6 @@
 {
-  "mintedAt": "2026-11-28T02:53:48.113860+00:00",
+  "mintedAt": "2026-11-28T05:27:00.600019+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795779115",
-      "stationId": "station-algorithmic-wire",
-      "topic": "More health workers, stronger systems: Africa’s new ambitious goal",
-      "title": "Six Million Missing: Africa’s Ten-Year Push",
-      "episodeNumber": 1115,
-      "description": "African ministers set a ten-year goal to train, employ and retain three million more health workers, while a projected shortage of more than six million looms by 2035.",
-      "durationMs": 350450,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795779115-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, and I’m Devon Cross. My co-host is Dr. Maya Lin. We are talking about a ten-year plan from African health ministers to add three million health workers, and the question we will argue is whether a training target can become a workforce you can actually stand in a clinic.",
-          "timestampMs": 0,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795779115-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that this is a capacity commitment, not a finished programme. The ministers approved training, employment and retention of three million additional health workers, but the story does not show how those three numbers become doctors in a rural clinic on a Tuesday.",
-          "timestampMs": 23550,
-          "durationMs": 19700,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795779115-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is too soft. The mechanism has to be named. Who pays for the training, where the graduates are assigned, and what evidence is collected after they arrive? A target without a placement list is a number on a page, and I would rather hear the placement list.",
-          "timestampMs": 43900,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795779115-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a health worker in a clinic that is short-staffed. The plan says the workforce will reach a target. For that person, the real moment is the morning when a patient is waiting and the register is open, and the difference between a goal and a system is whether there is another person behind the counter.",
-          "timestampMs": 64650,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795779115-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Reading the story as it stands: “More health workers, stronger systems: Africa’s new ambitious goal.” It says Africa is facing a projected shortage of more than six million health professionals by 2035, and countries are stepping up efforts to strengthen their workforce. What it proves is that ministers approved a ten-year programme. What it does not prove is that the programme is funded, staffed, or producing placements.",
-          "timestampMs": 88600,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795779115-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, the change is that more people will be trained, employed and retained, and the shortage narrows. But the people inside the story also face new pressure: the plan has to move from an approval into actual recruitment, and the shortfall that remains is still a shortfall.",
-          "timestampMs": 117350,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795779115-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A listener must not conclude that three million will show up where the need is greatest. The receipts give a target, a starting figure of nearly 5.72 million professionals in 2024, and a projected gap. They do not show funding, assignment, retention rates, or a monitoring plan.",
-          "timestampMs": 138900,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795779115-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is the nurse who is retained. Retention is the part of the story with the least reporting, and it is the part that decides whether a trained worker stays in a post long enough to change a clinic’s staffing.",
-          "timestampMs": 159650,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795779115-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "If I had to start something tomorrow, I would publish one public list: the number of graduates trained, the number employed, and the number still employed after twelve months. That is small enough to build quickly and honest enough to be checked.",
-          "timestampMs": 180800,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795779115-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The flaw in that is that it measures a programme, not the people it serves. A worker can be employed and still leave the district, or the list can grow while the clinics that need them most remain short. It is a narrow measure, and narrow measures hide where the work actually happens.",
-          "timestampMs": 199150,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795779115-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Mateo, calling from Valencia, Spain. Mateo, you live with this story. What can you personally confirm about health workers, staffing, or the gap between a plan and the day-to-day clinic?",
-          "timestampMs": 221900,
-          "durationMs": 12900,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795779115-12",
-          "speakerId": "caller-1795779115",
-          "speakerName": "Mateo (Valencia, Spain)",
-          "text": "I am not an expert, I just work in the health system here and I know that the plan can be good, but nothing changes if it is not implemented. I can confirm that the shortage is real because I have seen the staff numbers and the number of patients waiting.",
-          "timestampMs": 235450,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795779115-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Mateo, that is worth taking seriously. It moves the hour away from a target and toward the gap between the plan and the daily staffing, which is exactly the part the story does not show.",
-          "timestampMs": 257400,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795779115-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is this: who is responsible for the health workers who do not show up? That matters because a shortage is not fixed by a number, it is fixed by a person, a place and a decision.",
-          "timestampMs": 272950,
-          "durationMs": 17700,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795779115-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "You can check whether this is being handled honestly by looking for three things in the follow-up reporting: who funds the training, where the workers are placed, and what happens to retention after they arrive. If those three are missing, the story is still a target and not a system.",
-          "timestampMs": 291300,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795779115-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the goal, because it names a real gap, but do not promote the number as if it were a workforce already in place.",
-          "timestampMs": 312850,
-          "durationMs": 10500,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795779115-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "For the next hour, ask your local health authority for one figure: how many of the planned workers are actually employed in a post, and for how long they stay there.",
-          "timestampMs": 324000,
-          "durationMs": 13300,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795779115-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is The Algorithmic Wire, with Devon Cross and Dr. Maya Lin, on the ten-year goal for more African health workers. The next hour starts when the clock turns.",
-          "timestampMs": 337950,
-          "durationMs": 12500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168207",
-        "Receipt 1: More health workers, stronger systems: Africa’s new ambitious goal 26 August 2026 Health Facing a projected shortage of more than six million health professionals by 2035, African countries are stepping up efforts to str",
-        "Receipt 2: The ministers approved a 10-year programme to train, employ and retain three million additional health workers in a major push to bolster health systems across the continent..",
-        "Receipt 3: More health workers, but still not enough The commitment comes as Africa’s health workforce has grown significantly over the past decade , reaching nearly 5.72 million professionals in 2024..",
-        "Receipt 4: Every dollar invested in health workers could generate up to $10 in economic benefits and roughly 30 times that amount in broader social returns, through better health, higher productivity and stronger economies..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: More health workers, stronger systems: Africa’s new ambitious goal",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168207",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795779115",
-          "name": "Mateo",
-          "location": "Valencia, Spain",
-          "topic": "More health workers, stronger systems: Africa’s new ambitious goal",
-          "take": "I am not an expert, I just work in the health system here and I know that the plan can be good, but nothing changes if it is not implemented. I can confirm that the shortage is real because I have seen the staff numbers and the number of patients waiting.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T11:31:55.229874+00:00"
-    },
-    {
-      "id": "show-live-llm-1795789729",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Explainer: UN peace operations work to create, preserve peace",
-      "title": "The Blue Line and the Election After",
-      "episodeNumber": 1829,
-      "description": "A peace operation's renewed mandate, the people it contains, and what the story does and does not prove.",
-      "durationMs": 399250,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795789729-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, with Devon Cross and Dr. Maya Lin at the desk. We are talking about the UN peace operations that exist to create and preserve peace, and the question we will argue all hour: does a mission that is deployed to stop violence actually work, or does it just move the violence somewhere else?",
-          "timestampMs": 0,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795789729-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The honest reading is that the story is describing a shift in what these missions are for. The story says the UN and its member states must adapt because peace operations are increasingly deployed to contain violence rather than implement agreements. That is a claim about purpose, and it is supported by the language of the secretary-general speaking to the General Assembly.",
-          "timestampMs": 24750,
-          "durationMs": 25700,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795789729-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I want the mechanism, not the mood. If the missions are now containing violence, who is deciding where the line goes, what happens to the people inside the line, and what evidence would show the mission is working? A mission that contains violence is a real outcome, but it is not the same as a mission that ends violence.",
-          "timestampMs": 51100,
-          "durationMs": 24500,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795789729-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture UNIFIL along the Blue Line in Lebanon, which has separated Lebanon and Israel since the 1970s. Its mandate was renewed for another year by the UN Security Council. That is one ordinary moment: a line that is watched, maintained, and extended by a vote, with people living close to it.",
-          "timestampMs": 76250,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795789729-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The story says: peace and security explainer, UN peace operations work to create, preserve peace, by Isaiah Steinberg on 26 August 2026, supporting the first democratic elections after brutal civil wars in Mozambique and Cambodia. That is evidence of two places where elections followed civil wars and where these operations were involved. It does not prove that the operations created those elections, or that they worked, or that the same thing happened everywhere.",
-          "timestampMs": 98200,
-          "durationMs": 30100,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795789729-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, the people in Mozambique and Cambodia are living with a new kind of dependence: the elections happened, and the operations remain present as a standing fact on the ground. The consequence is that the question moves from whether the mission worked to whether the mission can be removed, and on what terms.",
-          "timestampMs": 128950,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795789729-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that peace operations are useless, or that they are secretly the cause of the conflicts they sit inside. The receipts describe deployments and a secretary-general's warning about the highest number of conflicts since 1945. They do not give us a count of lives saved, a cost of the missions, or any comparison between places with and without them.",
-          "timestampMs": 152900,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795789729-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is the person who was near the Blue Line, or the person who voted in a post-civil-war election. When the cameras leave and the mandate is renewed for another year, that person is the one who decides whether the operation feels like protection or like a permanent arrangement.",
-          "timestampMs": 180050,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795789729-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The narrow thing I would ship is a plain-language public note after each mandate renewal: what the mission is now doing, what the budget is for, and what would have to change for it to leave. Small, printable, and honest, it would let people judge the arrangement instead of guessing.",
-          "timestampMs": 204400,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795789729-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The hole is that a public note about the mission is written from inside the system, and the people it is meant to serve may not have the language to read it. The note can be accurate and still miss the fact that a renewal means something different to the person standing on the line than to the member state voting for it.",
-          "timestampMs": 225950,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795789729-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We are going to the phone to Nadia, calling from Cairo, Egypt. Nadia, what can you personally confirm about the work of peace operations, from your own life, without having to explain an expert's argument?",
-          "timestampMs": 252700,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795789729-12",
-          "speakerId": "caller-1795789729",
-          "speakerName": "Nadia (Cairo, Egypt)",
-          "text": "I live in Cairo, and I know people who moved when the work was near their neighbourhood. I can tell you what I saw with my own eyes, and I can tell you what the people around me said, but I am not going to describe what a mandate means in legal terms.",
-          "timestampMs": 268250,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795789729-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That detail matters because it gives us the person-level view that the page does not: movement, displacement, and the ordinary decisions made when the work arrives. It also changes the hour because the practical question is no longer only whether the mission is effective, but what it costs in daily life.",
-          "timestampMs": 291000,
-          "durationMs": 21300,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795789729-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked is: when a mission is renewed for another year, who gets to say whether the renewal was necessary? That matters because the renewal is a decision made in a vote, and the person living next to the line is not asked to confirm it.",
-          "timestampMs": 312950,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795789729-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run: find out what the mission's current mandate says it is doing, then find out what the same mission did before the last renewal. If the answer is only that the mission is still there, you have found a containment arrangement rather than evidence of peace.",
-          "timestampMs": 334100,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795789729-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the story's warning that peace operations are increasingly deployed to contain violence, and do not promote the idea that they are a proven way to create and preserve peace.",
-          "timestampMs": 356450,
-          "durationMs": 12900,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795789729-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Your next action is to read the current mandate of one mission you already know, and write down what it says the mission is doing today versus what it said last year.",
-          "timestampMs": 370000,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795789729-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour on The Algorithmic Wire, with Devon Cross and Dr. Maya Lin, on the UN peace operations that exist to create and preserve peace. The next hour starts when the clock turns.",
-          "timestampMs": 384350,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168210",
-        "Receipt 1: Explainer: UN peace operations work to create, preserve peace By Isaiah Steinberg 26 August 2026 Peace and Security Supporting the first democratic elections after brutal civil wars in Mozambique and Cambodia.",
-        "Receipt 2: As the world faces the highest number of conflicts since 1945 and a rising death toll from war alongside peace operations increasingly deployed to contain violence rather than implement agreements, the UN and its Member ",
-        "Receipt 3: Explainer: How UN peacekeepers meet the challenge of escalating conflict in Lebanon 8 October 2024 Peace and Security The UN peacekeeping mission UNIFIL has been operating along the “Blue Line” which separates Lebanon an",
-        "Receipt 4: The UN has deployed 167 such missions since 1948, with about 40 active in 2024, according to a review by the UN’s Department of Political and Peacebuilding Affairs ..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Explainer: UN peace operations work to create, preserve peace",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168210",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795789729",
-          "name": "Nadia",
-          "location": "Cairo, Egypt",
-          "topic": "Explainer: UN peace operations work to create, preserve peace",
-          "take": "I live in Cairo, and I know people who moved when the work was near their neighbourhood. I can tell you what I saw with my own eyes, and I can tell you what the people around me said, but I am not going to describe what a mandate means in legal terms.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T14:28:49.597855+00:00"
-    },
     {
       "id": "show-live-llm-1795789760",
       "stationId": "station-algorithmic-wire",
@@ -1984,6 +1488,502 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-28T02:53:48.113810+00:00"
+    },
+    {
+      "id": "show-live-llm-1795843562",
+      "stationId": "station-algorithmic-wire",
+      "topic": "After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth",
+      "title": "The Seizure Stopped the Training",
+      "episodeNumber": 1662,
+      "description": "A training centre in East Jerusalem was taken, and UNRWA warns that the youth using it have lost access to the skills they were building.",
+      "durationMs": 412050,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795843562-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I'm Devon. Dr. Maya Lin is with me, and we are talking about a vocational training centre in occupied East Jerusalem that Israeli forces took over on Tuesday. The question for this hour is simple: when a training facility is seized, what exactly does that do to the young people who were supposed to use it, and how do we know?",
+          "timestampMs": 0,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795843562-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The story is a warning, not a verdict. UNRWA is saying that hundreds of Palestinian young people have lost access to skills training that could affect their future, and it is describing a forced entry on 24 August, not claiming that every student is now unemployed. That is a narrower claim than it might sound, and I want to keep it narrow.",
+          "timestampMs": 28350,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795843562-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Narrow is good, but I want the mechanism spelled out. Who entered, through which door, on what authority, and which specific courses were interrupted? If the answer is that security forces took a compound, then I do not yet know how the disruption reaches an individual student, and that is the part I would want evidence for before anyone calls it a crisis.",
+          "timestampMs": 54700,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795843562-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a young person in East Jerusalem who has a place in a vocational programme, arrives at the Kalandia training centre, and finds the building under Israeli security control. That is the ordinary moment at the centre of this story. It is not an abstract statistic; it is a person arriving at the wrong time, with a course they have already paid attention to and a future they have already planned around.",
+          "timestampMs": 81450,
+          "durationMs": 29700,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795843562-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is the headline, read nearly straight off the page: \"After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth.\" That sentence proves that UNRWA is making a warning about the impact on youth, and it does not prove how many students were affected, what courses were lost, or what any of it will cost them. It is a starting point for a question, not a finished answer.",
+          "timestampMs": 111800,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795843562-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the people inside the story face a concrete and avoidable interruption: a programme that was scheduled to run, a place to learn a skill, and a timeline that did not move when the centre did. The consequence is not a feeling about the future; it is a training session that cannot happen and a student who has to find out how to continue.",
+          "timestampMs": 141750,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795843562-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not turn this into a claim that the training system has collapsed or that every student in the area has been pushed out. The receipts say a training centre was taken, that amendments to the anti-UNRWA laws allow security forces to seize a compound and the Kalandia Training Centre, and that UNRWA warns of an impact on youth. That is the boundary.",
+          "timestampMs": 170100,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795843562-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the young person who was enrolled in the programme and had to keep going after the seizure. They are the ones who will find out whether the skills they were building are still reachable, and they are not the ones holding the headline.",
+          "timestampMs": 198050,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795843562-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship one small thing: publish the actual enrolment list for the Kalandia centre and the date each student's course was interrupted. That is a small thing, but it is the difference between \"hundreds of young people\" and a name, a programme, and a date that someone can act on.",
+          "timestampMs": 220800,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795843562-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That is a good idea and it has a flaw. An enrolment list tells us who was affected, but it does not tell us who can still reach a training place, who can afford to travel, or who has to wait for an official process to reopen a course. The list is a useful starting point, not a complete picture of the people left behind.",
+          "timestampMs": 242750,
+          "durationMs": 26900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795843562-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We have a caller on the line, Ellis, in Glasgow, Scotland. Ellis, you have been living with this story and you are not an expert, so what can you personally confirm?",
+          "timestampMs": 270300,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795843562-12",
+          "speakerId": "caller-1795843562",
+          "speakerName": "Ellis (Glasgow, Scotland)",
+          "text": "I know the Kalandia centre from reports and from what I can see in the area, but I do not have access to the enrolment list. What I can say is that the seizure was reported on 24 August, and that the UNRWA warning is about young people losing access to training.",
+          "timestampMs": 284250,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795843562-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That is a useful detail, Ellis, because it tells us what a listener in Glasgow can and cannot verify. You can confirm the date and the agency's warning, but you cannot confirm the number of students affected or the courses that were interrupted. That is exactly the gap I was pointing to in the hour.",
+          "timestampMs": 306600,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795843562-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is whether the training centre can be reopened, and on what terms. It matters because the warning is about access, and access is the thing that changes when a building is taken back.",
+          "timestampMs": 330150,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795843562-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run yourself: ask what the source says about the number of students affected, what courses were interrupted, and who is responsible for reopening the centre. If you cannot find answers to all three, the story is still a warning, not a full account of the damage.",
+          "timestampMs": 347300,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795843562-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow ruling is this: keep the fact that UNRWA warns of an impact on youth after the seizure, and do not promote the idea that the training system has collapsed.",
+          "timestampMs": 369650,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795843562-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The next concrete thing to do is to ask the source for the names of students affected, the courses interrupted, and the reopening plan, and to keep asking until you have answers.",
+          "timestampMs": 383600,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795843562-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is The Algorithmic Wire, from Devon and Dr. Maya Lin, about the seizure of the Kalandia vocational training centre and the warning about youth. The next hour starts when the clock turns.",
+          "timestampMs": 397950,
+          "durationMs": 14100,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168219",
+        "Receipt 1: After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth 27 August 2026 Humanitarian Aid The seizure of a vocational training centre in occupied East Jerusalem has left hundreds of Palestinian yo",
+        "Receipt 2: Israeli authorities forcibly entered the Kalandia Vocational Training Centre on Tuesday, 24 August, and took control of the facility, according to the UN agency for Palestine refugees, UNRWA .",
+        "Receipt 3: In December, amendments were made to the anti-UNRWA laws, including a provision to cut water and electricity from UNRWA installations in East Jerusalem, and secondly, to authorize Israeli security forces to seize, our co",
+        "Receipt 4: UNRWA The UNRWA Kalandia vocational training centre in the West Bank.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168219",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795843562",
+          "name": "Ellis",
+          "location": "Glasgow, Scotland",
+          "topic": "After Israeli seizure of Kalandia training centre, UNRWA warns of impact on youth",
+          "take": "I know the Kalandia centre from reports and from what I can see in the area, but I do not have access to the enrolment list. What I can say is that the seizure was reported on 24 August, and that the UNRWA warning is about young people losing access to training.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T05:26:02.225634+00:00"
+    },
+    {
+      "id": "show-live-llm-1795843620",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Lebanon: Civilian risks grow as military activity continues, UN says",
+      "title": "UNIFIL Flags Rising Civilian Risk Along Lebanon's Blue Line",
+      "episodeNumber": 1720,
+      "description": "A UN peacekeeping report in south Lebanon warns of growing civilian risk from damaged roads, disrupted services, and ongoing military activity.",
+      "durationMs": 432050,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795843620-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I'm Devon Cross. Dr. Maya Lin is joining me from the desk. We're talking about a UN peacekeeping mission in south Lebanon saying that civilians face growing risk because of damaged roads, disrupted services, and continuing military activity. The question we'll argue about tonight is whether this report tells you how dangerous the place is or just that the danger is continuing.",
+          "timestampMs": 0,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795843620-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that this is a status warning, not a new discovery. The mission says violence has dropped compared with earlier months, but it also observes a rise in military activity inside its own area of operations. So the claim is narrow and specific: things are worse in some ways and better in others, and the mission is watching closely.",
+          "timestampMs": 28750,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795843620-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Maya, I want the mechanism, because \"risks grow\" sounds like a verdict and the sentence doesn't quite deliver one. How would that work, for whom, and on what evidence? I'd want to know which roads, which services, which strikes, and who is actually measuring the risk rather than describing it.",
+          "timestampMs": 55500,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795843620-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a driver in south Lebanon trying to get a repair truck through a road that has been damaged. The mission says the latest strikes happened outside its area of operations, yet the impact is being felt across southern Lebanon and along the Blue Line. That is the ordinary moment the report is really about: a routine crossing that has become hazardous because the ground around it is still changing.",
+          "timestampMs": 77050,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795843620-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is the first receipt, from UNIFIL's spokesperson Kandice Ardiel to UN News: \"While the latest strikes occurred outside UNIFIL's area of operations, the impact of the conflict continues to be felt across southern Lebanon and along the Blue Line.\" What it proves is that the mission is drawing a distinction between where the strikes happened and where the damage lands. What it does not prove is how much of that damage is new, or who was hit.",
+          "timestampMs": 106600,
+          "durationMs": 32100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795843620-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the people living inside the area of operations are absorbing a different kind of exposure than the people whose roads were struck. The mission is warning that renewed military activity risks undermining the fragile stability achieved in recent months. For those civilians, that means services stay unreliable, movement stays costly, and the safety they thought they had is now conditional on the next round of strikes.",
+          "timestampMs": 139350,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795843620-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that the whole of Lebanon is under renewed war. The report says violence has decreased compared with previous months, and it says the latest strikes occurred outside the mission's area of operations. It also doesn't tell us the number of civilian casualties, the names of the roads, or the identity of the forces behind the projectiles.",
+          "timestampMs": 168900,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795843620-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the family in a village along the Blue Line whose road is used to cross, sell, or get to a clinic. The mission's warning is aimed at them, and their daily decisions are the real test of whether the \"fragile stability achieved in recent months\" holds.",
+          "timestampMs": 195250,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795843620-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "One narrow, practical thing that would help is a public map of the damaged roads and the disrupted services the mission already knows about. It would be small enough to start tomorrow and useful enough that a family could plan a route around the damage instead of guessing.",
+          "timestampMs": 219200,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795843620-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That map breaks at exactly the point where it would matter most. A public road map can't show who is inside the mission's area of operations, who is outside it, or which projectiles are coming from where. And the mission's warning is about risk, not about the people hit, so a map of roads can leave out the households whose risk is the one that isn't visible on a map.",
+          "timestampMs": 239950,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795843620-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We're opening the phone line to Jordan, who is calling in from Toronto, Canada. Jordan, what can you personally confirm about the situation in Lebanon?",
+          "timestampMs": 269500,
+          "durationMs": 10900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795843620-12",
+          "speakerId": "caller-1795843620",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I live in Toronto and I have family in the area, and I know the roads have been damaged, but I can't confirm the details because I'm not there. I can tell you that the disruption is felt in the community and that people are trying to figure out how to get to work and to medical care.",
+          "timestampMs": 281050,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795843620-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Jordan, that changes the hour for me, because it tells us the report's warning is being lived with by families whose access to services is already constrained. It also tells us the practical thing Devon wants, a public map of roads and services, would help the family right now, not just a listener back in Toronto.",
+          "timestampMs": 305800,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795843620-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is who is responsible for the disruption, and why the mission is describing the risk without naming the actors involved. It matters because a report that says \"risks grow\" without identifying the forces or the pattern leaves the listener with no way to hold anyone accountable.",
+          "timestampMs": 329750,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795843620-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here's a test you can run yourself: read the mission's warning and check whether it gives you a place, a service, or a pattern you can verify on your own. If the report only tells you that risk is growing and doesn't say which roads or which households are affected, then you have a warning, but not yet an explanation.",
+          "timestampMs": 352100,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795843620-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow ruling from this desk is that we keep the mission's warning about civilian risk and the distinction between the strikes and the area of operations, and we do not promote it as a claim about who is responsible or how bad the whole region has become.",
+          "timestampMs": 377650,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795843620-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "So your next concrete action is simple: check whether the mission's warning has been followed by any public reporting on the damaged roads or disrupted services it mentioned. If you find that reporting, share it with someone who lives in the affected area.",
+          "timestampMs": 398400,
+          "durationMs": 18100,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795843620-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That's The Algorithmic Wire, hosted by me, Devon Cross, and Dr. Maya Lin, on the question of civilian risk in south Lebanon as UN peacekeeping activity continues. The next hour starts when the clock turns.",
+          "timestampMs": 417150,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168215",
+        "Receipt 1: Lebanon: Civilian risks grow as military activity continues, UN says By Nancy Sarkis in Geneva 27 August 2026 Peace and Security Damaged roads, disrupted services and ongoing military activity continue to put civilians a",
+        "Receipt 2: The mission continues to monitor developments closely and report violations, warning that renewed military activity risks undermining the fragile stability achieved in recent months ..",
+        "Receipt 3: UNIFIL spokesperson Kandice Ardiel told UN News that while the latest strikes occurred outside UNIFIL’s area of operations, the impact of the conflict continues to be felt across southern Lebanon and along the “Blue Line",
+        "Receipt 4: Although violence has decreased compared to previous months, UNIFIL has observed a rise in military activity inside its area of operations, including logistical movements, demolitions and projectile launches..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Lebanon: Civilian risks grow as military activity continues, UN says",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168215",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795843620",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "Lebanon: Civilian risks grow as military activity continues, UN says",
+          "take": "I live in Toronto and I have family in the area, and I know the roads have been damaged, but I can't confirm the details because I'm not there. I can tell you that the disruption is felt in the community and that people are trying to figure out how to get to work and to medical care.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T05:27:00.599983+00:00"
     }
   ]
 }
