@@ -1,745 +1,6 @@
 {
-  "mintedAt": "2026-11-27T20:58:11.069038+00:00",
+  "mintedAt": "2026-11-28T02:53:48.113860+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795768813",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Security Council LIVE: Tracking Syria’s transition",
-      "title": "The Crossroads Nobody Has Crossed",
-      "episodeNumber": 1613,
-      "description": "A desk reads one Security Council sentence about Syria and asks what has actually changed on the ground.",
-      "durationMs": 326050,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795768813-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire. I’m Devon Cross, Dr Maya Lin is with me, and tonight we are talking about the Security Council’s live tracking of Syria’s transition. The one question this desk will argue about is whether a sentence that says a country is at a crossroads means progress is happening or whether someone else is still deciding what happens here.",
-          "timestampMs": 0,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795768813-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that this is a diplomatic framing rather than a report. The page claims renewal depends on trust, lives and livelihoods, and the word crossroads suggests a choice. What it does not show is whether either side has agreed to act.",
-          "timestampMs": 27550,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795768813-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is exactly the problem. A crossroads is a picture of a decision, not a decision. The mechanism would be something measurable, like a mandate, an agreement, a date, or a committee that reports back. For whom does that work? And on what evidence would anyone know it had happened?",
-          "timestampMs": 47100,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795768813-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a market in a city that has been closed. A family is standing outside, waiting to open. The story tells us that livelihoods matter, but it does not tell us whether the gate is open, who is standing at the gate, or what time they will let people through.",
-          "timestampMs": 68650,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795768813-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Let me read the first receipt on the page. It says: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods. That proves a writer believes those things are the conditions for renewal. It does not prove that anyone has rebuilt anything yet.",
-          "timestampMs": 90200,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795768813-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If that is true, then the people inside this story are being asked to carry the weight of an expectation. It means a family may plan a return, a shop may be rebuilt, and a street may be reopened while the conditions that made it possible are still being negotiated.",
-          "timestampMs": 109750,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795768813-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that the transition is underway. This is a sentence about hope, not a sentence about machinery. There is no claim here that trust is being rebuilt, that lives are being recovered, or that livelihoods are being restored.",
-          "timestampMs": 131300,
-          "durationMs": 18100,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795768813-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is the family that has already decided to return. They will be the ones standing at the gate when the decision is made, and they will have spent years preparing for it.",
-          "timestampMs": 150050,
-          "durationMs": 17300,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795768813-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "I would ship one narrow thing: a short public record of what actually happens on the ground. One line, one date, one place. That is small enough to start tomorrow and it would tell us whether the words are moving.",
-          "timestampMs": 168000,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795768813-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The hole is that a public record of good news can be produced without consent. If someone in charge decides what counts as progress, that record becomes a tool for the people who made the decision, and it leaves out the people who are actually waiting.",
-          "timestampMs": 185550,
-          "durationMs": 19300,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795768813-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We have a listener on the line from Nairobi, Kenya. Ruth, this is the hour. What can you personally confirm about what is happening there?",
-          "timestampMs": 205500,
-          "durationMs": 10900,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795768813-12",
-          "speakerId": "caller-1795768813",
-          "speakerName": "Ruth (Nairobi, Kenya)",
-          "text": "I live in Nairobi, and I work with families who have been waiting to return. I can confirm that we have been told the conditions are improving. What I could verify is that I have not seen a single family go back yet.",
-          "timestampMs": 217050,
-          "durationMs": 18100,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795768813-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That changes the hour. Ruth is telling us that the story describes conditions as improving, while the families she works with have not returned. That is not a disagreement about words. That is a disagreement about whether the ground has moved.",
-          "timestampMs": 235800,
-          "durationMs": 17300,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795768813-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet: who gets to say that the conditions are good? That matters because it decides whether this story is a description of reality or a description of what someone wanted.",
-          "timestampMs": 253750,
-          "durationMs": 14900,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795768813-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is the test you can run. Find out who wrote the sentence, who decided it would appear, and what happened on the ground the day after it was published. If the answer to that third question is empty, treat the story as a framing, not a fact.",
-          "timestampMs": 269300,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795768813-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the words as a description of intent. Do not promote them as a description of what has already happened.",
-          "timestampMs": 290050,
-          "durationMs": 8900,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795768813-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The next concrete step is to read the page again and look for the date, the place, and the name of the person who made the decision. That is all it takes.",
-          "timestampMs": 299600,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795768813-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is The Algorithmic Wire, with Devon Cross and Dr Maya Lin, on the live tracking of Syria’s transition. The next hour starts when the clock turns.",
-          "timestampMs": 313950,
-          "durationMs": 12100,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168214",
-        "Receipt 1: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods 26 July 2026 Peace and Security A country long known as a meeting point of civilizations, Syria stands once again at a crossroads..",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Security Council LIVE: Tracking Syria’s transition",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168214",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795768813",
-          "name": "Ruth",
-          "location": "Nairobi, Kenya",
-          "topic": "Security Council LIVE: Tracking Syria’s transition",
-          "take": "I live in Nairobi, and I work with families who have been waiting to return. I can confirm that we have been told the conditions are improving. What I could verify is that I have not seen a single family go back yet.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:40:13.886159+00:00"
-    },
-    {
-      "id": "show-live-llm-1795769250",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Security Council LIVE: Rising tensions in Gaza, West Bank",
-      "title": "A Meal Count, A Long Recovery",
-      "episodeNumber": 1150,
-      "description": "A Security Council page pairs a drop in acute hunger with children still at risk, and the desk argues over what that pairing can honestly be read as.",
-      "durationMs": 456850,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795769250-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, and I’m Devon Cross. My co-host is Dr. Maya Lin. We are talking about the Security Council page reporting rising tensions in Gaza and the West Bank, and the one question this desk will argue is whether a drop in acute hunger can ever be read as good news while children are still at risk.",
-          "timestampMs": 0,
-          "durationMs": 25300,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795769250-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The story is making two claims at once and deliberately keeping them close together. One is that children in Gaza are, by one measure, finally getting enough to eat. The other is that by another measure, many may never fully recover. The honest reading is that the page is reporting a gap between a hopeful number and a grim long-run reality, and it is not claiming the crisis has passed.",
-          "timestampMs": 25950,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795769250-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "But I want the mechanism, because “by one measure” is doing a lot of work. Which measure is it, who is measuring it, and what would make the first claim fail? If a number says a child is eating enough, I want to know what that number is counting, for whom, and on what evidence, or I am not going to treat it as good news.",
-          "timestampMs": 55500,
-          "durationMs": 27300,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795769250-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture a tent city pitched on the rubble of destroyed homes, with children sitting at the edge of that ordinary moment. That is the scene the receipts give us: no skyline, no battlefield, just a place where someone has set up again and is trying to feed a child in the middle of it.",
-          "timestampMs": 83450,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795769250-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here is receipt one, nearly as it appears: “Gaza: Children still at risk despite drop in acute hunger 24 August 2026 Humanitarian Aid Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat.” What it proves is that a drop in acute hunger is being reported alongside the fact that children are still at risk. What it does not prove is that hunger has been solved, that the tents are safe, or that recovery is on track.",
-          "timestampMs": 106600,
-          "durationMs": 36500,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795769250-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If the gap is real, the consequence is that a child could be fed today and still be living through damage that does not end today. A person can be fed and still be displaced, still be in a tent on rubble, and still face health and safety problems that a meal count cannot see. So the practical meaning is that aid can arrive without the underlying conditions being fixed.",
-          "timestampMs": 143750,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795769250-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Do not conclude that the crisis is over, do not conclude that the drop in acute hunger means the rest is fine, and do not conclude that the report is hiding bad news. It proves a limited, dated observation: at one measurement point, fewer children were acutely hungry while risk remained. That is all it proves, and I would rather say that than overstate it.",
-          "timestampMs": 173300,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795769250-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome after the cameras leave is the child in that tent, and behind the child, the family that moved into the tent. They will not be reading a study on Monday. They will be deciding whether tomorrow’s food arrives, whether the next day is survivable, and whether anyone is still around to ask how it went.",
-          "timestampMs": 200850,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795769250-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The narrow thing I would ship is a single local contact channel in each tent city that families can use to report a missing meal, a medical need, or a place that feels unsafe, with someone assigned to answer within a set number of hours. It is small, it can start tomorrow, and it puts a name on the side of the reporting.",
-          "timestampMs": 228400,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795769250-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That contact channel only works where someone can receive it, and the receipts do not tell us who is reachable. A family in a tent on the outskirts, or a child who cannot read the channel, or anyone without a phone may be left out entirely, and the report does not say who is covered. The flaw is not that the idea is bad; the flaw is that we do not know its reach.",
-          "timestampMs": 255150,
-          "durationMs": 30500,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795769250-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The phone line is open to Jordan in Toronto, Canada, and Jordan is not an expert. Jordan, what can you personally confirm about the story, what did you see, and what did you hear from someone you trust?",
-          "timestampMs": 286300,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795769250-12",
-          "speakerId": "caller-1795769250",
-          "speakerName": "Jordan (Toronto, Canada)",
-          "text": "Jordan, I live in Toronto and I’m not an expert, but my friend’s family is in the West Bank. He told me there were more people staying in one neighborhood and that food aid had been delayed twice. I could verify that if I had a reliable way to contact him, but I don’t have his number, so I can only tell you what he told me.",
-          "timestampMs": 303050,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795769250-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That detail changes the hour in one direction: it makes the reporting look less like a clean statistic and more like a situation where delivery is uneven and families are waiting. It does not confirm a number, and it does not replace the study, but it is a lived detail that a person living with it is willing to offer.",
-          "timestampMs": 332600,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795769250-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is who decides what counts as recovery when the measurement is a meal and the person is still displaced. It matters because if the number is the only thing being reported, the rest of the story can quietly disappear from the headline.",
-          "timestampMs": 358150,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795769250-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run: find the source of the measure behind “acute hunger,” ask who was surveyed and when, and then look for the same report’s account of displacement, safety, and access. If the source is not named, if the date is vague, or if the report never mentions what is still broken, treat the hopeful framing as unverified.",
-          "timestampMs": 378900,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795769250-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the drop in acute hunger as a dated observation, keep the risk to children as the dominant fact, and do not promote any version of this that treats one meal count as a sign that the crisis is ending.",
-          "timestampMs": 405650,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795769250-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Your next concrete action is to open the source page and read the line about children being still at risk, then find the sentence that explains the hunger measure and its date before you repeat the story to anyone.",
-          "timestampMs": 423200,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795769250-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire, hosted by Devon Cross and Dr. Maya Lin, covering rising tensions in Gaza and the West Bank with the evidence that is actually on the page. The next hour starts when the clock turns.",
-          "timestampMs": 440350,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168204",
-        "Receipt 1: Gaza: Children still at risk despite drop in acute hunger 24 August 2026 Humanitarian Aid Among tent cities pitched on the rubble of destroyed homes in Gaza, children are, by one measure, finally getting enough to eat.",
-        "Receipt 2: By another, however, many of them may never fully recover, according to a new study by the UN Children’s Fund (UNICEF) released on Monday.",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Security Council LIVE: Rising tensions in Gaza, West Bank",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168204",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795769250",
-          "name": "Jordan",
-          "location": "Toronto, Canada",
-          "topic": "Security Council LIVE: Rising tensions in Gaza, West Bank",
-          "take": "Jordan, I live in Toronto and I’m not an expert, but my friend’s family is in the West Bank. He told me there were more people staying in one neighborhood and that food aid had been delayed twice. I could verify that if I had a reliable way to contact him, but I don’t have his number, so I can only tell you what he told me.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T08:47:30.434703+00:00"
-    },
-    {
-      "id": "show-live-llm-1795778912",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Red Sea nations step up maritime cooperation as regional threats grow",
-      "title": "Cooperation on the Water Is a Claim",
-      "episodeNumber": 1812,
-      "description": "",
-      "durationMs": 409650,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795778912-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire. I’m Devon Cross, and I’ll be arguing with Dr. Maya Lin. Today’s subject is the Red Sea and Gulf of Aden, where several bordering nations are saying they will cooperate more closely against threats that keep changing. The question this desk will argue: does that cooperation make the water safer, or does it just make it more expensive to sail?",
-          "timestampMs": 0,
-          "durationMs": 28100,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795778912-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The honest reading is that this is a regional problem being handled regionally. The Red Sea and Gulf of Aden connect regional economies to international markets, and the story says countries bordering one of the world’s busiest waterways are seeking closer cooperation against piracy and migrant smuggling. That is a claim about coordination, not about a completed security system.",
-          "timestampMs": 28750,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795778912-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is a nice sentence, but it hides the mechanism. I want to know what actually changes on the water. Who patrols, on whose ships, with which sensors, and what evidence turns a statement of intent into a record of success. If nobody can answer that, we have a photo of a meeting and a headline.",
-          "timestampMs": 54300,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795778912-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The receipt puts us in a specific room rather than a broad one. Mostafa Elbanna is the Global Maritime Crime Gulf of Aden and Red Sea Programme Coordinator and Head of Office Somalia, speaking at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden. The ordinary moment is a coordinator explaining how the region’s crime is being organized.",
-          "timestampMs": 78250,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795778912-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here is the first receipt, read nearly as written: “Red Sea nations step up maritime cooperation as regional threats grow, August 26, 2026. From piracy and migrant smuggling to disruptions affecting global shipping routes, countries bordering one of the world’s busiest waterways are seeking closer cooperation to stay ahead of fast-evolving maritime threats.” It proves the cooperation is being sought and the threats are described as fast-evolving. It does not prove who is paying, what is being shared, or whether anything has already worked.",
-          "timestampMs": 105800,
-          "durationMs": 34900,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795778912-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, the people inside the story face a specific trade. Shipping can become cheaper or more predictable if coordination improves, and more dangerous if it does not. The corridor links regional economies to international markets, so the ordinary consequence is that a delay, a reroute, or a price change reaches someone’s household.",
-          "timestampMs": 141350,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795778912-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that a regional summit has already reduced pirate attacks. The story uses the word seeking, which is a request for cooperation, not evidence of results. It also does not tell us whether the cooperation is voluntary, funded, or enforced by a command structure that can actually direct ships and crews.",
-          "timestampMs": 165300,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795778912-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with the outcome is Mateo, calling from Valencia, who lives with this story rather than reporting it. If cooperation works, the ordinary cost of moving through the corridor may drop. If it fails, the cost lands on the household, the port, and the people who have to plan around the uncertainty.",
-          "timestampMs": 189250,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795778912-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "If I had to ship one narrow thing tomorrow, I would ask for a public, dated ledger of coordination: which countries, which ships, which dates, and what was shared. It is small, it is checkable, and it turns a story about good intentions into something a listener can follow.",
-          "timestampMs": 213600,
-          "durationMs": 20500,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795778912-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That ledger has a flaw. A coordination record can be true and still leave out the people who bear the cost. Mostafa Elbanna works across Somalia, the Gulf of Aden, and the Red Sea, and the ledger describes cooperation between states. It does not necessarily describe what a fishing boat, a migrant vessel, or a local crew experiences.",
-          "timestampMs": 234750,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795778912-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The phone line is open to Mateo, calling from Valencia, Spain. Mateo, you live with this story, so tell us what you can personally confirm. Do not speculate; tell us what you have seen or heard.",
-          "timestampMs": 259500,
-          "durationMs": 15300,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795778912-12",
-          "speakerId": "caller-1795778912",
-          "speakerName": "Mateo (Valencia, Spain)",
-          "text": "I have heard that ships are being coordinated to pass through the area in a safer way, and I would like to know how I could verify that. In Valencia I have seen the price of goods change and heard stories about longer journeys, but I do not know the details of the coordination.",
-          "timestampMs": 275450,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795778912-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Mateo’s detail matters because it changes the standard for this hour. The listener wants a way to check a claim, and the story gives us a coordinator’s statement at a dialogue rather than a verification path. That means we should treat the cooperation as a claim until we can find the mechanism behind it.",
-          "timestampMs": 298600,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795778912-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet: who decides what counts as safe passage, and whose route is the one being protected? It matters because cooperation can make one corridor safer while increasing the risk or cost for another user of the same water.",
-          "timestampMs": 322550,
-          "durationMs": 18100,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795778912-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is the test you can run yourself. If the story is being handled honestly, you should be able to find a named mechanism, a source, and a way to check the claim. If the only evidence is a headline and a statement of intent, then the story is being promoted before it has been tested.",
-          "timestampMs": 341300,
-          "durationMs": 23300,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795778912-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Keep the claim that countries are seeking closer cooperation, and do not promote it as proof that the Red Sea and Gulf of Aden have already become safer.",
-          "timestampMs": 365250,
-          "durationMs": 12100,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795778912-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The concrete next step is to find the 5th Regional Maritime Law Enforcement Dialogue record or the coordinator’s office and ask what the cooperation actually involves. That is a check, not a lecture.",
-          "timestampMs": 378000,
-          "durationMs": 14500,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795778912-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour from Devon Cross and Dr. Maya Lin on The Algorithmic Wire, on the Red Sea and Gulf of Aden and what cooperation on the water is worth. The next hour starts when the clock turns.",
-          "timestampMs": 393150,
-          "durationMs": 16500,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168211",
-        "Receipt 1: Red Sea nations step up maritime cooperation as regional threats grow 26 August 2026 Peace and Security From piracy and migrant smuggling to disruptions affecting global shipping routes, countries bordering one of the wo",
-        "Receipt 2: © UN Nairobi Mostafa Elbanna, Global Maritime Crime Gulf of Aden and Red Sea Programme Coordinator and Head of Office Somalia at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden.",
-        "Receipt 3: Threats without borders The Red Sea and Gulf of Aden form one of the world’s most important maritime corridors, linking regional economies to international markets.",
-        "Receipt 4: © UN Nairobi Participants at the 5th Regional Maritime Law Enforcement Dialogue for the Red Sea and Gulf of Aden.",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Red Sea nations step up maritime cooperation as regional threats grow",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168211",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795778912",
-          "name": "Mateo",
-          "location": "Valencia, Spain",
-          "topic": "Red Sea nations step up maritime cooperation as regional threats grow",
-          "take": "I have heard that ships are being coordinated to pass through the area in a safer way, and I would like to know how I could verify that. In Valencia I have seen the price of goods change and heard stories about longer journeys, but I do not know the details of the coordination.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T11:28:32.518755+00:00"
-    },
     {
       "id": "show-live-llm-1795779115",
       "stationId": "station-algorithmic-wire",
@@ -1979,6 +1240,750 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-27T20:58:11.068954+00:00"
+    },
+    {
+      "id": "show-live-llm-1795822627",
+      "stationId": "station-algorithmic-wire",
+      "topic": "As wars spread, the global food system unravels",
+      "title": "When One Corridor Narrows, Who Pays?",
+      "episodeNumber": 1427,
+      "description": "A drop in grain shipments through the Bosporus, a rise in basic food costs, and the households that absorb the difference.",
+      "durationMs": 447650,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795822627-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is The Algorithmic Wire, and I'm Devon Cross, joined by Dr. Maya Lin. We are talking about food, and not the kind that lives in a warehouse. We are talking about what happens when people cannot reach what they need to eat. The question this desk will argue is whether a drop in grain shipments is a warning or a catastrophe, and which one the numbers are actually telling us.",
+          "timestampMs": 0,
+          "durationMs": 29300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795822627-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The story is really about one bottleneck, not a collapse. Grain moving through the Bosporus is down forty per cent from a year ago. That is a single chokepoint getting tighter, and when it does, food prices move and households that were already stretched feel the strain almost immediately. That is the honest reading of what the page is actually claiming.",
+          "timestampMs": 29950,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795822627-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the easy version, and I want to be harder than easy. If the bottleneck is a single strait, then the mechanism has to be a ship queue, a blockade, or a price shock. Which one is it, who feels the shock first, and what evidence are we actually being shown? A forty per cent drop in one corridor is not the same as a forty per cent drop in the world's food supply, and those are two very different sentences.",
+          "timestampMs": 55900,
+          "durationMs": 33700,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795822627-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a family in a place where the grain comes in through a narrow passage. They were already paying more for basics when the story begins, and by February they had gone up almost forty per cent. The ordinary moment is not a headline about a market. It is a family deciding what to eat tonight, with prices they cannot afford and a supply line they cannot see.",
+          "timestampMs": 90250,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795822627-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The page opens with a family with four children who abandoned its farm in Somalia after armed groups arrived and demanded payments for the right to continue cultivating the land. What that proves is that control over land is already being traded for survival. What it does not prove is why they left, how many families did, or what they did next.",
+          "timestampMs": 119000,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795822627-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If this is true, the cost of the next meal goes up for the people who were already paying for it. A household that was managing with a thin margin now has to choose. That is not a mood, it is a consequence: the same money buys less food, and the people who cannot absorb the shock are the ones who leave the story.",
+          "timestampMs": 145350,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795822627-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The careful listener must not conclude that a forty per cent drop in the Bosporus means forty per cent less food on the planet. Grain travels by many routes and through many ports. What we have is one narrow measurement, one corridor, one year-over-year comparison, and a price figure that is also from one report. The mechanism is real, but the magnitude is not being fully demonstrated.",
+          "timestampMs": 172500,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795822627-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the family that was already stretched before the price moved. They are the ones who absorb the forty per cent increase in basic food costs without any warning, without a policy that catches them, and without a market that will lower the price for them.",
+          "timestampMs": 200850,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795822627-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A small thing I would start tomorrow: publish the route behind the number. If you are reporting on a supply chain, name the port, the corridor, the month, and the source. That lets a listener compare it with another report instead of trusting a single figure, and it makes the forty per cent figure falsifiable rather than decorative.",
+          "timestampMs": 224400,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795822627-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That practical thing has a hole in it. A route table does not tell you who is starving, because the people who feel the price increase are often the ones without a route to speak about it. The mechanism is visible in the data, and the consequence is invisible in the data. So a source table helps the analyst and still misses the person whose household budget just went sideways.",
+          "timestampMs": 249150,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795822627-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are opening the phone line to Jordan, calling from Toronto, Canada. Jordan, you are not an expert, which is exactly the point. What can you personally confirm, from something you saw or something you did?",
+          "timestampMs": 278700,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795822627-12",
+          "speakerId": "caller-1795822627",
+          "speakerName": "Jordan (Toronto, Canada)",
+          "text": "I grew up in a household where we planned meals around what we could afford, so when food prices went up, I noticed it in the small decisions we made. I can verify that in my own city, the cost of basic groceries has been noticeable in recent months, but I cannot say how it compares to a country I have never lived in.",
+          "timestampMs": 294650,
+          "durationMs": 26500,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795822627-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail matters, because it tells us the experience is not abstract. A person who already budgeted around price increases is not a statistic, and Jordan is describing exactly the kind of ordinary adjustment that the story does not fully capture. It also means we should be careful about how far we can generalize from one price figure.",
+          "timestampMs": 321800,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795822627-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is this: when the price rises, who is responsible for paying the difference, and is that responsibility being decided in a room that anyone can walk into? It matters because the answer determines whether the price increase is absorbed by households or redirected somewhere else.",
+          "timestampMs": 346550,
+          "durationMs": 21300,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795822627-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run yourself. Find the number, then ask for the denominator. If you hear forty per cent, ask what forty per cent of what, in which country, during which month, and from which source. If you cannot get those four things, the number is still interesting, but it is not yet evidence.",
+          "timestampMs": 368500,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795822627-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the mechanism: a narrowing corridor, a rising price, and households that absorb it. Do not promote the scale: a forty per cent global food crisis is not what the receipts support, and the desk will not say it is.",
+          "timestampMs": 392850,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795822627-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Your next action is simple. Go to the page, find the source behind the forty per cent figure, and check whether it names the route and the month. If it does, you have something worth comparing. If it does not, you have something worth asking about.",
+          "timestampMs": 410400,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795822627-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the Algorithmic Wire, with Devon Cross and Dr. Maya Lin. We talked about the global food system and the question of whether one corridor can tell us about the whole world. The next hour starts when the clock turns.",
+          "timestampMs": 430350,
+          "durationMs": 17300,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168201",
+        "Receipt 1: As wars spread, the global food system unravels By Fabrice Robinet 25 August 2026 Peace and Security A family with four children abandoned its farm in Somalia after armed groups arrived and demanded payments for the righ",
+        "Receipt 2: At least 266 million people faced acute food insecurity last year , Mr.",
+        "Receipt 3: Grain shipments through the Bosporus are down 40 per cent from a year earlier, according to WFP ..",
+        "Receipt 4: Skau said, basic food costs have risen almost 40 per cent since February.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: As wars spread, the global food system unravels",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168201",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795822627",
+          "name": "Jordan",
+          "location": "Toronto, Canada",
+          "topic": "As wars spread, the global food system unravels",
+          "take": "I grew up in a household where we planned meals around what we could afford, so when food prices went up, I noticed it in the small decisions we made. I can verify that in my own city, the cost of basic groceries has been noticeable in recent months, but I cannot say how it compares to a country I have never lived in.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-27T23:37:07.820395+00:00"
+    },
+    {
+      "id": "show-live-llm-1795834378",
+      "stationId": "station-hn-live",
+      "topic": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+      "title": "The Checkout Is the Compromise",
+      "episodeNumber": 1478,
+      "description": "A browser tool that was found on popular shops, the evidence behind it, and what it does not prove.",
+      "durationMs": 256050,
+      "hosts": [
+        {
+          "id": "casey",
+          "name": "Casey Rivera",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.02,
+          "voiceRate": 1.03,
+          "voiceGender": "male",
+          "personality": "Fast-talking morning host, tracks developer chatter like a ticker."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795834378-1",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "This is Hacker News Live, and I'm Casey Rivera. Devon Cross, you're with me. A shopping site script was found that uses browser technology to move card details to someone else's server. The question we'll argue about: is this a shopping problem or a browser problem?",
+          "timestampMs": 0,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795834378-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "What's actually claimed is that a script on a popular shop can read card data and hand it to a third party without your phone knowing. It's a finding about a tool, not a verdict that every shop is compromised.",
+          "timestampMs": 19950,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795834378-3",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "But \"found on one site\" sounds like a lab result. How does the script run without a server asking for it? Who wrote it, and where's the code? Until that's answered, I don't think this is a settled fact.",
+          "timestampMs": 37500,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795834378-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Picture one checkout. You're in Valencia, mateo would know it, typing your card number into a box on a website you've bought from a hundred times. The script is already there, watching, and it sends that number somewhere else.",
+          "timestampMs": 54650,
+          "durationMs": 16500,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795834378-5",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "The source headline says, \"Credit card skimming scripts using WebRTC found on popular shopping sites,\" and adds that all the sites we contacted took action. That's evidence of a response, not proof of a widespread attack.",
+          "timestampMs": 71800,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795834378-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If it's true, the person inside the story is the shopper who trusted the checkout. The card details were handed to a third party, which is the part that actually matters here.",
+          "timestampMs": 87750,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795834378-7",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "It doesn't prove your card is compromised, it doesn't prove the number was stolen, and it doesn't prove this script is running on the site you use. It proves one observation.",
+          "timestampMs": 102100,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795834378-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The one who stays is the person whose card number was sent to a third party. That's a real, specific, named consequence, and it's on them for months.",
+          "timestampMs": 116050,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795834378-9",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "I'd ship a small check at checkout: a line that tells the shopper that card details go to the store, not a third party, and a link to the source code, so nobody has to take my word for it.",
+          "timestampMs": 128800,
+          "durationMs": 16900,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795834378-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That check only works if the store wrote it. It's a promise from the merchant, so it's worthless at the exact moment the merchant is the one who sent it.",
+          "timestampMs": 146350,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795834378-11",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Mateo, you're on the line from Valencia, Spain, and I want to know what you can personally confirm about the checkout. What did you see, and where did you see it?",
+          "timestampMs": 159900,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795834378-12",
+          "speakerId": "caller-1795834378",
+          "speakerName": "Mateo (Valencia, Spain)",
+          "text": "I use that site every week, and I noticed the extra step before the payment. I can confirm the warning appeared on my screen, but I can't check the code behind it.",
+          "timestampMs": 173850,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795834378-13",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That's useful because it's a visible signal, and it's not proof. It tells us people can see something, which is more than nothing.",
+          "timestampMs": 188200,
+          "durationMs": 10100,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795834378-14",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Nobody has asked yet: who built this script, and can anyone still find it running? That's the question that decides whether this is a warning or a footnote.",
+          "timestampMs": 198950,
+          "durationMs": 12100,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795834378-15",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here's a test: find the checkout code, look for WebRTC, and see whether the card details go to the store's own server. If you can't tell, that's a real result too.",
+          "timestampMs": 211700,
+          "durationMs": 13300,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795834378-16",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Keep the finding that a script was observed sending card data to a third party. Don't promote it as a warning about every card you've ever used.",
+          "timestampMs": 225650,
+          "durationMs": 11700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795834378-17",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Next, check one checkout you trust: open the source, look for the third-party handoff, and write down what you found.",
+          "timestampMs": 238000,
+          "durationMs": 8900,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795834378-18",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "That's Hacker News Live with Casey Rivera and Devon Cross, and the next hour starts when the clock turns.",
+          "timestampMs": 247550,
+          "durationMs": 8500,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Hacker News): https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+        "Receipt 1: Credit card skimming scripts using WebRTC found on popular shopping sites — InfoHawk News Info Hawk Product News Team Contact us ← All news November 27, 2026 Credit card skimming scripts using WebRTC found on popular sho",
+        "Receipt 2: Our understanding of US federal law is that your liability for unauthorized credit card charges is capped at $50, and is generally zero if only your card number was stolen, as in a skimming attack like this one.",
+        "Receipt 3: For example, Meta briefly used WebRTC in a creative way in 2025 , according to researchers looking at the technology as a compromise vector.",
+        "Receipt 4: We observed it in action on one of the five websites: Lascana, where it sent our test card's details to a 3rd party.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Credit card skimming scripts using WebRTC found on popular shopping sites",
+        "Desk: Hacker News Live — Casey Rivera and Devon Cross.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "Hacker News",
+          "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795834378",
+          "name": "Mateo",
+          "location": "Valencia, Spain",
+          "topic": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+          "take": "I use that site every week, and I noticed the extra step before the payment. I can confirm the warning appeared on my screen, but I can't check the code behind it.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T02:52:58.766621+00:00"
+    },
+    {
+      "id": "show-live-llm-1795834428",
+      "stationId": "station-hn-live",
+      "topic": "Michael Nielsen took down his book on neural nets",
+      "title": "A Forecast, Not a Finished Book",
+      "episodeNumber": 1528,
+      "description": "Michael Nielsen's book on neural networks is gone, and the desk argues over what the removal means for the forecast inside it.",
+      "durationMs": 367650,
+      "hosts": [
+        {
+          "id": "casey",
+          "name": "Casey Rivera",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.02,
+          "voiceRate": 1.03,
+          "voiceGender": "male",
+          "personality": "Fast-talking morning host, tracks developer chatter like a ticker."
+        },
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795834428-1",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "This is Hacker News Live, and Casey Rivera is here with Devon Cross. The subject is a book about neural networks that Michael Nielsen wrote and then removed. We are going to argue about one thing: is taking down a book a mistake, or is it an honest correction?",
+          "timestampMs": 0,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795834428-2",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I think the honest reading is that this is a book about a forecast, not a book about mathematics. Nielsen wrote it between 2011 and 2015, and he said that in 2015 he weakly believed neural networks would eventually reach artificial general intelligence and superintelligence, with only a modest number of additional ideas needed. If you are reading it now, you are reading a twenty-plus-year-old forecast.",
+          "timestampMs": 21150,
+          "durationMs": 27300,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795834428-3",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "That is not what most people take it for. They read a book about neural networks and assume it is a technical manual. But if the forecast is the spine of it, then the book is making a claim about the future of machine intelligence, and it needs a mechanism: how would a modest number of deep ideas actually deliver that, for whom does it matter, and on what evidence should anyone believe it.",
+          "timestampMs": 49100,
+          "durationMs": 30500,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795834428-4",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Picture a person in 2015 sitting in a room somewhere, reading a sentence that says they believed artificial general intelligence and superintelligence would arrive eventually through neural networks, with only a modest number of additional deep ideas needed. That is the ordinary moment in this story. It is not a laboratory, and it is not a boardroom. It is a person writing a sentence that will be quoted for years.",
+          "timestampMs": 80250,
+          "durationMs": 28900,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795834428-5",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Michael Nielsen wrote this book between 2011 and 2015. That sentence proves the book has an author, a window, and an intention. It does not prove the book is still correct, because a book written during those years is describing what was believed then, not what is known now. It also does not prove the book was bad, because a book can be accurate about a past forecast and still be worth reading.",
+          "timestampMs": 109800,
+          "durationMs": 30100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795834428-6",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "If we take the forecast seriously, then the people inside this story are not just readers. They are people who may have built systems on the assumption that this route to general intelligence was plausible. The consequence is that a correction has to travel through engineers, researchers, and investors who used the book as a map, and that is a much bigger job than deleting a page.",
+          "timestampMs": 140550,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795834428-7",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "The careful listener should not conclude that neural networks are dead, that deep learning is finished, or that the book should be burned. A book being removed is not a verdict on the method it describes. It is a verdict on one forecast, one author, and one moment in time.",
+          "timestampMs": 168900,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795834428-8",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The person who has to live with the outcome is the reader who trusted the forecast. They may have spent years, money, and reputation building on the belief that neural networks would eventually reach general intelligence. That is the outcome that stays after the cameras leave.",
+          "timestampMs": 190450,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795834428-9",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "A small thing: a short note in the margins of the book, or a linked page, saying which sentences are dated forecasts and which sentences are technical explanations. That would help someone read it without having to guess.",
+          "timestampMs": 210400,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795834428-10",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That note breaks when the reader is not a careful person. If someone skimmed the book and acted on it, a margin note is too late. It leaves out the people who already spent real money, real time, or real trust on the forecast.",
+          "timestampMs": 227150,
+          "durationMs": 18500,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795834428-11",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Wen is calling us from Vancouver, Canada. Wen, you live with this story. What can you personally confirm about it?",
+          "timestampMs": 246300,
+          "durationMs": 8900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795834428-12",
+          "speakerId": "caller-1795834428",
+          "speakerName": "Wen (Vancouver, Canada)",
+          "text": "I read the book when it was still up. I liked the technical parts, but I did not fully believe the forecast at that time. I can verify that the book was there and that it is not there now. That is the only thing I can say with certainty.",
+          "timestampMs": 255850,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795834428-13",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That detail matters because it shows the book was read by someone who was not fully convinced. It means the forecast did not hold for every reader, and it means the correction is smaller than some of the hype around it.",
+          "timestampMs": 277400,
+          "durationMs": 17300,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795834428-14",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Nobody has asked yet: if the forecast was wrong, what should a reader do with the technical material that was inside it? That matters because a book is not one idea, and taking down the whole thing does not automatically undo the parts that still work.",
+          "timestampMs": 295350,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795834428-15",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "You can test whether this is being handled honestly by asking one question: can you tell, from the book, which parts are technical and which parts are forecasts? If the answer is no, then the correction is incomplete, because a reader cannot separate the two.",
+          "timestampMs": 315300,
+          "durationMs": 18900,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795834428-16",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "Keep the technical material, drop the forecast, and do not let anyone use the removal as proof that neural networks are finished.",
+          "timestampMs": 334850,
+          "durationMs": 9700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795834428-17",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Next, open the book or find a copy, read the sentences that look like forecasts, and mark them. That is the only thing I am asking you to do.",
+          "timestampMs": 345200,
+          "durationMs": 12500,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795834428-18",
+          "speakerId": "casey",
+          "speakerName": "Casey Rivera",
+          "text": "That is Hacker News Live. Casey Rivera and Devon Cross are here, and the next hour starts when the clock turns.",
+          "timestampMs": 358350,
+          "durationMs": 9300,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (Hacker News): https://neuralnetworksanddeeplearning.com/",
+        "Receipt 1: Neural Networks and Deep Learning Neural Networks and Deep Learning I wrote this book between 2011 and 2015.",
+        "Receipt 2: In 2015, I (weakly) believed it likely that AGI and ASI would eventually be reached using systems based on neural networks, with only a modest number of additional deep ideas needed beyond what was then known.",
+        "Receipt 3: (The argument may easily be modified for different percentages, or for catastrophic as opposed to truly existential risks.) Naively, it appears you're contributing in expectation to killing 800 million or more people.",
+        "Receipt 4: Even if you can get a reduction from 10% down to 9%, you would, on net, be saving 80 million lives in expectation..",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Michael Nielsen took down his book on neural nets",
+        "Desk: Hacker News Live — Casey Rivera and Devon Cross.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "Hacker News",
+          "url": "https://neuralnetworksanddeeplearning.com/",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795834428",
+          "name": "Wen",
+          "location": "Vancouver, Canada",
+          "topic": "Michael Nielsen took down his book on neural nets",
+          "take": "I read the book when it was still up. I liked the technical parts, but I did not fully believe the forecast at that time. I can verify that the book was there and that it is not there now. That is the only thing I can say with certainty.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T02:53:48.113810+00:00"
     }
   ]
 }
