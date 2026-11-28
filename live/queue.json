@@ -1,502 +1,6 @@
 {
-  "mintedAt": "2026-11-28T05:27:00.600019+00:00",
+  "mintedAt": "2026-11-28T08:30:47.019990+00:00",
   "shows": [
-    {
-      "id": "show-live-llm-1795789760",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
-      "title": "Violence Moves, Responsibility Does Not",
-      "episodeNumber": 1860,
-      "description": "A look at the Haiti gang crackdown in the capital, and what happens when the violence spreads elsewhere.",
-      "durationMs": 396850,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795789760-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon Cross and Dr. Maya Lin are here on The Algorithmic Wire. Tonight we are talking about Haiti: the government has pushed harder against gangs in the capital, and the violence appears to be moving to other places. The question for this hour is simple and it is the only one: is this a strategy working, or is this pressure that is leaking somewhere else?",
-          "timestampMs": 0,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795789760-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Dr. Maya Lin has the strongest honest reading. The story says the campaign against gangs in the capital is intensifying, and it says more than half of the casualties are attributed to gangs. But it also says about 40 percent happened during security operations against them, and about five percent are connected to self-defense groups and vigilantes.",
-          "timestampMs": 27550,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795789760-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is a clean description, Maya, but I want the mechanism. If the government is squeezing gangs in the capital, what actually makes violence move? Who is being displaced, and what evidence would show that rather than a reporter noticing three fires in different towns?",
-          "timestampMs": 51900,
-          "durationMs": 18900,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795789760-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Let me make it concrete. The story describes a farming community called Kenscoff, in the hills overlooking the capital. Armed men descended on it late Sunday, set homes ablaze, and attacked residents. The ordinary moment in this story is a household standing in the doorway wondering what the fire is.",
-          "timestampMs": 71450,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795789760-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here is receipt one, from August 25, 2026: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere. The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the hills overlooking Haiti’s capital, setting homes ablaze and attacking residents. It proves that a specific attack happened and that it is being reported. It does not prove that the government caused it, that anyone planned it, or what anyone is supposed to do about it.",
-          "timestampMs": 93000,
-          "durationMs": 34900,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795789760-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If that is true, the people inside this story are living with a different kind of risk. The gangs are moving, or the pressure is moving, and the households that are left are now in territory they did not choose. That is not an abstraction. It means a family in Kenscoff is now dealing with a threat that was not there when they were sleeping.",
-          "timestampMs": 128550,
-          "durationMs": 26900,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795789760-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Do not conclude that the government is losing, or that the campaign is a failure. The receipts do not show why violence moved, whether it is one gang moving, several gangs, or civilians being pushed out of the capital. The numbers also do not tell you which town each casualty belongs to, so the 40 percent figure is a category, not a map.",
-          "timestampMs": 156100,
-          "durationMs": 26100,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795789760-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with this outcome after the cameras leave is a resident of Kenscoff. They are not going to get a briefing, a press release, or an update from the desk. They are the ones who will decide whether to stay, whether to move, and whether to return.",
-          "timestampMs": 182850,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795789760-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "One narrow thing, something you could start tomorrow: publish the names of the communities where the killings happen, with dates, so that the pattern can be checked instead of read as a headline. A list of places is small, but it is the difference between a story and a rumour.",
-          "timestampMs": 205200,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795789760-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That list has a flaw. It only records places where someone was brave enough to report. The households that were killed before anyone could file, or who were afraid to speak, will never appear on it. So the list will look reassuring and it will be biased toward the visible.",
-          "timestampMs": 226750,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795789760-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We have a caller on the line, Wen, calling from Vancouver, Canada. Wen, you have lived with this story, so tell us what you can personally confirm, and what you could not check from where you are.",
-          "timestampMs": 248300,
-          "durationMs": 15700,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795789760-12",
-          "speakerId": "caller-1795789760",
-          "speakerName": "Wen (Vancouver, Canada)",
-          "text": "I live in Vancouver, so I am far away from Haiti, but I have been reading the reports for a long time. What I could confirm is that the descriptions of the killings in Kenscoff sound like something that has been happening for years, not just in the last few weeks. What I could not verify is whether the government is responsible for the violence moving out of the capital.",
-          "timestampMs": 264650,
-          "durationMs": 28900,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795789760-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That is useful, Wen. You have confirmed a pattern in the reporting, but you have not confirmed the cause. That keeps the hour honest, because the story can describe movement and still leave the question of responsibility open.",
-          "timestampMs": 294200,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795789760-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Nobody has asked yet: who decided to move the pressure, and did they expect the violence to follow? That matters because if the answer is no one in charge, then the strategy is not working. If the answer is someone in charge, then this is a choice with consequences, and it is a choice worth knowing about.",
-          "timestampMs": 310950,
-          "durationMs": 23700,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795789760-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run. Ask what evidence would change your mind. If the answer is none, the story is not being handled honestly, because it would mean no one has thought through what would prove it wrong.",
-          "timestampMs": 335300,
-          "durationMs": 16900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795789760-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The narrow ruling is this: keep the description of the violence and the movement, and do not promote the idea that the government is winning or that the violence is a mystery.",
-          "timestampMs": 352850,
-          "durationMs": 13700,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795789760-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Wen, what you should do next is check one thing: whether the communities named in the reports have any public record of the killings, and whether that record has a date attached. That is a small action, and it is the one that would change how we understand this story.",
-          "timestampMs": 367200,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795789760-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Devon Cross and Dr. Maya Lin on The Algorithmic Wire. The next hour starts when the clock turns.",
-          "timestampMs": 388750,
-          "durationMs": 8100,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168203",
-        "Receipt 1: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere 25 August 2026 Peace and Security The killings in Kenscoff began late Sunday, when armed men descended on the farming community in the",
-        "Receipt 2: More than half of the casualties were attributed to gangs, while about 40 per cent occurred during security operations against them and 5 per cent were linked to self-defense groups and vigilantes..",
-        "Receipt 3: Haiti’s gangs are adapting to pressure, seeking new territory and revenue, while the methods used against them are themselves creating risks for civilians..",
-        "Receipt 4: ‘Wanton, intentional infliction of incredible pain’ by gangs in Haiti 6 August 2026 Peace and Security Gangs in Haiti continue to terrorise communities with the “wanton, intentional infliction of incredible pain” on peop",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168203",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795789760",
-          "name": "Wen",
-          "location": "Vancouver, Canada",
-          "topic": "Haiti ramps up the fight against gangs in the capital, but violence spreads elsewhere",
-          "take": "I live in Vancouver, so I am far away from Haiti, but I have been reading the reports for a long time. What I could confirm is that the descriptions of the killings in Kenscoff sound like something that has been happening for years, not just in the last few weeks. What I could not verify is whether the government is responsible for the violence moving out of the capital.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T14:29:20.473351+00:00"
-    },
-    {
-      "id": "show-live-llm-1795812898",
-      "stationId": "station-algorithmic-wire",
-      "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
-      "title": "The Cost of a Coup",
-      "episodeNumber": 1598,
-      "description": "Two hosts unpack a UN report on Rohingya suffering in Myanmar, with a caller from Toronto.",
-      "durationMs": 386450,
-      "hosts": [
-        {
-          "id": "devon",
-          "name": "Devon Cross",
-          "role": "host-1",
-          "title": "Lead Anchor",
-          "avatar": "H1",
-          "voicePitch": 1.0,
-          "voiceRate": 1.02,
-          "voiceGender": "male",
-          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
-        },
-        {
-          "id": "maya",
-          "name": "Dr. Maya Lin",
-          "role": "host-2",
-          "title": "Co-Host",
-          "avatar": "H2",
-          "voicePitch": 1.15,
-          "voiceRate": 1.0,
-          "voiceGender": "female",
-          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
-        }
-      ],
-      "segments": [
-        {
-          "id": "seg-llm-1795812898-1",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "This is The Algorithmic Wire. I'm Devon Cross, and my colleague is Dr. Maya Lin. Tonight we are talking about the Rohingya in Myanmar and a report from the UN High Commissioner for Human Rights dated 25 August 2026. The question we will argue is whether this report is a warning about a system, or simply a description of pain.",
-          "timestampMs": 0,
-          "durationMs": 24900,
-          "emotion": "neutral",
-          "topicTag": "cold_open"
-        },
-        {
-          "id": "seg-llm-1795812898-2",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The strongest honest reading is that this is a documented pattern, not a headline about one bad week. The report says Rohingya Muslim communities are suffering, misery and cruelty across the country on multiple levels. That is the claim. It is specific about scale and geography, and it comes from the UN High Commissioner.",
-          "timestampMs": 25550,
-          "durationMs": 22500,
-          "emotion": "neutral",
-          "topicTag": "first_take"
-        },
-        {
-          "id": "seg-llm-1795812898-3",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Let me push. A report can be true and still be vague. If we take that statement at face value, who is responsible, what is the mechanism, and what evidence is the UN citing? The report says \"across the country,\" but it does not tell us the exact locations, dates or names of the people who are carrying out the violence.",
-          "timestampMs": 48700,
-          "durationMs": 25300,
-          "emotion": "neutral",
-          "topicTag": "the_push"
-        },
-        {
-          "id": "seg-llm-1795812898-4",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Picture one ordinary moment: a family returning to a home that the report says was attacked. The receipt describes airstrikes on homes, schools and camps for displaced people. The report does not tell us which family, but the consequence is the same: a place to live is gone, a school is gone, and the people inside it have to figure out what comes next.",
-          "timestampMs": 74650,
-          "durationMs": 26500,
-          "emotion": "neutral",
-          "topicTag": "scene"
-        },
-        {
-          "id": "seg-llm-1795812898-5",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "Here is the first receipt, nearly verbatim: Members of the minority ethnic Rohingya Muslim group in Myanmar are \"suffering, misery, and cruelty on multiple levels and across the country that is heartbreaking,\" according to the UN High Commissioner for Human Rights. It proves that the UN has recorded widespread suffering. It does not prove who ordered it, who is paying for it, or what the next day will bring.",
-          "timestampMs": 101800,
-          "durationMs": 28500,
-          "emotion": "neutral",
-          "topicTag": "page_one"
-        },
-        {
-          "id": "seg-llm-1795812898-6",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "If this is true, people who were already displaced lose another reason to stay away. The report says the conflict has created a world that is not only a humanitarian crisis but a criminal economy. That means the people inside the story are not only victims of violence; they are also caught in a system that is making money while they suffer.",
-          "timestampMs": 130950,
-          "durationMs": 25700,
-          "emotion": "neutral",
-          "topicTag": "what_it_means"
-        },
-        {
-          "id": "seg-llm-1795812898-7",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "A careful listener must not conclude that every Rohingya person is in the same place, or that the report names a single perpetrator. The phrase \"across the country\" is a summary. It does not tell us the exact villages, camps or military units involved, and it does not prove what happens next.",
-          "timestampMs": 157300,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "what_it_does_not_prove"
-        },
-        {
-          "id": "seg-llm-1795812898-8",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The person who has to live with this after the cameras leave is the person who cannot leave. The report describes displaced people in camps, but the people inside those camps are not anonymous. They are the ones deciding whether to stay, whether to return, and whether to trust the next report.",
-          "timestampMs": 179650,
-          "durationMs": 21700,
-          "emotion": "neutral",
-          "topicTag": "who_stays"
-        },
-        {
-          "id": "seg-llm-1795812898-9",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "One narrow thing that would help is a local hotline that a Rohingya person could call to report a specific attack or abuse. It would be small enough to start tomorrow, it would put a name on a place, and it would make the report's abstract language concrete.",
-          "timestampMs": 202000,
-          "durationMs": 20100,
-          "emotion": "neutral",
-          "topicTag": "what_i_would_ship"
-        },
-        {
-          "id": "seg-llm-1795812898-10",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "The hole in that idea is access. A hotline is useful if the person can reach it, but the report says the abuses are spread across the country. A hotline does not tell us whether the phones are working, whether the people using it are safe, or whether the report will be heard.",
-          "timestampMs": 222750,
-          "durationMs": 22100,
-          "emotion": "neutral",
-          "topicTag": "the_hole"
-        },
-        {
-          "id": "seg-llm-1795812898-11",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "We have a phone line open. Jordan is calling from Toronto, Canada. Jordan, you have been living with this story, and you are not an expert. What can you personally confirm?",
-          "timestampMs": 245500,
-          "durationMs": 13300,
-          "emotion": "neutral",
-          "topicTag": "caller_intro"
-        },
-        {
-          "id": "seg-llm-1795812898-12",
-          "speakerId": "caller-1795812898",
-          "speakerName": "Jordan (Toronto, Canada)",
-          "text": "I am not an expert, but I know the words. When I hear \"across the country,\" I think of the family I met who said they had to leave their home because they were afraid to stay. I can verify that they were not exaggerating. That is all I have.",
-          "timestampMs": 259450,
-          "durationMs": 20900,
-          "emotion": "neutral",
-          "topicTag": "caller"
-        },
-        {
-          "id": "seg-llm-1795812898-13",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "That detail matters because it puts a face on the phrase \"across the country.\" It is one family, one home, one fear, and it is exactly the kind of evidence that a report cannot always show on paper.",
-          "timestampMs": 281000,
-          "durationMs": 16100,
-          "emotion": "neutral",
-          "topicTag": "caller_hold"
-        },
-        {
-          "id": "seg-llm-1795812898-14",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "The question nobody has asked yet is why the world's largest producer of opium and synthetic drugs is also producing misery. The report says Myanmar has become the world's largest producer of opium and synthetic drugs alongside a multi-billion-dollar scam industry and unregulated mining of rare earth minerals. What is the connection between the money and the cruelty?",
-          "timestampMs": 297750,
-          "durationMs": 24100,
-          "emotion": "neutral",
-          "topicTag": "the_unasked"
-        },
-        {
-          "id": "seg-llm-1795812898-15",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Here is a test you can run. If you read the report and you cannot find the names of the people who are doing the harm, the report is still a real report, but it is a weaker one. A good report tells you who is responsible, what is being done, and what happens next.",
-          "timestampMs": 322500,
-          "durationMs": 22900,
-          "emotion": "neutral",
-          "topicTag": "the_test"
-        },
-        {
-          "id": "seg-llm-1795812898-16",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "What to keep: the report's language about suffering, misery and cruelty. What not to promote: the idea that this is only one country, one week or one group of people.",
-          "timestampMs": 346050,
-          "durationMs": 12900,
-          "emotion": "neutral",
-          "topicTag": "ruling"
-        },
-        {
-          "id": "seg-llm-1795812898-17",
-          "speakerId": "maya",
-          "speakerName": "Dr. Maya Lin",
-          "text": "Do one thing: share this with someone who has not read the report yet, and ask them what they would do if they heard this on the news. That is the only homework.",
-          "timestampMs": 359600,
-          "durationMs": 14100,
-          "emotion": "neutral",
-          "topicTag": "handoff"
-        },
-        {
-          "id": "seg-llm-1795812898-18",
-          "speakerId": "devon",
-          "speakerName": "Devon Cross",
-          "text": "That is the hour. I'm Devon Cross, and Dr. Maya Lin is my colleague. This was the Algorithmic Wire, and the next hour starts when the clock turns.",
-          "timestampMs": 374350,
-          "durationMs": 12100,
-          "emotion": "neutral",
-          "topicTag": "signoff"
-        }
-      ],
-      "showNotes": [
-        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168200",
-        "Receipt 1: Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty 25 August 2026 Human Rights Members of the minority ethnic Rohingya Muslim group in Myanmar are “suffering, misery, and cruelty on multiple levels and acr",
-        "Receipt 2: Five years since the military junta took control of Myanmar, it has killed at least 8,075 and forcibly conscripted hundreds of thousands while the rebel Arakan Army – the de facto authority across most of Rakhine – has c",
-        "Receipt 3: Conflict economy destroys communities The report also outlines how since the 2021 coup, Myanmar has become the world’s largest producer of opium and synthetic drugs, alongside a multi-billion-dollar scam industry and the",
-        "Receipt 4: Myanmar: UN investigators document deliberate military attacks on civilians 11 August 2026 Human Rights Myanmar's military has carried out a sustained campaign of deliberate attacks on civilians – including airstrikes on",
-        "Written on the desk with the studio model. Only the receipts above were treated as fact."
-      ],
-      "keyTakeaways": [
-        "The story: Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
-        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
-        "What the page proved, and what it did not."
-      ],
-      "references": [
-        {
-          "title": "un_news",
-          "url": "https://news.un.org/feed/view/en/story/2026/08/1168200",
-          "type": "news"
-        }
-      ],
-      "callers": [
-        {
-          "id": "caller-1795812898",
-          "name": "Jordan",
-          "location": "Toronto, Canada",
-          "topic": "Rohingyas in Myanmar suffering ‘heartbreaking’ misery and cruelty",
-          "take": "I am not an expert, but I know the words. When I hear \"across the country,\" I think of the family I met who said they had to leave their home because they were afraid to stay. I can verify that they were not exaggerating. That is all I have.",
-          "status": "on-air",
-          "avatar": "C1"
-        }
-      ],
-      "ungated": false,
-      "createdAt": "2026-11-27T20:54:58.021190+00:00"
-    },
     {
       "id": "show-live-llm-1795813091",
       "stationId": "station-algorithmic-wire",
@@ -1984,6 +1488,502 @@
       ],
       "ungated": false,
       "createdAt": "2026-11-28T05:27:00.599983+00:00"
+    },
+    {
+      "id": "show-live-llm-1795854596",
+      "stationId": "station-algorithmic-wire",
+      "topic": "UN chief, Red Cross renew call for rules on lethal autonomous weapons",
+      "title": "The Red Line Is Already Drawn",
+      "episodeNumber": 1896,
+      "description": "The UN and Red Cross warn that autonomous targeting may already be underway, while unconfirmed reports and a missing evidence trail keep the story in the warning zone.",
+      "durationMs": 417250,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795854596-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "This is the Algorithmic Wire, and I am Devon Cross. Dr. Maya Lin is with me. The story is that the UN chief and the Red Cross have renewed an urgent call for rules on lethal autonomous weapons, and the question is whether this is a warning about technology we already have or a warning about technology that is still a century away.",
+          "timestampMs": 0,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795854596-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading is that the two institutions are describing a specific mechanism, not an abstract idea. Guterres says the danger is autonomous targeting of humans by machines, and Egger says the race toward greater autonomy is already underway. That is a claim about present systems and present decisions, and it deserves to be treated as one.",
+          "timestampMs": 26750,
+          "durationMs": 24100,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795854596-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Maya, I want the mechanism before I want the moral. Tell me what a machine does on its own, who gives the order, what evidence the machine uses, and what happens when the person it is aimed at stops being who it was when the order was given.",
+          "timestampMs": 51500,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795854596-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Picture a soldier in a contested area who has been wounded and is now protected from attack. A civilian walks into the zone, and the machine has to decide whether that person is a target. Guterres points at exactly that: a combatant can surrender, a civilian can enter the area of operations, and the machine may meet a situation that was not anticipated when it was built.",
+          "timestampMs": 72250,
+          "durationMs": 27700,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795854596-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Here is the source line, nearly verbatim: \"Amid unconfirmed reports that fully autonomous and AI-guided drones are now being used on the battlefield, UN chief António Guterres and the President of the Red Cross on Tuesday renewed their urgent call for.\" What it proves is that two senior bodies are speaking out about a live concern. What it does not prove is that the systems are confirmed to be in use, because the reports are explicitly unconfirmed.",
+          "timestampMs": 100600,
+          "durationMs": 31700,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795854596-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If the story is true, the people inside it face a decision under time and incomplete information. A wounded combatant, a civilian who has entered the zone, and a machine that has to act before a human can be sure of what it is looking at. The consequence is not a distant future of robots; it is a present moment where the rules of targeting are being tested.",
+          "timestampMs": 132950,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795854596-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "A careful listener must not conclude that autonomous weapons are confirmed to be operating on the battlefield, that every system is already fully autonomous, or that the call is a legal ruling. The call is an urgent appeal, and the reports behind it are unconfirmed. The gap between a warning and a verified fact is exactly the gap this hour is about.",
+          "timestampMs": 161700,
+          "durationMs": 25700,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795854596-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who stays with the outcome is the civilian who enters an area of operations. That person does not get a second warning, does not get to argue with the machine, and may be wounded or killed by a decision made faster than a human can verify it. The story's real subject is that ordinary person, not the technology.",
+          "timestampMs": 188050,
+          "durationMs": 24900,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795854596-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "I would ship one narrow thing: a public, dated record of what each military system claims to do on its own, who authorizes each engagement, and what evidence is required before a strike is allowed. Small, concrete, and startable tomorrow, because it turns an abstract moral concern into something people can actually inspect.",
+          "timestampMs": 213600,
+          "durationMs": 22100,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795854596-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That record would help only if the systems are transparent and the data is public. If the systems are classified, if the evidence is withheld, or if the people being protected cannot see the record, the mechanism is invisible and the appeal has no way to be checked. The flaw is that a practical tool still depends on disclosure that is not guaranteed.",
+          "timestampMs": 236350,
+          "durationMs": 26100,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795854596-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are opening the line to Ruth, who is calling from Nairobi, Kenya. Ruth, you live with this story. What can you personally confirm about what these weapons mean to people here?",
+          "timestampMs": 263100,
+          "durationMs": 13700,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795854596-12",
+          "speakerId": "caller-1795854596",
+          "speakerName": "Ruth (Nairobi, Kenya)",
+          "text": "I cannot confirm what these weapons are doing in my country. I can confirm that I have seen people in Nairobi worried about what machines can do to people who are not soldiers, and that I know that some people here have been told to stay indoors when there is no clear reason given.",
+          "timestampMs": 277450,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795854596-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Ruth, that changes the hour. A worried civilian in Nairobi is not a hypothetical; it is a lived detail, and it is the person the story is really about. The next question is not whether the technology exists, but what a person in that situation can actually see and verify.",
+          "timestampMs": 300600,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795854596-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked yet is this: if the systems are unconfirmed, who is responsible for the decision that was made anyway? It matters because the appeal calls for rules, but a rule does nothing if the person who gave the order cannot be held to it.",
+          "timestampMs": 322150,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795854596-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run yourself: ask a reporter or an official to name the specific system, the specific order, and the specific evidence that led to a strike. If they cannot name all three, the story is still a warning, not proof. If they can, the story has moved past the unconfirmed reports.",
+          "timestampMs": 342900,
+          "durationMs": 23300,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795854596-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the warning about the moral red line, because it is concrete and urgent. Do not promote the idea that autonomous weapons are confirmed to be in use, because the reports are unconfirmed and the call is an appeal, not a verdict.",
+          "timestampMs": 366850,
+          "durationMs": 17700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795854596-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The next concrete action is this: when you read the next version of this story, check whether the system, the order, and the evidence are named. That is the only thing that turns a warning into a fact.",
+          "timestampMs": 385200,
+          "durationMs": 16100,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795854596-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the Algorithmic Wire, with Devon Cross and Dr. Maya Lin, about the UN chief's and the Red Cross's renewed call for rules on lethal autonomous weapons. The next hour starts when the clock turns.",
+          "timestampMs": 401950,
+          "durationMs": 15300,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168196",
+        "Receipt 1: UN chief, Red Cross renew call for rules on lethal autonomous weapons By Daniel Johnson in Geneva 25 August 2026 Peace and Security Amid unconfirmed reports that fully autonomous and AI-guided drones are now being used o",
+        "Receipt 2: “ We are now dangerously close to crossing a moral red line: the autonomous targeting of humans by machines ,” UN Secretary-General Guterres said, in a joint appeal with International Committee of the Red Cross (ICRC) he",
+        "Receipt 3: “A combatant can surrender or be wounded and therefore be protected from attack; civilians can enter the area of operations of the autonomous weapons systems; the weapons may encounter a situation that would not have bee",
+        "Receipt 4: Egger noted that autonomous weapons were “not part of a distant future”, as the race towards greater autonomy is already underway.",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: UN chief, Red Cross renew call for rules on lethal autonomous weapons",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168196",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795854596",
+          "name": "Ruth",
+          "location": "Nairobi, Kenya",
+          "topic": "UN chief, Red Cross renew call for rules on lethal autonomous weapons",
+          "take": "I cannot confirm what these weapons are doing in my country. I can confirm that I have seen people in Nairobi worried about what machines can do to people who are not soldiers, and that I know that some people here have been told to stay indoors when there is no clear reason given.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T08:29:56.949673+00:00"
+    },
+    {
+      "id": "show-live-llm-1795854647",
+      "stationId": "station-algorithmic-wire",
+      "topic": "Can restoring land create jobs? These young entrepreneurs are proving it",
+      "title": "A Tree Is Not a Business Until Someone Pays",
+      "episodeNumber": 1047,
+      "description": "Young entrepreneurs in land restoration are learning that a livelihood depends on who pays and what happens after the funding ends.",
+      "durationMs": 383250,
+      "hosts": [
+        {
+          "id": "devon",
+          "name": "Devon Cross",
+          "role": "host-1",
+          "title": "Lead Anchor",
+          "avatar": "H1",
+          "voicePitch": 1.0,
+          "voiceRate": 1.02,
+          "voiceGender": "male",
+          "personality": "Dry humour, twenty years in production infrastructure, hates hype, loves raw sockets."
+        },
+        {
+          "id": "maya",
+          "name": "Dr. Maya Lin",
+          "role": "host-2",
+          "title": "Co-Host",
+          "avatar": "H2",
+          "voicePitch": 1.15,
+          "voiceRate": 1.0,
+          "voiceGender": "female",
+          "personality": "Precise, quick-witted, asks for the evidence and calls Devon on his nostalgia."
+        }
+      ],
+      "segments": [
+        {
+          "id": "seg-llm-1795854647-1",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The Algorithmic Wire, and I am Devon Cross, along with Dr. Maya Lin. We are talking about young people starting businesses around restoring damaged land, and whether that work can actually pay people. The question we will argue about is this: does turning land repair into a business create jobs, or does it just make the work look like a job?",
+          "timestampMs": 0,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "cold_open"
+        },
+        {
+          "id": "seg-llm-1795854647-2",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The strongest honest reading of this story is that it is about momentum. From Ecuador to Bangladesh, entrepreneurs are developing businesses around land restoration, and the piece frames that as a generation finding a way to earn a living from work that was previously dependent on someone else's grant or project cycle.",
+          "timestampMs": 25950,
+          "durationMs": 21700,
+          "emotion": "neutral",
+          "topicTag": "first_take"
+        },
+        {
+          "id": "seg-llm-1795854647-3",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That framing is not wrong, but it skips the mechanism. A business around restoration has to survive a price, a customer, a supply chain, and a season. I want Maya to tell me how a young person in Senegal or Bangladesh actually keeps a business going, who pays, and what evidence we are being asked to trust.",
+          "timestampMs": 48300,
+          "durationMs": 23700,
+          "emotion": "neutral",
+          "topicTag": "the_push"
+        },
+        {
+          "id": "seg-llm-1795854647-4",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The concrete moment here is one tree. Daniel Halman of Féro is planting a young tree in Senegal, which is the kind of ordinary action that gets turned into a photograph, an account, and a pitch. That is the scene, and it is not a metaphor, it is a description of a working practice.",
+          "timestampMs": 72650,
+          "durationMs": 22500,
+          "emotion": "neutral",
+          "topicTag": "scene"
+        },
+        {
+          "id": "seg-llm-1795854647-5",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The story says these young entrepreneurs are among those taking part in the Youth Ecopreneur Programme, an initiative of the International Trade Centre and UNCCD's G20 Global Land Initiative that helps young people develop environmental businesses and prepare to attract investment. That proves there is a programme and that these people are in it. It does not prove that the businesses are profitable, self-sustaining, or creating durable employment.",
+          "timestampMs": 95800,
+          "durationMs": 28100,
+          "emotion": "neutral",
+          "topicTag": "page_one"
+        },
+        {
+          "id": "seg-llm-1795854647-6",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "If the piece's premise holds, the practical change is that people who restore land may have a reason to keep doing it after the project money stops. That is a real consequence: it would mean the work is attached to a livelihood instead of a funding cycle, and it would make the people doing it more likely to stay.",
+          "timestampMs": 124550,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "what_it_means"
+        },
+        {
+          "id": "seg-llm-1795854647-7",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Careful listeners should not conclude that these are proven businesses. The receipts describe a programme that helps young people develop environmental businesses and prepare to attract investment. That is preparation, not a record of revenue, jobs, or repayment, and the story does not supply those numbers.",
+          "timestampMs": 149700,
+          "durationMs": 19300,
+          "emotion": "neutral",
+          "topicTag": "what_it_does_not_prove"
+        },
+        {
+          "id": "seg-llm-1795854647-8",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The person who has to live with the outcome is the young entrepreneur, and in the example named, Daniel Halman. If the work is valuable, he gets a livelihood and a reason to continue. If it is not, the restoration may stop when the programme support ends, and nobody has been asked what happens then.",
+          "timestampMs": 169650,
+          "durationMs": 22900,
+          "emotion": "neutral",
+          "topicTag": "who_stays"
+        },
+        {
+          "id": "seg-llm-1795854647-9",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The narrow thing I would ship is a simple tracking sheet that records, for each business, what is sold, to whom, at what price, and how many people are paid. It is small enough to start tomorrow, it does not require a new programme, and it would turn a story about hope into a story that can be checked.",
+          "timestampMs": 193200,
+          "durationMs": 24500,
+          "emotion": "neutral",
+          "topicTag": "what_i_would_ship"
+        },
+        {
+          "id": "seg-llm-1795854647-10",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The flaw in that sheet is that it only captures what already happens inside a business that has been organised enough to record it. It leaves out the people doing restoration outside the programme, and it tells us nothing about the value of work that has not yet been priced.",
+          "timestampMs": 218350,
+          "durationMs": 20900,
+          "emotion": "neutral",
+          "topicTag": "the_hole"
+        },
+        {
+          "id": "seg-llm-1795854647-11",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "We are opening the phone line to Sam, calling from Winnipeg, Canada. Sam, you have been living with this story. What can you personally confirm about the work, and who are you actually talking to?",
+          "timestampMs": 239900,
+          "durationMs": 14900,
+          "emotion": "neutral",
+          "topicTag": "caller_intro"
+        },
+        {
+          "id": "seg-llm-1795854647-12",
+          "speakerId": "caller-1795854647",
+          "speakerName": "Sam (Winnipeg, Canada)",
+          "text": "I heard about the young people planting trees and the idea that it could make a job out of it. I can tell you I have seen people do that kind of work in our own community, and I can check whether the people I know are paid for the labour or whether they are doing it because they have to.",
+          "timestampMs": 255450,
+          "durationMs": 25300,
+          "emotion": "neutral",
+          "topicTag": "caller"
+        },
+        {
+          "id": "seg-llm-1795854647-13",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "That detail matters because it separates a paid business from unpaid restoration. If Sam can confirm who is paid, it tells us whether the story is describing a livelihood or a volunteer practice, and that is the single most important thing the hour has been waiting to hear.",
+          "timestampMs": 281400,
+          "durationMs": 20100,
+          "emotion": "neutral",
+          "topicTag": "caller_hold"
+        },
+        {
+          "id": "seg-llm-1795854647-14",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "The question nobody has asked is this: what happens to the land and the people when the programme support ends? It matters because a business built on restoration can depend on money, and when that money stops, the work may stop too.",
+          "timestampMs": 302150,
+          "durationMs": 17700,
+          "emotion": "neutral",
+          "topicTag": "the_unasked"
+        },
+        {
+          "id": "seg-llm-1795854647-15",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "Here is a test you can run: ask the story's authors for the number of businesses that have continued past their initial funding, and ask who paid the people doing the work. If they cannot give you both answers, the story is describing a promise rather than an outcome.",
+          "timestampMs": 320500,
+          "durationMs": 20500,
+          "emotion": "neutral",
+          "topicTag": "the_test"
+        },
+        {
+          "id": "seg-llm-1795854647-16",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "Keep the idea that restoration can become a livelihood, and do not promote it as proof that these entrepreneurs have already built businesses that survive without grants.",
+          "timestampMs": 341650,
+          "durationMs": 11700,
+          "emotion": "neutral",
+          "topicTag": "ruling"
+        },
+        {
+          "id": "seg-llm-1795854647-17",
+          "speakerId": "maya",
+          "speakerName": "Dr. Maya Lin",
+          "text": "The next concrete action is to find the programme's own reporting page and ask for the same two numbers, because a reader can check whether the work has become a business or is still waiting for one.",
+          "timestampMs": 354000,
+          "durationMs": 15700,
+          "emotion": "neutral",
+          "topicTag": "handoff"
+        },
+        {
+          "id": "seg-llm-1795854647-18",
+          "speakerId": "devon",
+          "speakerName": "Devon Cross",
+          "text": "That is the hour from The Algorithmic Wire. Devon Cross and Dr. Maya Lin on whether restoring land can create jobs, and the next hour starts when the clock turns.",
+          "timestampMs": 370350,
+          "durationMs": 12900,
+          "emotion": "neutral",
+          "topicTag": "signoff"
+        }
+      ],
+      "showNotes": [
+        "Source (un_news): https://news.un.org/feed/view/en/story/2026/08/1168194",
+        "Receipt 1: These young entrepreneurs are proving it 24-08-2026_LandRestoration_Fero (AaA0Su-9_6RXmc6tQs6B) Daniel Halman of Féro plants a young tree in Senegal.",
+        "Receipt 2: These young entrepreneurs are proving it By Laura Quinones 24 August 2026 Climate and Environment From Ecuador to Bangladesh, a new generation of entrepreneurs is turning land restoration into economic opportunity.",
+        "Receipt 3: If their ideas, and those of other young entrepreneurs like them, can scale, they could help turn restoration from an activity dependent on repeated funding into one that creates lasting economic value for the people res",
+        "Receipt 4: Building businesses around land restoration The four entrepreneurs are among those taking part in the Youth Ecopreneur Programme (YECO), an initiative of the International Trade Centre and UNCCD’s G20 Global Land Initiat",
+        "Written on the desk with the studio model. Only the receipts above were treated as fact."
+      ],
+      "keyTakeaways": [
+        "The story: Can restoring land create jobs? These young entrepreneurs are proving it",
+        "Desk: The Algorithmic Wire — Devon Cross and Dr. Maya Lin.",
+        "What the page proved, and what it did not."
+      ],
+      "references": [
+        {
+          "title": "un_news",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168194",
+          "type": "news"
+        }
+      ],
+      "callers": [
+        {
+          "id": "caller-1795854647",
+          "name": "Sam",
+          "location": "Winnipeg, Canada",
+          "topic": "Can restoring land create jobs? These young entrepreneurs are proving it",
+          "take": "I heard about the young people planting trees and the idea that it could make a job out of it. I can tell you I have seen people do that kind of work in our own community, and I can check whether the people I know are paid for the labour or whether they are doing it because they have to.",
+          "status": "on-air",
+          "avatar": "C1"
+        }
+      ],
+      "ungated": false,
+      "createdAt": "2026-11-28T08:30:47.019943+00:00"
     }
   ]
 }
